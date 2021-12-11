@@ -4,6 +4,7 @@ import Leaderboard_dekstop from './components/leaderboard/leaderboard_dekstop'
 import Eventlanding from './components/event/eventlanding'
 import OneViewEvent from './components/event/oneview'
 import Announcement from './components/announcement/announcement'
+import MemberContainer from './components/memberupdate/index'
 const Routes = () =>{
     return(
         <div>
@@ -12,6 +13,7 @@ const Routes = () =>{
             <Route exact path = "/events" component = {Eventlanding}/>
             <Route exact path = "/event_one_view" component= {OneViewEvent}/>
             <Route exact path = "/announcement" component = {Announcement}/>
+            <Route exact path = "/Member" component = {MemberContainer}/>
             </Switch>
         </div>
     )
