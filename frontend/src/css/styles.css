@@ -1,0 +1,201 @@
+
+.main_div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.leader_header_1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: linear-gradient(
+    251.57deg,
+    #0066ff 31.76%,
+    rgba(0, 102, 255, 0) 172.86%
+  );
+  border-radius: 0px 0px 35px 35px;
+}
+.rotLogo img {
+  width: 13vh;
+  height: 13vh;
+}
+
+.speherecontainer {
+  background-color: brown;
+}
+.sphere1 {
+  background-color: brown;
+}
+
+
+.main_event_div{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+width: 1280px;
+height: 3260px;
+background: #0066FF;
+
+}
+.FlexContainer{
+    position: absolute;
+    top:190px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 85%;
+    
+    height: 150vh;
+    overflow: auto;
+    flex-direction: column;
+}
+
+.FlexContainer div {
+    position: relative;
+    width: 200px;
+    height: 351px;
+    margin: 6px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: lightblue;
+ 
+}
+.card_text h3{
+    font-size: 15px;
+}
+
+.card_blackimg{
+    position: absolute;
+border:3px solid black;
+background: black;
+width: 50%;
+height: 70px;
+}
+
+.card_text p{
+    font-size: 11px;
+}
+
+.events_header{
+    top:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 350px;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    color: black;
+    
+}
+
+.l_sphere1{
+    position: absolute;
+width: 480.47px;
+height: 480.47px;
+left: -150px;
+top: -50.46px;
+border-radius: 800px;
+
+background: linear-gradient(249.53deg, #FF5555 -35.98%, rgba(0, 77, 192, 0) 134.25%);
+transform: rotate(124.77deg);
+}
+
+.l_sphere2{
+    position: absolute;
+width: 380.47px;
+height: 380.47px;
+left: 216.68px;
+top: -253px;
+border-radius: 200px;
+background: linear-gradient(249.53deg, #FF5555 -35.98%, rgba(0, 77, 192, 0) 134.25%);
+transform: rotate(60.97deg);
+}
+
+.l_sphere3{
+    z-index: -1;
+position: absolute;
+width: 193.86px;
+height: 193.86px;
+left: 424.75px;
+top: 94.85px;
+border-radius: 200px;
+background: linear-gradient(249.53deg, #FF5555 -35.98%, rgba(0, 77, 192, 0) 134.25%);
+}
+
+
+.l_sphere4{
+    position: absolute;
+    width: 437px;
+    height: 437px;
+    left: 957.91px;
+    top: -72.13px;
+    border-radius: 200px;
+    background: linear-gradient(233.18deg, #FF2020 -45.38%, rgba(255, 85, 85, 0) 105.99%);
+}
+
+.l_sphere5{
+    position: absolute;
+width: 153.86px;
+height: 153.86px;
+left: 880.98px;
+top: 160.79px;
+border-radius: 200px;
+background: linear-gradient(249.53deg, #FF5555 -35.98%, rgba(0, 77, 192, 0) 134.25%);
+}
+
+.one_view_main{
+
+    position: relative;
+    width: 1280px;
+    height: 2061px;
+    
+    background: #0066FF;
+}
+
+.one_view_container{
+    
+position: absolute;
+width: 1201px;
+height: 1650px;
+left: 38px;
+top: 336px;
+
+background: rgba(173, 215, 242, 0.3);
+backdrop-filter: blur(8px);
+display: flex;
+flex-direction: column;
+justify-content:space-between;
+align-items: center;
+border-radius: 25px;
+}
+
+
+.black_box_one_view{
+    position: absolute;
+   top:100px;
+    background-color: black;
+    width: 85%;
+    height: 40%;
+}
+.text_one_view{
+    position: absolute;
+    top:800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
