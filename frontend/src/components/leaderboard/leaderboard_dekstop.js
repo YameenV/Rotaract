@@ -3,11 +3,14 @@ import '../../css/leaderboard.css'
 import ListOfPPL from "./listcomponent/listofppl";
 import ROTLOGO from "../../imgs/RCUCoEsLogo.png";
 import search from "../../icons/search.png";
+import {connect} from 'react-redux'
 import "bootstrap/dist/css/bootstrap.min.css";
+import * as actions from '../../actions/index'
 import { Button, ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
 class Leaderboard_dekstop extends Component {
   state = {
     inputVal: "",
+    indidata:[]
   };
 
   setVal = (e) => {
@@ -16,7 +19,21 @@ class Leaderboard_dekstop extends Component {
     });
   };
 
+  getUserBoard = () =>{
+    this.props.getLeaderUserData()
+  }
+
+  componentWillReceiveProps(nextProps){
+    if(nextProps){
+      this.setState({
+        indidata:nextProps.data.teamData
+      })
+    }
+  }
+
+
   render() {
+    
     return (
       <div className="leader_main">
         <div className="leader_header">
@@ -48,7 +65,7 @@ class Leaderboard_dekstop extends Component {
 
             <ButtonGroup className="leader_button-group">
               <div className="leader_button-1">Team</div>
-              <div className="leader_button-2">Individual</div>
+              <div onClick={this.getUserBoard} className="leader_button-2">Individual</div>
             </ButtonGroup>
 
             <div className="leader_username-input">
@@ -67,9 +84,15 @@ class Leaderboard_dekstop extends Component {
           </div>
         </div>
 
-        <div className="leader_list-container">
-          <ListOfPPL keyword={this.state.inputVal} />
+          {
+            this.state.indidata.length > 0 ? (
+              <div className="leader_list-container">
+          <ListOfPPL rawData={this.state.indidata} keyword={this.state.inputVal} />
         </div>
+            ):(null)
+
+          }
+        
 
 
         <footer className="leader_footer">
@@ -80,4 +103,11 @@ class Leaderboard_dekstop extends Component {
   }
 }
 
-export default Leaderboard_dekstop;
+const mapStateToProps = (state) =>{
+return{
+  data:state.team
+}
+}
+
+
+export default connect(mapStateToProps,actions)(Leaderboard_dekstop);

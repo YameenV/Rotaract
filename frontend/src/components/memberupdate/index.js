@@ -3,7 +3,7 @@ import LauncherDiv from './launcherDiv'
 class MemberContainer extends Component {
 
     state = {
-        typeofupdate:''
+        typeofupdate:'personalinfo'
     }
 
 

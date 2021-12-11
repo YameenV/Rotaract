@@ -1,24 +1,28 @@
 import React, { Component } from 'react'
 
 class Otherinterest extends Component {
+
+    state = {
+        hobbies:'',
+        Interest:''
+    }
+
     render() {
         return (
             <div>
-                <p>
+                <form>
+                <label>
                     Hobbies
-                </p>
+                </label>
                 <br/>
-                <p>
-                    Programming
-                </p>
-                <br/>
-                <br/>
-                <p>
+                <input type = "text" value={this.state.hobbies} onChange={(e)=>{this.setState({hobbies:e.target.value})}}/>
+                   
+                <label>
                     Interests
-                </p>
-                <p>
-                    Watching movies
-                </p>
+                </label>
+                <input type = "text" value={this.state.Interest} onChange={(e)=>{this.setState({Interest:e.target.value})}}/>
+                </form>
+               
 
             </div>
         )

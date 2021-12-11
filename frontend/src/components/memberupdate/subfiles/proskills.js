@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 
 class Proskills extends Component {
     state = {
-        val1:'',
-        val2:'',
-        val3:'',
-        val4:'',
-        val5:'',
-        val6:'',
-        val7:''
+        skill:'',
+        feild_of_interest:'',
+        experience:'',
+        project:'',
+        artical:'',
+        intership:'',
+        future_goal:''
     }
 
     giveData = (e) =>{
@@ -24,41 +24,38 @@ class Proskills extends Component {
                     <label>
                     Technology/ Programing Languages /Software /Skill you know :
                     </label>
-                    <input type="text" onChange={(e)=>{this.setState({val1:e.target.value})}}value={this.state.val1}/>
+                    <input type="text" onChange={(e)=>{this.setState({skill:e.target.value})}}value={this.state.skill}/>
 
 
                     <label>
                     Field of Interest :
                     </label>
-                    <input type="text" onChange={(e)=>{this.setState({val2:e.target.value})}}  value={this.state.val2}/>
+                    <input type="text" onChange={(e)=>{this.setState({feild_of_interest:e.target.value})}}  value={this.state.feild_of_interest}/>
 
 
                     <label>
                     Experience in that field :  
                     </label>
-                    <input type="text" onChange={(e)=>{this.setState({val3:e.target.value})}} value={this.state.val3}/>
+                    <input type="text" onChange={(e)=>{this.setState({experience:e.target.value})}} value={this.state.experience}/>
 
 
                     <label>
                     Projects / Open source contribution / Articles / blog you had worked on
                     </label>
-                    <input type="text" onChange={(e)=>{this.setState({val4:e.target.value})}} value={this.state.val4}/>
+                    <input type="text" onChange={(e)=>{this.setState({project:e.target.value})}} value={this.state.project}/>
 
 
                     <label>
                     Internship you had done :
                     </label>
-                    <input type="text" onChange={(e)=>{this.setState({val5:e.target.value})}}  value={this.state.val5}/>
+                    <input type="text" onChange={(e)=>{this.setState({intership:e.target.value})}}  value={this.state.intership}/>
 
+                    
                     <label>
-                    Internship you had done :
+                    Your future goal :
                     </label>
-                    <input type="text" onChange={(e)=>{this.setState({val6:e.target.value})}}  value={this.state.val6}/>
+                    <input type="text" onChange={(e)=>{this.setState({future_goal:e.target.value})}}  value={this.state.future_goal}/>
 
-                    <label>
-                    Internship you had done :
-                    </label>
-                    <input type="text" onChange={(e)=>{this.setState({val7:e.target.value})}}  value={this.state.val7}/>
 
                     <button type="submit">
                     Submit

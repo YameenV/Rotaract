@@ -1,19 +1,17 @@
 import React from 'react'
 import {Route,Switch} from 'react-router-dom'
 import Leaderboard_dekstop from './components/leaderboard/leaderboard_dekstop'
-import Eventlanding from './components/event/eventlanding'
-import OneViewEvent from './components/event/oneview'
-import Announcement from './components/announcement/announcement'
+import Eventcontainer from './components/event/eventcontainer'
+import AnnContainer from './components/announcement/annContainer'
 import MemberContainer from './components/memberupdate/index'
 const Routes = () =>{
     return(
         <div>
             <Switch>
             <Route exact path = "/" component={Leaderboard_dekstop}/>
-            <Route exact path = "/events" component = {Eventlanding}/>
-            <Route exact path = "/event_one_view" component= {OneViewEvent}/>
-            <Route exact path = "/announcement" component = {Announcement}/>
-            <Route exact path = "/Member" component = {MemberContainer}/>
+            <Route exact path = "/events" component = {Eventcontainer}/>
+            <Route exact path = "/announcement" component = {AnnContainer}/>
+            <Route exact path = "/member" component = {MemberContainer}/>
             </Switch>
         </div>
     )

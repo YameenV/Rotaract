@@ -1,23 +1,32 @@
 import React, { Component } from 'react'
 
 class Educational extends Component {
+
+    state = {
+        currently_studying:'',
+        certification_done:'',
+        future_plan:'',
+        book:'',
+    }
+
     render() {
         return (
             <div>
-                <p>Currently studying :</p>
-                <p>Artificial Intelligence & Machine Learning</p>
+                <form>
+                
+                <label>Currently studying :</label>
+                <input type= "text" value ={this.state.currently_studying} onChange={(e)=>{this.setState({currently_studying:e.target.value})}}/>
                 <br/>
-                <p>Currently studying :</p>
-                <p>Artificial Intelligence & Machine Learning</p>
+                <label>Certification you had done :</label>
+                <input type= "text" value ={this.state.certification_done} onChange={(e)=>{this.setState({certification_done:e.target.value})}}/>
                 <br/>
-                <p>Certification you had done :</p>
-                <p>None</p>
+                <label>future plane for studying :</label>
+                <input type= "text" value ={this.state.future_plan} onChange={(e)=>{this.setState({future_plan:e.target.value})}}/>
                 <br/>
-                <p>future plane for studying :</p>
-                <p>IDK</p>
-                <br/>
-                <p>Novels/Book/Articles you had read :</p>
-                <p>This Book Loves You by Pewdiepie</p>
+                <label>Novels/Book/Articles you had read :</label>
+                <input type= "text" value ={this.state.book} onChange={(e)=>{this.setState({book:e.target.value})}}/>
+                </form>
+                
             </div>
         )
     }

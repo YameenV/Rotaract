@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
 
 class About extends Component {
+
+    state = {
+        describe:'',
+        yourself_ten_years:''
+    }
+
     render() {
         return (
             <div>
-                <p>Describe yourself in 5-6 sentence:</p>
-                <p>Master of All Trades</p>
-                <br/>
-                <p>Where do you see your self in 10 years:</p>
-                <p>Where I won't regret being</p>
+                <form>
+                <label>Describe yourself in 5-6 sentence:</label>
+                <textarea type="text" value = {this.state.describe} onChange={(e)=>{this.setState({describe:e.target.value})}}/>
+                <label>Where do you see your self in 10 years:</label>
+                <input type="text" value = {this.state.yourself_ten_years} onChange={(e)=>{this.setState({yourself_ten_years:e.target.value})}}/>
+                </form>
             </div>
         )
     }

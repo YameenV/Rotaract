@@ -1,40 +1,9 @@
 
 import '../../css/announcement.css'
 
-function Announcement() {
-
-  const data = [
-    {
-      "image": 'https://lh3.googleusercontent.com/ogw/ADea4I55Y8CeJadoMfZsh9xbDTaa8z9Qy1Ge2Ud5Yiak=s32-c-mo',
-      "by": "By Aakarsh President",
-      "title": "Gbm meeting",
-      "date": "On 1st November 2001",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      "image": 'https://lh3.googleusercontent.com/ogw/ADea4I55Y8CeJadoMfZsh9xbDTaa8z9Qy1Ge2Ud5Yiak=s32-c-mo',
-      "by": "By Aakarsh President",
-      "title": "Gbm meeting",
-      "date": "On 1st November 2001",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      "image": 'https://lh3.googleusercontent.com/ogw/ADea4I55Y8CeJadoMfZsh9xbDTaa8z9Qy1Ge2Ud5Yiak=s32-c-mo',
-      "by": "By Aakarsh President",
-      "title": "Gbm meeting",
-      "date": "On 1st November 2001",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      "image": 'https://lh3.googleusercontent.com/ogw/ADea4I55Y8CeJadoMfZsh9xbDTaa8z9Qy1Ge2Ud5Yiak=s32-c-mo',
-      "by": "By Aakarsh President",
-      "title": "Gbm meeting",
-      "date": "On 1st November 2001",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    }
-  ]
-
-
+function Announcement(props) {
+let data = props.adata
+ console.log(data)
   return (
     <div className="announcement_main">
 
@@ -62,11 +31,11 @@ function Announcement() {
             <div className='announcement'>
               <div className="ann_image-con">
                 <img className="ann_image" src={items.image} />
-                <div className="ann_by">{items.by}</div>
+                <div className="ann_by">{items.name}</div>
               </div>
               <div className="ann_title">{items.title}</div>
-              <div className="ann_date">{items.date}</div>
-              <div className="ann_description">{items.description}</div>
+              <div className="ann_date">{items.day}-{items.month}-{items.year}</div>
+              <div className="ann_description">{items.announcement}</div>
               <hr className="ann_line"></hr>
 
             </div>
