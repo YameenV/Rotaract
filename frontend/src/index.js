@@ -7,12 +7,15 @@ import Reducers from './reducers/index'
 import {Provider} from 'react-redux' 
 import {createStore,applyMiddleware} from 'redux' 
 import promiseMiddleware from 'redux-promise' 
+// import Navbar from '.'
+import Navbar from './components/navbar/navbar'
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore)
 const App = () =>{
  return(
 <div>
   <Layout>
   <BrowserRouter>
+  <Navbar/>
   <Router/>
   </BrowserRouter>
   </Layout>

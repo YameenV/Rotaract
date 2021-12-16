@@ -5,7 +5,6 @@
     min-width: 100vw;
     background: linear-gradient(221.19deg, #0066FF 23.33%, #FFFFFF 159.8%);
     display: flex;
-    justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: column;
 }

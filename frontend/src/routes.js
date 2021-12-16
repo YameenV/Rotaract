@@ -8,12 +8,16 @@ import Loginpage from './components/adminpanel/loginpage'
 import Welcome_page from './components/adminpanel/welcome_page'
 import Teampage from './components/adminpanel/teampage'
 import Individualpage from './components/adminpanel/individual'
+import Navbar from './components/navbar/navbar'
+
 const Routes = () =>{
     return(
         <div>
             <Switch>
             <Route exact path = "/" component={Leaderboard_dekstop}/>
-            <Route exact path = "/events" component = {Eventcontainer}/>
+            <Route exact path = "/leaderboard" component={Leaderboard_dekstop}/>
+            <Route exact path = "/event" component = {Eventcontainer}/>
+            <Route exact path = "/navbar"  component = {Navbar} />
             <Route exact path = "/announcement" component = {AnnContainer}/>
             <Route exact path = "/member" component = {MemberContainer}/>
             <Route exact path = "/admin_login" component = {Loginpage} />

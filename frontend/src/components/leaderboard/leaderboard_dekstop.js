@@ -7,6 +7,7 @@ import {connect} from 'react-redux'
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from '../../actions/index'
 import { Button, ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
+// import Navbar from '../../components/navbar/navbar'
 class Leaderboard_dekstop extends Component {
   state = {
     inputVal: "",
@@ -35,11 +36,13 @@ class Leaderboard_dekstop extends Component {
   render() {
     
     return (
+      
+     
       <div className="leader_main">
         <div className="leader_header">
-          <div className="leader_rotLogo">
+          {/* <div className="leader_rotLogo">
             <img className="leader_rotLogo-image" src={ROTLOGO} />
-          </div>
+          </div> */}
           <div className="leader_sphere">
             <div className="l_sphere-1"></div>
             <div className="l_sphere-2"></div>
@@ -101,6 +104,7 @@ class Leaderboard_dekstop extends Component {
           <p className="leader_footer-text">FOOOTER</p>
         </footer>
       </div>
+      
     );
   }
 }
