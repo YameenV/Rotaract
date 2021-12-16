@@ -26,7 +26,9 @@ class AnnContainer extends Component {
             <div>
                 {this.state.annDATA.length > 0 ?(
                     <Announcement adata = {this.state.annDATA}/>
-                ):(null)}
+                ):(
+                    <Announcement adata = {this.state.annDATA}/>
+                )}
                 
             </div>
         )

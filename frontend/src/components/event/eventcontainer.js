@@ -26,8 +26,10 @@ class Eventcontainer extends Component {
             <div>
                 {
                     this.state.eData.length > 0 ? (
-                        <Eventlanding data = {this.props.events}/>
-                    ):(null)
+                        <Eventlanding data = {this.state.eData}/>
+                    ):(
+                        <Eventlanding data = {this.state.eData}/> 
+                    )
                 }
                
             </div>
@@ -41,4 +43,4 @@ const mapStateToProps = (state) =>{
     }
 }
 
-export default connect(mapStateToProps,actions)(Eventcontainer)
+export default connect(mapStateToProps,actions)(Eventcontainer)  

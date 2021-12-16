@@ -89,7 +89,9 @@ class Leaderboard_dekstop extends Component {
               <div className="leader_list-container">
           <ListOfPPL rawData={this.state.indidata} keyword={this.state.inputVal} />
         </div>
-            ):(null)
+            ):(
+              <ListOfPPL rawData = {this.state.indidata} keyword = {this.state.inputVal}/>
+            )
 
           }
         
