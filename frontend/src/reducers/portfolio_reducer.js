@@ -1,8 +1,8 @@
 export default function(state={},action){
 
     switch(action.type){
-        case 'portfolio_dat':
-            return {...state,teamData:action.payload}
+        case 'portfolio_data':
+            return {...state,userData:action.payload}
 
         default:
             return state

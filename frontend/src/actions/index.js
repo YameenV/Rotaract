@@ -46,3 +46,12 @@ export function getAnnouncement(){
         payload:request
     }
 }
+
+export function getUserByName(name){
+    const request = axios.get(`/get_user_by_name/${name}`)
+    .then(response => response.data)
+    return{
+        type:'portfolio_data',
+        payload:request
+    }
+}

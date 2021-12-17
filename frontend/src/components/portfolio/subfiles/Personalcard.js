@@ -2,16 +2,18 @@ import React, { Component } from 'react'
 
 class Personalcard extends Component {
     render() {
+        let personaldata =this.props.personaldata
+        let contacts = this.props.contacts
         return (
             <div>
                 
-            <div>20th October 2002, 19yo</div>
-            <div>Male</div>
-            <div>Bhiwandi, Thane</div>
-            <div>+91 7757912578</div>
-            <div>hmsamaan@gmail.com</div>
-            <div>amn_shk__</div>
-            <div>amn-shk</div>
+            <div>Age: {personaldata.age}</div>
+            <div>Gender: {personaldata.gender}</div>
+            <div>District: {personaldata.district}</div>
+            <div>Mobile number: {contacts.mobile_number}</div>
+            <div>Email address: {contacts.email_address}</div>
+            <div>Twitter: {contacts.twitter}</div>
+            <div>Whatsapp: {contacts.whatsapp}</div>
 
 
             </div>
