@@ -6,56 +6,54 @@ import * as actions from "../../actions/index";
 class PortFolioContainer extends Component {
 
     state = {
-        full_name:"",
-        personalinfo:{
-          age:0,
-          bloodgroup:'',
-          fullname:'',
-          gender:'',
-          district:''
-        },
-        about:{
-          describe:'',
-          yourself_in_ten_years:''
-
-        },
-        contacts:{
-          email_address:'',
-          github:'',
-          linkedln:'',
-          mobile_number:'',
-          twitter:'',
-          whatsapp:''
-        },
-        otherinterest:{
-          Interest: [],
-          hobbies:[]
-        },
-        professionalskill:{
-          achievement:[],
-          artical:[],
-          experience:'',
-          field_of_interest:[],
-          future_goal:'',
-          internship:[],
-          project:[],
-          skill:[]
-        },
-        education_background: {
-          currently_studying: '',
-          certification_done: [],
-          future_plan: [],
-          book: []
-        },
-        rotaractclub:{
-          joning_reason:'',
-          avenue:[],
-          current_position:'',
-          number_of_year:'',
-          suggestion:'',
-          testimonial:''
-
-        }
+      full_name:'',
+      personalinfo:{
+        age:20,
+        bloodgroup:'A+',
+        fullname:'Abhinav pandey',
+        gender:'male',
+        district:'palghar'
+      },
+      about:{
+        describe:'I am 20 yrs old',
+        yourself_in_ten_years:'I cant see the future'
+      },
+      contacts:{
+        email_address:'somefakeemail@123',
+        github:'githibAccount21',
+        linkedin:'linkednaccount',
+        mobile_number:'941242587',
+        twitter:'fakeTwitter',
+        whatsapp:'941242587'
+      },
+      otherinterest:{
+        Interest: ['typing'],
+        hobbies:['typing']
+      },
+      professionalskill:{
+        achievement:['NA'],
+        artical:['NA'],
+        experience:4,
+        field_of_interest:['NA'],
+        future_goal:'NA',
+        internship:['NA'],
+        project:['hello world'],
+        skill:['NA']
+      },
+      education_background:{
+        currently_studying: 'college',
+        certification_done: ['school'],
+        future_plan: ['no plans'],
+        book:['mein kampf']
+      },
+      rotractClub: {
+        joning_reason:'exciting',
+        avenue: ['NA'],
+        current_position: 'GBM',
+        number_of_year:'0',
+        suggestion: 'NA', 
+        testimonial: 'NA'
+      }
     }
 
     findRtr = (e) =>{
@@ -121,6 +119,7 @@ class PortFolioContainer extends Component {
 
         })
       }
+  
     }
 
 
