@@ -14,6 +14,7 @@ html {
 a {
   text-decoration: none;
   /* font-size: 2.5rem; */
+  z-index: 99;
 }
 
 li {
@@ -30,9 +31,10 @@ li {
   height: 10rem;
   display: grid;
   grid-template-columns: 10rem 1fr 2fr 3fr 10rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    background: linear-gradient(221.19deg, #0066FF 50%, #FFFFFF 180%);
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, */
+    /* rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+    /* background: linear-gradient(221.19deg, #0066FF 50%, #FFFFFF 180%); */
+  background-color: transparent;
 }
 
 .logo {
@@ -42,6 +44,10 @@ li {
   justify-content: start;
   align-items: center;
   
+}
+.hamburger-menu{
+  display:none;
+  /* color: antiquewhite; */
 }
 .leader_rotLogo-image {
   width: calc(67px + 2vw);

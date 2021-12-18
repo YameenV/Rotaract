@@ -1,0 +1,441 @@
+
+
+.main_member{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    align-content: center;
+    align-items: center;
+    background: linear-gradient(107.25deg, #FFFFFF -30.05%, #0066FF 7.53%, #000917 100%);
+    
+    
+}
+.member_navbar{
+    display: grid;
+    grid-template-columns: 2rem 2fr 2fr 2fr 2rem;
+    min-width: 100vw;
+}
+.member_rotaractlogo{
+    height: calc(40px + 10vw);
+    width: calc(40px+10vw);
+    
+}
+.logo_member{
+    grid-column: 2/3;
+}
+.member_logo{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    /* left: 100px; */
+    top: 4vw;
+    background: rgba(173, 215, 242, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
+    
+    /* background: url(.jpg); */
+    border-radius: 50%;
+    z-index: 5;
+}
+.member_rotimage{
+    width: 170px;
+    height: 170px;
+    /* left: 556px;
+    top: 84px; */
+    z-index: 99;
+    /* position: absolute; */
+    
+    
+    /* background: url(.jpg); */
+    border-radius: 50%;
+
+}
+.nav_link{
+    display: flex;
+    grid-column: 4/5;
+    font-style: normal;
+    color: white;
+    /* font-size: calc(10rem + 40vw); */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.h3, h3{
+    /* text-align: center; */
+    font-size: 3rem;
+    color: white;
+    font-family: Helvetica;
+    /* font-style: normal; */
+    font-weight: normal;
+    
+}
+/* .h3{ */
+    /* color: rebeccapurple; */
+/* } */
+.member_container{
+
+    /* margin-top: 10vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(173, 215, 242, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 25px;
+    width: 90vw;
+    /* height: 90vh; */
+
+}
+.unknown{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10vh;
+    grid-column: 4/5;
+
+    height: 100%;
+    width: 37vw;
+    
+}
+
+
+.contact_form , .about_form , .education_form ,.other_form ,.personal_form,.professional_form,.rotaract_form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-size: calc(0.7rem + 1vw);
+    border-radius: 100px;
+    justify-content: space-around;
+    margin-bottom: 20%;
+    gap: 0.6vw;
+    font-family: Helvetica;
+    /* font-style: normal; */
+    font-weight: normal;
+    color:black;
+}
+.contact_form input ,.about_form input , .education_form input ,.other_form  input ,.personal_form input,.professional_form input,.rotaract_form input {
+    border-radius: 10px;
+}
+.contact_form button, .about_form button , .education_form button,.other_form button,.personal_form button,.professional_form button,.rotaract_form button{
+    border-radius: 10px;
+}
+.contact_form label{
+    font-family:  Helvetica;
+    font-style: normal;
+    font-weight: normal;
+}
+.personal_form select{
+    border-radius: 8px;
+}
+
+.main_data{
+    min-height: 50vh;
+    min-width: 60vw;
+    display: grid;
+    grid-template-columns: 5rem 3fr 1fr 3fr 3rem;
+        
+}
+.member_line{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 3/4;
+}
+.vl{
+    border-left:2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:70vh;   
+    grid-column: 3/4;
+}
+.member_name{
+    font-size: calc(12px + 2vw);
+    font-style: normal;
+    color:black;
+    padding-top: 50px;
+    font-family: Helvetica;
+    /* font-style: normal; */
+    font-weight: normal;
+    
+}
+.member_status{
+    font-size: calc(3px + 2vw);
+    font-style: normal;
+    color:black; 
+    font-family: Helvetica;
+    /* font-style: normal; */
+    font-weight: normal;
+       
+}
+.changing_container{
+    width: 100vw;
+}
+.button_div{
+    display: flex;  
+    flex-direction: column;
+    grid-column: 2/3;
+    justify-content: center;
+    align-content: center;       
+}
+.changer_buttons{
+    display: flex;  
+    flex-direction: column;
+    padding-top: 7vh;    
+    font-size: calc(1px + 2vw);
+    padding-left: 10px;
+    border-style: none;
+    height: 80vh;
+    font-family: Helvetica;
+    /* font-style: normal; */
+    font-weight: normal;
+    /* width: 20vw; */
+}
+/* 
+ */
+.button{    
+    /* margin: 5px; */
+    background: transparent;
+    color:white;
+    font-style: normal;
+    border-style: none;
+    border-radius: 10px;
+    margin-bottom: 1vw;
+    font-family: Helvetica;
+    /* font-style: normal; */
+    font-weight: normal;
+}
+/* .button:active{
+    background-color: red; 
+    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.1);
+} */
+.button:focus{
+    background-color: black;
+}
+
+.button:hover{
+    transform: scale(1.05);
+    background: black;
+    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*  --------------------- Responsive CSS Style ---------------------------- --------------------------------------------------  */
+
+
+
+@media (max-width: 1080px) {
+    .main_member{    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* min-height: 100vh; */
+        /* min-width: 100vw; */
+        align-content: center;
+        align-items: center;
+        background: linear-gradient(107.25deg, #FFFFFF -30.05%, #0066FF 7.53%, #000917 100%);
+    }
+    .member_rotimage{
+        width: 160px;
+        height: 160px;    
+        
+    }
+    .member_logo{
+        top: 5vw;
+        width: 170px;
+        height: 170px;
+    }
+        
+}
+  
+/* responsive css style  */
+  
+@media (max-width: 998px) {
+    .changer_buttons{
+        display: flex;  
+        flex-direction: column;
+        /* padding-top: 7vh;     */
+        /* font-size: calc(8px + 3vw); */
+        /* padding-left: 10px; */
+        border-style: none;
+        /* height: 80vh; */
+        /* width: 20vw; */
+    }
+    .vl{
+        border-left:1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:80vw;   
+        grid-column: 3/4;
+    }
+    .member_rotimage{
+        width: 145px;
+        height: 145px;    
+        
+    }
+    .member_logo{
+        top:6vw;
+        width: 155px;
+        height: 155px;
+    }
+    
+}
+/**/
+
+@media (max-width: 798px) {
+    .changer_buttons{
+        display: flex;  
+        flex-direction: column;
+        /* padding-top: 7vh;     */
+        font-size: 2rem;
+        /* padding-left: 10px; */
+        border-style: none;
+        /* height: 80vh; */
+        /* width: 20vw; */
+        font-family: Helvetica;
+    /* font-style: normal; */
+        font-weight: normal;
+    }
+    .vl{
+        display: none;
+        
+    }
+    .member_line{
+        display: none;
+    }
+    .main_data{
+        min-height: 50vh;
+        min-width: 60vw;
+        display: grid;
+        grid-template-columns: 1rem 2fr 2fr  ;
+            
+    }
+    .button_div{
+        display: flex;  
+        flex-direction: column;
+        grid-column: 2/3;
+        justify-content: center;
+        align-content: center;       
+    }
+    .unknown{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 13vh;
+        grid-column: 3/4;
+    
+        /* height: 100%; */
+        /* width: 37vw; */
+        
+    }
+    
+    .member_navbar{
+        display: grid;
+        grid-template-columns:  2fr 2fr 2fr ;
+        /* min-width: 70vh; */
+    }
+    .member_rotaractlogo{
+        height: calc(40px + 10vw);
+        width: calc(40px+10vw);
+        
+    }
+    .logo_member{
+        grid-column: 1/2;
+    }
+    .nav_link{
+        display: flex;
+        grid-column: 3/4;
+        font-style: normal;
+        color: white;
+        /* font-size: calc(10rem + 40vw); */
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .member_rotimage{
+        width: 125px;
+        height: 125px;    
+        
+    }
+    .member_logo{
+        top:8vw;
+        
+        width: 135px;
+        height: 135px;
+    }
+    
+
+    
+    
+
+}
+/**/  
+@media (max-width: 500px) {
+    
+        .main-nav {
+      height: 6rem;
+      grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
+    }
+    .h3, h3{
+        font-size: 1.7rem;
+        color: white;
+    }
+    .main_data{
+        min-height: 50vh;
+        min-width: 60vw;
+        /* display: grid; */
+        /* grid-template-columns: 1rem 2fr 2fr  ; */
+        display: flex;
+        flex-direction: column;
+    }
+    .button_div{
+        display: flex;  
+        flex-direction: column;
+        /* grid-column: 2/3; */
+        justify-content: center;
+        align-content: center;       
+    }
+
+    .unknown{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 13vh;
+        /* grid-column: 3/4; */
+    
+        /* height: 100%; */
+        width: 70vw;
+        
+    }
+    .changer_buttons{
+        height: 100%;
+        padding-left: 0;
+    }
+    .contact_form , .about_form , .education_form ,.other_form ,.personal_form,.professional_form,.rotaract_form{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        font-size: calc(1rem + 2vw);
+        font-family: Helvetica;
+    /* font-style: normal; */
+        font-weight: normal;
+        
+    }
+    .member_rotimage{
+        width: 105px;
+        height: 105px;    
+        
+    }
+    .member_logo{
+        top:10vw;
+        width: 115px;
+        height: 115px;
+    }
+    
+
+}

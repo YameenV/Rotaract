@@ -1,66 +1,67 @@
 import React, { Component } from 'react'
+import '../../../css/memberupdate.css'
 
 class Proskills extends Component {
     state = {
-        skill:'',
-        feild_of_interest:'',
-        experience:'',
-        project:'',
-        artical:'',
-        intership:'',
-        future_goal:''
+        skill: '',
+        feild_of_interest: '',
+        experience: '',
+        project: '',
+        artical: '',
+        intership: '',
+        future_goal: ''
     }
 
-    giveData = (e) =>{
+    giveData = (e) => {
         e.preventDefault();
         console.log(this.state)
     }
 
     render() {
         return (
-            <div>
-                  <form className="rot_form" onSubmit={this.giveData} className="rot_form">
-                  
-                    <label>
-                    Technology/ Programing Languages /Software /Skill you know :
-                    </label>
-                    <input type="text" onChange={(e)=>{this.setState({skill:e.target.value})}}value={this.state.skill}/>
-
+            <div className="professional_div">
+                <form className="rot_form" onSubmit={this.giveData} className="professional_form">
 
                     <label>
-                    Field of Interest :
+                        Technology/ Programing Languages /Software /Skill you know :
                     </label>
-                    <input type="text" onChange={(e)=>{this.setState({feild_of_interest:e.target.value})}}  value={this.state.feild_of_interest}/>
+                    <input type="text" onChange={(e) => { this.setState({ skill: e.target.value }) }} value={this.state.skill} />
 
 
                     <label>
-                    Experience in that field :  
+                        Field of Interest :
                     </label>
-                    <input type="text" onChange={(e)=>{this.setState({experience:e.target.value})}} value={this.state.experience}/>
+                    <input type="text" onChange={(e) => { this.setState({ feild_of_interest: e.target.value }) }} value={this.state.feild_of_interest} />
 
 
                     <label>
-                    Projects / Open source contribution / Articles / blog you had worked on
+                        Experience in that field :
                     </label>
-                    <input type="text" onChange={(e)=>{this.setState({project:e.target.value})}} value={this.state.project}/>
+                    <input type="text" onChange={(e) => { this.setState({ experience: e.target.value }) }} value={this.state.experience} />
 
 
                     <label>
-                    Internship you had done :
+                        Projects / Open source contribution / Articles / blog you had worked on
                     </label>
-                    <input type="text" onChange={(e)=>{this.setState({intership:e.target.value})}}  value={this.state.intership}/>
+                    <input type="text" onChange={(e) => { this.setState({ project: e.target.value }) }} value={this.state.project} />
 
-                    
+
                     <label>
-                    Your future goal :
+                        Internship you had done :
                     </label>
-                    <input type="text" onChange={(e)=>{this.setState({future_goal:e.target.value})}}  value={this.state.future_goal}/>
+                    <input type="text" onChange={(e) => { this.setState({ intership: e.target.value }) }} value={this.state.intership} />
+
+
+                    <label>
+                        Your future goal :
+                    </label>
+                    <input type="text" onChange={(e) => { this.setState({ future_goal: e.target.value }) }} value={this.state.future_goal} />
 
 
                     <button type="submit">
-                    Submit
+                        Submit
                     </button>
-                
+
                 </form>
             </div>
         )

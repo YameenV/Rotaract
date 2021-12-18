@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../../../css/memberupdate.css'
 
 class About extends Component {
 
@@ -9,12 +10,14 @@ class About extends Component {
 
     render() {
         return (
-            <div>
-                <form>
+            <div className="about_div">
+                <form className="about_form">
                 <label>Describe yourself in 5-6 sentence:</label>
                 <textarea type="text" value = {this.state.describe} onChange={(e)=>{this.setState({describe:e.target.value})}}/>
                 <label>Where do you see your self in 10 years:</label>
                 <input type="text" value = {this.state.yourself_ten_years} onChange={(e)=>{this.setState({yourself_ten_years:e.target.value})}}/>
+                <br/>
+                <button type="submit">Submit</button>
                 </form>
             </div>
         )
