@@ -36,7 +36,10 @@ li {
     /* background: linear-gradient(221.19deg, #0066FF 50%, #FFFFFF 180%); */
   background-color: transparent;
 }
-
+svg{
+  color: white;
+  z-index: 99;
+}
 .logo {
   display: grid;
   /* background-color: #3b5998; */
@@ -102,7 +105,7 @@ li {
 .menu-link ul li:hover > a {
   transform-origin: left;
   /* color: rgba(0, 0, 3, 1); */
-  color : red;
+  color : white;
   text-decoration: underline;
   transition: 0.5s;
 }

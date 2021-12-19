@@ -49,6 +49,8 @@ const Eventlanding = (props) => {
 
     ) : (
         <div className="event_main">
+            <Navbar/>
+
             <div className="event_header">events</div>
             <div className="sphere">
                 <div className="ann_sphere1">
