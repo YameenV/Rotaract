@@ -8,7 +8,7 @@ import ROTLOGO from "../../imgs/RCUCoEsLogo.png";
 const Navbar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
-         <nav className="main-nav">
+      <nav className="main-nav">
         
         {/* 1st logo part  */}
         <div className="leader_rotLogo">
@@ -35,6 +35,9 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink to="/member">Member Update</NavLink>
+            </li>
+            <li>
+              <NavLink to="/portfolio">Portfolio</NavLink>
             </li>
           </ul>
         </div>

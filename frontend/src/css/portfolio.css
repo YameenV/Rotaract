@@ -13,16 +13,37 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: stretch;
+    padding: 25px 25px 25px 25px;
 }
 
 .pro-search-con{
     width: 100%;
-    background-color: black;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.pro-input{
+    border: none;
+    width: 50vw;
+    height: 4vh;
+    background: rgba(173, 215, 242, 0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+}
+
+.pro-button{
+    border: none;
+    width: 10vw;
+    border-radius: 50px;
+    height: 4vh;
+    background: rgba(173, 215, 242, 0.7);
+    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
 }
 
 .pro-cont-presonal_graph{
@@ -41,9 +62,10 @@
     box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 25px;
-    flex-grow: 1;
-    flex-basis: 0;
+    flex-grow: 2;
+    flex-shrink: 0;
     height: 350px;
+    padding: 10px 10px 10px 10px;
 }
 
 .pro-graph{
@@ -51,18 +73,19 @@
     box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 25px;
-    flex-grow: 4;
-    flex-basis: 0;
+    flex-grow: 3;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 350px;
+    padding: 10px 10px 10px 10px;
     
 }
 
 .pro-chart_div{
-    width: 97%;
-    height: 97%;
+    width: 100%;
+    height: 100%;
+    
 }
 
 .pro-personal_div{
@@ -70,9 +93,11 @@
     height: 100%;
     display: flex;
     flex-basis: 0;
+    flex-shrink: 0;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    
 }
 
 .pro-personal_img{
@@ -85,7 +110,8 @@
     font-family: Inter;
     font-style: normal;
     font-weight: 400;
-    width: 50%;
+    width: 100%;
+    padding-left: 5px;
 }
 .pro-personal_name{
     font-family: Inter;
@@ -103,22 +129,26 @@
     backdrop-filter: blur(10px);
     border-radius: 25px;
     flex-direction: column;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 25px 25px 25px 25px;
 
 }
 
-/* .pro-otherdata_rotaractclub h1{
-    margin-left: 30px;
+.pro-otherdata_rotaractclub h1{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .pro-otherdata_rotaractclub h2{
-    margin-left: 30px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 .pro-otherdata_rotaractclub p{
-    margin-left: 30px;
-} */
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
 
 .pro-otherdata_professional{
     margin-top: 1vw;
@@ -128,35 +158,47 @@
     backdrop-filter: blur(10px);
     border-radius: 25px;
     flex-direction: column;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 25px 25px 25px 25px;
 }
 
 
-/* .pro-otherdata_professional h1{
-    margin-left: 30px;
+.pro-otherdata_professional h1{
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .pro-otherdata_professional h2{
-    margin-left: 30px;
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 .pro-otherdata_professional p{
-    margin-left: 30px;
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .pro-otherdata_professional-Tech{
-    margin-left: 30px;
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 .pro-otherdata_professional-field{
-    margin-left: 30px;
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 .pro-otherdata_professional-internship{
-    margin-left: 30px;
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 .pro-otherdata_professional-ach{
-    margin-left: 30px;
-} */
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
 
 
 .pro-otherdata_education{
@@ -167,22 +209,28 @@
     backdrop-filter: blur(10px);
     border-radius: 25px;
     flex-direction: column;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 25px 25px 25px 25px;
 }
-/* .pro-otherdata_education h1{
-    margin-left: 30px;
+.pro-otherdata_education h1{
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 .pro-otherdata_education h2{
-    margin-left: 30px;
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 .pro-otherdata_education p{
-    margin-left: 30px;
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 .pro-otherdata_education-cert{
-    margin-left: 30px;
-} */
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
 
 .pro-otherdata_interests{
     margin-top: 1vw;
@@ -192,19 +240,23 @@
     backdrop-filter: blur(10px);
     border-radius: 25px;
     flex-direction: column;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 25px 25px 25px 25px;
 }
-/* .pro-otherdata_interests h1{
-    margin-left: 30px;
+.pro-otherdata_interests h1{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 .pro-otherdata_interests h2{
-    margin-left: 30px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
 }
 .pro-otherdata_interests p{
-    margin-left: 30px;
-} */
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
 
 
 .pro-otherdata_about{
@@ -216,29 +268,34 @@
     border-radius: 25px;
     flex-direction: column;
     text-align: start;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 25px 25px 25px 25px;
 }
 
 @media only screen and (max-width: 800px){
     .pro-cont-presonal_graph{
         flex-direction: column;
         align-items: stretch;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        justify-content: space-between;
     }
     .pro-personal{
-        flex-basis: 0;
+
         margin-bottom: 20px;
         padding-top: 10px;
         padding-bottom: 10px;
+        flex-grow: 1;
+        flex-basis: 0;
 
     }
     .pro-graph{
         margin-bottom: 15px;
-        flex-basis: 0;
         padding-top: 10px;
         padding-bottom: 10px;
+        flex-grow: 4;
+    }
+    .pro-search-con{
+        justify-content: center;
+    }
+    .pro-personal_div{
+        text-align: center;
     }
 }

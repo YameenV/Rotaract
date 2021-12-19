@@ -137,7 +137,7 @@ class PortFolioContainer extends Component {
               value={this.state.full_name}
               onChange={(e) => this.setState({ full_name: e.target.value })}
             />
-            <button type="submit">Find</button>
+            <button className="pro-button" type="submit">Find</button>
           </form>
         </div>
         {
