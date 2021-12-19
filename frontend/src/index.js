@@ -11,16 +11,16 @@ import promiseMiddleware from 'redux-promise'
 import Navbar from './components/navbar/navbar'
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore)
 const App = () =>{
- return(
-<div>
-  <Layout>
-  <BrowserRouter>
-  <Navbar/>
-  <Router/>
-  </BrowserRouter>
-  </Layout>
-</div>
- )
+ return (
+   <div>
+     <Layout>
+       <BrowserRouter>
+         {/* <Navbar/> */}
+         <Router />
+       </BrowserRouter>
+     </Layout>
+   </div>
+ );
 }
 
 
