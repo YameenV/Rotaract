@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Roboto&display=swap');
+
+
+
+.pro-main{
+    /* background-image: url("/home/sleep/Rotaract/frontend/src/background/blackhole.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; */
+    background: linear-gradient(221.19deg, #0066FF 23.33%, #FFFFFF 159.8%);
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.pro-search-con{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.pro-cont-presonal_graph{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1vw;
+
+}
+
+.pro-personal{
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 350px;
+}
+
+.pro-graph{
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-grow: 4;
+    flex-basis: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    
+}
+
+.pro-chart_div{
+    width: 97%;
+    height: 97%;
+}
+
+.pro-personal_div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-basis: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pro-personal_img{
+    box-shadow: 11px 6px 10px 5px rgba(0, 0, 0, 0.15);
+    width: calc(30px + 5vw);
+    border-radius: 50%;
+}
+
+.pro-personal_text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    width: 50%;
+}
+.pro-personal_name{
+    font-family: Inter;
+    font-style: bold;
+    font-weight: 400;
+    font-size: calc(5px + 1.5vw);
+}
+
+
+.pro-otherdata_rotaractclub{
+    margin-top: 2vw;
+    display: flex;
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+/* .pro-otherdata_rotaractclub h1{
+    margin-left: 30px;
+}
+
+.pro-otherdata_rotaractclub h2{
+    margin-left: 30px;
+}
+.pro-otherdata_rotaractclub p{
+    margin-left: 30px;
+} */
+
+.pro-otherdata_professional{
+    margin-top: 1vw;
+    display: flex;
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* .pro-otherdata_professional h1{
+    margin-left: 30px;
+}
+
+.pro-otherdata_professional h2{
+    margin-left: 30px;
+}
+.pro-otherdata_professional p{
+    margin-left: 30px;
+}
+
+.pro-otherdata_professional-Tech{
+    margin-left: 30px;
+}
+.pro-otherdata_professional-field{
+    margin-left: 30px;
+}
+.pro-otherdata_professional-internship{
+    margin-left: 30px;
+}
+.pro-otherdata_professional-ach{
+    margin-left: 30px;
+} */
+
+
+.pro-otherdata_education{
+    margin-top: 1vw;
+    display: flex;
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* .pro-otherdata_education h1{
+    margin-left: 30px;
+}
+.pro-otherdata_education h2{
+    margin-left: 30px;
+}
+.pro-otherdata_education p{
+    margin-left: 30px;
+}
+.pro-otherdata_education-cert{
+    margin-left: 30px;
+} */
+
+.pro-otherdata_interests{
+    margin-top: 1vw;
+    display: flex;
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* .pro-otherdata_interests h1{
+    margin-left: 30px;
+}
+.pro-otherdata_interests h2{
+    margin-left: 30px;
+}
+.pro-otherdata_interests p{
+    margin-left: 30px;
+} */
+
+
+.pro-otherdata_about{
+    margin-top: 1vw;
+    display: flex;
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-direction: column;
+    text-align: start;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 800px){
+    .pro-cont-presonal_graph{
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .pro-personal{
+        flex-basis: 0;
+        margin-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+    .pro-graph{
+        margin-bottom: 15px;
+        flex-basis: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}

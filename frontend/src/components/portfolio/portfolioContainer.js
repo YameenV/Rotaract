@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Portfolio from "./portfolio";
 import { connect } from "react-redux";
 import * as actions from "../../actions/index";
+import "../../css/portfolio.css"
+import Navbar from "../navbar/navbar"
 
 class PortFolioContainer extends Component {
 
@@ -126,10 +128,11 @@ class PortFolioContainer extends Component {
   render() {
      
     return (
-      <div>
-        <div>
-          <form onSubmit={this.findRtr}>
-            <input
+      <div className="pro-main" >
+        <Navbar/>
+        <div className="pro-search-con" >
+          <form   onSubmit={this.findRtr}>
+            <input className="pro-input"
               type="text"
               value={this.state.full_name}
               onChange={(e) => this.setState({ full_name: e.target.value })}

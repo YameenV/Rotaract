@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import Chart from 'react-apexcharts'
+import "../../../css/portfolio.css"
 class Scoregraph extends Component {
         state = {
             options: {
+              colors : ['#FF2020', '#FF5555'],
               chart: {
                 id: "basic-bar",
                 type: "bar",
@@ -53,12 +55,13 @@ class Scoregraph extends Component {
 
     render() {
         return (
-            <div>
+            <div className='pro-chart_div'>
                 <Chart
                 options={this.state.options}
                 series={this.state.series}
                 type="area"
-                width="400"
+                width="100%"
+                height="100%"
                 />
             </div>
         )
