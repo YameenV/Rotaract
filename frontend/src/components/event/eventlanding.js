@@ -1,5 +1,6 @@
 import '../../css/event.css'
 import Navbar from '../navbar/navbar'
+import milk from '../../background/milky.jpg'
 const Eventlanding = (props) => {
 
     let data = props.data
@@ -9,21 +10,11 @@ const Eventlanding = (props) => {
     return (data.length) > 0 ? (
 
         <div className="event_main">
-            <Navbar/>
-            <div className="event_header">events</div>
-            <div className="sphere">
-                <div className="ann_sphere1">
-                </div>
-                <div className="ann_sphere2">
-                </div>
-                <div className="ann_sphere3">
+            <Navbar />
 
-                </div>
-                <div className="ann_sphere4">
-                </div>
-                <div className="ann_sphere5">
-                </div>
-            </div>
+            <img className="event-background" src={milk} />
+
+            <div className="event_header">events</div>
             <div className="Events">
                 {
 
@@ -49,22 +40,12 @@ const Eventlanding = (props) => {
 
     ) : (
         <div className="event_main">
-            <Navbar/>
+            <Navbar />
+
+            <img className="event-background" src={milk} />
+
 
             <div className="event_header">events</div>
-            <div className="sphere">
-                <div className="ann_sphere1">
-                </div>
-                <div className="ann_sphere2">
-                </div>
-                <div className="ann_sphere3">
-
-                </div>
-                <div className="ann_sphere4">
-                </div>
-                <div className="ann_sphere5">
-                </div>
-            </div>
             <div className="Events">
 
                 <div className="event">
