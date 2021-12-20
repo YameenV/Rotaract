@@ -12,8 +12,7 @@ class AdminPublish extends Component {
         event: '',
         imglink: ''
     }
-    // const [isShow, setIsShow] = React.useState(true);
-
+    
 
     submitAnnouncement = (e) => {
         e.preventDefault();
@@ -31,10 +30,7 @@ class AdminPublish extends Component {
         }
     }
 
-    // disable = (e) =>{
-    //     e.preventDefault();
-    //     const [isShow, setIsShow] = React.useState(true);
-    // }
+  
     render() {
         return (
             <div className='publish-main'>
@@ -42,9 +38,11 @@ class AdminPublish extends Component {
                 <div className='publish-headertext'>
                     Welcome Aakash!
                 </div>
-
-                <button className="public-ann" value="announce" onClick={(e) => { this.setState({ typeof: e.target.value }) }}> + Announce something</button>
-                <button className='public-event' value="event_highlight" onClick={(e) => { this.setState({ typeof: e.target.value }) }}> + Add an event highlight</button>
+                
+                {this.state.typeof === 'event_highlight' ? (null):(<button className="public-ann" value="announce" onClick={(e) => { this.setState({ typeof: e.target.value }) }}> + Announce something</button>)}
+                {
+                    this.state.typeof === 'announce' ? (null):(<button className='public-event' value="event_highlight" onClick={(e) => { this.setState({ typeof: e.target.value }) }}> + Add an event highlight</button>)
+                }
                 {
                     this.state.typeof === 'announce' ? (
                         <div className='public-ann_con'>
