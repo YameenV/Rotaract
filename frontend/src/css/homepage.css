@@ -88,7 +88,7 @@
   position: absolute;
   /* width: ; */
   top :115vw;
-  left :56%;
+  right:0;
   z-index: 30;
 
 }
@@ -427,7 +427,7 @@ color: #ADD7F2;
 .team_info_detail {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .team_info_1,
 .team_info_2,
@@ -499,6 +499,16 @@ color: #ADD7F2;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+  position: absolute;
+  width: 85vw;
+  background-color: transparent;
+  color: white;
+  top: 190vw;
+  left: 50%;
+  align-content: center;
+  transform: translateX(-50%);
+  z-index: 50;
+  
 }
 .home_event_header{
   font-family: Bebas Neue;
@@ -698,6 +708,12 @@ color: #000917;
 
 
 }
+
+.bar_1_image{
+  width: 20;
+}
+
+
 .leaderboard_switch{
   display: flex;
   flex-direction: row;

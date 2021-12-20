@@ -17,9 +17,12 @@ import Pic5 from "../../imgs/pic5.png";
 import Pic6 from "../../imgs/pic6.png";
 import ashu from "../../imgs/ashutosh1.jpg";
 import Moon from "../../imgs/moon.png";
+import Navbar from "../navbar/navbar"
+
 const Homepage = () => {
   return (
     <div className="Home_main">
+      <Navbar/>
       {/* <div> */}
 
       <div className="earth_div">
@@ -67,13 +70,13 @@ const Homepage = () => {
       <div className="universe_3_div">
         <img className="universe_2_image" src={Universe4}></img>
       </div>
-      {/* <div className="universe1_div">
+      <div className="universe1_div">
         <img className="universe1_image" src={Universe1}></img>
-      </div> */}
+      </div>
 
-      {/* <div className="universe_2_div">
+      <div className="universe_2_div">
         <img className="universe_2_image" src={Universe2}></img>
-      </div> */}
+      </div>
 {/* 
       <div className="universe_3_div">
         <img className="universe_3_image" src={Universe4}></img>
