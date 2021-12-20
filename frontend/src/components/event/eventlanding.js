@@ -12,7 +12,7 @@ const Eventlanding = (props) => {
         <div className="event_main">
             <Navbar />
 
-            <img className="event-background" src={milk} />
+            <img className="publish-img" src={milk} />
 
             <div className="event_header">events</div>
             <div className="Events">
@@ -42,7 +42,7 @@ const Eventlanding = (props) => {
         <div className="event_main">
             <Navbar />
 
-            <img className="event-background" src={milk} />
+            <img className="publish-img" src={milk} />
 
 
             <div className="event_header">events</div>

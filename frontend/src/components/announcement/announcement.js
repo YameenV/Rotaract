@@ -25,7 +25,7 @@ function Announcement(props) {
           data.map(items =>
             <div className='announcement'>
               <div className="ann_image-con">
-                <img className="ann_image" src={items.image} />
+                <img className="ann_image" src="https://lh3.googleusercontent.com/ogw/ADea4I4aW8SmWEbhY1q_SL-RvoLNujBEj5VsoDcB9BfSWBo=s83-c-mo" />
                 <div className="ann_by">{items.name}</div>
               </div>
               <div className="ann_title">{items.title}</div>
