@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "../../css/admin_publish.css"
-import Gala from "../../background/gala2.jpg"
+import Gala from "../../background/gala3.png"
 
 class AdminPublish extends Component {
 

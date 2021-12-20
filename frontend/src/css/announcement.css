@@ -3,10 +3,11 @@
 .announcement_main{
     min-height: 100vh;
     min-width: 100vw;
-    background: linear-gradient(221.19deg, #0066FF 23.33%, #FFFFFF 159.8%);
+    background:linear-gradient(3.97deg, #0066FF 2.93%, #000917 96.58%) fixed;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    z-index: 5;
 }
 .announcement_header{
     font-family: Bebas Neue;
@@ -16,6 +17,7 @@
     font-size: calc(12px + 6vw);
     padding-left: 30px;
     z-index: 10;
+    z-index: 5;
 }
 
 .announcement-con {
@@ -26,18 +28,20 @@
     margin-right: 20px;
     display: flex;
     flex-direction: column;
+    z-index: 5;
 }
 
 .announcement {
     padding-left: 20px;
     padding-top: 20px;
     padding-right: 20px;
+    z-index: 5;
 }
 
 .ann_image-con {
     display: flex;
     flex-direction: row;
-    
+    z-index: 5;
 }
 
 .ann_image{
@@ -48,6 +52,7 @@
     padding-bottom: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+    z-index: 5;
 }
 
 .ann_by {
@@ -58,83 +63,31 @@
     font-weight: 510;
     font-size: calc(8px + 1vw);
     font-family: Inter;
-    
+    z-index: 5;
 }
 
 .ann_title {
     font-size: calc(15px + 2vw);
     font-weight: bold;
     font-family: Inter;
-    
+    z-index: 5;
 }
 .ann_date {
     font-size: calc(8px +  0.5vw);
     font-family: Inter;
+    z-index: 5;
 }
 .ann_description {
     font-size: calc(8px + 1vw);
     font-family: Inter;
+    z-index: 5;
 }
 
 .ann_line {
     border: 1px solid #000000;
+    z-index: 5;
 }
 
-
-
-.ann_sphere1{
-    position: fixed;
-    width: 412.64px;
-    height: 412.64px;
-    left: 100.26px;
-    top: -10px;
-    border-radius: 50%;
-    background: linear-gradient(249.53deg, #FF5555 -35.98%, rgba(0, 77, 192, 0) 134.25%);
-    transform: rotate(60.97deg);
-
-}
-
-.ann_sphere2{
-    position: fixed;
-    width: 412.64px;
-    height: 412.64px;
-    left: -200.29px;
-    top: 200.91px;
-    border-radius: 50%;
-    background: linear-gradient(249.53deg, #FF5555 -35.98%, rgba(0, 77, 192, 0) 134.25%);
-    transform: rotate(124.77deg);
-}
-
-.ann_sphere3{
-    position: fixed;
-    width: 166.86px;
-    height: 166.86px;
-    left: 391.86px;
-    top: 300.95px;
-    border-radius: 50%;
-    background: linear-gradient(249.53deg, #FF5555 -35.98%, rgba(0, 77, 192, 0) 134.25%);
-    
-}
-
-.ann_sphere4{
-    position: fixed;
-    width: 437px;
-    height: 437px;
-    right: 1px;
-    top: 100.13px;
-    border-radius: 50%;
-    background: linear-gradient(233.18deg, #FF2020 -45.38%, rgba(255, 85, 85, 0) 105.99%);
-}
-
-.ann_sphere5{
-    position: fixed;
-    width: 153.86px;
-    height: 153.86px;
-    right: 320px;
-    top: 300.79px;
-    border-radius: 50%;
-    background: linear-gradient(249.53deg, #FF5555 -35.98%, rgba(0, 77, 192, 0) 134.25%);
-}
 
 @media only screen and (max-width: 800px) {
     .ann_image {
