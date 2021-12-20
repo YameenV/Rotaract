@@ -22,6 +22,7 @@
     font-size: calc(12px + 6vw);
     z-index: 5;
     width: 81vw;
+    color: #000917;
 }
 
 .public-ann{
@@ -78,6 +79,10 @@
     border-radius: 10px;
     gap: 10px;
     z-index: 5;
+}
+
+.public-ann_con h3{
+    color: #000917;
 }
 .public-ann_img_by{
     display: flex;
@@ -171,7 +176,9 @@
     font-size: calc(6px + 1vw);
     text-align: center;
 }
-
+.publish-event_con{
+    display: flex;
+}
 
 @media only screen and (max-width: 800px) {
     .public-ann{
@@ -194,6 +201,7 @@
     }
     .publish-img{
         object-fit: cover;
+        height: 100vh;
     }
     .public-ann_img_by{
         flex-direction: column;
@@ -203,6 +211,7 @@
     }
     .public-ann_con{
         width: calc(80px + 70vw);
+        color: #000917;
 
     }
 

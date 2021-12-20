@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "../../css/admin_publish.css"
-import Gala from "../../background/gala.jpg"
+import Gala from "../../background/gala2.jpg"
 
 class AdminPublish extends Component {
 
@@ -75,7 +75,7 @@ class AdminPublish extends Component {
                 {
                     this.state.typeof === 'event_highlight' ? (
                         <div>
-                            <form onSubmit={this.submitEvent}>
+                            <form classname="publish-event_con"onSubmit={this.submitEvent}>
                                 <input placeholder="Title" value={this.state.etitle} onChange={(e) => this.setState({ etitle: e.target.value })} />
                                 <textarea placeholder="Description" value={this.state.event} onChange={(e) => this.setState({ event: e.target.value })} />
                                 <input placeholder="Image link" value={this.state.imglink} onChange={(e) => this.setState({ imglink: e.target.value })} />
