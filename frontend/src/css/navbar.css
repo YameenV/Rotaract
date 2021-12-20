@@ -223,6 +223,10 @@ svg{
     font-size: calc(1.5rem + 4vw);
     
   }
+  .menu-link ul li a{
+    color: aliceblue;
+  }
+  
   
   
 }
@@ -250,6 +254,10 @@ svg{
     font-size: calc(1.5rem + 4vw);
     
   }
+
+  .menu-link ul li a{
+    color: aliceblue;
+  }
   
 }
 
@@ -257,6 +265,7 @@ svg{
   .main-nav {
     height: 6rem;
     grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
+    color: aliceblue;
   }
 
   .logo,
@@ -284,7 +293,9 @@ svg{
     font-size: calc(1.5rem + 4vw);
     
   }
+  .menu-link ul li a{
+    color: aliceblue;
+  }
   
-
 
 }
