@@ -200,6 +200,7 @@
   text-transform: capitalize;
 
   color: #ffffff;
+
 }
 .home_announcement {
   position: absolute;
@@ -772,9 +773,7 @@ color: #000917;
   color: #000917;
 }
 
-.home_register_button {
-  /* min-width: 10vw; */
-}
+
 .home_register_button {
   background: #ff5555;
   border-radius: 10px;
@@ -906,7 +905,7 @@ color: #000917;
   font-family: Helvetica;
   font-style: normal;
   font-weight: normal;
-  font-size: 120px;
+  font-size: 5rem;
   line-height: 166px;
   /* identical to box height */
 

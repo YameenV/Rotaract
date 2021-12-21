@@ -2,7 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Roboto&display=swap');
 
 .publish-main{
-    background:linear-gradient(3.97deg, #0066FF 2.93%, #000917 96.58%) fixed;
+    /* background: url("/home/sleep/Rotaract/frontend/src/background/Nebula.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* height: 100%; */
     display: flex;
     min-width: 100vw;
     min-height: 100vh;
@@ -21,7 +26,7 @@
     font-weight: 400;
     text-transform: capitalize;
     font-size: calc(12px + 6vw);
-    z-index: 5;
+    /* z-index: 5; */
     width: 81vw;
     color: #000917;
 }
@@ -39,7 +44,7 @@
     font-size: calc(6px + 1vw);
     text-align: start;
     padding: 15px 15px 15px 3vw;
-    z-index: 5;
+    /* z-index: 5; */
 }
 
 .public-event{
@@ -55,16 +60,12 @@
     font-size: calc(6px + 1vw);
     text-align: start;
     padding: 15px 15px 15px 3vw;
-    z-index: 5;
+    /* z-index: 5; */
 }
 .publish-img{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    /* background-image: url("/home/sleep/Rotaract/frontend/src/background/gala3.png"); */
+    height: 100vh;
     mix-blend-mode: screen;
-    object-fit: cover;
 }
 .publish-hide {
     display: none;
@@ -80,7 +81,7 @@
     backdrop-filter: blur(4px);
     border-radius: 10px;
     gap: 10px;
-    z-index: 5;
+    /* z-index: 5; */
 }
 
 .public-ann_con h3{
@@ -92,19 +93,19 @@
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    z-index: 5;
+    /* z-index: 5; */
 }
 .public-ann_img{
     width: calc(30px + 5vw);
     border-radius: 50%;
-    z-index: 5;
+    /* z-index: 5; */
 }
 
 .public-ann_img_by h3{
     font-family: Inter;
     font-style: black;
     font-weight: normal;
-    z-index: 5;
+    /* z-index: 5; */
 
 }
 .public-ann-div2{
@@ -126,7 +127,7 @@
     font-size: calc(6px + 1vw);
     text-align: start;
     padding: 10px 10px 10px 10px;
-    z-index: 5;
+    /* z-index: 5; */
 }
 
 .public-ann_text{
@@ -142,7 +143,7 @@
     font-size: calc(6px + 1vw);
     text-align: start;
     padding: 10px 10px 10px 10px;
-    z-index: 5;
+    /* z-index: 5; */
 }
 
 .public-ann-botton{
@@ -201,10 +202,10 @@
         width: auto;
         font-size: calc(12px + 10vw);
     }
-    .publish-img{
+    /* .publish-img{
         object-fit: cover;
         height: 100vh;
-    }
+    } */
     .public-ann_img_by{
         flex-direction: column;
     }

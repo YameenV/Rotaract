@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "../../css/admin_publish.css"
-import Gala from "../../background/gala3.png"
+
 
 class AdminPublish extends Component {
 
@@ -34,7 +34,7 @@ class AdminPublish extends Component {
     render() {
         return (
             <div className='publish-main'>
-                <img className='publish-img' src={Gala} />
+                {/* <div className='publish-img'></div> */}
                 <div className='publish-headertext'>
                     Welcome Aakash!
                 </div>
