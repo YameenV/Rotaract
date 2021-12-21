@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import { Carousel } from 'react-responsive-carousel';
 import "../../css/homepage.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ROTLOGO from "../../imgs/RCUCoEsLogo.png";
