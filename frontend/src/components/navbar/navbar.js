@@ -11,7 +11,7 @@ const Navbar = () => {
       <nav className="main-nav">
         
         {/* 1st logo part  */}
-        <div className="leader_rotLogo">
+        <div className="logo">
             <img className="leader_rotLogo-image" src={ROTLOGO} />
           </div>
 
@@ -47,7 +47,7 @@ const Navbar = () => {
 
           {/*  hamburger Menu menu   */}
           <div className="hamburger-menu">
-            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+            <a  onClick={() => setShowMediaIcons(!showMediaIcons)}>
               <GiHamburgerMenu />
             </a>
           </div>
