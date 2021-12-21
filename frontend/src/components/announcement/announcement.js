@@ -1,7 +1,7 @@
 
 import '../../css/announcement.css'
 import Navbar from '../navbar/navbar'
-import aur from '../../background/aur.png'
+
 
 function Announcement(props) {
   let data = props.adata
@@ -10,13 +10,10 @@ function Announcement(props) {
     <div className="announcement_main">
       <Navbar/>
 
-      <img className='publish-img' src={aur} />
+      {/* <img className='publish-img' src={aur} /> */}
 
       <div className="announcement_header">
         Announcement
-      </div>
-      <div className="announcement_">
-        <img />
       </div>
 
 
@@ -40,12 +37,10 @@ function Announcement(props) {
     </div>) : (
     <div className="announcement_main">
       <Navbar/>
-      <img className='publish-img' src={aur} />
+      {/* <img className='publish-img' src={aur} /> */}
       <div className="announcement_header">
         Announcement
       </div>
-      
-
 
       <div className="announcement-con">
 
