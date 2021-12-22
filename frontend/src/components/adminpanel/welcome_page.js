@@ -18,16 +18,22 @@ class Welcome_page extends Component {
       <div className="wlcmjay_main">
         <div className="wlcmjay_gpcard">
           <h1>Welcome Jai</h1>
-          <button onClick={(e) => this.redToTeam(e)} type="button" value="Team">
-            Team
-          </button>
-          <button
-            onClick={(e) => this.redToIndi(e)}
-            type="button"
-            value="Individual"
-          >
-            Individual
-          </button>
+          <div className="wlcm_btn">
+            <button
+              onClick={(e) => this.redToTeam(e)}
+              type="button"
+              value="Team"
+            >
+              Team
+            </button>
+            <button
+              onClick={(e) => this.redToIndi(e)}
+              type="button"
+              value="Individual"
+            >
+              Individual
+            </button>
+          </div>
         </div>
       </div>
     );

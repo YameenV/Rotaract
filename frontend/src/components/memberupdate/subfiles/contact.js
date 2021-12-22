@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../../../css/memberupdate.css'
 
 class Contact extends Component {
 
@@ -16,7 +17,7 @@ class Contact extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="contact_div" >
               <form className="contact_form" onSubmit={this.giveData}>
                 <label>Contact No.</label>
                 <input value={this.state.mobile_number} onChange={(e)=>{this.setState({mobile_number:e.target.value})}} type="text"/>

@@ -10,6 +10,7 @@ import Teampage from './components/adminpanel/teampage'
 import Individualpage from './components/adminpanel/individual'
 import Navbar from './components/navbar/navbar'
 import PortFolioContainer from './components/portfolio/portfolioContainer'
+import AdminPublish from './components/admin_publish/adminPublish'
 
 const Routes = () =>{
     return(
@@ -26,6 +27,7 @@ const Routes = () =>{
             <Route exact path = "/admin_team" component = {Teampage}/>
             <Route exact path = "/admin_individual" component = {Individualpage}/>
             <Route exact path = "/portfolio" component={PortFolioContainer}/>
+            <Route exact path = "/admin_publish" component={AdminPublish}/>
             </Switch>
         </div>
     )

@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Roboto&display=swap');
+
+
+
+.pro-main{
+    /* background-image: url("/home/sleep/Rotaract/frontend/src/background/blackhole.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; */
+    background: linear-gradient(221.19deg, #0066FF 23.33%, #FFFFFF 159.8%);
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 25px 25px 25px 25px;
+}
+
+.pro-search-con{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.pro-input{
+    border: none;
+    width: 50vw;
+    height: 4vh;
+    background: rgba(173, 215, 242, 0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+}
+
+.pro-button{
+    border: none;
+    width: 10vw;
+    border-radius: 50px;
+    height: 4vh;
+    background: rgba(173, 215, 242, 0.7);
+    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+}
+
+.pro-cont-presonal_graph{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1vw;
+
+}
+
+.pro-personal{
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-grow: 2;
+    flex-shrink: 0;
+    height: 350px;
+    padding: 10px 10px 10px 10px;
+}
+
+.pro-graph{
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    padding: 10px 10px 10px 10px;
+    
+}
+
+.pro-chart_div{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.pro-personal_div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-basis: 0;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.pro-personal_img{
+    box-shadow: 11px 6px 10px 5px rgba(0, 0, 0, 0.15);
+    width: calc(30px + 5vw);
+    border-radius: 50%;
+}
+
+.pro-personal_text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    width: 100%;
+    padding-left: 5px;
+}
+.pro-personal_name{
+    font-family: Inter;
+    font-style: bold;
+    font-weight: 400;
+    font-size: calc(5px + 1.5vw);
+}
+
+
+.pro-otherdata_rotaractclub{
+    margin-top: 2vw;
+    display: flex;
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-direction: column;
+    padding: 25px 25px 25px 25px;
+
+}
+
+.pro-otherdata_rotaractclub h1{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.pro-otherdata_rotaractclub h2{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+.pro-otherdata_rotaractclub p{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.pro-otherdata_professional{
+    margin-top: 1vw;
+    display: flex;
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-direction: column;
+    padding: 25px 25px 25px 25px;
+}
+
+
+.pro-otherdata_professional h1{
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.pro-otherdata_professional h2{
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+.pro-otherdata_professional p{
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.pro-otherdata_professional-Tech{
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+.pro-otherdata_professional-field{
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+.pro-otherdata_professional-internship{
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+.pro-otherdata_professional-ach{
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.pro-otherdata_education{
+    margin-top: 1vw;
+    display: flex;
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-direction: column;
+    padding: 25px 25px 25px 25px;
+}
+.pro-otherdata_education h1{
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+.pro-otherdata_education h2{
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+.pro-otherdata_education p{
+     font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+.pro-otherdata_education-cert{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.pro-otherdata_interests{
+    margin-top: 1vw;
+    display: flex;
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-direction: column;
+    padding: 25px 25px 25px 25px;
+}
+.pro-otherdata_interests h1{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+.pro-otherdata_interests h2{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+.pro-otherdata_interests p{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.pro-otherdata_about{
+    margin-top: 1vw;
+    display: flex;
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    flex-direction: column;
+    text-align: start;
+    padding: 25px 25px 25px 25px;
+}
+
+@media only screen and (max-width: 800px){
+    .pro-cont-presonal_graph{
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    .pro-personal{
+
+        margin-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        flex-grow: 1;
+        flex-basis: 0;
+
+    }
+    .pro-graph{
+        margin-bottom: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        flex-grow: 4;
+    }
+    .pro-search-con{
+        justify-content: center;
+    }
+    .pro-personal_div{
+        text-align: center;
+    }
+}

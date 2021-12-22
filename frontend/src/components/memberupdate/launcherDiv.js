@@ -6,6 +6,8 @@ import Proskills from './subfiles/proskills'
 import Educational from './subfiles/educational'
 import Otherinterest from './subfiles/otherinterest'
 import About from './subfiles/about'
+import '../../css/memberupdate.css'
+
 class LauncherDiv extends Component {
   render() {
     return (

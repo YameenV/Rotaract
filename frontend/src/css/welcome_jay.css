@@ -23,3 +23,32 @@
     font-size: 4rem;
     margin-top: 7%;
 }
+.wlcm_btn{
+    display: flex;
+    margin-top: 6vh;
+    background: linear-gradient(90deg, #20DF7F 0%, #0066FF 166.88%);
+    border-radius: 10px;
+}
+.wlcmjay_gpcard button{
+    border: none;
+    width: 30vw;
+    height: 5vh;
+    font-size: 1.5rem;
+    color: #000917;
+    background: transparent;
+}
+.wlcmjay_gpcard button:first-child{
+    border-radius: 10px 0 0 10px;
+}
+.wlcmjay_gpcard button:first-child:hover{
+    width: 60vw;
+    transition: 300ms ease-in;
+    margin-left: 0;
+}
+.wlcmjay_gpcard button:first-child:hover + button:last-child{
+    display: none;
+    transition: 300ms ease-in;
+}
+.wlcmjay_gpcard button:last-child{
+    border-radius: 0 10px 10px 0;
+}

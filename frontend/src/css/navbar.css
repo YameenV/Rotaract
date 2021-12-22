@@ -14,6 +14,7 @@ html {
 a {
   text-decoration: none;
   /* font-size: 2.5rem; */
+  z-index: 99;
 }
 
 li {
@@ -30,11 +31,15 @@ li {
   height: 10rem;
   display: grid;
   grid-template-columns: 10rem 1fr 2fr 3fr 10rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    background: linear-gradient(221.19deg, #0066FF 50%, #FFFFFF 180%);
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, */
+    /* rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+    /* background: linear-gradient(221.19deg, #0066FF 50%, #FFFFFF 180%); */
+  background-color: transparent;
 }
-
+svg{
+  color: white;
+  z-index: 99;
+}
 .logo {
   display: grid;
   /* background-color: #3b5998; */
@@ -42,6 +47,10 @@ li {
   justify-content: start;
   align-items: center;
   
+}
+.hamburger-menu{
+  display:none;
+  /* color: antiquewhite; */
 }
 .leader_rotLogo-image {
   width: calc(67px + 2vw);
@@ -96,7 +105,7 @@ li {
 .menu-link ul li:hover > a {
   transform-origin: left;
   /* color: rgba(0, 0, 3, 1); */
-  color : red;
+  color : white;
   text-decoration: underline;
   transition: 0.5s;
 }
@@ -148,7 +157,7 @@ li {
   }
 
   .mobile-menu-link {
-    background-color: purple;
+    background-color: black;
     /* height: 20rem; */
     min-height: 90vh;
     min-width: 90vw;

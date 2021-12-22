@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../../../css/portfolio.css"
 
 class OtherData extends Component {
 
@@ -9,8 +10,9 @@ class OtherData extends Component {
     let rotractclub = this.props.rotractClub
     let education = this.props.education_background
     return (
-      <div>
-        <div>
+      <div className="pro-otherdata_con">
+        <div className="pro-otherdata_rotaractclub">
+      
           <h1>Rotaract Club</h1>
           <h2>Why you joined Rotaract club?</h2>
           <p>{rotractclub.joning_reason}</p>
@@ -27,10 +29,10 @@ class OtherData extends Component {
         </div>
         <br />
 
-        <div>
+        <div className="pro-otherdata_professional">
           <h1>Professional skills</h1>
           <h2>Technology/ Programing Languages /Software /Skill you know :</h2>
-          <div>{skills.skill.map((item,i)=>(
+          <div className="pro-otherdata_professional-Tech">{skills.skill.map((item,i)=>(
             <div key={i}>
               {item}
             </div>
@@ -40,7 +42,7 @@ class OtherData extends Component {
           <br />
 
           <h2>Field of Interest :</h2>
-          <div>{skills.field_of_interest.map((item,i)=>(
+          <div className="pro-otherdata_professional-field">{skills.field_of_interest.map((item,i)=>(
             <div key = {i}>
               {item}
             </div>
@@ -68,7 +70,7 @@ class OtherData extends Component {
 
           <br />
           <h2>Internship you had done :</h2>
-          <div>{
+          <div className="pro-otherdata_professional-internship">{
           skills.internship?
           skills.internship.map((item,i)=>(
             <div>
@@ -81,7 +83,7 @@ class OtherData extends Component {
           <br />
 
           <h2>Achievement you had done :</h2>
-          <div>{skills.achievement ? 
+          <div className="pro-otherdata_professional-ach">{skills.achievement ? 
             skills.achievement.map((item,i)=>(
               <div>{item}</div>
             ))
@@ -96,14 +98,14 @@ class OtherData extends Component {
           <p>{skills.future_goal}</p>
         </div>
         <br />
-        <div>
+        <div className="pro-otherdata_education">
           <h1>Educational background</h1>
           <h2>Currently studying at: </h2>
           <p>{education.currently_studying}</p>
           <br />
 
           <h2>Certification you had done :</h2>
-          <div>{education.certification_done ? 
+          <div className="pro-otherdata_education-cert">{education.certification_done ? 
           education.certification_done.map((item,i)=>(
             <div key = {i}>
               {item}
@@ -134,7 +136,7 @@ class OtherData extends Component {
         </div>
 
         <br />
-        <div>
+        <div className="pro-otherdata_interests">
           <h1>Other interests</h1>
           <h2>Hobbies</h2>
           <p>{otherinterest.hobbies ?
@@ -156,7 +158,7 @@ class OtherData extends Component {
         </div>
 
         <br />
-        <div>
+        <div className="pro-otherdata_about">
           <h1>About</h1>
           <h2>Describe yourself in 5-6 setences</h2>
           <p>{about.describe}</p>
