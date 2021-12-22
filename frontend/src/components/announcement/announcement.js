@@ -2,6 +2,7 @@
 import '../../css/announcement.css'
 import Navbar from '../navbar/navbar'
 
+
 function Announcement(props) {
   let data = props.adata
   console.log(data)
@@ -9,21 +10,10 @@ function Announcement(props) {
     <div className="announcement_main">
       <Navbar/>
 
+      {/* <img className='publish-img' src={aur} /> */}
+
       <div className="announcement_header">
         Announcement
-      </div>
-      <div className="announcement_sphere">
-        <div className="ann_sphere1">
-        </div>
-        <div className="ann_sphere2">
-        </div>
-        <div className="ann_sphere3">
-
-        </div>
-        <div className="ann_sphere4">
-        </div>
-        <div className="ann_sphere5">
-        </div>
       </div>
 
 
@@ -32,7 +22,7 @@ function Announcement(props) {
           data.map(items =>
             <div className='announcement'>
               <div className="ann_image-con">
-                <img className="ann_image" src={items.image} />
+                <img className="ann_image" src="https://lh3.googleusercontent.com/ogw/ADea4I4aW8SmWEbhY1q_SL-RvoLNujBEj5VsoDcB9BfSWBo=s83-c-mo" />
                 <div className="ann_by">{items.name}</div>
               </div>
               <div className="ann_title">{items.title}</div>
@@ -47,24 +37,10 @@ function Announcement(props) {
     </div>) : (
     <div className="announcement_main">
       <Navbar/>
-
+      {/* <img className='publish-img' src={aur} /> */}
       <div className="announcement_header">
         Announcement
       </div>
-      <div className="announcement_sphere">
-        <div className="ann_sphere1">
-        </div>
-        <div className="ann_sphere2">
-        </div>
-        <div className="ann_sphere3">
-
-        </div>
-        <div className="ann_sphere4">
-        </div>
-        <div className="ann_sphere5">
-        </div>
-      </div>
-
 
       <div className="announcement-con">
 

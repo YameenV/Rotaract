@@ -11,12 +11,13 @@ import Individualpage from './components/adminpanel/individual'
 import Navbar from './components/navbar/navbar'
 import PortFolioContainer from './components/portfolio/portfolioContainer'
 import AdminPublish from './components/admin_publish/adminPublish'
+import Homepage from './components/Homepage/homepage'
 
 const Routes = () =>{
     return(
         <div>
             <Switch>
-            <Route exact path = "/" component={Leaderboard_dekstop}/>
+            <Route exact path = "/" component={Homepage}/>
             <Route exact path = "/leaderboard" component={Leaderboard_dekstop}/>
             <Route exact path = "/event" component = {Eventcontainer}/>
             <Route exact path = "/navbar"  component = {Navbar}/>
