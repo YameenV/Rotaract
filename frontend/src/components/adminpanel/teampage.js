@@ -44,19 +44,24 @@ class Teampage extends Component {
     e.preventDefault();
     this.setToggle();
     let sendObj = {
-      date: this.state.date,
-      points: this.state.points,
-      reason: this.state.reason,
+      
     };
-    console.log(sendObj);
+   
   };
 
   setDate = (d) => {
+    let date = d.split('-')
+    let year = date[0]
+    let month = date[1]
+    let day = date[2]
+    console.log(date)
     this.setState({
-      date: d,
+      date:d,
+      year,
+      month,
+      day
     });
   };
-
   setToggle2 = (e) => {
     if (this.state.upToggle2) {
       this.setState({
@@ -126,6 +131,17 @@ class Teampage extends Component {
     });
   };
 
+
+  deleteItem = (key)=>{
+    let cloneArray = [...this.state.namesarray]
+    cloneArray.splice(key,1)
+    this.setState({
+      namesarray:cloneArray
+    })
+
+  }
+ 
+
   render() {
     return (
       <div className="jayteam_main">
@@ -144,6 +160,63 @@ class Teampage extends Component {
         <button onClick={this.setToggle} className="csvuploadbtn">
           Upload CSV
         </button>
+        {this.state.upToggle ? (
+          <div>
+            <form onSubmit={this.sendData} className="uploadcsvindi_nxtform">
+              <input
+                type="file"
+                accept=".csv"
+                onChange={(e) => this.takeFile(e)}
+              />
+              <div className="csvupload_indi">
+                {this.state.namesarray.length > 0 ? (
+                  <div className="csvindi_members">
+                    <MemberNames
+                      fileLength={this.state.FileLength}
+                      nameData={this.state.namesarray}
+                      keyword={this.state.name}
+                      deleteName={this.deleteItem}
+
+                    />
+                    <button
+                      type="button"
+                      onClick={this.clearNames}
+                      className="csvindi_clrbtn"
+                    >
+                      Clear list
+                    </button>
+                  </div>
+                ) : null}
+              </div>
+            
+              <input
+                type="date"
+                value={this.state.date}
+                onChange={(e) => {
+                  this.setDate(e.target.value);
+                }}
+              />
+              <input
+                type="text"
+                value={this.state.points}
+                onChange={(e) => {
+                  this.setState({ points: e.target.value });
+                }}
+                placeholder="Points"
+              />
+              <textarea
+                value={this.state.reason}
+                onChange={(e) => {
+                  this.setState({ reason: e.target.value });
+                }}
+                placeholder="Reason"
+              ></textarea>
+
+              <button type="submit">Update</button>
+            </form>
+          </div>
+        ) : null}
+
         <button onClick={this.setToggle2} className="addteambtn">
           Add team
         </button>
@@ -195,60 +268,7 @@ class Teampage extends Component {
             </form>
           </div>
         ) : null}
-        {this.state.upToggle ? (
-          <div>
-            <form onSubmit={this.sendData}>
-              <input
-                type="file"
-                accept=".csv"
-                onChange={(e) => this.takeFile(e)}
-              />
-              <div className="csvupload_team">
-                {this.state.namesarray.length > 0 ? (
-                  <div className="csvteam_members">
-                    <MemberNames
-                      fileLength={this.state.FileLength}
-                      nameData={this.state.namesarray}
-                      keyword={this.state.name}
-                    />
-                    <button
-                      type="button"
-                      onClick={this.clearNames}
-                      className="csvteam_clrbtn"
-                    >
-                      Clear list
-                    </button>
-                  </div>
-                ) : null}
-              </div>
-
-              <input
-                type="date"
-                value={this.state.date}
-                onChange={(e) => {
-                  this.setDate(e.target.value);
-                }}
-              />
-              <input
-                type="text"
-                value={this.state.points}
-                onChange={(e) => {
-                  this.setState({ points: e.target.value });
-                }}
-                placeholder="points"
-              />
-              <textarea
-                value={this.state.reason}
-                onChange={(e) => {
-                  this.setState({ reason: e.target.value });
-                }}
-                placeholder="reason"
-              ></textarea>
-
-              <button type="submit">Update</button>
-            </form>
-          </div>
-        ) : null}
+        
       </div>
     );
   }
