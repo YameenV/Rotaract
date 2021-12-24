@@ -55,3 +55,24 @@ export function getUserByName(name){
         payload:request
     }
 }
+
+
+export function createAnnouncement(adata){
+    console.log(adata)
+    const request = axios.post('/create_latestannouncement',adata)
+    .then(response=>response.data)
+    return{
+        type:'ann_post',
+        payload:request
+    }
+}
+
+export function createEvent(edata){
+
+    const request = axios.post('/create_event',edata)
+    .then(response =>response.data)
+    return{
+        type:'post_event',
+        payload:request
+    }
+}

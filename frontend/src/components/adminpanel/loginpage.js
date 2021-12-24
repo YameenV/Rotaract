@@ -1,56 +1,38 @@
-import React, { Component } from 'react'
-import {Redirect} from 'react-router-dom'
+import React, { useState } from "react";
 import "../../css/admin_login_jay.css";
 
-class Loginpage extends Component {
-  state = {
-    username: "",
-    password: "",
-  };
+function Loginpage() {
+  const [username, setusername] = useState();
+  const [password, setpassword] = useState();
 
-  setUserName = (u) => {
-    this.setState({
-      username: u,
-    });
-  };
-  setPassword = (p) => {
-    this.setState({
-      password: p,
-    });
-  };
-
-  sendLoginInfo = (e) => {
+  const sendLoginInfo = (e) => {
     e.preventDefault();
-    this.props.history.push("/admin_welcome");
+    console.log(username);
+    console.log(password);
   };
 
-  render() {
-    return (
+  return (
+    <div>
       <div className="admin_panel_login_main">
         <div>
           <h1>Login</h1>
           <p>Sign in and start managing your leaderboard</p>
         </div>
-        <form onSubmit={this.sendLoginInfo}>
+        <form onSubmit={sendLoginInfo}>
           <label>Username</label>
-          <input
-            type="text"
-            value={this.state.username}
-            onChange={(e) => this.setUserName(e.target.value)}
-          />
+          <input type="text" onChange={(e) => setusername(e.target.value)} />
           <br />
           <label>password</label>
           <input
             type="password"
-            value={this.state.password}
-            onChange={(e) => this.setPassword(e.target.value)}
+            onChange={(e) => setpassword(e.target.value)}
           />
           <br />
           <button type="submit">Login</button>
         </form>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-export default Loginpage
+export default Loginpage;

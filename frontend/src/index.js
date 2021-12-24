@@ -7,15 +7,17 @@ import Reducers from './reducers/index'
 import {Provider} from 'react-redux' 
 import {createStore,applyMiddleware} from 'redux' 
 import promiseMiddleware from 'redux-promise' 
-// import Navbar from '.'
 import Navbar from './components/navbar/navbar'
+import {Auth0Provider} from '@auth0/auth0-react'
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore)
+
+
+
 const App = () =>{
  return(
 <div>
   <Layout>
   <BrowserRouter>
-  {/* <Navbar/> */}
   <Router/>
   </BrowserRouter>
   </Layout>
@@ -26,6 +28,7 @@ const App = () =>{
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(Reducers)}>
+
     <App />
     </Provider>,
   document.getElementById('root')
