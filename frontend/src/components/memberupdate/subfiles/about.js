@@ -7,11 +7,15 @@ class About extends Component {
         describe:'',
         yourself_ten_years:''
     }
+    sendData = (e) =>{
+        e.preventDefault();
+        this.props.pers(this.state)
+    }
 
     render() {
         return (
             <div className="about_div">
-                <form className="about_form">
+                <form className="about_form" onSubmit={this.sendData}>
                 <label>Describe yourself in 5-6 sentence:</label>
                 <textarea type="text" value = {this.state.describe} onChange={(e)=>{this.setState({describe:e.target.value})}}/>
                 <label>Where do you see your self in 10 years:</label>

@@ -14,7 +14,7 @@ class Proskills extends Component {
 
     giveData = (e) => {
         e.preventDefault();
-        console.log(this.state)
+        this.props.pers('proskills',this.state)
     }
 
     render() {

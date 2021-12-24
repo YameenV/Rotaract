@@ -9,10 +9,15 @@ class Educational extends Component {
         book:'',
     }
 
+    sendData = (e) =>{
+        e.preventDefault();
+        this.props.pers(this.state)
+    }
+
     render() {
         return (
             <div className="education_div">
-                <form className="education_form">
+                <form className="education_form" onSubmit={this.sendData}>
                 
                     <label>Currently studying :</label>
                     <input type= "text" value ={this.state.currently_studying} onChange={(e)=>{this.setState({currently_studying:e.target.value})}}/>

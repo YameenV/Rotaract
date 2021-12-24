@@ -8,10 +8,15 @@ class Otherinterest extends Component {
         Interest:''
     }
 
+    sendData = (e) =>{
+    e.preventDefault();
+    this.props.pers(this.state)
+    }
+    
     render() {
         return (
             <div className="other_div">
-                <form className="other_form">
+                <form className="other_form" onSubmit={this.sendData}>
                 <label>Hobbies</label>
                 
                 <input type = "text" value={this.state.hobbies} onChange={(e)=>{this.setState({hobbies:e.target.value})}}/>
@@ -23,9 +28,6 @@ class Otherinterest extends Component {
                 
                 <button type="submit">Submit</button>
                 </form>
-
-                
-               
 
             </div>
         )
