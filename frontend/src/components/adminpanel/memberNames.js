@@ -6,16 +6,15 @@ class MemberNames extends Component {
     sendingName:[]
   };
 
-  giveName = (name) =>{
-    this.setState({
-      sendingName:[...this.state.sendingName,name]
-    })
-    this.props.getSingleName(this.state.sendingName)
+  deleteName = (e,key) =>{
+    e.preventDefault()
+    this.props.deleteName(key)
   }
-
+  
 
   processNames = (recData, L) => {
     let EndArray = [];
+   
     recData.forEach((element) => {
       if (element.includes("Rtr") || element.includes("Rtr.")) {
         let newEle;
@@ -24,8 +23,14 @@ class MemberNames extends Component {
       } else {
         EndArray.push(element);
       }
-    });
-    return (
+
+    }
+    
+    
+    );
+
+
+return (
       <div>
         {EndArray.filter((item) => {
           if (this.props.keyword === "") {
@@ -35,9 +40,15 @@ class MemberNames extends Component {
           ) {
             return item;
           }
-        }).map((item) => (
-          <div onClick={(e)=>this.giveName(item)}>{item}</div>
+        }).map((item,i) => (
+        <div>
+ <div>{item}
+          </div>
+          <button onClick={(e)=>this.deleteName(e,i)}>x</button>
+        </div>
+         
         ))}
+      
       </div>
     );
   };

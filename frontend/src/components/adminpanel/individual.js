@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { cl, Component } from "react";
 import MemberNames from "./memberNames";
 import "../../css/jayindi.css";
 import rtlogo from "../../imgs/RCUCoEsLogo.png";
@@ -39,17 +39,18 @@ class Individualpage extends Component {
       });
     }
   };
+
   sendData = (e) => {
     e.preventDefault();
     this.setToggle();
     let sendobj = {
-      name:this.state.takenname,
+      name:this.state.namesarray,
       score:{
         user_id:'aingegm2=0gj4m-s0',
         name:'Abhinav',
         current_position:'GBM',
         score:this.state.points,
-        month:this.state.year,
+        month:this.state.month,
         day:this.state.day,
         year:this.state.year,
         increment_type:this.state.incrementType,
@@ -62,11 +63,12 @@ class Individualpage extends Component {
 
   setDate = (d) => {
     let date = d.split('-')
-    let year = d[0]
-    let month = d[1]
-    let day = d[2]
+    let year = date[0]
+    let month = date[1]
+    let day = date[2]
     console.log(date)
     this.setState({
+      date:d,
       year,
       month,
       day
@@ -93,13 +95,7 @@ class Individualpage extends Component {
     console.log(newObj);
   };
 
-  deleteItem = (key) => {
-    let cloneArray = [...this.state.teams];
-    cloneArray.splice(key, 1);
-    this.setState({
-      teams: cloneArray,
-    });
-  };
+  
 
   takeFile = (e) => {
     const file = e.target.files[0];
@@ -141,11 +137,15 @@ class Individualpage extends Component {
     });
   };
 
-  getSelectedNames = (names) =>{
+  deleteItem = (key)=>{
+    let cloneArray = [...this.state.namesarray]
+    cloneArray.splice(key,1)
     this.setState({
-      takenname:[...this.state.name,names]
+      namesarray:cloneArray
     })
+
   }
+ 
 
   render() {
     return (
@@ -178,7 +178,8 @@ class Individualpage extends Component {
                       fileLength={this.state.FileLength}
                       nameData={this.state.namesarray}
                       keyword={this.state.name}
-                      getSingleName={this.getSelectedNames}
+                      deleteName={this.deleteItem}
+
                     />
                     <button
                       type="button"
@@ -190,8 +191,11 @@ class Individualpage extends Component {
                   </div>
                 ) : null}
               </div>
-              <select>
-                <option>Increment type</option>
+              <select onChange={(e)=>this.setState({incrementType:e.target.value})}>
+                <option>Meeting - BOD, GBM, etc</option>
+                <option>Events - attendance</option>
+                <option>Individual (active)</option>
+                <option>Feedback Form</option>
               </select>
               <input
                 type="date"
