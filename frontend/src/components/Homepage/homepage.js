@@ -23,31 +23,15 @@ import Navbar from "../navbar/navbar";
 /*   [ 320-480 ], [ 481-768 ] , [ 769-1024 ], [ 1025-1200 ], [ 1201+ ] */
 
 class Homepage extends Component {
+
   state = {
-    evntdata: [],
-    andata: [],
-    teamdata: [],
-  };
-
-  componentWillMount() {
-    this.props.getEvents();
-    this.props.getAnnouncement();
+    teamdata:[]
   }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps) {
-      let edata = nextProps.eventdata.eventData;
-      let adata = nextProps.anndata.annData;
-
+  componentWillReceiveProps(nextProps){
+    if(nextProps){
       this.setState({
-        evntdata: edata,
-        andata: adata,
-      });
-    }
-    if (nextProps.teamdata) {
-      this.setState({
-        teamdata: nextProps.teamdata.teamData,
-      });
+        teamdata:nextProps.teamdata
+      })
     }
   }
 
@@ -57,7 +41,9 @@ class Homepage extends Component {
   };
 
   render() {
-    console.log(this.state);
+    let anndata = this.props.first
+    let eventdata = this.props.second
+    console.log(anndata)
     return (
       <div>
         <div className="Home_main">
@@ -207,8 +193,8 @@ class Homepage extends Component {
               </div>
               <div className="announcement_container">
                 <div className="for_padding">
-                  {this.props.anndata.length > 0 ? (
-                    this.state.andata.map((item, i) => {
+                  {anndata.length > 0 ? (
+                    anndata.map((item, i) => {
                       return i < 3 ? (
                         <div className={`announcement_content_${i}`}>
                           <div className="content1_header">
@@ -264,9 +250,9 @@ class Homepage extends Component {
                 <h1>Events </h1>
               </div>
               <div className="home_event_container">
-                {this.props.eventdata.length > 0 ? (
-                  this.state.evntdata.map((item, i) => {
-                    return i < 3 ? (
+                {eventdata.length > 0 ? (
+                  eventdata.map((item, i) => {
+                    return i < 2 ? (
                       <div className={`event_container_${i + 1}`}>
                         <div className="event_container_1_image_div">
                           <img className="container_1_image"></img>
@@ -277,7 +263,9 @@ class Homepage extends Component {
                           {item.description}
                         </div>
                       </div>
-                    ) : null;
+                    ) : 
+                  null
+                    ;
                   })
                 ) : (
                   <div className="event_container_1">
@@ -299,7 +287,7 @@ class Homepage extends Component {
                 <h1>Leaderboards</h1>
               </div>
               <div className="leaderboard_bar">
-                {this.props.teamdata.length > 0
+               {/*  {this.state.teamdata.length > 0
                   ? this.state.teamdata.map((item, i) => {
                       return (
                         <div className={`leaderboard_bar_${i + 1}`}>
@@ -316,7 +304,30 @@ class Homepage extends Component {
                       );
                     })
                   : 
-                
+                  <div>
+                      <div className="leaderboard_bar_1">
+                  <div className="bar_image_div_1">
+                    <img
+                      className="bar_1_image"
+                      src="../../bdujab"
+                    ></img>
+                  </div>
+                  <div className="bar_1_name">
+                    <h2>Bar 1</h2>
+                  </div>
+                </div>
+
+                <div className="leaderboard_bar_2">
+                  <div className="bar_image_div_2">
+                    <img
+                      className="bar_2_image"
+                      src="../../bdujab"
+                    ></img>
+                  </div>
+                  <div className="bar_2_name">
+                    <h2>Bar 2</h2>
+                  </div>
+                </div>
 
                 <div className="leaderboard_bar_3">
                   <div className="bar_image_div_3">
@@ -329,7 +340,33 @@ class Homepage extends Component {
                     <h2>Bar 3</h2>
                   </div>
                 </div>
-                }
+
+                <div className="leaderboard_bar_4">
+                  <div className="bar_image_div_4">
+                    <img
+                      className="bar_4_image"
+                      src="../../bdujab"
+                    ></img>
+                  </div>
+                  <div className="bar_1_name">
+                    <h2>Bar 1</h2>
+                  </div>
+                </div>
+
+                <div className="leaderboard_bar_1">
+                  <div className="bar_image_div_1">
+                    <img
+                      className="bar_1_image"
+                      src="../../bdujab"
+                    ></img>
+                  </div>
+                  <div className="bar_1_name">
+                    <h2>Bar 1</h2>
+                  </div>
+                </div>
+                  </div>
+                
+                } */}
               </div>
               <div className="leaderboard_switch">
                 <ButtonGroup className="leader_button-group">
@@ -456,12 +493,5 @@ class Homepage extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    eventdata: state.event,
-    anndata: state.announcement,
-    teamdata: state.team,
-  };
-};
 
-export default connect(mapStateToProps, actions)(Homepage);
+export default Homepage;

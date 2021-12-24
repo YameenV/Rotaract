@@ -11,7 +11,7 @@ import Individualpage from './components/adminpanel/individual'
 import Navbar from './components/navbar/navbar'
 import PortFolioContainer from './components/portfolio/portfolioContainer'
 import AdminPublish from './components/admin_publish/adminPublish'
-import Homepage from './components/Homepage/homepage'
+import Homepage from './components/Homepage/homepageContainer'
 
 
 const Routes = () =>{
