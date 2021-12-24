@@ -166,20 +166,41 @@
 .resetbtn_jayteam{
     background: #FF5555 !important;
 }
+.csvupload_team{
+    width: 90%;
+    background: rgba(173, 215, 242, 0.3);
+    min-height: 30vh;
+    border-radius: 10px;
+    color: #000917;
+    display: flex;
+    flex-direction: column;
+    text-indent: 10px;
+    margin: 15px 0 15px 0;
+    justify-content: space-between;
+    padding: 7px;
+}
+.csvteam_clrbtn{
+    width: 100% !important;
+    background: #FF5555 !important;
+    margin: 2vh 0 0.5vh !important;
+}
 /* Smartphones ----------- */
 @media only screen
 and (max-width: 800px) {
     .jayteam_hdr{
         flex-direction: column;
+        transition: 300ms ease-in;
     }
     .jayteam_hdr h1{
         align-self: center;
         text-align: center;
         font-size: 5rem;
         margin-top: 10px;
+        transition: 300ms ease-in;
     }
     .jayteam_hdr img{
         width: 100%;
+        transition: 300ms ease-in;
     }
     .jayteam_tmbtn{
         padding-top: 1vh;
@@ -198,14 +219,17 @@ and (max-width: 800px) {
 and  (min-width: 426px) and (max-width: 1024px) {
     .jayteam_hdr{
         flex-direction: column;
+        transition: 300ms ease-in;
     }
     .jayteam_hdr h1{
         align-self: center;
         text-align: center;
         font-size: 5rem;
+        transition: 300ms ease-in;
     }
     .jayteam_hdr img{
         width: 70%;
+        transition: 300ms ease-in;
     }
     .jayteam_tmbtn{
         padding-top: 1.5vh;
