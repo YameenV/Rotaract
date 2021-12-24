@@ -20,7 +20,7 @@ function Loginpage(props) {
             <h1>Login</h1>
             <p>Sign In and Start Managing your Leaderboard!</p>
           </div>
-          <form onSubmit={sendToWelcome}>
+          <form>
             <label>Username</label>
             <input
               type="text"
@@ -36,7 +36,6 @@ function Loginpage(props) {
             <button type="submit">Login</button>
           </form>
         </div>
-        
       </div>
     </div>
   );

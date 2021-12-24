@@ -1,4 +1,4 @@
-.jayteam_main{
+.jayindi_main{
     min-height: 100vh;
     min-width: 100vw;
     background:linear-gradient(186.37deg, #000917 14.88%, #0066FF 82.38%, #ADD7F2 141.93%) fixed;
@@ -7,24 +7,24 @@
     align-items: center;
     overflow: hidden;
 }
-.jayteam_hdr h1{
+.jayindi_hdr h1{
     color: #FFFFFF;
     font-size: 3.5rem;
     align-self: flex-end;
     margin-bottom: 2%;
 }
-.jayteam_hdr{
+.jayindi_hdr{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
 }
-.jayteam_main img{
+.jayindi_main img{
     width:20%;
 }
-.jayteam_tmbtn{
+.jay_indibtn{
     width: 90%;
-    background: linear-gradient(90deg, #20DF7F 0%, #0066FF 166.88%);
+    background: linear-gradient(90deg, #0066FF -48.96%, #20DF7F 200.68%);
     text-align: center;
     height: 6vh;
     border-radius: 10px;
@@ -33,55 +33,17 @@
     padding-top: 0.8vh;
     margin-bottom: 15px;
 }
-.uploadcsv_nxtform{
+.uploadcsvindi_nxtform{
     width: 100vw;
 }
-.addteam_nxtform{
-    width: 100vw;
-}
-.jayteam_main form{
+.jayindi_main form{
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.jayteam_conatiner{
-    width: 90%;
-    background: rgba(173, 215, 242, 0.3);
-    min-height: 30vh;
-    border-radius: 10px;
-    color: #000917;
-    display: flex;
-    flex-direction: column;
-    text-indent: 10px;
-    margin: 15px 0 15px 0;
-    justify-content: space-between;
-    padding: 7px;
-}
-.jayselectedteams{
-    background: #FFFFFF;
-    border-radius: 100px;
-    display: flex;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    align-items: center;
-    height: 5vh;
-}
-.allteamsselected{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-.jayteam_selteambutton{
-    height: 4.2vh !important;
-    width: 2vw !important;
-    border-radius: 50% !important;
-    background: #FF5555 !important;
-    font-size: 0.8rem !important;
-    margin: 0 0.2vw 0 0.2vw !important;
-}
-.jayteam_main textarea{
+.jayindi_main textarea{
     width: 90%;
     outline: none;
     border: none;
@@ -93,19 +55,19 @@
     margin: 15px 0 15px 0;
     padding: 5px;
 }
-.jayteam_main textarea:hover{
+.jayindi_main textarea:hover{
     background: rgba(173, 215, 242, 0.6);
     transition: 300ms ease-in;
 }
-.jayteam_main textarea:focus{
+.jayindi_main textarea:focus{
     background: #FFFFFF;
     transition: 300ms ease-in;
 }
-.jayteam_main textarea::placeholder{
+.jayindi_main textarea::placeholder{
     color: #000917;
     opacity: 80%;
 }
-.jayteam_main input{
+.jayindi_main select{
     width: 90%;
     height: 6vh;
     outline: none;
@@ -117,19 +79,31 @@
     font-size: 1.2rem;
     margin: 15px 0 15px 0;
 }
-.jayteam_main input:hover{
+.jayindi_main input{
+    width: 90%;
+    height: 6vh;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    text-indent: 10px;
+    background-color: rgba(173, 215, 242, 0.3);
+    color: #000917;
+    font-size: 1.2rem;
+    margin: 15px 0 15px 0;
+}
+.jayindi_main input:hover{
     background-color: rgba(173, 215, 242, 0.6);
     transition: 300ms ease-in;
 }
-.jayteam_main input:focus{
+.jayindi_main input:focus{
     background-color: #FFFFFF;
     transition: 300ms ease-in;
 }
-.jayteam_main input::placeholder{
+.jayindi_main input::placeholder{
     color: #000917;
     opacity: 80%;
 }
-.jayteam_main input[type=file]::file-selector-button {
+.jayindi_main input[type=file]::file-selector-button {
     border: none;
     padding: 0.7vh;
     border-radius: 10px;
@@ -138,12 +112,12 @@
     transition: 1s;
     margin-left: -10px;
   }
-.jayteam_main h5{
+.jayindi_main h5{
     color: #000917;
     font-size: 1.2rem;
     margin: 15px 0 15px 0;
 }
-.jayteam_main button{
+.jayindi_main button{
     border: none;
     width: 90%;
     height: 6vh;
@@ -153,69 +127,50 @@
     border-radius: 10px;
     margin: 10px;
 }
-.jayteam_main button:hover{
+.jayindi_main button:hover{
     background: #23ff91;
     transition: 300ms ease-in;
-}
-.updtrestbtn{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-.resetbtn_jayteam{
-    background: #FF5555 !important;
 }
 /* Smartphones ----------- */
 @media only screen
 and (max-width: 800px) {
-    .jayteam_hdr{
+    .jayindi_hdr{
         flex-direction: column;
     }
-    .jayteam_hdr h1{
+    .jayindi_hdr h1{
         align-self: center;
         text-align: center;
         font-size: 5rem;
         margin-top: 10px;
     }
-    .jayteam_hdr img{
+    .jayindi_hdr img{
         width: 100%;
     }
-    .jayteam_tmbtn{
+    .jay_indibtn{
         padding-top: 1vh;
     }
-    .jayteam_main input[type=file]::file-selector-button{
+    .jayindi_main input[type=file]::file-selector-button{
         padding: 1.2vh;
-    }
-    .jayteam_selteambutton{
-        height: 4vh !important;
-        width: 7vw !important;
-        margin: 0 1vw 0 1.5vw !important;
     }
 } 
 /* iPads  ----------- */
 @media only screen
 and  (min-width: 426px) and (max-width: 1024px) {
-    .jayteam_hdr{
+    .jayindi_hdr{
         flex-direction: column;
     }
-    .jayteam_hdr h1{
+    .jayindi_hdr h1{
         align-self: center;
         text-align: center;
         font-size: 5rem;
     }
-    .jayteam_hdr img{
+    .jayindi_hdr img{
         width: 70%;
     }
-    .jayteam_tmbtn{
+    .jay_indibtn{
         padding-top: 1.5vh;
     }
-    .jayteam_main input[type=file]::file-selector-button{
+    .jayindi_main input[type=file]::file-selector-button{
         padding: 1.6vh;
-    }
-    .jayteam_selteambutton{
-        height: 4.2vh !important;
-        width: 6vw !important;
-        margin: 0 0.8vw 0 1.5vw !important;
     }
 } 

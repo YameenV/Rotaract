@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import MemberNames from "./memberNames";
+import "../../css/jayindi.css";
+import rtlogo from "../../imgs/RCUCoEsLogo.png";
+
 class Individualpage extends Component {
   state = {
     name: "",
@@ -119,24 +122,23 @@ class Individualpage extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <p>Welcome jai</p>
+      <div className="jayindi_main">
+        <div className="jayindi_hdr">
+          <h1>Welcome jai</h1>
+          <img src={rtlogo}></img>
         </div>
-        <button>Individual</button>
-        <br />
+        <div className="jay_indibtn">Individual</div>
         <input
           value={this.state.name}
           onChange={(e) => this.setState({ name: e.target.value })}
           type="text"
-          placeholder="search by name"
+          placeholder="Search by Name"
         />
-        OR
-        <label>Upload CSV</label>
+        <h5>OR</h5>
         <button onClick={this.setToggle}>Upload CSV</button>
         {this.state.upToggle ? (
           <div>
-            <form onSubmit={this.sendData}>
+            <form onSubmit={this.sendData} className="uploadcsvindi_nxtform">
               <input
                 type="file"
                 accept=".csv"
@@ -156,11 +158,9 @@ class Individualpage extends Component {
                   </div>
                 ) : null}
               </div>
-
               <select>
                 <option>Increment type</option>
               </select>
-              <br />
               <input
                 type="date"
                 value={this.state.date}
@@ -168,22 +168,20 @@ class Individualpage extends Component {
                   this.setDate(e.target.value);
                 }}
               />
-              <br />
               <input
                 type="text"
                 value={this.state.points}
                 onChange={(e) => {
                   this.setState({ points: e.target.value });
                 }}
-                placeholder="points"
+                placeholder="Points"
               />
-              <br />
               <textarea
                 value={this.state.reason}
                 onChange={(e) => {
                   this.setState({ reason: e.target.value });
                 }}
-                placeholder="reason"
+                placeholder="Reason"
               ></textarea>
 
               <button type="submit">Update</button>

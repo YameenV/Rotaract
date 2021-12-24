@@ -40,7 +40,7 @@
     background: linear-gradient(90deg, #20DF7F 0%, #0066FF 166.88%);
 }
 .indi_btn{
-    background: linear-gradient(90deg, rgba(79, 243, 135, 0.92) -48.96%, #0066FF 23.68%);
+    background: linear-gradient(90deg, #0066FF -48.96%, #20DF7F 200.68%);
 }
 .team_btn:hover{
     width: 100%;
