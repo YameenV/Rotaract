@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Roboto&display=swap');
 .announcement_main{
-    /* background: url("/home/sleep/Rotaract/frontend/src/background/Nebula.jpg"); */
+    background: url("../../src/background/Nebula.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
