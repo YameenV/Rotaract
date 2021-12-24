@@ -30,6 +30,7 @@ const Routes = () =>{
             <Route exact path = "/admin_individual" component = {Individualpage}/>
             <Route exact path = "/portfolio" component={PortFolioContainer}/>
             <Route exact path = "/admin_publish" component={AdminPublish}/>
+          
             </Switch>
         </div>
     )

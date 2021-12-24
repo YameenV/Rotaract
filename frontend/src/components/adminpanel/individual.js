@@ -11,7 +11,7 @@ class Individualpage extends Component {
     reason: "",
     namesarray: [],
     FileLength: 0,
-    inputVal:""
+    inputVal: "",
   };
   addTeam = (e) => {
     e.preventDefault();
