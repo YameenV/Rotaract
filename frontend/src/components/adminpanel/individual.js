@@ -10,7 +10,11 @@ class Individualpage extends Component {
     upToggle2: false,
     incrementType: "",
     date: "",
+    year:"",
+    day:"",
+    month:"",
     points: "",
+    takenname:[],
     reason: "",
     namesarray: [],
     FileLength: 0,
@@ -38,17 +42,34 @@ class Individualpage extends Component {
   sendData = (e) => {
     e.preventDefault();
     this.setToggle();
-    let sendObj = {
-      date: this.state.date,
-      points: this.state.points,
-      reason: this.state.reason,
-    };
-    console.log(sendObj);
+    let sendobj = {
+      name:this.state.takenname,
+      score:{
+        user_id:'aingegm2=0gj4m-s0',
+        name:'Abhinav',
+        current_position:'GBM',
+        score:this.state.points,
+        month:this.state.year,
+        day:this.state.day,
+        year:this.state.year,
+        increment_type:this.state.incrementType,
+        reason:this.state.reason
+
+      }
+    }
+    console.log(sendobj);
   };
 
   setDate = (d) => {
+    let date = d.split('-')
+    let year = d[0]
+    let month = d[1]
+    let day = d[2]
+    console.log(date)
     this.setState({
-      date: d,
+      year,
+      month,
+      day
     });
   };
 
@@ -120,6 +141,12 @@ class Individualpage extends Component {
     });
   };
 
+  getSelectedNames = (names) =>{
+    this.setState({
+      takenname:[...this.state.name,names]
+    })
+  }
+
   render() {
     return (
       <div className="jayindi_main">
@@ -151,6 +178,7 @@ class Individualpage extends Component {
                       fileLength={this.state.FileLength}
                       nameData={this.state.namesarray}
                       keyword={this.state.name}
+                      getSingleName={this.getSelectedNames}
                     />
                     <button type="button" onClick={this.clearNames}>
                       Clear list

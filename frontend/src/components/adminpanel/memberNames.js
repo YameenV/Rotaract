@@ -3,7 +3,16 @@ import React, { Component } from "react";
 class MemberNames extends Component {
   state = {
     namesArray: [],
+    sendingName:[]
   };
+
+  giveName = (name) =>{
+    this.setState({
+      sendingName:[...this.state.sendingName,name]
+    })
+    this.props.getSingleName(this.state.sendingName)
+  }
+
 
   processNames = (recData, L) => {
     let EndArray = [];
@@ -27,7 +36,7 @@ class MemberNames extends Component {
             return item;
           }
         }).map((item) => (
-          <div>{item}</div>
+          <div onClick={(e)=>this.giveName(item)}>{item}</div>
         ))}
       </div>
     );
@@ -37,7 +46,13 @@ class MemberNames extends Component {
     let recData = this.props.nameData;
     let L = this.props.fileLength;
     return (
-      <div>{recData.length > 0 ? this.processNames(recData, L) : null}</div>
+      <div>{recData.length > 0 ? this.processNames(recData, L) : null}
+      
+      <div>
+
+      </div>
+      
+      </div>
     );
   }
 }
