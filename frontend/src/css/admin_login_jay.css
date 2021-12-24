@@ -1,5 +1,148 @@
 .admin_panel_login_main{
-    background-color: antiquewhite;
+    background: linear-gradient(186.37deg, #000917 14.88%, #0066FF 82.38%, #ADD7F2 141.93%);
     min-width: 100vw;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+.admin_panel_login_main img{
+    width:13%;
+    flex: none;
+    top: 10px;
+    position: absolute;
+}
+.jay_login{
+    background: rgba(173, 215, 242, 0.3);
+    position: absolute;
+    height: 70vh;
+    width: 40%;
+    top: 38px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    align-items: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+    margin-top: 10px;
+}
+.jay_login input{
+    width: 30vw;
+    height: 5vh;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 4%;
+    color: #000917;
+    text-indent: 10px ;
+}
+.jay_login input:focus{
+    outline: none;
+    font-size: 1.2rem;
+    border: 1px solid #000917;
+    color: #000917;
+}
+.jay_header_txt{
+    width: 75%;
+    color: #000917;
+    margin-top: 7%;
+    
+}
+.jay_header_txt h1{
+    font-size: 4rem;
+    margin-bottom: 3%;
+}
+.jay_header_txt p{
+    font-size: 2rem;
+}
+.jay_login form{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.jay_login button{
+    border: none;
+    position: absolute;
+    width: 30vw;
+    background-color: rgba(173, 224, 242, 0.604);
+    color: #000917;
+    height: 6vh;
+    font-size: 1.8rem;
+    border-radius: 3px;
+    bottom: 7%;
+}
+.jay_login form button:hover{
+    background-color: rgb(173, 224, 242);
+    transition: 300ms ease-in;
+}
+.jay_login form label{
+    font-size: 1.5rem;
+}
+/* Smartphones ----------- */
+@media only screen
+and (max-width: 800px) {
+    .jay_login{
+        width: 80%;
+        transition: 300ms ease-in;
+    }
+    .jay_header_txt h1{
+        font-size: 4rem;
+        transition: 300ms ease-in
+    }
+    .jay_header_txt p{
+        font-size: 1.7rem;
+        transition: 300ms ease-in
+    }
+    .jay_login input{
+        width: 60vw;
+        transition: 30ms ease-in;
+    }
+    .jay_login form button{
+        width: 60vw;
+        transition: 300ms ease-in;
+    }
+    .jay_login form label{
+        font-size: 1.3rem;
+        transition: 300ms ease-in
+    }
+    .admin_panel_login_main img{
+        width:40%;
+        transition: 300ms ease-in;
+    }
+    
+}
+/* iPads  ----------- */
+@media only screen
+and  (min-width: 426px) and (max-width: 1024px) {
+    .jay_login{
+        width: 80%;
+        transition: 300ms ease-in;
+    }
+    .admin_panel_login_main img{
+        width:20%;
+        transition: 300ms ease-in;
+    }
+    .jay_header_txt h1{
+        font-size: 5.2rem;
+        transition: 300ms ease-in
+    }
+    .jay_header_txt p{
+        font-size: 2.4rem;
+        transition: 300ms ease-in
+    }
+    .jay_login input{
+        width: 60vw;
+        transition: 30ms ease-in;
+    }
+    .jay_login form button{
+        width: 60vw;
+        transition: 300ms ease-in;
+    }
+
+    .jay_login form label{
+        font-size: 1.3rem;
+        transition: 300ms ease-in
+    }
 }

@@ -1,0 +1,54 @@
+.wlcmjay_main{
+    background: linear-gradient(186.37deg, #000917 14.88%, #0066FF 82.38%, #ADD7F2 141.93%);
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wlcmjay_gpcard{
+    background: rgba(173, 215, 242, 0.3);
+    height: 70vh;
+    width: 70%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    align-items: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+.wlcmjay_gpcard h1{
+    color: #000917;
+    font-size: 4rem;
+    margin-top: 7%;
+}
+.wlcm_btn{
+    display: flex;
+    margin-top: 6vh;
+    background: linear-gradient(90deg, #20DF7F 0%, #0066FF 166.88%);
+    border-radius: 10px;
+}
+.wlcmjay_gpcard button{
+    border: none;
+    width: 30vw;
+    height: 5vh;
+    font-size: 1.5rem;
+    color: #000917;
+    background: transparent;
+}
+.wlcmjay_gpcard button:first-child{
+    border-radius: 10px 0 0 10px;
+}
+.wlcmjay_gpcard button:first-child:hover{
+    width: 60vw;
+    transition: 300ms ease-in;
+    margin-left: 0;
+}
+.wlcmjay_gpcard button:first-child:hover + button:last-child{
+    display: none;
+    transition: 300ms ease-in;
+}
+.wlcmjay_gpcard button:last-child{
+    border-radius: 0 10px 10px 0;
+}

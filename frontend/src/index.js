@@ -30,7 +30,6 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(Reducers)}>
 
     <App />
-    </Provider>,
-  document.getElementById('root')
+  </Provider>,
+  document.getElementById("root")
 );
-

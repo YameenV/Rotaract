@@ -1,26 +1,42 @@
-import React, { Component } from 'react'
-import {Redirect} from 'react-router-dom'
+import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
+import "../../css/welcome_jay.css";
+
 class Welcome_page extends Component {
+  redToTeam = (e) => {
+    e.preventDefault();
+    this.props.history.push("/admin_team");
+  };
 
-    redToTeam = (e) =>{
-        e.preventDefault()
-        this.props.history.push('/admin_team')
-    }
+  redToIndi = (e) => {
+    e.preventDefault();
+    this.props.history.push("/admin_individual");
+  };
 
-    redToIndi = (e) =>{
-        e.preventDefault()
-       this.props.history.push('/admin_individual')
-    }
-
-    render() {
-        return (
-            <div>
-                Welcome jai
-              <button onClick={(e)=>this.redToTeam(e)} type="button" value = "Team">Team</button>
-              <button onClick={(e)=>this.redToIndi(e)}type="button" value = "Individual">Individual</button>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className="wlcmjay_main">
+        <div className="wlcmjay_gpcard">
+          <h1>Welcome Jai</h1>
+          <div className="wlcm_btn">
+            <button
+              onClick={(e) => this.redToTeam(e)}
+              type="button"
+              value="Team"
+            >
+              Team
+            </button>
+            <button
+              onClick={(e) => this.redToIndi(e)}
+              type="button"
+              value="Individual"
+            >
+              Individual
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
-export default Welcome_page
-
+export default Welcome_page;
