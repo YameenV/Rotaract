@@ -207,63 +207,54 @@ class Homepage extends Component {
               </div>
               <div className="announcement_container">
                 <div className="for_padding">
-                  {this.props.anndata.length > 0 ? 
-                  this.state.andata.map((item, i) => {
-                        return i < 3 ? (
-                          <div className={`announcement_content_${i}`}>
-                            <div className="content1_header">
-                              <div className="content1_image_div">
-                                <img
-                                  className="content1_image"
-                                  src={Pic3}
-                                ></img>
+                  {this.props.anndata.length > 0 ? (
+                    this.state.andata.map((item, i) => {
+                      return i < 3 ? (
+                        <div className={`announcement_content_${i}`}>
+                          <div className="content1_header">
+                            <div className="content1_image_div">
+                              <img className="content1_image" src={Pic3}></img>
+                            </div>
+                            <div className="content1_name">
+                              <div className="content1_name_name">
+                                {" "}
+                                BY Rushil
                               </div>
-                              <div className="content1_name">
-                                <div className="content1_name_name">
-                                  {" "}
-                                  BY Rushil
-                                </div>
-                                <div className="content1_name_position">
-                                  Secratory
-                                </div>
+                              <div className="content1_name_position">
+                                Secratory
                               </div>
                             </div>
-                            <div className="content1_message">
-                              <h1>{item.announcement}</h1>
-                            </div>
-                            <div className="content1_date">
-                              on {item.day}-{item.month}-{item.year}
-                            </div>
-                            <hr className="hr1" />
                           </div>
-                        ) : null;
-                      })
-                    :  <div className="announcement_content_1">
-                    <div className="content1_header">
-                      <div className="content1_image_div">
-                        <img
-                          className="content1_image"
-                          src={Pic3}
-                        ></img>
-                      </div>
-                      <div className="content1_name">
-                        <div className="content1_name_name">
-                          {" "}
-                          BY Rushil
+                          <div className="content1_message">
+                            <h1>{item.announcement}</h1>
+                          </div>
+                          <div className="content1_date">
+                            on {item.day}-{item.month}-{item.year}
+                          </div>
+                          <hr className="hr1" />
                         </div>
-                        <div className="content1_name_position">
-                          Secratory
+                      ) : null;
+                    })
+                  ) : (
+                    <div className="announcement_content_1">
+                      <div className="content1_header">
+                        <div className="content1_image_div">
+                          <img className="content1_image" src={Pic3}></img>
+                        </div>
+                        <div className="content1_name">
+                          <div className="content1_name_name"> BY Rushil</div>
+                          <div className="content1_name_position">
+                            Secratory
+                          </div>
                         </div>
                       </div>
+                      <div className="content1_message">
+                        <h1>There might be a network error</h1>
+                      </div>
+                      <div className="content1_date">on 0-0-0</div>
+                      <hr className="hr1" />
                     </div>
-                    <div className="content1_message">
-                      <h1>There might be a network error</h1>
-                    </div>
-                    <div className="content1_date">
-                      on 0-0-0
-                    </div>
-                    <hr className="hr1" />
-                  </div>}
+                  )}
                 </div>
               </div>
             </div>
@@ -273,32 +264,33 @@ class Homepage extends Component {
                 <h1>Events </h1>
               </div>
               <div className="home_event_container">
-                {
-                this.props.eventdata.length > 0
-                  ? this.state.evntdata.map((item, i) => {
-                      return i < 3 ? (
-                        <div className={`event_container_${i + 1}`}>
-                          <div className="event_container_1_image_div">
-                            <img className="container_1_image"></img>
-                          </div>
-                          <div className="event_title">{item.title}</div>
-                          <div className="event_name">{item.name}</div>
-                          <div className="event_container_1_content">
-                            {item.description}
-                          </div>
+                {this.props.eventdata.length > 0 ? (
+                  this.state.evntdata.map((item, i) => {
+                    return i < 3 ? (
+                      <div className={`event_container_${i + 1}`}>
+                        <div className="event_container_1_image_div">
+                          <img className="container_1_image"></img>
                         </div>
-                      ) : null;
-                    })
-                  :  <div className="event_container_1">
-                  <div className="event_container_1_image_div">
-                    <img className="container_1_image"></img>
+                        <div className="event_title">{item.title}</div>
+                        <div className="event_name">{item.name}</div>
+                        <div className="event_container_1_content">
+                          {item.description}
+                        </div>
+                      </div>
+                    ) : null;
+                  })
+                ) : (
+                  <div className="event_container_1">
+                    <div className="event_container_1_image_div">
+                      <img className="container_1_image"></img>
+                    </div>
+                    <div className="event_title">Title</div>
+                    <div className="event_name">
+                      Please wait for a while the server might be down
+                    </div>
+                    <div className="event_container_1_content">Description</div>
                   </div>
-                  <div className="event_title">Title</div>
-                  <div className="event_name">Please wait for a while the server might be down</div>
-                  <div className="event_container_1_content">
-                    Description
-                  </div>
-                </div>}
+                )}
               </div>
             </div>
 
@@ -307,23 +299,37 @@ class Homepage extends Component {
                 <h1>Leaderboards</h1>
               </div>
               <div className="leaderboard_bar">
-                {this.state.teamdata
+                {this.props.teamdata.length > 0
                   ? this.state.teamdata.map((item, i) => {
                       return (
-                        <div className={`leaderboard_bar_${i+1}`}>
-                          <div className={`bar_image_div_${i+1}`}>
+                        <div className={`leaderboard_bar_${i + 1}`}>
+                          <div className={`bar_image_div_${i + 1}`}>
                             <img
-                              className={`bar_${i+1}_image`}
+                              className={`bar_${i + 1}_image`}
                               src="../../bdujab"
                             ></img>
                           </div>
-                          <div className={`bar_${i+1}_name`}>
+                          <div className={`bar_${i + 1}_name`}>
                             <h2>{item.name}</h2>
                           </div>
                         </div>
                       );
                     })
-                  : null}
+                  : 
+                
+
+                <div className="leaderboard_bar_3">
+                  <div className="bar_image_div_3">
+                    <img
+                      className="bar_3_image"
+                      src="../../bdujab"
+                    ></img>
+                  </div>
+                  <div className="bar_3_name">
+                    <h2>Bar 3</h2>
+                  </div>
+                </div>
+                }
               </div>
               <div className="leaderboard_switch">
                 <ButtonGroup className="leader_button-group">
