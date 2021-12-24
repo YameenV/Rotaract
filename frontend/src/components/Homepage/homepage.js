@@ -207,7 +207,7 @@ class Homepage extends Component {
               </div>
               <div className="announcement_container">
                 <div className="for_padding">
-                  {this.state.andata.length > 0 ? 
+                  {this.props.anndata.length > 0 ? 
                   this.state.andata.map((item, i) => {
                         return i < 3 ? (
                           <div className={`announcement_content_${i}`}>
@@ -273,7 +273,8 @@ class Homepage extends Component {
                 <h1>Events </h1>
               </div>
               <div className="home_event_container">
-                {this.state.evntdata.length > 0
+                {
+                this.props.eventdata.length > 0
                   ? this.state.evntdata.map((item, i) => {
                       return i < 3 ? (
                         <div className={`event_container_${i + 1}`}>
