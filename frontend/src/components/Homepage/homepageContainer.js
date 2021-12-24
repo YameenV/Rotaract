@@ -6,7 +6,8 @@ class HomepageContainer extends Component {
 
     state = {
         AnnouncementData:[],
-        EventData:[]
+        EventData:[],
+        
     }
 
 
@@ -19,7 +20,6 @@ class HomepageContainer extends Component {
         if (nextProps) {
           let edata = nextProps.eventdata.eventData;
           let adata = nextProps.anndata.annData;
-    
           this.setState({
             AnnouncementData: adata,
             EventData: edata,
@@ -27,17 +27,21 @@ class HomepageContainer extends Component {
         }
       }
 
+    
+
     render() {
         return (
             <div>
                 {this.state.AnnouncementData ? (
                     <div>
-                        <Homepage first = {this.state.AnnouncementData} second = {this.state.EventData}/>
+                        <Homepage 
+                        
+                        first = {this.state.AnnouncementData}  second = {this.state.EventData}/>
                     </div>
                 ):(
                     <div>
 
-                    <Homepage first = {[]} second ={[]}/>
+                    <Homepage first = {[]}  second ={[]}/>
                     </div>)}
             </div>
         )

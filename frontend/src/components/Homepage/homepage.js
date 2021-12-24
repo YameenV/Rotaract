@@ -3,8 +3,8 @@ import React, { Component } from "react";
 /* import { Carousel } from 'react-responsive-carousel'; */
 import "../../css/homepage.css";
 import { ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
-import { connect } from "react-redux";
-import * as actions from "../../actions/index";
+import {connect} from 'react-redux'
+import * as actions from '../../actions/index'
 import { GiHamburgerMenu } from "react-icons/gi";
 import ROTLOGO from "../../imgs/RCUCoEsLogo.png";
 import Earth from "../../imgs/earth.png";
@@ -29,21 +29,24 @@ class Homepage extends Component {
   }
   componentWillReceiveProps(nextProps){
     if(nextProps){
+     
       this.setState({
-        teamdata:nextProps.teamdata
+        teamdata:nextProps.teamd.teamData
       })
     }
   }
 
   getIndividualData = (e) => {
     e.preventDefault();
-    this.props.getLeaderUserData();
+    this.props.getLeaderUserData()
   };
+
+  
 
   render() {
     let anndata = this.props.first
     let eventdata = this.props.second
-    console.log(anndata)
+    let teamdata = this.state.teamdata
     return (
       <div>
         <div className="Home_main">
@@ -287,8 +290,8 @@ class Homepage extends Component {
                 <h1>Leaderboards</h1>
               </div>
               <div className="leaderboard_bar">
-               {/*  {this.state.teamdata.length > 0
-                  ? this.state.teamdata.map((item, i) => {
+                { teamdata && teamdata.length > 0 ?  (
+                 teamdata.map((item, i) => {
                       return (
                         <div className={`leaderboard_bar_${i + 1}`}>
                           <div className={`bar_image_div_${i + 1}`}>
@@ -303,8 +306,8 @@ class Homepage extends Component {
                         </div>
                       );
                     })
-                  : 
-                  <div>
+                ): 
+                  
                       <div className="leaderboard_bar_1">
                   <div className="bar_image_div_1">
                     <img
@@ -317,56 +320,9 @@ class Homepage extends Component {
                   </div>
                 </div>
 
-                <div className="leaderboard_bar_2">
-                  <div className="bar_image_div_2">
-                    <img
-                      className="bar_2_image"
-                      src="../../bdujab"
-                    ></img>
-                  </div>
-                  <div className="bar_2_name">
-                    <h2>Bar 2</h2>
-                  </div>
-                </div>
-
-                <div className="leaderboard_bar_3">
-                  <div className="bar_image_div_3">
-                    <img
-                      className="bar_3_image"
-                      src="../../bdujab"
-                    ></img>
-                  </div>
-                  <div className="bar_3_name">
-                    <h2>Bar 3</h2>
-                  </div>
-                </div>
-
-                <div className="leaderboard_bar_4">
-                  <div className="bar_image_div_4">
-                    <img
-                      className="bar_4_image"
-                      src="../../bdujab"
-                    ></img>
-                  </div>
-                  <div className="bar_1_name">
-                    <h2>Bar 1</h2>
-                  </div>
-                </div>
-
-                <div className="leaderboard_bar_1">
-                  <div className="bar_image_div_1">
-                    <img
-                      className="bar_1_image"
-                      src="../../bdujab"
-                    ></img>
-                  </div>
-                  <div className="bar_1_name">
-                    <h2>Bar 1</h2>
-                  </div>
-                </div>
-                  </div>
-                
-                } */}
+              
+              
+                } 
               </div>
               <div className="leaderboard_switch">
                 <ButtonGroup className="leader_button-group">
@@ -493,5 +449,10 @@ class Homepage extends Component {
   }
 }
 
+const mapStateToProps = (state) =>{
+  return{
+    teamd:state.team
+  }
+}
 
-export default Homepage;
+export default connect(mapStateToProps,actions)(Homepage)
