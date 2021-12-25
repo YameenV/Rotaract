@@ -10,10 +10,19 @@ class Otherinterest extends Component {
 
     sendData = (e) =>{
     e.preventDefault();
-    this.props.pers(this.state)
+        let n1 = this.state.hobbies.split(',');
+        let n2 = this.state.Interest.split(',')
+        let hobbies = n1;
+        let Interest = n2;
+        let obj = {
+            hobbies,
+            Interest
+        }
+        this.props.pers('otherinterest',obj);
     }
     
     render() {
+      
         return (
             <div className="other_div">
                 <form className="other_form" onSubmit={this.sendData}>

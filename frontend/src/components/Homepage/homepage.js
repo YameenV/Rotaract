@@ -3,8 +3,8 @@ import React, { Component } from "react";
 /* import { Carousel } from 'react-responsive-carousel'; */
 import "../../css/homepage.css";
 import { ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
-import {connect} from 'react-redux'
-import * as actions from '../../actions/index'
+import { connect } from "react-redux";
+import * as actions from "../../actions/index";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ROTLOGO from "../../imgs/RCUCoEsLogo.png";
 import Earth from "../../imgs/earth.png";
@@ -23,30 +23,26 @@ import Navbar from "../navbar/navbar";
 /*   [ 320-480 ], [ 481-768 ] , [ 769-1024 ], [ 1025-1200 ], [ 1201+ ] */
 
 class Homepage extends Component {
-
   state = {
-    teamdata:[]
-  }
-  componentWillReceiveProps(nextProps){
-    if(nextProps){
-     
+    teamdata: [],
+  };
+  componentWillReceiveProps(nextProps) {
+    if (nextProps) {
       this.setState({
-        teamdata:nextProps.teamd.teamData
-      })
+        teamdata: nextProps.teamd.teamData,
+      });
     }
   }
 
   getIndividualData = (e) => {
     e.preventDefault();
-    this.props.getLeaderUserData()
+    this.props.getLeaderUserData();
   };
 
-  
-
   render() {
-    let anndata = this.props.first
-    let eventdata = this.props.second
-    let teamdata = this.state.teamdata
+    let anndata = this.props.first;
+    let eventdata = this.props.second;
+    let teamdata = this.state.teamdata;
     return (
       <div>
         <div className="Home_main">
@@ -196,7 +192,7 @@ class Homepage extends Component {
               </div>
               <div className="announcement_container">
                 <div className="for_padding">
-                  {anndata.length > 0 ? (
+                  {anndata && anndata.length > 0 ? (
                     anndata.map((item, i) => {
                       return i < 3 ? (
                         <div className={`announcement_content_${i}`}>
@@ -253,7 +249,7 @@ class Homepage extends Component {
                 <h1>Events </h1>
               </div>
               <div className="home_event_container">
-                {eventdata.length > 0 ? (
+                {eventdata && eventdata.length > 0 ? (
                   eventdata.map((item, i) => {
                     return i < 2 ? (
                       <div className={`event_container_${i + 1}`}>
@@ -266,9 +262,7 @@ class Homepage extends Component {
                           {item.description}
                         </div>
                       </div>
-                    ) : 
-                  null
-                    ;
+                    ) : null;
                   })
                 ) : (
                   <div className="event_container_1">
@@ -290,39 +284,32 @@ class Homepage extends Component {
                 <h1>Leaderboards</h1>
               </div>
               <div className="leaderboard_bar">
-                { teamdata && teamdata.length > 0 ?  (
-                 teamdata.map((item, i) => {
-                      return (
-                        <div className={`leaderboard_bar_${i + 1}`}>
-                          <div className={`bar_image_div_${i + 1}`}>
-                            <img
-                              className={`bar_${i + 1}_image`}
-                              src="../../bdujab"
-                            ></img>
-                          </div>
-                          <div className={`bar_${i + 1}_name`}>
-                            <h2>{item.name}</h2>
-                          </div>
+                {teamdata && teamdata.length > 0 ? (
+                  teamdata.map((item, i) => {
+                    return (
+                      <div className={`leaderboard_bar_${i + 1}`}>
+                        <div className={`bar_image_div_${i + 1}`}>
+                          <img
+                            className={`bar_${i + 1}_image`}
+                            src="../../bdujab"
+                          ></img>
                         </div>
-                      );
-                    })
-                ): 
-                  
-                      <div className="leaderboard_bar_1">
-                  <div className="bar_image_div_1">
-                    <img
-                      className="bar_1_image"
-                      src="../../bdujab"
-                    ></img>
+                        <div className={`bar_${i + 1}_name`}>
+                          <h2>{item.name}</h2>
+                        </div>
+                      </div>
+                    );
+                  })
+                ) : (
+                  <div className="leaderboard_bar_1">
+                    <div className="bar_image_div_1">
+                      <img className="bar_1_image" src="../../bdujab"></img>
+                    </div>
+                    <div className="bar_1_name">
+                      <h2>Bar 1</h2>
+                    </div>
                   </div>
-                  <div className="bar_1_name">
-                    <h2>Bar 1</h2>
-                  </div>
-                </div>
-
-              
-              
-                } 
+                )}
               </div>
               <div className="leaderboard_switch">
                 <ButtonGroup className="leader_button-group">
@@ -449,10 +436,10 @@ class Homepage extends Component {
   }
 }
 
-const mapStateToProps = (state) =>{
-  return{
-    teamd:state.team
-  }
-}
+const mapStateToProps = (state) => {
+  return {
+    teamd: state.team,
+  };
+};
 
-export default connect(mapStateToProps,actions)(Homepage)
+export default connect(mapStateToProps, actions)(Homepage);

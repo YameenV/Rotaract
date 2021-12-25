@@ -9,7 +9,13 @@ class About extends Component {
     }
     sendData = (e) =>{
         e.preventDefault();
-        this.props.pers(this.state)
+        let describe = this.state.describe.split(',')
+        let yourself_ten_years = this.state.yourself_ten_years.split(',')
+        let obj = {
+            describe,
+            yourself_ten_years
+        }
+        this.props.pers('about',obj)
     }
 
     render() {

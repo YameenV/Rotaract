@@ -68,7 +68,30 @@ class LauncherDiv extends Component {
       case 'rotaract':
         this.setState({rotractClub:data})
         break;
-    
+      case 'proskills':
+        this.setState({professional_skill:data})
+        break;
+      case 'personalInfo':
+        this.setState({
+          age:data.dob,
+          gender:data.gender,
+          city:data.place
+        })
+        break;
+      case 'otherinterest':
+        this.setState({other_interest:data})
+        break;
+      case 'contact':
+        this.setState({contact:data})
+        break;
+      case 'about':
+         this.setState({about:data})
+         break;
+      case 'education_background':
+          this.setState({education_background:data})
+          break;
+      default:
+        return
     }
 
   }
@@ -94,6 +117,10 @@ class LauncherDiv extends Component {
           <Otherinterest  pers={this.getPersonalData}/>
         ) : null}
         {this.props.data === "about" ? <About  pers={this.getPersonalData}/> : null}
+
+        <div>
+          <button>Submit</button>
+        </div>
       </div>
     );
   }

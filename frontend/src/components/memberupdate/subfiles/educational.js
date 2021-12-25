@@ -11,7 +11,16 @@ class Educational extends Component {
 
     sendData = (e) =>{
         e.preventDefault();
-        this.props.pers(this.state)
+        let certification_done = this.state.certification_done.split(',')
+        let future_plan = this.state.future_plan.split(',')
+        let book = this.state.book.split(',')
+        let obj = {
+            currently_studying:this.state.currently_studying,
+            certification_done,
+            future_plan,
+            book
+        }
+        this.props.pers('education_background',obj)
     }
 
     render() {

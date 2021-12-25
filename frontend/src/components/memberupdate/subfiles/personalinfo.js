@@ -10,7 +10,7 @@ class Personalinfo extends Component {
 
     getData = (e) => {
         e.preventDefault()
-        this.props.pers(this.state)
+        this.props.pers("personalInfo",this.state)
     }
 
     setGender = (t) => {

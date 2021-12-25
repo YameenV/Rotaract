@@ -13,7 +13,7 @@ class Contact extends Component {
     }
     sendData = (e) =>{
         e.preventDefault();
-        this.props.pers(this.state)
+        this.props.pers('contact',this.state)
     }
     render() {
         return (

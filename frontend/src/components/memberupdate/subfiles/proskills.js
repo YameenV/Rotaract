@@ -14,7 +14,22 @@ class Proskills extends Component {
 
   giveData = (e) => {
     e.preventDefault();
-    this.props.pers("proskills", this.state);
+    let skill = this.state.skill.split(',')
+    let feild_of_interest = this.state.feild_of_interest.split(',')
+    let project = this.state.project.split(',')
+    let artical = this.state.artical.split(',')
+    let intership =this.state.intership.split(',')
+    let obj = {
+      skill,
+      feild_of_interest,
+      experience:this.state.experience,
+      project,
+      artical,
+      intership,
+      future_goal:this.state.future_goal
+    }
+
+    this.props.pers("proskills", obj);
   };
 
   render() {
