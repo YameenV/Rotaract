@@ -9,10 +9,24 @@ class Educational extends Component {
         book:'',
     }
 
+    sendData = (e) =>{
+        e.preventDefault();
+        let certification_done = this.state.certification_done.split(',')
+        let future_plan = this.state.future_plan.split(',')
+        let book = this.state.book.split(',')
+        let obj = {
+            currently_studying:this.state.currently_studying,
+            certification_done,
+            future_plan,
+            book
+        }
+        this.props.pers('education_background',obj)
+    }
+
     render() {
         return (
             <div className="education_div">
-                <form className="education_form">
+                <form className="education_form" onSubmit={this.sendData}>
                 
                     <label>Currently studying :</label>
                     <input type= "text" value ={this.state.currently_studying} onChange={(e)=>{this.setState({currently_studying:e.target.value})}}/>

@@ -12,16 +12,16 @@ class Rotaractclub extends Component {
 
     }
 
-
-    giveData = (e) => {
-        e.preventDefault();
-        console.log(this.state)
+    sendData = (e) =>{
+        e.preventDefault()
+        this.props.pers('rotaract',this.state)
     }
+
     render() {
 
         return (
             <div className="rotaract_div">
-                <form className="rotaract_form">
+                <form className="rotaract_form" onSubmit={this.sendData}>
                     <label>
                         Why did you join the club?
                     </label>
@@ -37,7 +37,7 @@ class Rotaractclub extends Component {
                     <label>
                         Since when are you in the Rotaractclub?
                     </label>
-                    <input type="text" onChange={(e) => { this.setState({ vanumber_of_yearl3: e.target.value }) }} value={this.state.number_of_year} />
+                    <input type="text" onChange={(e) => { this.setState({ number_of_year: e.target.value }) }} value={this.state.number_of_year} />
 
 
                     <label>

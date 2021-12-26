@@ -6,6 +6,9 @@ export default function(state={},action){
         case 'get_one_event':
             return {...state,eventData:action.payload}
 
+        case 'post_event':
+            return {...state,eventData:action.payload}
+
         default:
             return state
 

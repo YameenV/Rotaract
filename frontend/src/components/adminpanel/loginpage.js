@@ -1,32 +1,19 @@
-import React, { Component } from 'react'
-import {Redirect} from 'react-router-dom'
+import React, { useState } from "react";
 import "../../css/admin_login_jay.css";
 import rtlogo from "../../imgs/RCUCoEsLogo.png";
 
-class Loginpage extends Component {
-  state = {
-    username: "",
-    password: "",
-  };
+function Loginpage() {
+  const [username, setusername] = useState();
+  const [password, setpassword] = useState();
 
-  setUserName = (u) => {
-    this.setState({
-      username: u,
-    });
-  };
-  setPassword = (p) => {
-    this.setState({
-      password: p,
-    });
-  };
-
-  sendLoginInfo = (e) => {
+  const sendLoginInfo = (e) => {
     e.preventDefault();
-    this.props.history.push("/admin_welcome");
+    console.log(username);
+    console.log(password);
   };
 
-  render() {
-    return (
+  return (
+    <div>
       <div className="admin_panel_login_main">
         <img src={rtlogo}></img>
         <div className="jay_login">
@@ -50,9 +37,21 @@ class Loginpage extends Component {
             <button type="submit">Login</button>
           </form>
         </div>
+        <form onSubmit={sendLoginInfo}>
+          <label>Username</label>
+          <input type="text" onChange={(e) => setusername(e.target.value)} />
+          <br />
+          <label>password</label>
+          <input
+            type="password"
+            onChange={(e) => setpassword(e.target.value)}
+          />
+          <br />
+          <button type="submit">Login</button>
+        </form>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-export default Loginpage
+export default Loginpage;

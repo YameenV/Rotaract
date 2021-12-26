@@ -11,14 +11,14 @@ class Contact extends Component {
         github:'',
         whatsapp:''
     }
-    giveData = (e) =>{
+    sendData = (e) =>{
         e.preventDefault();
-        console.log(this.state)
+        this.props.pers('contact',this.state)
     }
     render() {
         return (
             <div className="contact_div" >
-              <form className="contact_form" onSubmit={this.giveData}>
+              <form className="contact_form" onSubmit={this.sendData}>
                 <label>Contact No.</label>
                 <input value={this.state.mobile_number} onChange={(e)=>{this.setState({mobile_number:e.target.value})}} type="text"/>
 

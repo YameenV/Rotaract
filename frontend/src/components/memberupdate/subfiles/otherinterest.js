@@ -8,10 +8,24 @@ class Otherinterest extends Component {
         Interest:''
     }
 
+    sendData = (e) =>{
+    e.preventDefault();
+        let n1 = this.state.hobbies.split(',');
+        let n2 = this.state.Interest.split(',')
+        let hobbies = n1;
+        let Interest = n2;
+        let obj = {
+            hobbies,
+            Interest
+        }
+        this.props.pers('otherinterest',obj);
+    }
+    
     render() {
+      
         return (
             <div className="other_div">
-                <form className="other_form">
+                <form className="other_form" onSubmit={this.sendData}>
                 <label>Hobbies</label>
                 
                 <input type = "text" value={this.state.hobbies} onChange={(e)=>{this.setState({hobbies:e.target.value})}}/>
@@ -23,9 +37,6 @@ class Otherinterest extends Component {
                 
                 <button type="submit">Submit</button>
                 </form>
-
-                
-               
 
             </div>
         )

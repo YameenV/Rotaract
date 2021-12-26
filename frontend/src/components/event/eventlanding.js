@@ -45,7 +45,7 @@ const Eventlanding = (props) => {
             <img className="publish-img" src={milk} />
 
 
-            <div className="event_header">events</div>
+            <div className="event_header" style={{color:'white'}}>events</div>
             <div className="Events">
 
                 <div className="event">
