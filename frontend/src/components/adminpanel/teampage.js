@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import MemberNames from "./memberNames";
+import "../../css/jayteam.css";
+import rtlogo from "../../imgs/RCUCoEsLogo.png";
+
 class Teampage extends Component {
   state = {
     name: "",
@@ -124,23 +127,25 @@ class Teampage extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <p>Welcome jai</p>
+      <div className="jayteam_main">
+        <div className="jayteam_hdr">
+          <h1>Welcome Jai</h1>
+          <img src={rtlogo}></img>
         </div>
-        <button>Team</button>
-        <br />
+        <div className="jayteam_tmbtn">Team</div>
         <input
           value={this.state.name}
           onChange={(e) => this.setState({ name: e.target.value })}
           type="text"
-          placeholder="search by name"
+          placeholder="Search by Name"
         />
-        OR
-        <label>Upload CSV</label>
-        <button onClick={this.setToggle}>Upload CSV</button>
-        <br />
-        <button onClick={this.setToggle2}>Add team</button>
+        <h5>OR</h5>
+        <button onClick={this.setToggle} className="csvuploadbtn">
+          Upload CSV
+        </button>
+        <button onClick={this.setToggle2} className="addteambtn">
+          Add team
+        </button>
         {this.state.upToggle2 ? (
           <div>
             <form>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import "../../css/welcome_jay.css";
+import rtlogo from "../../imgs/RCUCoEsLogo.png";
 
 class Welcome_page extends Component {
   redToTeam = (e) => {
@@ -16,24 +17,27 @@ class Welcome_page extends Component {
   render() {
     return (
       <div className="wlcmjay_main">
-        <div className="wlcmjay_gpcard">
+        <div className="wlcmjay_hdr">
           <h1>Welcome Jai</h1>
-          <div className="wlcm_btn">
-            <button
-              onClick={(e) => this.redToTeam(e)}
-              type="button"
-              value="Team"
-            >
-              Team
-            </button>
-            <button
-              onClick={(e) => this.redToIndi(e)}
-              type="button"
-              value="Individual"
-            >
-              Individual
-            </button>
-          </div>
+          <img src={rtlogo}></img>
+        </div>
+        <div className="wlcm_btn">
+          <button
+            className="team_btn"
+            onClick={(e) => this.redToTeam(e)}
+            type="button"
+            value="Team"
+          >
+            Team
+          </button>
+          <button
+            className="indi_btn"
+            onClick={(e) => this.redToIndi(e)}
+            type="button"
+            value="Individual"
+          >
+            Individual
+          </button>
         </div>
       </div>
     );

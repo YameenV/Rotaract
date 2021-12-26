@@ -3,52 +3,95 @@
     min-width: 100vw;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-.wlcmjay_gpcard{
-    background: rgba(173, 215, 242, 0.3);
-    height: 70vh;
-    width: 70%;
-    color: white;
-    display: flex;
     flex-direction: column;
-    border-radius: 30px;
-    align-items: center;
-    position: relative;
-    backdrop-filter: blur(10px);
 }
-.wlcmjay_gpcard h1{
-    color: #000917;
-    font-size: 4rem;
-    margin-top: 7%;
+.wlcmjay_hdr h1{
+    color: #FFFFFF;
+    font-size: 3.5rem;
+    align-self: flex-end;
+    margin-bottom: 2%;
+}
+.wlcmjay_hdr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+.wlcmjay_main img{
+    width:20%;
 }
 .wlcm_btn{
     display: flex;
-    margin-top: 6vh;
-    background: linear-gradient(90deg, #20DF7F 0%, #0066FF 166.88%);
-    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
 }
-.wlcmjay_gpcard button{
+.wlcmjay_main button{
     border: none;
-    width: 30vw;
-    height: 5vh;
-    font-size: 1.5rem;
+    width: inherit;
+    height: 6vh;
+    font-size: 1.2rem;
     color: #000917;
-    background: transparent;
+    border-radius: 10px;
+    margin: 10px;
 }
-.wlcmjay_gpcard button:first-child{
-    border-radius: 10px 0 0 10px;
+.team_btn{
+    background: linear-gradient(90deg, #20DF7F 0%, #0066FF 166.88%);
 }
-.wlcmjay_gpcard button:first-child:hover{
-    width: 60vw;
-    transition: 300ms ease-in;
-    margin-left: 0;
+.indi_btn{
+    background: linear-gradient(90deg, rgba(79, 243, 135, 0.92) -48.96%, #0066FF 23.68%);
 }
-.wlcmjay_gpcard button:first-child:hover + button:last-child{
+.team_btn:hover{
+    width: 100%;
+    transition: 500ms ease-in;
+}
+.team_btn:hover + .indi_btn{
     display: none;
-    transition: 300ms ease-in;
+    transition: 500ms ease-in;
 }
-.wlcmjay_gpcard button:last-child{
-    border-radius: 0 10px 10px 0;
+.indi_btn:hover{
+    width: 100%;
+    transition: 500ms ease-in;
 }
+.indi_btn:hover + .team_btn{
+    display: none;
+    transition: 500ms ease-in;
+}
+/* Smartphones ----------- */
+@media only screen
+and (max-width: 800px) {
+    .wlcmjay_hdr{
+        flex-direction: column;
+    }
+    .wlcmjay_hdr h1{
+        align-self: center;
+        text-align: center;
+        font-size: 5rem;
+        margin-top: 10px;
+    }
+    .wlcmjay_hdr img{
+        width: 100%;
+    }
+    .wlcm_btn{
+        flex-direction: column;
+    }
+} 
+/* iPads  ----------- */
+@media only screen
+and  (min-width: 426px) and (max-width: 1024px) {
+    .wlcmjay_hdr{
+        flex-direction: column;
+    }
+    .wlcmjay_hdr h1{
+        align-self: center;
+        text-align: center;
+        font-size: 5rem;
+    }
+    .wlcmjay_hdr img{
+        width: 70%;
+    }
+    .wlcm_btn{
+        flex-direction: column;
+    }
+} 
