@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import LauncherDiv from './launcherDiv'
 import '../../css/memberupdate.css'
+import {connect} from 'react-redux'
+import * as actions from '../../actions/index'
 import ROTLOGO from "../../imgs/RCUCoEsLogo.png";
 import MemberPic from "../../imgs/ashutosh1.jpg";
 import { Link } from 'react-router-dom';
@@ -19,9 +21,15 @@ class MemberContainer extends Component {
         })
     }
 
+    sendUser = (data) =>{
+        if(data){
+            this.props.createUser(data)
+        }
+    }
+
 
     render() {
-        console.log(this.state)
+      console.log(this.props)
         return (
             <div className="main_member">
                 <Navbar/>
@@ -65,7 +73,7 @@ class MemberContainer extends Component {
                         </div>
                         <div className="unknown">
                             {this.state.typeofupdate !== '' ? (
-                                <LauncherDiv data={this.state.typeofupdate} />
+                                <LauncherDiv data={this.state.typeofupdate} sender={this.sendUser}/>
                             ) : (null)}
                         </div>
                     </div>
@@ -75,5 +83,11 @@ class MemberContainer extends Component {
     }
 }
 
-export default MemberContainer
+const mapStateToProps = (state) =>{
+    return{
+        data:state.portfolio
+    }
+}
+
+export default connect(mapStateToProps,actions)(MemberContainer)
 

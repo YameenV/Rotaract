@@ -9,12 +9,23 @@ class Rotaractclub extends Component {
         number_of_year: '',
         suggestion: '',
         testimonial: '',
+        avenue:''
 
     }
 
     sendData = (e) =>{
         e.preventDefault()
-        this.props.pers('rotaract',this.state)
+        let avenue = this.state.avenue.split(',')
+        let obj = {
+            joning_reason:this.state.joning_reason,
+            current_position:this.state.current_position,
+            number_of_year:this.state.number_of_year,
+            suggestion:this.state.suggestion,
+            testimonial:this.state.testimonial,
+            avenue
+        }
+
+        this.props.pers('rotaract',obj)
     }
 
     render() {

@@ -76,3 +76,13 @@ export function createEvent(edata){
         payload:request
     }
 }
+
+
+export function createUser(udata){
+    const request = axios.post('/create_user',udata)
+    .then(response=>response.data)
+    return{
+        type:'Create_user',
+        payload:request
+    }
+}

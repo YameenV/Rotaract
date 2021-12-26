@@ -4,6 +4,9 @@ export default function(state={},action){
         case 'portfolio_data':
             return {...state,userData:action.payload}
 
+        case 'Create_user':
+            return {...state,userData:action.payload}
+
         default:
             return state
 

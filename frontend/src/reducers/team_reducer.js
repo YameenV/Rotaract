@@ -5,6 +5,7 @@ export default function(state={},action){
             return {...state,teamData:action.payload}
         case 'Leaderboard_team_data':
             return {...state,teamData:action.payload}
+ 
 
         default:
             return state

@@ -5,6 +5,8 @@ import Rotaractclub from './subfiles/rotaractclub'
 import Proskills from './subfiles/proskills'
 import Educational from './subfiles/educational'
 import Otherinterest from './subfiles/otherinterest'
+import {connect} from 'react-redux'
+import * as actions from '../../actions/index'
 import About from './subfiles/about'
 import '../../css/memberupdate.css'
 
@@ -61,7 +63,6 @@ class LauncherDiv extends Component {
     
   }
 
-
   getPersonalData = (type,data) =>{
     
     switch(type){
@@ -73,9 +74,11 @@ class LauncherDiv extends Component {
         break;
       case 'personalInfo':
         this.setState({
-          age:data.dob,
+          age:data.age,
           gender:data.gender,
-          city:data.place
+          city:data.place,
+          full_name:data.full_name,
+          district:data.district
         })
         break;
       case 'otherinterest':
@@ -96,8 +99,14 @@ class LauncherDiv extends Component {
 
   }
 
+
+  send = (e) =>{
+    e.preventDefault();
+    this.props.sender(this.state)
+  }
+
   render() {
-    console.log(this.state)
+    
     return (
       <div className = "changing_container">
         {this.props.data === "personalinfo" ? (
@@ -119,10 +128,15 @@ class LauncherDiv extends Component {
         {this.props.data === "about" ? <About  pers={this.getPersonalData}/> : null}
 
         <div>
-          <button>Submit</button>
+          <div>
+            Only submit when all data is filled
+          <button type="submit" onClick={this.send}>Submit</button>
+          </div>
         </div>
       </div>
     );
   }
 }
+
+
 export default LauncherDiv;
