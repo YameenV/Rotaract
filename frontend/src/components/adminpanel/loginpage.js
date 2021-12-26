@@ -6,11 +6,7 @@ function Loginpage() {
   const [username, setusername] = useState();
   const [password, setpassword] = useState();
 
-  const sendLoginInfo = (e) => {
-    e.preventDefault();
-    console.log(username);
-    console.log(password);
-  };
+  
 
   return (
     <div>
@@ -21,23 +17,23 @@ function Loginpage() {
             <h1>Login</h1>
             <p>Sign In and Start Managing your Leaderboard!</p>
           </div>
-          <form onSubmit={this.sendLoginInfo}>
+          <form >
             <label>Username</label>
             <input
               type="text"
-              value={this.state.username}
+              value={username}
               onChange={(e) => this.setUserName(e.target.value)}
             />
             <label>Password</label>
             <input
               type="password"
-              value={this.state.password}
+              value={password}
               onChange={(e) => this.setPassword(e.target.value)}
             />
             <button type="submit">Login</button>
           </form>
         </div>
-        <form onSubmit={sendLoginInfo}>
+        <form>
           <label>Username</label>
           <input type="text" onChange={(e) => setusername(e.target.value)} />
           <br />
