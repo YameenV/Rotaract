@@ -17,7 +17,7 @@ function Loginpage() {
             <h1>Login</h1>
             <p>Sign In and Start Managing your Leaderboard!</p>
           </div>
-          <form >
+          <form>
             <label>Username</label>
             <input
               type="text"
@@ -33,18 +33,6 @@ function Loginpage() {
             <button type="submit">Login</button>
           </form>
         </div>
-        <form>
-          <label>Username</label>
-          <input type="text" onChange={(e) => setusername(e.target.value)} />
-          <br />
-          <label>password</label>
-          <input
-            type="password"
-            onChange={(e) => setpassword(e.target.value)}
-          />
-          <br />
-          <button type="submit">Login</button>
-        </form>
       </div>
     </div>
   );
