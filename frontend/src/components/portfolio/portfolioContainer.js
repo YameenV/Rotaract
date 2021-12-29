@@ -67,9 +67,11 @@ class PortFolioContainer extends Component {
     } 
 
     componentWillReceiveProps(nextProps){
-      if(nextProps.portdata){
+     
+      if(nextProps.portdata.userData){
         let data = nextProps.portdata.userData[0]
-        
+        let checker = nextProps.portdata.userData.response
+        if(checker===undefined){
         this.setState({
           personalinfo:{
             age:data.age,
@@ -120,11 +122,18 @@ class PortFolioContainer extends Component {
           }
 
         })
+        }
+        else{
+          let fourofour = checker.data.detail
+          alert(fourofour)
+        }
       }
-  
-    }
+     
+     
+     
+    
 
-
+}
   render() {
      
     return (
