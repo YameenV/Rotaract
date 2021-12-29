@@ -20,11 +20,7 @@ function Loginpage(props) {
             <h1>Login</h1>
             <p>Sign In and Start Managing your Leaderboard!</p>
           </div>
-<<<<<<< HEAD
           <form>
-=======
-          <form onSubmit={sendToWelcome}>
->>>>>>> d352ecfe6ec7342998bd3f74aec96585916639cc
             <label>Username</label>
             <input
               type="text"
@@ -40,10 +36,6 @@ function Loginpage(props) {
             <button type="submit">Login</button>
           </form>
         </div>
-<<<<<<< HEAD
-=======
-        
->>>>>>> d352ecfe6ec7342998bd3f74aec96585916639cc
       </div>
     </div>
   );

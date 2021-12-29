@@ -19,6 +19,7 @@ class Teampage extends Component {
     FileLength: 0,
     inputVal: "",
   };
+
   addTeam = (e) => {
     e.preventDefault();
 
@@ -163,26 +164,32 @@ class Teampage extends Component {
               />
               <button onClick={this.addTeam}>Add</button>
 
-              <div>
+              <div className="jayteam_conatiner">
                 {this.state.teams ? (
-                  this.state.teams.map((item, i) => (
-                    <div>
-                      <div>
-                        {item}
-                        <button onClick={(e) => this.deleteItem(i)}>x</button>
-                      </div>
-                    </div>
-                  ))
+                  <div className="allteamsselected">
+                    {this.state.teams.map((item, i) => (
+                      <span className="jayselectedteams">
+                        <span>{item}</span>
+                        <button
+                          className="jayteam_selteambutton"
+                          onClick={(e) => this.deleteItem(i)}
+                        >
+                          X
+                        </button>
+                      </span>
+                    ))}
+                  </div>
                 ) : (
                   <div>0 teams selected</div>
                 )}
                 {this.state.teams.length} teams selected
               </div>
-
-              <button onClick={this.sendTeamData} type="submit">
-                Update
-              </button>
-              <button type="reset">Reset</button>
+              <div className="updtrestbtn">
+                <button onClick={this.sendTeamData} type="submit">
+                  Update
+                </button>
+                <button type="reset" className="resetbtn_jayteam">Reset</button>
+              </div>
             </form>
           </div>
         ) : null}
@@ -216,7 +223,6 @@ class Teampage extends Component {
                   this.setDate(e.target.value);
                 }}
               />
-              <br />
               <input
                 type="text"
                 value={this.state.points}
@@ -225,7 +231,6 @@ class Teampage extends Component {
                 }}
                 placeholder="points"
               />
-              <br />
               <textarea
                 value={this.state.reason}
                 onChange={(e) => {
