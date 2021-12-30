@@ -131,17 +131,37 @@
     background: #23ff91;
     transition: 300ms ease-in;
 }
+.csvupload_indi{
+    width: 90%;
+    background: rgba(173, 215, 242, 0.3);
+    min-height: 30vh;
+    border-radius: 10px;
+    color: #000917;
+    display: flex;
+    flex-direction: column;
+    text-indent: 10px;
+    margin: 15px 0 15px 0;
+    justify-content: space-between;
+    padding: 7px;
+}
+.csvindi_clrbtn{
+    width: 100% !important;
+    background: #FF5555 !important;
+    margin: 2vh 0 0.5vh !important;
+}
 /* Smartphones ----------- */
 @media only screen
 and (max-width: 800px) {
     .jayindi_hdr{
         flex-direction: column;
+        transition: 300ms ease-in;
     }
     .jayindi_hdr h1{
         align-self: center;
         text-align: center;
         font-size: 5rem;
         margin-top: 10px;
+        transition: 300ms ease-in;
     }
     .jayindi_hdr img{
         width: 100%;
@@ -158,14 +178,17 @@ and (max-width: 800px) {
 and  (min-width: 426px) and (max-width: 1024px) {
     .jayindi_hdr{
         flex-direction: column;
+        transition: 300ms ease-in;
     }
     .jayindi_hdr h1{
         align-self: center;
         text-align: center;
         font-size: 5rem;
+        transition: 300ms ease-in;
     }
     .jayindi_hdr img{
         width: 70%;
+        transition: 300ms ease-in;
     }
     .jay_indibtn{
         padding-top: 1.5vh;

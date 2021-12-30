@@ -188,7 +188,9 @@ class Teampage extends Component {
                 <button onClick={this.sendTeamData} type="submit">
                   Update
                 </button>
-                <button type="reset" className="resetbtn_jayteam">Reset</button>
+                <button type="reset" className="resetbtn_jayteam">
+                  Reset
+                </button>
               </div>
             </form>
           </div>
@@ -201,15 +203,19 @@ class Teampage extends Component {
                 accept=".csv"
                 onChange={(e) => this.takeFile(e)}
               />
-              <div style={{ backgroundColor: "#e3e3e3" }}>
+              <div className="csvupload_team">
                 {this.state.namesarray.length > 0 ? (
-                  <div>
+                  <div className="csvteam_members">
                     <MemberNames
                       fileLength={this.state.FileLength}
                       nameData={this.state.namesarray}
                       keyword={this.state.name}
                     />
-                    <button type="button" onClick={this.clearNames}>
+                    <button
+                      type="button"
+                      onClick={this.clearNames}
+                      className="csvteam_clrbtn"
+                    >
                       Clear list
                     </button>
                   </div>

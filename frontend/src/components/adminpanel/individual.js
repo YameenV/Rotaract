@@ -144,15 +144,19 @@ class Individualpage extends Component {
                 accept=".csv"
                 onChange={(e) => this.takeFile(e)}
               />
-              <div style={{ backgroundColor: "#e3e3e3" }}>
+              <div className="csvupload_indi">
                 {this.state.namesarray.length > 0 ? (
-                  <div>
+                  <div className="csvindi_members">
                     <MemberNames
                       fileLength={this.state.FileLength}
                       nameData={this.state.namesarray}
                       keyword={this.state.name}
                     />
-                    <button type="button" onClick={this.clearNames}>
+                    <button
+                      type="button"
+                      onClick={this.clearNames}
+                      className="csvindi_clrbtn"
+                    >
                       Clear list
                     </button>
                   </div>
