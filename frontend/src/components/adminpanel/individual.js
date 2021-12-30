@@ -132,7 +132,7 @@ class Individualpage extends Component {
           value={this.state.name}
           onChange={(e) => this.setState({ name: e.target.value })}
           type="text"
-          placeholder="search by name"
+          placeholder="Search by Name"
         />
         <h5>OR</h5>
         <button onClick={this.setToggle}>Upload CSV</button>
@@ -174,7 +174,7 @@ class Individualpage extends Component {
                 onChange={(e) => {
                   this.setState({ points: e.target.value });
                 }}
-                placeholder="points"
+                placeholder="Points"
               />
               <textarea
                 value={this.state.reason}

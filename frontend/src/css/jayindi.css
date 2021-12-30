@@ -24,7 +24,7 @@
 }
 .jay_indibtn{
     width: 90%;
-    background: linear-gradient(90deg, #20DF7F 0%, #0066FF 166.88%);
+    background: linear-gradient(90deg, #0066FF -48.96%, #20DF7F 200.68%);
     text-align: center;
     height: 6vh;
     border-radius: 10px;
@@ -131,15 +131,6 @@
     background: #23ff91;
     transition: 300ms ease-in;
 }
-.updtrestbtn{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-.resetbtn_jayteam{
-    background: #FF5555 !important;
-}
 /* Smartphones ----------- */
 @media only screen
 and (max-width: 800px) {
@@ -155,6 +146,12 @@ and (max-width: 800px) {
     .jayindi_hdr img{
         width: 100%;
     }
+    .jay_indibtn{
+        padding-top: 1vh;
+    }
+    .jayindi_main input[type=file]::file-selector-button{
+        padding: 1.2vh;
+    }
 } 
 /* iPads  ----------- */
 @media only screen
@@ -169,5 +166,11 @@ and  (min-width: 426px) and (max-width: 1024px) {
     }
     .jayindi_hdr img{
         width: 70%;
+    }
+    .jay_indibtn{
+        padding-top: 1.5vh;
+    }
+    .jayindi_main input[type=file]::file-selector-button{
+        padding: 1.6vh;
     }
 } 

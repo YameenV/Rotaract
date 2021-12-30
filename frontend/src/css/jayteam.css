@@ -57,16 +57,16 @@
     text-indent: 10px;
     margin: 15px 0 15px 0;
     justify-content: space-between;
+    padding: 7px;
 }
 .jayselectedteams{
     background: #FFFFFF;
     border-radius: 100px;
     display: flex;
-    max-width: max-content;
     margin-right: 5px;
     margin-bottom: 5px;
     align-items: center;
-    height: 4vh;
+    height: 5vh;
 }
 .allteamsselected{
     display: flex;
@@ -74,13 +74,12 @@
     flex-wrap: wrap;
 }
 .jayteam_selteambutton{
-    display: inline;
-    height: 4vh !important;
-    width: 4vw !important;
+    height: 4.2vh !important;
+    width: 2vw !important;
     border-radius: 50% !important;
     background: #FF5555 !important;
     font-size: 0.8rem !important;
-    margin: 0 !important;
+    margin: 0 0.2vw 0 0.2vw !important;
 }
 .jayteam_main textarea{
     width: 90%;
@@ -182,6 +181,17 @@ and (max-width: 800px) {
     .jayteam_hdr img{
         width: 100%;
     }
+    .jayteam_tmbtn{
+        padding-top: 1vh;
+    }
+    .jayteam_main input[type=file]::file-selector-button{
+        padding: 1.2vh;
+    }
+    .jayteam_selteambutton{
+        height: 4vh !important;
+        width: 7vw !important;
+        margin: 0 1vw 0 1.5vw !important;
+    }
 } 
 /* iPads  ----------- */
 @media only screen
@@ -196,5 +206,16 @@ and  (min-width: 426px) and (max-width: 1024px) {
     }
     .jayteam_hdr img{
         width: 70%;
+    }
+    .jayteam_tmbtn{
+        padding-top: 1.5vh;
+    }
+    .jayteam_main input[type=file]::file-selector-button{
+        padding: 1.6vh;
+    }
+    .jayteam_selteambutton{
+        height: 4.2vh !important;
+        width: 6vw !important;
+        margin: 0 0.8vw 0 1.5vw !important;
     }
 } 
