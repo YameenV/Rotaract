@@ -31,26 +31,27 @@ class MemberNames extends Component {
 
 
 return (
+  <div>
+    {EndArray.filter((item) => {
+      if (this.props.keyword === "") {
+        return item;
+      } else if (
+        item.toLowerCase().includes(this.props.keyword.toLowerCase())
+      ) {
+        return item;
+      }
+    }).map((item, i) => (
       <div>
-        {EndArray.filter((item) => {
-          if (this.props.keyword === "") {
-            return item;
-          } else if (
-            item.toLowerCase().includes(this.props.keyword.toLowerCase())
-          ) {
-            return item;
-          }
-        }).map((item,i) => (
-        <div>
- <div>{item}
-          </div>
-          <button onClick={(e)=>this.deleteName(e,i)}>x</button>
-        </div>
-         
-        ))}
-      
+        <span className="csv_members">
+          {item}
+          <button onClick={(e) => this.deleteName(e, i)} className="csv_dltbtn">
+            x
+          </button>
+        </span>
       </div>
-    );
+    ))}
+  </div>
+);
   };
 
   render() {

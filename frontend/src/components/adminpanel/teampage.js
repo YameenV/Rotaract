@@ -168,27 +168,26 @@ class Teampage extends Component {
                 accept=".csv"
                 onChange={(e) => this.takeFile(e)}
               />
-              <div className="csvupload_indi">
+              <div className="csvupload_team">
                 {this.state.namesarray.length > 0 ? (
-                  <div className="csvindi_members">
+                  <div className="csvteam_members">
                     <MemberNames
                       fileLength={this.state.FileLength}
                       nameData={this.state.namesarray}
                       keyword={this.state.name}
                       deleteName={this.deleteItem}
-
                     />
                     <button
                       type="button"
                       onClick={this.clearNames}
-                      className="csvindi_clrbtn"
+                      className="csvteam_clrbtn"
                     >
                       Clear list
                     </button>
                   </div>
                 ) : null}
               </div>
-            
+
               <input
                 type="date"
                 value={this.state.date}
@@ -268,7 +267,6 @@ class Teampage extends Component {
             </form>
           </div>
         ) : null}
-        
       </div>
     );
   }
