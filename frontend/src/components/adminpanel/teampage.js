@@ -10,7 +10,7 @@ class Teampage extends Component {
     upToggle: false,
     upToggle2: false,
     date: "",
-    points: "",
+    points: 0,
     reason: "",
     teams: [],
     teamname: "",
@@ -21,7 +21,7 @@ class Teampage extends Component {
     captainarray: [],
     namesarray: [],
     FileLength: 0,
-    inputVal: "",
+    inputVal: ""
   };
 
   addTeam = (e) => {
@@ -95,7 +95,7 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
     let newObj = {
       teamsArray: this.state.teams,
     };
-    console.log(newObj);
+    
   };
 
   deleteItem = (key) => {

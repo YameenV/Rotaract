@@ -20,7 +20,9 @@ class Individualpage extends Component {
     reason: "",
     namesarray: [],
     FileLength: 0,
-    inputVal: "",
+    inputVal: ""
+  
+
   };
   addTeam = (e) => {
     e.preventDefault();
@@ -49,7 +51,7 @@ class Individualpage extends Component {
       name:this.state.namesarray,
       score:{
         user_id:1,
-        name:'Abhinav',
+        name:'abhinavp',
         current_position:'GBM',
         score:parseInt(this.state.points),
         month:this.state.month,
@@ -147,10 +149,12 @@ class Individualpage extends Component {
     })
 
   }
+
+
  
 
   render() {
-
+    console.log(this.state.increment)
     return (
       <div className="jayindi_main">
         <div className="jayindi_hdr">
