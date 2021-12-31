@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import MemberNames from "./memberNames";
 import "../../css/jayteam.css";
 import rtlogo from "../../imgs/RCUCoEsLogo.png";
-
+import {connect} from 'react-redux'
+import * as actions from '../../actions/index'
 class Teampage extends Component {
   state = {
     name: "",
@@ -13,6 +14,9 @@ class Teampage extends Component {
     reason: "",
     teams: [],
     teamname: "",
+    year:"",
+    month:"",
+    day:"",
     captainname: "",
     captainarray: [],
     namesarray: [],
@@ -42,11 +46,23 @@ class Teampage extends Component {
   };
   sendData = (e) => {
     e.preventDefault();
-    this.setToggle();
-    let sendObj = {
-      
-    };
-   
+    
+    var currentdate = new Date(); 
+var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+                console.log(datetime)
+               
+   var obj = {
+    season_name: 'season 1',
+    team_name: this.state.teamname,
+    captain_name: this.state.captainname,
+    date_time: datetime
+   }
+   this.props.AddTeam(obj)
+  
   };
 
   setDate = (d) => {
@@ -143,6 +159,7 @@ class Teampage extends Component {
  
 
   render() {
+    console.log(this.props)
     return (
       <div className="jayteam_main">
         <div className="jayteam_hdr">
@@ -157,72 +174,14 @@ class Teampage extends Component {
           placeholder="Search by Name"
         />
         <h5>OR</h5>
-        <button onClick={this.setToggle} className="csvuploadbtn">
-          Upload CSV
-        </button>
-        {this.state.upToggle ? (
-          <div>
-            <form onSubmit={this.sendData} className="uploadcsvindi_nxtform">
-              <input
-                type="file"
-                accept=".csv"
-                onChange={(e) => this.takeFile(e)}
-              />
-              <div className="csvupload_indi">
-                {this.state.namesarray.length > 0 ? (
-                  <div className="csvindi_members">
-                    <MemberNames
-                      fileLength={this.state.FileLength}
-                      nameData={this.state.namesarray}
-                      keyword={this.state.name}
-                      deleteName={this.deleteItem}
-
-                    />
-                    <button
-                      type="button"
-                      onClick={this.clearNames}
-                      className="csvindi_clrbtn"
-                    >
-                      Clear list
-                    </button>
-                  </div>
-                ) : null}
-              </div>
-            
-              <input
-                type="date"
-                value={this.state.date}
-                onChange={(e) => {
-                  this.setDate(e.target.value);
-                }}
-              />
-              <input
-                type="text"
-                value={this.state.points}
-                onChange={(e) => {
-                  this.setState({ points: e.target.value });
-                }}
-                placeholder="Points"
-              />
-              <textarea
-                value={this.state.reason}
-                onChange={(e) => {
-                  this.setState({ reason: e.target.value });
-                }}
-                placeholder="Reason"
-              ></textarea>
-
-              <button type="submit">Update</button>
-            </form>
-          </div>
-        ) : null}
+        
 
         <button onClick={this.setToggle2} className="addteambtn">
           Add team
         </button>
         {this.state.upToggle2 ? (
           <div>
-            <form>
+            <form onSubmit={this.sendData}>
               <input
                 value={this.state.teamname}
                 onChange={(e) => this.setState({ teamname: e.target.value })}
@@ -258,7 +217,7 @@ class Teampage extends Component {
                 {this.state.teams.length} teams selected
               </div>
               <div className="updtrestbtn">
-                <button onClick={this.sendTeamData} type="submit">
+                <button type="submit">
                   Update
                 </button>
                 <button type="reset" className="resetbtn_jayteam">
@@ -274,4 +233,10 @@ class Teampage extends Component {
   }
 }
 
-export default Teampage;
+const mapStateToProps = (state) =>{
+  return{
+    tdata:state.team
+  }
+}
+
+export default connect(mapStateToProps,actions)(Teampage);

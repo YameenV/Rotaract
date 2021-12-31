@@ -5,8 +5,10 @@ export default function(state={},action){
             return {...state,teamData:action.payload}
         case 'Leaderboard_team_data':
             return {...state,teamData:action.payload}
- 
-
+        case 'inc_data':
+            return {...state,teamData:action.payload}
+        case 'add_team':
+            return {...state,teamData:action.payload}
         default:
             return state
 

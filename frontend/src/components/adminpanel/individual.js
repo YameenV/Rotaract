@@ -2,6 +2,8 @@ import React, { cl, Component } from "react";
 import MemberNames from "./memberNames";
 import "../../css/jayindi.css";
 import rtlogo from "../../imgs/RCUCoEsLogo.png";
+import {connect} from 'react-redux'
+import * as actions from '../../actions/index'
 
 class Individualpage extends Component {
   state = {
@@ -46,10 +48,10 @@ class Individualpage extends Component {
     let sendobj = {
       name:this.state.namesarray,
       score:{
-        user_id:'aingegm2=0gj4m-s0',
+        user_id:1,
         name:'Abhinav',
         current_position:'GBM',
-        score:this.state.points,
+        score:parseInt(this.state.points),
         month:this.state.month,
         day:this.state.day,
         year:this.state.year,
@@ -58,7 +60,7 @@ class Individualpage extends Component {
 
       }
     }
-    console.log(sendobj);
+    this.props.IncrementIndividual(sendobj)
   };
 
   setDate = (d) => {
@@ -92,10 +94,8 @@ class Individualpage extends Component {
     let newObj = {
       teamsArray: this.state.teams,
     };
-    console.log(newObj);
+   
   };
-
-  
 
   takeFile = (e) => {
     const file = e.target.files[0];
@@ -131,6 +131,8 @@ class Individualpage extends Component {
     }.bind(this);
     reader.readAsText(file);
   };
+
+
   clearNames = () => {
     this.setState({
       namesarray: [],
@@ -148,6 +150,7 @@ class Individualpage extends Component {
  
 
   render() {
+
     return (
       <div className="jayindi_main">
         <div className="jayindi_hdr">
@@ -228,5 +231,11 @@ class Individualpage extends Component {
     );
   }
 }
+const mapStateToProps = (state) =>{
+  return{
+    indidata:state.team
+  }
+}
 
-export default Individualpage;
+
+export default connect(mapStateToProps,actions)(Individualpage);
