@@ -3,9 +3,7 @@ import LauncherDiv from './launcherDiv'
 import '../../css/memberupdate.css'
 import {connect} from 'react-redux'
 import * as actions from '../../actions/index'
-import ROTLOGO from "../../imgs/RCUCoEsLogo.png";
 import MemberPic from "../../imgs/ashutosh1.jpg";
-import { Link } from 'react-router-dom';
 import Navbar from '../navbar/navbar';
 
 class MemberContainer extends Component {
