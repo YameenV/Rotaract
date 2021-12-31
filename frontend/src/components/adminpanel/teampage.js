@@ -227,7 +227,6 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
             </form>
           </div>
         ) : null}
-        
       </div>
     );
   }
