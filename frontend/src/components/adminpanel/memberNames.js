@@ -31,7 +31,7 @@ class MemberNames extends Component {
 
 
 return (
-  <div>
+  <div className="csvindi_members">
     {EndArray.filter((item) => {
       if (this.props.keyword === "") {
         return item;
@@ -41,14 +41,12 @@ return (
         return item;
       }
     }).map((item, i) => (
-      <div>
-        <span className="csv_members">
-          {item}
-          <button onClick={(e) => this.deleteName(e, i)} className="csv_dltbtn">
-            x
-          </button>
-        </span>
-      </div>
+      <span className="csv_members">
+        {item}
+        <button onClick={(e) => this.deleteName(e, i)} className="csv_dltbtn">
+          X
+        </button>
+      </span>
     ))}
   </div>
 );

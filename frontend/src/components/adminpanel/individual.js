@@ -12,17 +12,15 @@ class Individualpage extends Component {
     upToggle2: false,
     incrementType: "",
     date: "",
-    year:"",
-    day:"",
-    month:"",
+    year: "",
+    day: "",
+    month: "",
     points: "",
-    takenname:[],
+    takenname: [],
     reason: "",
     namesarray: [],
     FileLength: 0,
-    inputVal: ""
-  
-
+    inputVal: "",
   };
   addTeam = (e) => {
     e.preventDefault();
@@ -48,34 +46,33 @@ class Individualpage extends Component {
     e.preventDefault();
     this.setToggle();
     let sendobj = {
-      name:this.state.namesarray,
-      score:{
-        user_id:1,
-        name:'abhinavp',
-        current_position:'GBM',
-        score:parseInt(this.state.points),
-        month:this.state.month,
-        day:this.state.day,
-        year:this.state.year,
-        increment_type:this.state.incrementType,
-        reason:this.state.reason
-
-      }
-    }
-    this.props.IncrementIndividual(sendobj)
+      name: this.state.namesarray,
+      score: {
+        user_id: 1,
+        name: "abhinavp",
+        current_position: "GBM",
+        score: parseInt(this.state.points),
+        month: this.state.month,
+        day: this.state.day,
+        year: this.state.year,
+        increment_type: this.state.incrementType,
+        reason: this.state.reason,
+      },
+    };
+    this.props.IncrementIndividual(sendobj);
   };
 
   setDate = (d) => {
-    let date = d.split('-')
-    let year = date[0]
-    let month = date[1]
-    let day = date[2]
-    console.log(date)
+    let date = d.split("-");
+    let year = date[0];
+    let month = date[1];
+    let day = date[2];
+    console.log(date);
     this.setState({
-      date:d,
+      date: d,
       year,
       month,
-      day
+      day,
     });
   };
 
@@ -96,7 +93,6 @@ class Individualpage extends Component {
     let newObj = {
       teamsArray: this.state.teams,
     };
-   
   };
 
   takeFile = (e) => {
@@ -134,27 +130,22 @@ class Individualpage extends Component {
     reader.readAsText(file);
   };
 
-
   clearNames = () => {
     this.setState({
       namesarray: [],
     });
   };
 
-  deleteItem = (key)=>{
-    let cloneArray = [...this.state.namesarray]
-    cloneArray.splice(key,1)
+  deleteItem = (key) => {
+    let cloneArray = [...this.state.namesarray];
+    cloneArray.splice(key, 1);
     this.setState({
-      namesarray:cloneArray
-    })
-
-  }
-
-
- 
+      namesarray: cloneArray,
+    });
+  };
 
   render() {
-    console.log(this.state.increment)
+    console.log(this.state.increment);
     return (
       <div className="jayindi_main">
         <div className="jayindi_hdr">
@@ -180,13 +171,12 @@ class Individualpage extends Component {
               />
               <div className="csvupload_indi">
                 {this.state.namesarray.length > 0 ? (
-                  <div className="csvindi_members">
+                  <div>
                     <MemberNames
                       fileLength={this.state.FileLength}
                       nameData={this.state.namesarray}
                       keyword={this.state.name}
                       deleteName={this.deleteItem}
-
                     />
                     <button
                       type="button"
@@ -198,7 +188,11 @@ class Individualpage extends Component {
                   </div>
                 ) : null}
               </div>
-              <select onChange={(e)=>this.setState({incrementType:e.target.value})}>
+              <select
+                onChange={(e) =>
+                  this.setState({ incrementType: e.target.value })
+                }
+              >
                 <option>Meeting - BOD, GBM, etc</option>
                 <option>Events - attendance</option>
                 <option>Individual (active)</option>
@@ -235,11 +229,10 @@ class Individualpage extends Component {
     );
   }
 }
-const mapStateToProps = (state) =>{
-  return{
-    indidata:state.team
-  }
-}
+const mapStateToProps = (state) => {
+  return {
+    indidata: state.team,
+  };
+};
 
-
-export default connect(mapStateToProps,actions)(Individualpage);
+export default connect(mapStateToProps, actions)(Individualpage);
