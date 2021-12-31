@@ -12,8 +12,8 @@ import Navbar from './components/navbar/navbar'
 import PortFolioContainer from './components/portfolio/portfolioContainer'
 import AdminPublish from './components/admin_publish/adminPublish'
 import Homepage from './components/Homepage/homepageContainer'
-
-
+import MemberRegister from './components/register/memberregister' 
+import Coreregister from './components/register/coreregister'
 const Routes = () =>{
     return(
         <div>
@@ -30,7 +30,8 @@ const Routes = () =>{
             <Route exact path = "/admin_individual" component = {Individualpage}/>
             <Route exact path = "/portfolio" component={PortFolioContainer}/>
             <Route exact path = "/admin_publish" component={AdminPublish}/>
-            
+            <Route exact path = "/memberlogin" component={MemberRegister}/>
+            <Route exact path = "/corelogin" component={Coreregister}/>
             </Switch>
         </div>
     )
