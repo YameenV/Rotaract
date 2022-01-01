@@ -229,6 +229,9 @@ svg {
     width: 19vw;
     z-index: 99;
   }
+  .menu-link ul li a{
+    color: #ADD7F2;
+  }
 }
 
 @media (max-width: 520px) {
@@ -267,5 +270,8 @@ svg {
     height: 23vw;
     width: 25vw;
     z-index: 99;
+  }
+  .menu-link ul li a{
+    color: #ADD7F2;
   }
 }
