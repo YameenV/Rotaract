@@ -45,7 +45,6 @@ class AdminPublish extends Component {
     
     return (
       <div className="publish-main">
-        <img className="publish-img" src={Gala} />
         <div className="publish-headertext">Welcome Aakash!</div>
 
         {this.state.typeof === "announce" ? null : (
