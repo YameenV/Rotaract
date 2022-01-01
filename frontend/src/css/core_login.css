@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Roboto&display=swap');
+
+
+.core_login-main{
+    background-image: url("../background/memebrlogin.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.core_login-conn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(173, 215, 242, 0.28);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    height: 60vh;
+    width: calc(200px + 25vw);
+    padding: 15px;
+    gap: 10px;
+}
+
+.core_login-text{
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: calc(12px + 6vw);
+    color: #000917;
+    align-self: center;
+}
+
+.core_login-but{
+    width: 70%;
+    background: #0066FF;
+    border-radius: 10px;
+    height: 8vh;
+    border: none;
+    font-family: Inter;
+    font-style: bold;
+    font-weight: bold;
+    font-size: calc(6px + 1vw);
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .core_login-conn{
+        height: 40vh;
+        width: calc(100px + 40vw);
+    }
+    .core_login-text{
+        font-size: calc(12px + 8vw);
+    }
+    .core_login-but{
+        height: 7vh;
+        font-size: calc(6px + 2vw);
+    }
+}
