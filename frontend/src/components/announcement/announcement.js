@@ -1,6 +1,7 @@
 
 import '../../css/announcement.css'
 import Navbar from '../navbar/navbar'
+import ann from '../../background/announcements.mp4'
 
 
 function Announcement(props) {
@@ -8,11 +9,22 @@ function Announcement(props) {
   console.log(data)
   return (data.length) > 0 ? (
     <div className="announcement_main">
+      <video autoPlay muted loop
+      style={{
+        position:"absolute",
+        objectFit:"cover",
+        width:"100%",
+        height:"100%",
+        zIndex:"-1",
+        position:"fixed",
+      }}
+      >
+			<source src={ann} type="video/mp4" />
+      </video>
+      
       <Navbar/>
 
-      {/* <img className='publish-img' src={aur} /> */}
-
-      <div className="announcement_header">
+      <div className="announcement_header-ann">
         Announcement
       </div>
 
@@ -36,9 +48,21 @@ function Announcement(props) {
       </div>
     </div>) : (
     <div className="announcement_main">
+      <video autoPlay muted loop
+      style={{
+        position:"absolute",
+        objectFit:"cover",
+        width:"100%",
+        height:"100%",
+        zIndex:"-1",
+        position:"fixed"
+      }}
+      >
+			<source src={ann} type="video/mp4" />
+      </video>
+      
       <Navbar/>
-      {/* <img className='publish-img' src={aur} /> */}
-      <div className="announcement_header">
+      <div className="announcement_header-ann">
         Announcement
       </div>
 

@@ -1,22 +1,19 @@
 
 
-.main_member{    
+.main_member{
+    min-height: 100vh;
+    min-width: 100vw; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
-    min-width: 100vw;
     align-content: center;
     align-items: center;
-    background: linear-gradient(107.25deg, #FFFFFF -30.05%, #0066FF 7.53%, #000917 100%);
-    
-    
 }
-.member_navbar{
+/* .member_navbar{
     display: grid;
     grid-template-columns: 2rem 2fr 2fr 2fr 2rem;
     min-width: 100vw;
-}
+} */
 .member_rotaractlogo{
     height: calc(40px + 10vw);
     width: calc(40px+10vw);
@@ -238,7 +235,7 @@
         /* min-width: 100vw; */
         align-content: center;
         align-items: center;
-        background: linear-gradient(107.25deg, #FFFFFF -30.05%, #0066FF 7.53%, #000917 100%);
+        
     }
     .member_rotimage{
         width: 160px;
@@ -368,14 +365,9 @@
         width: 135px;
         height: 135px;
     }
-    
-
-    
-    
-
 }
-/**/  
-@media (max-width: 500px) {
+
+@media (max-width: 550px) {
     
         .main-nav {
       height: 6rem;

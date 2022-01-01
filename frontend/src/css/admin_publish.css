@@ -2,17 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Roboto&display=swap');
 
 .publish-main{
-    background-image: url("../background/aur.png"), url("../background/milky.jpg");
-    /* background-size: cover;
+    background-image: url("../background/adminpublish.png");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed; */
+    background-attachment: fixed;
     /* height: 100%; */
-    background-position: right bottom, left top;
-    background-repeat: no-repeat, repeat;
     display: flex;
-    /* min-width: 100vw;
-    min-height: 100vh; */
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

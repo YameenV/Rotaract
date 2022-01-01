@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../../css/admin_publish.css";
-import Gala from "../../background/gala3.png";
 import {connect} from 'react-redux'
 import * as actions from '../../actions/index'
 class AdminPublish extends Component {

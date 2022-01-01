@@ -1,31 +1,30 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .announcement_main{
-    background: url("../../src/background/Nebula.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
-    overflow-y: hidden;
+    /* align-items: flex-start; */
     min-height: 100vh;
     min-width: 100vw;
 }
 
-.announcement_header{
+
+.announcement_header-ann{
     font-family: Bebas Neue;
     font-style: normal;
     font-weight: 400;
     text-transform: capitalize;
     font-size: calc(12px + 6vw);
     padding-left: 30px;
+    color: #ADD7F2;
 }
 
 .announcement-con {
     background: rgba(173, 215, 242, 0.3);
     backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
     border-radius: calc(5px + 2vw);
     margin-left: 20px;
     margin-right: 20px;
@@ -65,24 +64,24 @@
     padding-bottom: 10px;
     font-weight: 510;
     font-size: calc(8px + 1vw);
-    font-family: Inter;
+    font-family: Montserrat;
 
 }
 
 .ann_title {
     font-size: calc(15px + 2vw);
     font-weight: bold;
-    font-family: Inter;
+    font-family: Montserrat;
 
 }
 .ann_date {
     font-size: calc(8px +  0.5vw);
-    font-family: Inter;
+    font-family: Montserrat;
 
 }
 .ann_description {
     font-size: calc(8px + 1vw);
-    font-family: Inter;
+    font-family: Montserrat;
 
 }
 

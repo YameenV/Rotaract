@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import * as actions from "../../actions/index";
 import "../../css/portfolio.css"
 import Navbar from "../navbar/navbar"
+import port from "../../background/prot.mp4"
 
 class PortFolioContainer extends Component {
 
@@ -138,7 +139,23 @@ class PortFolioContainer extends Component {
      
     return (
       <div className="pro-main" >
+        <video autoPlay muted loop
+      style={{
+        position:"absolute",
+        objectFit:"cover",
+        width:"100%",
+        height:"100%",
+        mixBlendMode:"screen",
+        transform:"matrix(-1, 0, 0, 1, 0, 0)",
+        position:"fixed",
+        
+        
+      }}
+      >
+			<source src={port} type="video/mp4" />
+      </video>
         <Navbar/>
+        <div className="pro-conn">
         <div className="pro-search-con" >
           <form   onSubmit={this.findRtr}>
             <input className="pro-input"
@@ -156,7 +173,7 @@ class PortFolioContainer extends Component {
             null
           )
         }
-        
+        </div>
       </div>
     );
   }
