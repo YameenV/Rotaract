@@ -7,7 +7,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    /* height: 100%; */
     display: flex;
     min-width: 100vw;
     min-height: 100vh;
@@ -179,8 +178,67 @@
     font-size: calc(6px + 1vw);
     text-align: center;
 }
-.publish-event_con{
+
+.publish-event_div{
+    padding: 20px;
+    background: rgba(173, 215, 242, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    width: calc(100px + 75vw);
+}
+.publish-event_dcon{
     display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap:10px;
+    
+   
+}
+.publish_event_title{
+    background: rgba(173, 215, 242, 0.3);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    width: 100%;
+    height: 8vh;
+    border: none;
+    font-family: Inter;
+    font-style: bold;
+    font-weight: bold;
+    font-size: calc(6px + 1vw);
+    text-align: start;
+    padding: 10px
+}
+.publish_event_des{
+    background: rgba(173, 215, 242, 0.3);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    width: 100%;
+    height: 16vh;
+    border: none;
+    font-family: Inter;
+    font-style: bold;
+    font-weight: bold;
+    font-size: calc(6px + 1vw);
+    text-align: start;
+    padding: 10px;
+}
+.publish_event_imglink{
+    background: rgba(173, 215, 242, 0.3);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    width: 100%;
+    height: 8vh;
+    border: none;
+    font-family: Inter;
+    font-style: bold;
+    font-weight: bold;
+    font-size: calc(6px + 1vw);
+    text-align: start;
+    padding: 10px
 }
 
 @media only screen and (max-width: 800px) {
@@ -202,10 +260,6 @@
         width: auto;
         font-size: calc(12px + 10vw);
     }
-    /* .publish-img{
-        object-fit: cover;
-        height: 100vh;
-    } */
     .public-ann_img_by{
         flex-direction: column;
     }
@@ -216,6 +270,9 @@
         width: calc(80px + 70vw);
         color: #000917;
 
+    }
+    .publish-event_div{
+        width: calc(80px + 70vw);
     }
 
 }

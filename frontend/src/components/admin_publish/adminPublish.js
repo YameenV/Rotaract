@@ -147,24 +147,26 @@ class AdminPublish extends Component {
           </div>
         ) : null}
         {this.state.typeof === "event_highlight" ? (
-          <div>
-            <form classname="publish-event_con" onSubmit={this.submitEvent}>
-              <input
+            <div className="publish-event_div">
+            <form className="publish-event_dcon" onSubmit={this.submitEvent}>
+              <input className="publish_event_title"
                 placeholder="Title"
                 value={this.state.etitle}
                 onChange={(e) => this.setState({ etitle: e.target.value })}
               />
-              <textarea
+              <textarea className="publish_event_des"
                 placeholder="Description"
                 value={this.state.event}
                 onChange={(e) => this.setState({ event: e.target.value })}
               />
-              <input
+              <input className="publish_event_imglink"
                 placeholder="Image link"
                 value={this.state.imglink}
                 onChange={(e) => this.setState({ imglink: e.target.value })}
               />
+              <div className="public-ann-botton">
               <button
+              className="public-ann_back"
                 type="button"
                 onClick={(e) => {
                   this.setState({ typeof: "" });
@@ -172,9 +174,10 @@ class AdminPublish extends Component {
               >
                 Cancel
               </button>
-              <button type="submit">Post</button>
+              <button className="public-ann_submit" type="submit">Post</button>
+              </div>
             </form>
-          </div>
+            </div>
         ) : null}
       </div>
     );
