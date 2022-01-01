@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 
+
 export function getLeaderUserData(){
     const request = axios.get('/get_user_leaderboard')
     .then(response=>response.data)
@@ -73,6 +74,24 @@ export function createEvent(edata){
     .then(response =>response.data)
     return{
         type:'post_event',
+        payload:request
+    }
+}
+
+export function IncrementIndividual(idata){
+    const request = axios.post('/increment_user_score',idata)
+    .then(response=>response.data)
+    return{
+        type:'inc_data',
+        payload:request
+    }
+}
+
+export function AddTeam(tdata){
+    const request = axios.post('/create_team',tdata)
+    .then(response=>response.data)
+    return{
+        type:'add_team',
         payload:request
     }
 }

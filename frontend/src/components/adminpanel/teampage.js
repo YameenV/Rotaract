@@ -2,23 +2,28 @@ import React, { Component } from "react";
 import MemberNames from "./memberNames";
 import "../../css/jayteam.css";
 import rtlogo from "../../imgs/RCUCoEsLogo.png";
-
+import {connect} from 'react-redux'
+import * as actions from '../../actions/index'
 class Teampage extends Component {
   state = {
     name: "",
     upToggle: false,
     upToggle2: false,
     date: "",
-    points: "",
+    points: 0,
     reason: "",
     teams: [],
     teamname: "",
+    year:"",
+    month:"",
+    day:"",
     captainname: "",
     captainarray: [],
     namesarray: [],
     FileLength: 0,
-    inputVal: "",
+    inputVal: ""
   };
+
   addTeam = (e) => {
     e.preventDefault();
 
@@ -41,21 +46,38 @@ class Teampage extends Component {
   };
   sendData = (e) => {
     e.preventDefault();
-    this.setToggle();
-    let sendObj = {
-      date: this.state.date,
-      points: this.state.points,
-      reason: this.state.reason,
-    };
-    console.log(sendObj);
+    
+    var currentdate = new Date(); 
+var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+                console.log(datetime)
+               
+   var obj = {
+    season_name: 'season 1',
+    team_name: this.state.teamname,
+    captain_name: this.state.captainname,
+    date_time: datetime
+   }
+   this.props.AddTeam(obj)
+  
   };
 
   setDate = (d) => {
+    let date = d.split('-')
+    let year = date[0]
+    let month = date[1]
+    let day = date[2]
+    console.log(date)
     this.setState({
-      date: d,
+      date:d,
+      year,
+      month,
+      day
     });
   };
-
   setToggle2 = (e) => {
     if (this.state.upToggle2) {
       this.setState({
@@ -73,7 +95,7 @@ class Teampage extends Component {
     let newObj = {
       teamsArray: this.state.teams,
     };
-    console.log(newObj);
+    
   };
 
   deleteItem = (key) => {
@@ -125,7 +147,19 @@ class Teampage extends Component {
     });
   };
 
+
+  deleteItem = (key)=>{
+    let cloneArray = [...this.state.namesarray]
+    cloneArray.splice(key,1)
+    this.setState({
+      namesarray:cloneArray
+    })
+
+  }
+ 
+
   render() {
+    console.log(this.props)
     return (
       <div className="jayteam_main">
         <div className="jayteam_hdr">
@@ -140,15 +174,14 @@ class Teampage extends Component {
           placeholder="Search by Name"
         />
         <h5>OR</h5>
-        <button onClick={this.setToggle} className="csvuploadbtn">
-          Upload CSV
-        </button>
+        
+
         <button onClick={this.setToggle2} className="addteambtn">
           Add team
         </button>
         {this.state.upToggle2 ? (
           <div>
-            <form>
+            <form onSubmit={this.sendData}>
               <input
                 value={this.state.teamname}
                 onChange={(e) => this.setState({ teamname: e.target.value })}
@@ -163,78 +196,34 @@ class Teampage extends Component {
               />
               <button onClick={this.addTeam}>Add</button>
 
-              <div>
+              <div className="jayteam_conatiner">
                 {this.state.teams ? (
-                  this.state.teams.map((item, i) => (
-                    <div>
-                      <div>
-                        {item}
-                        <button onClick={(e) => this.deleteItem(i)}>x</button>
-                      </div>
-                    </div>
-                  ))
+                  <div className="allteamsselected">
+                    {this.state.teams.map((item, i) => (
+                      <span className="jayselectedteams">
+                        <span>{item}</span>
+                        <button
+                          className="jayteam_selteambutton"
+                          onClick={(e) => this.deleteItem(i)}
+                        >
+                          X
+                        </button>
+                      </span>
+                    ))}
+                  </div>
                 ) : (
                   <div>0 teams selected</div>
                 )}
                 {this.state.teams.length} teams selected
               </div>
-
-              <button onClick={this.sendTeamData} type="submit">
-                Update
-              </button>
-              <button type="reset">Reset</button>
-            </form>
-          </div>
-        ) : null}
-        {this.state.upToggle ? (
-          <div>
-            <form onSubmit={this.sendData}>
-              <input
-                type="file"
-                accept=".csv"
-                onChange={(e) => this.takeFile(e)}
-              />
-              <div style={{ backgroundColor: "#e3e3e3" }}>
-                {this.state.namesarray.length > 0 ? (
-                  <div>
-                    <MemberNames
-                      fileLength={this.state.FileLength}
-                      nameData={this.state.namesarray}
-                      keyword={this.state.name}
-                    />
-                    <button type="button" onClick={this.clearNames}>
-                      Clear list
-                    </button>
-                  </div>
-                ) : null}
+              <div className="updtrestbtn">
+                <button type="submit">
+                  Update
+                </button>
+                <button type="reset" className="resetbtn_jayteam">
+                  Reset
+                </button>
               </div>
-
-              <input
-                type="date"
-                value={this.state.date}
-                onChange={(e) => {
-                  this.setDate(e.target.value);
-                }}
-              />
-              <br />
-              <input
-                type="text"
-                value={this.state.points}
-                onChange={(e) => {
-                  this.setState({ points: e.target.value });
-                }}
-                placeholder="points"
-              />
-              <br />
-              <textarea
-                value={this.state.reason}
-                onChange={(e) => {
-                  this.setState({ reason: e.target.value });
-                }}
-                placeholder="reason"
-              ></textarea>
-
-              <button type="submit">Update</button>
             </form>
           </div>
         ) : null}
@@ -243,4 +232,10 @@ class Teampage extends Component {
   }
 }
 
-export default Teampage;
+const mapStateToProps = (state) =>{
+  return{
+    tdata:state.team
+  }
+}
+
+export default connect(mapStateToProps,actions)(Teampage);

@@ -8,7 +8,7 @@ import {Provider} from 'react-redux'
 import {createStore,applyMiddleware} from 'redux' 
 import promiseMiddleware from 'redux-promise' 
 import Navbar from './components/navbar/navbar'
-import {Auth0Provider} from '@auth0/auth0-react'
+import 'bootstrap/dist/css/bootstrap.min.css'
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore)
 
 

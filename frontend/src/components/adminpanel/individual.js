@@ -1,5 +1,10 @@
-import React, { Component } from "react";
+import React, { cl, Component } from "react";
 import MemberNames from "./memberNames";
+import "../../css/jayindi.css";
+import rtlogo from "../../imgs/RCUCoEsLogo.png";
+import {connect} from 'react-redux'
+import * as actions from '../../actions/index'
+
 class Individualpage extends Component {
   state = {
     name: "",
@@ -7,11 +12,15 @@ class Individualpage extends Component {
     upToggle2: false,
     incrementType: "",
     date: "",
+    year: "",
+    day: "",
+    month: "",
     points: "",
+    takenname: [],
     reason: "",
     namesarray: [],
     FileLength: 0,
-    inputVal:""
+    inputVal: "",
   };
   addTeam = (e) => {
     e.preventDefault();
@@ -32,20 +41,38 @@ class Individualpage extends Component {
       });
     }
   };
+
   sendData = (e) => {
     e.preventDefault();
     this.setToggle();
-    let sendObj = {
-      date: this.state.date,
-      points: this.state.points,
-      reason: this.state.reason,
+    let sendobj = {
+      name: this.state.namesarray,
+      score: {
+        user_id: 1,
+        name: "abhinavp",
+        current_position: "GBM",
+        score: parseInt(this.state.points),
+        month: this.state.month,
+        day: this.state.day,
+        year: this.state.year,
+        increment_type: this.state.incrementType,
+        reason: this.state.reason,
+      },
     };
-    console.log(sendObj);
+    this.props.IncrementIndividual(sendobj);
   };
 
   setDate = (d) => {
+    let date = d.split("-");
+    let year = date[0];
+    let month = date[1];
+    let day = date[2];
+    console.log(date);
     this.setState({
       date: d,
+      year,
+      month,
+      day,
     });
   };
 
@@ -66,15 +93,6 @@ class Individualpage extends Component {
     let newObj = {
       teamsArray: this.state.teams,
     };
-    console.log(newObj);
-  };
-
-  deleteItem = (key) => {
-    let cloneArray = [...this.state.teams];
-    cloneArray.splice(key, 1);
-    this.setState({
-      teams: cloneArray,
-    });
   };
 
   takeFile = (e) => {
@@ -111,56 +129,75 @@ class Individualpage extends Component {
     }.bind(this);
     reader.readAsText(file);
   };
+
   clearNames = () => {
     this.setState({
       namesarray: [],
     });
   };
 
+  deleteItem = (key) => {
+    let cloneArray = [...this.state.namesarray];
+    cloneArray.splice(key, 1);
+    this.setState({
+      namesarray: cloneArray,
+    });
+  };
+
   render() {
+    console.log(this.state.increment);
     return (
-      <div>
-        <div>
-          <p>Welcome jai</p>
+      <div className="jayindi_main">
+        <div className="jayindi_hdr">
+          <h1>Welcome jai</h1>
+          <img src={rtlogo}></img>
         </div>
-        <button>Individual</button>
-        <br />
+        <div className="jay_indibtn">Individual</div>
         <input
           value={this.state.name}
           onChange={(e) => this.setState({ name: e.target.value })}
           type="text"
-          placeholder="search by name"
+          placeholder="Search by Name"
         />
-        OR
-        <label>Upload CSV</label>
+        <h5>OR</h5>
         <button onClick={this.setToggle}>Upload CSV</button>
         {this.state.upToggle ? (
           <div>
-            <form onSubmit={this.sendData}>
+            <form onSubmit={this.sendData} className="uploadcsvindi_nxtform">
               <input
                 type="file"
                 accept=".csv"
                 onChange={(e) => this.takeFile(e)}
               />
-              <div style={{ backgroundColor: "#e3e3e3" }}>
+              <div className="csvupload_indi">
                 {this.state.namesarray.length > 0 ? (
                   <div>
                     <MemberNames
                       fileLength={this.state.FileLength}
                       nameData={this.state.namesarray}
                       keyword={this.state.name}
+                      deleteName={this.deleteItem}
                     />
-                    <button type="button" onClick={this.clearNames}>
+                    <button
+                      type="button"
+                      onClick={this.clearNames}
+                      className="csvindi_clrbtn"
+                    >
                       Clear list
                     </button>
                   </div>
                 ) : null}
               </div>
-
-              <select>
-                <option>Increment type</option>
+              <select
+                onChange={(e) =>
+                  this.setState({ incrementType: e.target.value })
+                }
+              >
+                <option>Meeting - BOD, GBM, etc</option>
+                <option>Events - attendance</option>
+                <option>Individual (active)</option>
+                <option>Feedback Form</option>
               </select>
-              <br />
               <input
                 type="date"
                 value={this.state.date}
@@ -168,22 +205,20 @@ class Individualpage extends Component {
                   this.setDate(e.target.value);
                 }}
               />
-              <br />
               <input
                 type="text"
                 value={this.state.points}
                 onChange={(e) => {
                   this.setState({ points: e.target.value });
                 }}
-                placeholder="points"
+                placeholder="Points"
               />
-              <br />
               <textarea
                 value={this.state.reason}
                 onChange={(e) => {
                   this.setState({ reason: e.target.value });
                 }}
-                placeholder="reason"
+                placeholder="Reason"
               ></textarea>
 
               <button type="submit">Update</button>
@@ -194,5 +229,10 @@ class Individualpage extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    indidata: state.team,
+  };
+};
 
-export default Individualpage;
+export default connect(mapStateToProps, actions)(Individualpage);
