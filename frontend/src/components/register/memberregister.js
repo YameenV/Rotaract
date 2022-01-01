@@ -11,7 +11,7 @@ function MemberRegister() {
             username,
             password
         }
-        console.log(info)
+       
     }
 
     return (

@@ -6,6 +6,7 @@ class AdminPublish extends Component {
   state = {
     typeof: "",
     atitle: "",
+    name:"",
     etitle: "",
     announcement: "",
     annName:"",
@@ -34,14 +35,16 @@ class AdminPublish extends Component {
     e.preventDefault();
     let event = {
       title: this.state.etitle,
-      event: this.state.event,
-      imagelink: this.state.imglink,
+      name:'Abhinav',
+      description: this.state.event,
+      img: this.state.imglink
+
     };
     this.props.createEvent(event)
   };
 
   render() {
-    
+    console.log(this.props)
     return (
       <div className="publish-main">
         <div className="publish-headertext">Welcome Aakash!</div>
@@ -149,6 +152,11 @@ class AdminPublish extends Component {
         {this.state.typeof === "event_highlight" ? (
             <div className="publish-event_div">
             <form className="publish-event_dcon" onSubmit={this.submitEvent}>
+            <input className="publish_event_title"
+                placeholder="Name"
+                value={this.state.name}
+                onChange={(e) => this.setState({ name: e.target.value })}
+              />
               <input className="publish_event_title"
                 placeholder="Title"
                 value={this.state.etitle}
@@ -187,6 +195,7 @@ class AdminPublish extends Component {
 const mapStateToProps = (state) =>{
   return{
     anndata:state.announcement,
+    evntdata:state.event
   }
 }
 
