@@ -14,6 +14,7 @@ import AdminPublish from './components/admin_publish/adminPublish'
 import Homepage from './components/Homepage/homepageContainer'
 import MemberRegister from './components/register/memberregister' 
 import Coreregister from './components/register/coreregister'
+import Membership from './components/membership/index'
 const Routes = () =>{
     return(
         <div>
@@ -32,6 +33,7 @@ const Routes = () =>{
             <Route exact path = "/admin_publish" component={AdminPublish}/>
             <Route exact path = "/memberlogin" component={MemberRegister}/>
             <Route exact path = "/corelogin" component={Coreregister}/>
+            <Route exact path = "/Member_register" component={Membership}/>
             </Switch>
         </div>
     )
