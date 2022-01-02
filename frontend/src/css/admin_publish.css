@@ -36,7 +36,6 @@
     background-color: rgba(255, 255, 255, 0.15);
     border: rgba(186,186,186,0.3) solid 1px;
     border-radius: 25px;
-    border: none;
     width: calc(100px + 75vw);
     height: calc(5px + 10vh);
     font-family: Inter;
@@ -52,9 +51,8 @@
     backdrop-filter: blur(7px) saturate(112%);
     -webkit-backdrop-filter: blur(16px) saturate(200%);
     background-color: rgba(255, 255, 255, 0.15);
-    border: rgba(186,186,186,0.3) solid 1px;
+    border: rgba(186,186,186,0.3) solid 1.5px;
     border-radius: 25px;
-    border: none;
     width: calc(100px + 75vw);
     height: calc(5px + 10vh);
     font-family: Inter;
@@ -80,9 +78,11 @@
     width: calc(100px + 75vw);
     border-radius: 25px;
     padding: 20px 20px 20px 20px;
-    background: rgba(173, 215, 242, 0.3);
-    backdrop-filter: blur(4px);
-    border-radius: 10px;
+    backdrop-filter: blur(11px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: rgba(186,186,186,0.3) solid 1px;
+    border-radius: 25px;
     gap: 10px;
     /* z-index: 5; */
 }
@@ -118,9 +118,11 @@
 }
 
 .public-ann_title{
-    background: rgba(173, 215, 242, 0.3);
-    backdrop-filter: blur(4px);
-    border-radius: 10px;
+    backdrop-filter: blur(11px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: rgba(186,186,186,0.3) solid 1px;
+    border-radius: 25px;
     width: 100%;
     height: 8vh;
     border: none;
