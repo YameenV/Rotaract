@@ -15,12 +15,14 @@ import Homepage from './components/Homepage/homepageContainer'
 import Coreregister from './components/register/coreregister'
 import Membership from './components/membership/memberRegister'
 import New_Homepage from './components/New-Homepage/member-registration'
+import Loader from './components/loadpage/loadder'
 
 const Routes = () =>{
     return(
         <div>
             <Switch>
-            <Route exact path = "/" component={Homepage}/>
+            <Route exact path = "/" component={Loader}/>
+            <Route exact path = "/home" component={Homepage}/>
             <Route exact path = "/leaderboard" component={Leaderboard_dekstop}/>
             <Route exact path = "/event" component = {Eventcontainer}/>
             <Route exact path = "/navbar"  component = {Navbar}/>

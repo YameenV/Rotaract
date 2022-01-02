@@ -11,6 +11,7 @@
     fixed;
   /* background-image: url('../imgs/background_image.jpeg'); */
   /* background-color: #000917; */
+  transition: opacity 2s ease-in-out;
 }
 .earth_div {
   height: 720px;
