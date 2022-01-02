@@ -1,6 +1,6 @@
 
 import '../../css/announcement.css'
-import Navbar from '../navbar/navbar'
+import HeaderNav from '../header/headerNav'
 import ann from '../../background/announcements.mp4'
 
 
@@ -21,9 +21,8 @@ function Announcement(props) {
       >
 			<source src={ann} type="video/mp4" />
       </video>
-      
-      <Navbar/>
-
+      <HeaderNav/>
+    
       <div className="announcement_header-ann">
         Announcement
       </div>
@@ -60,8 +59,8 @@ function Announcement(props) {
       >
 			<source src={ann} type="video/mp4" />
       </video>
-      
-      <Navbar/>
+      <HeaderNav/>
+    
       <div className="announcement_header-ann">
         Announcement
       </div>

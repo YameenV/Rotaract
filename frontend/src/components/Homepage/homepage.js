@@ -20,6 +20,7 @@ import ashu from "../../imgs/ashutosh1.jpg";
 import Moon from "../../imgs/moon.png";
 import HeaderNav from "../header/headerNav";
 
+
 /*   [ 320-480 ], [ 481-768 ] , [ 769-1024 ], [ 1025-1200 ], [ 1201+ ] */
 
 class Homepage extends Component {
@@ -45,8 +46,9 @@ class Homepage extends Component {
     let teamdata = this.state.teamdata;
     return (
       <div>
-          <HeaderNav/>
+        
         <div className="Home_main">
+        <HeaderNav/>
           <div className="earth_div">
             <img className="earth_image" src={Earth}></img>
           </div>

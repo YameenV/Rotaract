@@ -43,7 +43,7 @@ class Leaderboard_dekstop extends Component {
       <div className="leader_main">
         <div className="leader_header">
 
-          <Navbar />
+          
           <video autoPlay muted loop
             style={{
               objectFit: "cover",
