@@ -3,16 +3,17 @@ import '../../css/leaderboard.css'
 import ListOfPPL from "./listcomponent/listofppl";
 import ROTLOGO from "../../imgs/RCUCoEsLogo.png";
 import search from "../../icons/search.png";
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from '../../actions/index'
 import { Button, ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
 import Navbar from '../../components/navbar/navbar'
-import neu from "../../background/Nebula.jpg"
+import neu from "../../background/leaderboard.mp4"
+
 class Leaderboard_dekstop extends Component {
   state = {
     inputVal: "",
-    indidata:[]
+    indidata: []
   };
 
   setVal = (e) => {
@@ -21,28 +22,44 @@ class Leaderboard_dekstop extends Component {
     });
   };
 
-  getUserBoard = () =>{
+  getUserBoard = () => {
     this.props.getLeaderUserData()
   }
 
-  componentWillReceiveProps(nextProps){
-    if(nextProps){
+  componentWillReceiveProps(nextProps) {
+    if (nextProps) {
       this.setState({
-        indidata:nextProps.data.teamData
+        indidata: nextProps.data.teamData
       })
     }
   }
 
 
   render() {
-    
+
     return (
-      
-     
+
+
       <div className="leader_main">
-        <Navbar/>
         <div className="leader_header">
-        <img className='publish-img' src={neu} />
+
+          <Navbar />
+          <video autoPlay muted loop
+            style={{
+              objectFit: "cover",
+              width: "100%",
+              height:"inherit",
+              // height:"100%",
+              zIndex:"-1",
+              position: "fixed",
+              left: "0",
+              overflow:"hidden"
+
+            }}
+          >
+            <source src={neu} type="video/mp4" />
+          </video>
+
 
           <div className="leader_title">LEADERBOARD</div>
 
@@ -73,33 +90,33 @@ class Leaderboard_dekstop extends Component {
           </div>
         </div>
 
-          {
-            this.state.indidata.length > 0 ? (
-              <div className="leader_list-container">
-          <ListOfPPL rawData={this.state.indidata} keyword={this.state.inputVal} />
-        </div>
-            ):(
-              <ListOfPPL rawData = {this.state.indidata} keyword = {this.state.inputVal}/>
-            )
+        {
+          this.state.indidata.length > 0 ? (
+            <div className="leader_list-container">
+              <ListOfPPL rawData={this.state.indidata} keyword={this.state.inputVal} />
+            </div>
+          ) : (
+            <ListOfPPL rawData={this.state.indidata} keyword={this.state.inputVal} />
+          )
 
-          }
-        
+        }
+
 
 
         <footer className="leader_footer">
           <p className="leader_footer-text">FOOOTER</p>
         </footer>
       </div>
-      
+
     );
   }
 }
 
-const mapStateToProps = (state) =>{
-return{
-  data:state.team
-}
+const mapStateToProps = (state) => {
+  return {
+    data: state.team
+  }
 }
 
 
-export default connect(mapStateToProps,actions)(Leaderboard_dekstop);
+export default connect(mapStateToProps, actions)(Leaderboard_dekstop);

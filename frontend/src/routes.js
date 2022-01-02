@@ -13,7 +13,7 @@ import PortFolioContainer from './components/portfolio/portfolioContainer'
 import AdminPublish from './components/admin_publish/adminPublish'
 import Homepage from './components/Homepage/homepageContainer'
 import Coreregister from './components/register/coreregister'
-import Membership from './components/membership/index'
+import Membership from './components/membership/memberRegister'
 const Routes = () =>{
     return(
         <div>
@@ -31,7 +31,7 @@ const Routes = () =>{
             <Route exact path = "/portfolio" component={PortFolioContainer}/>
             <Route exact path = "/admin_publish" component={AdminPublish}/>
             <Route exact path = "/corelogin" component={Coreregister}/>
-            <Route exact path = "/Member_register" component={Membership}/>
+            <Route exact path = "/mem" component={Membership}/>
             </Switch>
         </div>
     )

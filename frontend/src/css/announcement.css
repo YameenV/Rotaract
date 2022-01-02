@@ -22,10 +22,11 @@
 }
 
 .announcement-con {
-    background: rgba(173, 215, 242, 0.3);
-    backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    border-radius: calc(5px + 2vw);
+    backdrop-filter: blur(7px) saturate(112%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: rgba(186,186,186,0.3) solid 1px;
+    border-radius: 25px;
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
