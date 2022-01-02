@@ -18,7 +18,7 @@ import Pic5 from "../../imgs/pic5.png";
 import Pic6 from "../../imgs/pic6.png";
 import ashu from "../../imgs/ashutosh1.jpg";
 import Moon from "../../imgs/moon.png";
-import Navbar from "../navbar/navbar";
+import HeaderNav from "../header/headerNav";
 
 /*   [ 320-480 ], [ 481-768 ] , [ 769-1024 ], [ 1025-1200 ], [ 1201+ ] */
 
@@ -45,9 +45,8 @@ class Homepage extends Component {
     let teamdata = this.state.teamdata;
     return (
       <div>
+          <HeaderNav/>
         <div className="Home_main">
-          {/* <Navbar /> */}
-          {/* <div> */}
           <div className="earth_div">
             <img className="earth_image" src={Earth}></img>
           </div>

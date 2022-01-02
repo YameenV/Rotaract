@@ -35,7 +35,6 @@ class HomepageContainer extends Component {
                 {this.state.AnnouncementData ? (
                     <div>
                         <Homepage 
-                        
                         first = {this.state.AnnouncementData}  second = {this.state.EventData}/>
                     </div>
                 ):(
