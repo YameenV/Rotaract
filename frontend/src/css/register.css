@@ -33,8 +33,21 @@
 .memeregister_text_image{
     display: flex;
     flex-direction: row;
-    /* flex-grow: 2; */
-    
+}
+
+.memeregister_text h1{
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    text-transform: capitalize;
+}
+
+.memeregister_text p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: capitalize;
 }
 
 .memeregister_text{
@@ -90,6 +103,11 @@
     border: none;
     width: 35%;
     height: 5vh;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 @media only screen and (max-width: 800px){
