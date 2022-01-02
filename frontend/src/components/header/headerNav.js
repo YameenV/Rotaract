@@ -1,21 +1,34 @@
 import React, { Component } from 'react'
 import '../../css/nav.css'
 import {NavDropdown, Navbar, Nav, Container} from 'react-bootstrap'
+import Logo from '../../imgs/RCUCoEsLogo.png'
 class HeaderNav extends Component {
     render() {
         return (
             <div>
-              <Navbar variant="dark" bg="dark" expand="sm">
-    <Container>
-    <Navbar.Brand href="#home">Home</Navbar.Brand>
+              <Navbar className="color-nav" expand="lg" style={{backgroundColor:'transparent'}}>
+  <Container>
+
+  <Navbar.Brand href="#home" >
+      <img
+      alt="logo"
+      src={Logo}
+      style={{height:'10vw', height:'10vw'}}
+      >
+      </img>
+  </Navbar.Brand>
+  <Navbar.Toggle style={{backgroundColor:'white',marginRight:'15px'}} aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-    <Nav.Link style={{color:'white'}} href="/announcement">Announcement</Nav.Link>
-    <Nav.Link style={{color:'white'}} href="/event">Events</Nav.Link>
-    <Nav.Link style={{color:'white'}} href="/leaderboard">Leaderboard</Nav.Link>
-    <Nav.Link style={{color:'white'}} href="/portfolio">Portfolio</Nav.Link>
+      <Nav.Link href="/">Home</Nav.Link>
+      <Nav.Link href="/announcement">Announcement</Nav.Link>
+      <Nav.Link href="/event">Events</Nav.Link>
+      <Nav.Link href="/leaderboard">Leaderboard</Nav.Link>
+      <Nav.Link href="/portfolio">Portfolio</Nav.Link>
     </Nav>
-    </Container>
-  </Navbar>
+  </Navbar.Collapse>
+  </Container>
+</Navbar>
             </div>
         )
     }

@@ -1,7 +1,8 @@
 import '../../css/event.css'
-import Navbar from '../navbar/navbar'
+
 import eve from '../../background/event.mp4'
 import { GiLevelFour } from 'react-icons/gi'
+import HeaderNav from '../header/headerNav'
 const Eventlanding = (props) => {
 
     let data = props.data
@@ -24,7 +25,7 @@ const Eventlanding = (props) => {
       >
 			<source src={eve} type="video/mp4" />
       </video>
-            <Navbar />
+            
             <div className="event_header">events</div>
             <div className="Events">
                 {
@@ -51,6 +52,7 @@ const Eventlanding = (props) => {
 
     ) : (
         <div className="event_main">
+            <HeaderNav/>
             <video autoPlay muted loop
       style={{
         position:"absolute",
@@ -64,10 +66,9 @@ const Eventlanding = (props) => {
       >
 			<source src={eve} type="video/mp4" />
       </video>
-            <Navbar />
+    
             <div className="event_header">events</div>
             <div className="Events">
-
                 <div className="event">
                     <div className="images">
                         <img className="event_img"></img>
