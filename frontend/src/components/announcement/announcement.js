@@ -2,7 +2,7 @@
 import '../../css/announcement.css'
 import HeaderNav from '../header/headerNav'
 import ann from '../../background/announcements.mp4'
-
+import Navbar from '../navbar/navbar'
 
 function Announcement(props) {
   let data = props.adata
@@ -21,7 +21,8 @@ function Announcement(props) {
       >
 			<source src={ann} type="video/mp4" />
       </video>
-      <HeaderNav/>
+      {/* <HeaderNav/> */}
+      <Navbar/>
     
       <div className="announcement_header-ann">
         Announcement
@@ -59,8 +60,8 @@ function Announcement(props) {
       >
 			<source src={ann} type="video/mp4" />
       </video>
-      <HeaderNav/>
-    
+      {/* <HeaderNav/> */}
+      <Navbar/>
       <div className="announcement_header-ann">
         Announcement
       </div>

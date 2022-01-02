@@ -159,11 +159,16 @@ svg {
 
   .mobile-menu-link {
     grid-column: 2/4;
-    position: relative;
-    z-index: 99;
+    /* position: relative; */
+    /* z-index: 99; */
   }
 
   .mobile-menu-link {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
     background-color: black;
   
     min-height: 90vh;
@@ -222,6 +227,7 @@ svg {
   }
   .menu-link ul li a {
     color: aliceblue;
+    /* font-size : 2rem; */
   }
   .leader_rotLogo-image {
 
