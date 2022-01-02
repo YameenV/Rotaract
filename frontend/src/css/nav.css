@@ -13,7 +13,7 @@ a:hover{
     !important;
 }
 
-img{
+.headerNav-Logo{
     filter: drop-shadow(0px 0px 9px #0066FF);
 }
 

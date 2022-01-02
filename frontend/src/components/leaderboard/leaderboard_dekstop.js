@@ -6,7 +6,7 @@ import search from "../../icons/search.png";
 import { connect } from 'react-redux'
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from '../../actions/index'
-import { Button, ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
+import { Button, ButtonGroup, InputGroup, FormControl, Nav } from "react-bootstrap";
 import Navbar from '../../components/navbar/navbar'
 import neu from "../../background/leaderboard.mp4"
 
@@ -41,7 +41,9 @@ class Leaderboard_dekstop extends Component {
 
 
       <div className="leader_main">
+        <Navbar />
         <div className="leader_header">
+
 
           
           <video autoPlay muted loop

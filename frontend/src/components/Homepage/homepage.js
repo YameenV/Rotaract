@@ -48,7 +48,7 @@ class Homepage extends Component {
         <div className="earth_div">
           <img className="earth_image" src={Earth}></img>
         </div>
-
+        {/* <Navbar/> */}
         
         <div className="home_main-2">
           <div className="first_container">

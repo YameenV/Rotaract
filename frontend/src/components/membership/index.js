@@ -15,6 +15,7 @@ console.log(this.state.email)
     render() {
         return (
             <div>
+                <Navbar />
                 <div>
                 <h1>Join now!</h1>
                 <p>

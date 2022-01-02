@@ -154,6 +154,7 @@ class PortFolioContainer extends Component {
       >
 			<source src={port} type="video/mp4" />
       </video>
+      <Navbar />
         
         <div className="pro-conn">
         <div className="pro-search-con" >

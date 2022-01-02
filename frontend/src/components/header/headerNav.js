@@ -10,7 +10,7 @@ class HeaderNav extends Component {
   <Container>
 
   <Navbar.Brand href="#home" >
-      <img
+      <img className='headerNav-Logo'
       alt="logo"
       src={Logo}
       style={{height:'10vw', height:'10vw'}}

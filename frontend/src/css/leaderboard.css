@@ -43,11 +43,13 @@
     line-height: 115px;
     text-transform: capitalize;
     z-index: +1;
+    color:#ADD7F2;
 }
 
 .leader_Mantaintext {
     font-size: calc(5px + 1vw);
     font-family: Inter;
+    color:#ADD7F2
 }
 
 .leader_button-username {
@@ -185,7 +187,9 @@
         justify-content: space-between;
         align-items: center;
         height: 100px;
-        background-color: blue;
+        width: 90vw;
+        
+        /* background-color: blue; */
         margin-bottom: 0;
     }
     .leader_button-group {

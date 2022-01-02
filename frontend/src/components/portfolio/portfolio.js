@@ -3,6 +3,7 @@ import Personalcard from './subfiles/Personalcard'
 import Scoregraph from './subfiles/Scoregraph'
 import OtherData from './subfiles/otherData.js'
 import "../../css/portfolio.css"
+import Navbar from '../navbar/navbar'
 
 
 class Portfolio extends Component {
@@ -12,6 +13,7 @@ class Portfolio extends Component {
         let recData = this.props.alldata
         return (
             <div classname="pro-contaner">
+               
                 <div className="pro-cont-presonal_graph">
                 <div className='pro-personal'>
                 <Personalcard personaldata = {recData.personalinfo} contacts = {recData.contacts}/>
