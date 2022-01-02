@@ -68,10 +68,10 @@
 }
 
 .pro-personal{
-    backdrop-filter: blur(7px) saturate(112%);
+    backdrop-filter: blur(15px) saturate(120%);
     -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.15);
-    border: rgba(186,186,186,0.3) solid 1px;
+    background-color: rgba(255, 255, 255, 0.18);
+    border: rgba(186,186,186,0.4) solid 1.5px;
     border-radius: 25px;
     flex-grow: 2;
     flex-shrink: 0;
@@ -80,10 +80,10 @@
 }
 
 .pro-graph{
-    backdrop-filter: blur(7px) saturate(112%);
+    backdrop-filter: blur(15px) saturate(120%);
     -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.15);
-    border: rgba(186,186,186,0.3) solid 1px;
+    background-color: rgba(255, 255, 255, 0.18);
+    border: rgba(186,186,186,0.4) solid 1.5px;
     border-radius: 25px;
     flex-grow: 3;
     display: flex;
@@ -138,10 +138,10 @@
 .pro-otherdata_rotaractclub{
     margin-top: 2vw;
     display: flex;
-    backdrop-filter: blur(7px) saturate(112%);
+    backdrop-filter: blur(15px) saturate(120%);
     -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.15);
-    border: rgba(186,186,186,0.3) solid 1px;
+    background-color: rgba(255, 255, 255, 0.18);
+    border: rgba(186,186,186,0.4) solid 1.5px;
     border-radius: 25px;
     flex-direction: column;
     padding: 25px 25px 25px 25px;
@@ -171,10 +171,10 @@
 .pro-otherdata_professional{
     margin-top: 1vw;
     display: flex;
-    backdrop-filter: blur(7px) saturate(112%);
+    backdrop-filter: blur(15px) saturate(120%);
     -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.15);
-    border: rgba(186,186,186,0.3) solid 1px;
+    background-color: rgba(255, 255, 255, 0.18);
+    border: rgba(186,186,186,0.4) solid 1.5px;
     border-radius: 25px;
     flex-direction: column;
     padding: 25px 25px 25px 25px;
@@ -230,10 +230,10 @@
 .pro-otherdata_education{
     margin-top: 1vw;
     display: flex;
-    backdrop-filter: blur(7px) saturate(112%);
+    backdrop-filter: blur(15px) saturate(120%);
     -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.15);
-    border: rgba(186,186,186,0.3) solid 1px;
+    background-color: rgba(255, 255, 255, 0.18);
+    border: rgba(186,186,186,0.4) solid 1.5px;
     border-radius: 25px;
     flex-direction: column;
     padding: 25px 25px 25px 25px;
@@ -266,10 +266,10 @@
 .pro-otherdata_interests{
     margin-top: 1vw;
     display: flex;
-    backdrop-filter: blur(7px) saturate(112%);
+    backdrop-filter: blur(15px) saturate(120%);
     -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.15);
-    border: rgba(186,186,186,0.3) solid 1px;
+    background-color: rgba(255, 255, 255, 0.18);
+    border: rgba(186,186,186,0.4) solid 1.5px;
     border-radius: 25px;
     flex-direction: column;
     padding: 25px 25px 25px 25px;
@@ -297,10 +297,10 @@
 .pro-otherdata_about{
     margin-top: 1vw;
     display: flex;
-    backdrop-filter: blur(7px) saturate(112%);
+    backdrop-filter: blur(15px) saturate(120%);
     -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.15);
-    border: rgba(186,186,186,0.3) solid 1px;
+    background-color: rgba(255, 255, 255, 0.18);
+    border: rgba(186,186,186,0.4) solid 1.5px;
     border-radius: 25px;
     flex-direction: column;
     text-align: start;
