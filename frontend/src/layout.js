@@ -4,9 +4,7 @@ import HeaderNav from './components/header/headerNav'
     render() {
         return (
             <div>
-                <div>
-                    <HeaderNav/>
-                </div>
+                
                 {this.props.children}
             </div>
         )

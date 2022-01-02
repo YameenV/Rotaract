@@ -6,7 +6,7 @@ class HeaderNav extends Component {
     render() {
         return (
             <div>
-              <Navbar className="color-nav" expand="lg" style={{backgroundColor:"#000917"}} >
+              <Navbar className="color-nav" expand="lg" style={{backgroundColor:'transparent'}} >
   <Container>
 
   <Navbar.Brand href="#home" >
