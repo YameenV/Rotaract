@@ -11,8 +11,44 @@
     fixed;
   /* background-image: url('../imgs/background_image.jpeg'); */
   /* background-color: #000917; */
-  transition: opacity 2s ease-in-out;
+ animation: HomeLoad 2s ease-in-out;
 }
+@keyframes HomeLoad{
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: .1;
+  }
+  20%{
+    opacity: .2;
+  }
+  30%{
+    opacity: .3;
+  }
+  40%{
+    opacity:.4;
+  }
+  50%{
+    opacity: .5;
+  }
+  60%{
+    opacity: .6;
+  }
+  70%{
+    opacity: .7;
+  }
+  80%{
+    opacity: .8;
+  }
+  90%{
+    opacity: .9;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 .earth_div {
   height: 720px;
 }
