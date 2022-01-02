@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Roboto&display=swap');
+
 .leader_main{
     min-height: 100vh;
     min-width: 100vw;
@@ -10,7 +11,8 @@
 }
 
 .leader_header {
-    background: linear-gradient(251.57deg, #0066FF 31.76%, rgba(0, 102, 255, 0) 172.86%);
+    /* background: linear-gradient(180deg, #000917 22.63%, #0066FF 99.03%, #ADD7F2 172.32%); */
+    height: 60vh;
     border-radius: 0px 0px 25px 25px;
     flex-grow: 2;
     display: flex;
@@ -21,7 +23,6 @@
 }
 .leader_rotLogo{
     align-self: flex-start;
-    z-index: 5;
 }
 .leader_rotLogo-image {
     width: calc(67px + 2vw);
@@ -41,13 +42,12 @@
     font-size: calc(20px + 6vw);
     line-height: 115px;
     text-transform: capitalize;
-    z-index: 10;
+    z-index: +1;
 }
 
 .leader_Mantaintext {
     font-size: calc(5px + 1vw);
     font-family: Inter;
-    z-index: 10;
 }
 
 .leader_button-username {
@@ -155,7 +155,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
 }
 
 .leader_footer-text {

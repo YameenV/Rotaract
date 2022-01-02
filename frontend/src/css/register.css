@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.memregister_main{
+    background-image: url("../background/memebrReg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.memregister-con{
+    backdrop-filter: blur(11px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: rgba(186,186,186,0.3) solid 1px;
+    border-radius: 25px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-width: 615px;
+    margin: 25px;
+    gap:20px;
+}
+
+.memeregister_text_image{
+    display: flex;
+    flex-direction: row;
+    /* flex-grow: 2; */
+    
+}
+
+.memeregister_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    gap: 15px;
+    padding-left: 40px;
+}
+
+.memregister_rotLogo-image-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.memregister_rotLogo-image{
+    width: calc(100 + 20vw);
+    height: 40vh;
+}
+
+.memeregister_button-div{
+    width: 100%;
+    /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:15px
+}
+
+.memeregister_button-in{
+    width: 90%;
+    background: rgba(173, 215, 242, 0.3);
+    border-radius: 20px;
+    height: 5vh;
+    border: none;
+}
+.memeregister_button-in:hover{
+    background: rgba(173, 215, 242, 0.7);
+    transition: 300ms ease-in;
+}
+.memeregister_button-in:focus{
+    background: white;
+    transition: 300ms ease-in;
+    border:none;
+}
+
+.memeregister_button-button{
+    background: #0066FF;
+    border-radius: 20px;
+    border: none;
+    width: 35%;
+    height: 5vh;
+}
+
+@media only screen and (max-width: 800px){
+    .memeregister_text_image{
+        flex-direction: column;
+        height: none;
+    }
+    .memeregister_text{
+        order:2;
+    }
+    .memregister_rotLogo-image-div{
+        order:1;
+    }
+    .memregister-con{
+        min-width: 100px;
+        width: 85%;
+    }
+}

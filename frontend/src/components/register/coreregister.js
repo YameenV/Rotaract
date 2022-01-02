@@ -1,4 +1,7 @@
 import React,{useState} from 'react'
+import '../../css/core_login.css'
+import Navbar from '../navbar/navbar'
+
 
  function Coreregister() {
 
@@ -16,15 +19,19 @@ import React,{useState} from 'react'
     }
 
     return (
-        <div>
-            <form onSubmit={sendMemberLogin}>
-            <label>Username</label><br/>
+        <div className='core_login-main'>
+            <Navbar/>
+            <div className='core_login-conn'>
+            <div className='core_login-text'> Member Login</div>
+            {/* <form onSubmit={sendMemberLogin}> */}
+            {/* <label>Username</label><br/>
             <input value={username} onChange={(e)=>setUsername(e.target.value)} type = 'text' /><br/>
             <label>Password</label><br/>
             <input value={password} type = 'password' onChange={(e)=>setPassword(e.target.value)}/>
-            <br/>
-            <button type='submit'>Login</button>
-            </form>
+            <br/> */}
+            <button className='core_login-but' type='submit'>Login With Google</button>
+            {/* </form> */}
+            </div>
         </div>
     )
 }

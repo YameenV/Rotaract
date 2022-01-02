@@ -12,9 +12,8 @@ import Navbar from './components/navbar/navbar'
 import PortFolioContainer from './components/portfolio/portfolioContainer'
 import AdminPublish from './components/admin_publish/adminPublish'
 import Homepage from './components/Homepage/homepageContainer'
-import MemberRegister from './components/register/memberregister' 
 import Coreregister from './components/register/coreregister'
-import Membership from './components/membership/index'
+import Membership from './components/membership/memberRegister'
 const Routes = () =>{
     return(
         <div>
@@ -31,9 +30,8 @@ const Routes = () =>{
             <Route exact path = "/admin_individual" component = {Individualpage}/>
             <Route exact path = "/portfolio" component={PortFolioContainer}/>
             <Route exact path = "/admin_publish" component={AdminPublish}/>
-            <Route exact path = "/memberlogin" component={MemberRegister}/>
             <Route exact path = "/corelogin" component={Coreregister}/>
-            <Route exact path = "/Member_register" component={Membership}/>
+            <Route exact path = "/mem" component={Membership}/>
             </Switch>
         </div>
     )
