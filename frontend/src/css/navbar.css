@@ -31,6 +31,9 @@ li {
   grid-template-columns: 4rem 1fr 2fr 3fr 4rem;
   
   background-color: transparent;
+  position: absolute;
+  z-index: +1;
+  top:0;
 }
 svg {
   color: white;

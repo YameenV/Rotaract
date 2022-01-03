@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../../css/nav.css'
 import {NavDropdown, Navbar, Nav, Container} from 'react-bootstrap'
-import Logo from '../../imgs/RCUCoEsLogo.png'
+import Logo from '../../background/rotl.png'
 class HeaderNav extends Component {
     render() {
         return (
@@ -10,7 +10,7 @@ class HeaderNav extends Component {
   <Container>
 
   <Navbar.Brand href="#home" >
-      <img
+      <img className='header-nav-log-rot'
       alt="logo"
       src={Logo}
       style={{height:'10vw', height:'10vw'}}

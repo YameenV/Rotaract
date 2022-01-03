@@ -45,8 +45,6 @@ class Homepage extends Component {
     let eventdata = this.props.second;
     let teamdata = this.state.teamdata;
     return (
-      <div>
-        
         <div className="Home_main">
         <HeaderNav/>
           <div className="earth_div">
@@ -423,7 +421,6 @@ class Homepage extends Component {
             </div>
           </footer>
         </div>
-      </div>
     );
   }
 }

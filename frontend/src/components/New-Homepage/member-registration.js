@@ -18,6 +18,7 @@ import Moon from "../../imgs/moon.png";
 import Navbar from "../navbar/navbar";
 import "../../css/new-registration.css";
 import { Link } from "react-router-dom";
+// import HeaderNav from "../header/headerNav";
 
 class New_Homepage extends Component {
   render() {
@@ -26,7 +27,7 @@ class New_Homepage extends Component {
         <div className="earth_div-i">
           <img className="earth_image-i" src={Earth}></img>
         </div>
-
+        <Navbar className="home-nav123"/>
         <div className="home-main-2">
           <div className="first_container-i">
             <div className="container_header-i">

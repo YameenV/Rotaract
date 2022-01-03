@@ -5,6 +5,7 @@ import * as actions from "../../actions/index";
 import "../../css/portfolio.css"
 import Navbar from "../navbar/navbar"
 import port from "../../background/prot.mp4"
+import HeaderNav from "../header/headerNav";
 
 class PortFolioContainer extends Component {
 
@@ -154,7 +155,7 @@ class PortFolioContainer extends Component {
       >
 			<source src={port} type="video/mp4" />
       </video>
-        
+      <HeaderNav/>
         <div className="pro-conn">
         <div className="pro-search-con" >
           <form   onSubmit={this.findRtr}>
