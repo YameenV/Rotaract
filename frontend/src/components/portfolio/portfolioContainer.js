@@ -155,7 +155,12 @@ class PortFolioContainer extends Component {
       >
 			<source src={port} type="video/mp4" />
       </video>
+<<<<<<< HEAD
       <HeaderNav/>
+=======
+      <Navbar />
+        
+>>>>>>> 4737684e91e3617ea5186d80a7555910b7f5a78f
         <div className="pro-conn">
         <div className="pro-search-con" >
           <form   onSubmit={this.findRtr}>
