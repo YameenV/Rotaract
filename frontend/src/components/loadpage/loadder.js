@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
-import AnnVideo from '../../background/loading.mp4'
-=======
 import AnnVideo from '../../background/Bg-Loader.mp4'
->>>>>>> 4737684e91e3617ea5186d80a7555910b7f5a78f
 export default class Loader extends Component {
 
     render() {

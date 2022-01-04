@@ -44,12 +44,6 @@ class Homepage extends Component {
     let eventdata = this.props.second;
     let teamdata = this.state.teamdata;
     return (
-<<<<<<< HEAD
-        <div className="Home_main">
-        <HeaderNav/>
-          <div className="earth_div">
-            <img className="earth_image" src={Earth}></img>
-=======
       <div className="home-main">
         <div className="earth_div">
           <img className="earth_image" src={Earth}></img>
@@ -88,7 +82,6 @@ class Homepage extends Component {
                 Brahe.
               </h2>
             </div>
->>>>>>> 4737684e91e3617ea5186d80a7555910b7f5a78f
           </div>
 
           <div className="second_container">
@@ -407,8 +400,6 @@ class Homepage extends Component {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
         <footer className="footer">
           <div className="footer_div">
@@ -416,7 +407,6 @@ class Homepage extends Component {
           </div>
         </footer>
       </div>
->>>>>>> 4737684e91e3617ea5186d80a7555910b7f5a78f
     );
   }
 }

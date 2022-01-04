@@ -1,21 +1,39 @@
-import React,{useState} from 'react'
+import React from 'react'
 import '../../css/core_login.css'
 import Navbar from '../navbar/navbar'
+import {auth} from '../firebase/config.js'
+import {signInWithPopup,GoogleAuthProvider} from "firebase/auth";
 
 
  function Coreregister() {
 
+    const SignWithGoogle = () => {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+        .then((re) => {
+            if(!onSign(re.user)){
+                throw new Error("Not a Rotaract Memeber")
+            }
+            else{
+                console.log(re)
+            }
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
 
-    const [username,setUsername] = useState();
-    const [password,setPassword] = useState();
-
-    const sendMemberLogin = (e) =>{
-        e.preventDefault();
-        let info = {
-            username,
-            password
+    function onSign(googleUser) {
+        const whitelist = ['yameenvinchu38@gmail.com'];
+        const userHasAccess = whitelist.some(
+            function(email){
+                return googleUser.email === email
+            }
+        )
+        if (userHasAccess) {
+            return true
         }
-        console.log(info)
+        return false
     }
 
     return (
@@ -23,14 +41,7 @@ import Navbar from '../navbar/navbar'
             <Navbar/>
             <div className='core_login-conn'>
             <div className='core_login-text'> Member Login</div>
-            {/* <form onSubmit={sendMemberLogin}> */}
-            {/* <label>Username</label><br/>
-            <input value={username} onChange={(e)=>setUsername(e.target.value)} type = 'text' /><br/>
-            <label>Password</label><br/>
-            <input value={password} type = 'password' onChange={(e)=>setPassword(e.target.value)}/>
-            <br/> */}
-            <button className='core_login-but' type='submit'>Login With Google</button>
-            {/* </form> */}
+            <button className='core_login-but' type='submit'onClick={SignWithGoogle}>Login With Google</button>
             </div>
         </div>
     )
