@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .event_main{
     /* background:linear-gradient(3.97deg, #0066FF 2.93%, #000917 96.58%) fixed; */
@@ -16,53 +16,76 @@
     font-weight: 400;   
     text-transform: capitalize;
     font-size: calc(12px + 6vw);
-    padding-left: 30px;
+    margin-top: 30vh;
+    margin-bottom: 20vh;
     color: #ADD7F2;
 }
-
-.Events{ 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* column-gap: 20px;
-    row-gap: 17px; */
-    flex-grow: 1;
+.evnt_main_con{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-evenly;
 }
-
 .event{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     border-radius: clamp(10px,25px,30px);
-    background:#ADD7F280;
-    backdrop-filter: blur(10px);
-    padding: 21px 21px 20px 20px ;
-    margin: 25px 30px 30px 40px ;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: calc(6px + 1vw);
-    min-width: 300px;
-    min-height: 500px;
-    
+    backdrop-filter: blur(15px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.18);
+    border: rgba(186,186,186,0.4) solid 1.5px;
+    padding: 20px;
+    margin: 0 20px 20px 0;
+    /* font-family: Inter; */
+    font-size: 1.2rem;
+    width: 30%;
+    color: #000917;
+    font-family: 'Montserrat', sans-serif !important;
 }
 .event:hover{
     transform: scale(1.05);
-    /* scale: ; */
+    box-shadow: 0px 15px 10px rgba(255, 255, 255, 0.1);
+    transition: 300ms ease-in;
+    background-color: rgba(255, 255, 255, 0.20)
 }
 
 .event_img{
-    height: calc(40px + 17vw);
-    width: calc(40px + 17vw);
-    /* background-color: ; */
+    max-height: 300px;
+    width: 100%;
+    background: #000917;
+    border-radius: clamp(10px,25px,30px);
+    object-fit: fill;
 }
-@media only screen and (min-width: 751px) and (max-width: 1024px) {
-.Events{
-    grid-template-columns: 1fr 1fr ;
+.title{
+    font-weight: 600;
+    text-align: left;
+    align-self: flex-start;
+    font-size: 1.7rem;
+    margin-top: 0.5vw;
+    margin-bottom: 0.2vw;
 }
+.description{
+    height: 290px;
+    overflow: hidden;
 }
-@media only screen and  ( max-width : 750px) {
-    .Events{
-        grid-template-columns: 1fr ;
+/* Smartphones ----------- */
+@media only screen
+and (max-width: 800px) {
+    .event_header{
+        font-size: 4rem;
     }
-}
+    .event{
+        width: 90%;
+    }
+} 
+/* iPads  ----------- */
+@media only screen
+and  (min-width: 426px) and (max-width: 1024px) {
+    .event{
+        width: 40%;
+    }
+    .event_img{
+        max-height: 250px;
+    }
+} 

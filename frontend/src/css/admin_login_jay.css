@@ -6,14 +6,16 @@
     align-items: center;
     overflow-x: hidden;
     flex-direction: column;
+    justify-content: center;
 }
 .admin_panel_login_main img{
-    width:13%;
+    width:30%;
+    margin-top: 10vh;
 }
 .jay_login{
     background: rgba(173, 215, 242, 0.3);
-    height: 70vh;
-    width: 40%;
+    height: 90vh;
+    width: 50%;
     color: white;
     display: flex;
     flex-direction: column;
@@ -22,25 +24,10 @@
     position: relative;
     backdrop-filter: blur(10px);
 }
-.jay_login input{
-    width: 30vw;
-    height: 5vh;
-    border: none;
-    border-radius: 3px;
-    color: #000917;
-    text-indent: 10px ;
-}
-.jay_login input:focus{
-    outline: none;
-    font-size: 1rem;
-    border: 1px solid #000917;
-    color: #000917;
-}
 .jay_header_txt{
-    width: 75%;
+    width: 90%;
     color: #000917;
-    margin-top: 7%;
-    
+    margin-top: 5%;
 }
 .jay_header_txt h1{
     font-size: 3.5rem;
@@ -57,7 +44,7 @@
 .jay_login button{
     border: none;
     position: absolute;
-    width: 30vw;
+    width: 90%;
     background-color: #20DF7F;
     color: #000917;
     height: 6vh;
@@ -68,9 +55,6 @@
 .jay_login form button:hover{
     background-color: #23ff91;
     transition: 300ms ease-in;
-}
-.jay_login form label{
-    font-size: 1rem;
 }
 /* Smartphones ----------- */
 @media only screen
@@ -113,15 +97,15 @@ and  (min-width: 426px) and (max-width: 1024px) {
         transition: 300ms ease-in;
     }
     .admin_panel_login_main img{
-        width:20%;
+        width:30%;
         transition: 300ms ease-in;
     }
     .jay_header_txt h1{
-        font-size: 5.2rem;
+        font-size: 4.8rem;
         transition: 300ms ease-in
     }
     .jay_header_txt p{
-        font-size: 2.4rem;
+        font-size: 1.8rem;
         transition: 300ms ease-in
     }
     .jay_login input{

@@ -37,7 +37,7 @@ import { collection, getDoc, onSnapshot } from "firebase/firestore";
     }
 
     function onSign(googleUser) {
-        const whitelist = ['yameenvinchu38@gmail.com'];
+        const whitelist = ["yameenvinchu38@gmail.com"];
         const userHasAccess = whitelist.some(
             function(email){
                 return googleUser.email === email
