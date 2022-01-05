@@ -12,11 +12,12 @@
 
 
 .announcement_header-ann{
+    margin-top: 4vw;
     font-family: Bebas Neue;
     font-style: normal;
     font-weight: 400;
     text-transform: capitalize;
-    font-size: calc(12px + 6vw);
+    font-size: 5rem;
     padding-left: 30px;
     color: #ADD7F2;
 }
@@ -66,6 +67,7 @@
     font-weight: 510;
     font-size: calc(8px + 1vw);
     font-family: Montserrat;
+    color: black;
 
 }
 
@@ -73,17 +75,20 @@
     font-size: calc(15px + 2vw);
     font-weight: bold;
     font-family: Montserrat;
-
+    color:black;
+    text-align: justify;
 }
 .ann_date {
     font-size: calc(8px +  0.5vw);
     font-family: Montserrat;
+    color:black;
 
 }
 .ann_description {
     font-size: calc(8px + 1vw);
     font-family: Montserrat;
-
+    color: black;
+    text-align: justify;
 }
 
 .ann_line {
@@ -93,6 +98,9 @@
 
 
 @media only screen and (max-width: 800px) {
+    .announcement_header-ann{
+        font-size: 3rem;
+    }
     .ann_image {
         width: 60px;
         height: 60px;

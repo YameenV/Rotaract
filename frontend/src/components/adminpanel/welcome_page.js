@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import "../../css/welcome_jay.css";
-import rtlogo from "../../imgs/RCUCoEsLogo.png";
+import rtlogo from "../../imgs/Background.png";
 
 class Welcome_page extends Component {
   redToTeam = (e) => {
