@@ -19,6 +19,7 @@ import Pic6 from "../../imgs/pic6.png";
 import ashu from "../../imgs/ashutosh1.jpg";
 import Moon from "../../imgs/moon.png";
 import Navbar from "../navbar/navbar";
+import { Link } from "react-router-dom";
 
 /*   [ 320-480 ], [ 481-768 ] , [ 769-1024 ], [ 1025-1200 ], [ 1201+ ] */
 
@@ -48,8 +49,8 @@ class Homepage extends Component {
         <div className="earth_div">
           <img className="earth_image" src={Earth}></img>
         </div>
-        <Navbar flags={1}/>
-        
+        <Navbar flags={1} />
+
         <div className="home_main-2">
           <div className="first_container">
             <div className="container_header">
@@ -221,6 +222,9 @@ class Homepage extends Component {
                 )}
               </div>
             </div>
+            <Link to="/announcement">
+              <div className="leaderboard_more">View All</div>
+            </Link>
           </div>
 
           <div className="homepage_events">
@@ -256,9 +260,12 @@ class Homepage extends Component {
                 </div>
               )}
             </div>
+            <Link to="/event">
+              <div className="leaderboard_more">See More</div>
+            </Link>
           </div>
         </div>
-        
+
         <div className="home_leaderboard">
           <div className="leaderboard_h">
             <h1>Leaderboards</h1>
@@ -301,7 +308,9 @@ class Homepage extends Component {
               </div>
             </ButtonGroup>
           </div>
-          <div className="leaderboard_more">View all</div>
+          <Link to="/leaderboard">
+            <div className="leaderboard_more">View all</div>
+          </Link>
         </div>
 
         <div className="team_info">
@@ -366,7 +375,7 @@ class Homepage extends Component {
               <div className="mention_content_1_image_div">
                 <img></img>
               </div>
-              <div className="mention_content_1_name">Harsh Patel</div>
+              <div className="mention_content_1_name">Yameen Vinchu</div>
             </div>
             <div className="mention_content_2">
               <div className="mention_content_2_image_div">
@@ -378,7 +387,7 @@ class Homepage extends Component {
               <div className="mention_content_3_image_div">
                 <img></img>
               </div>
-              <div className="mention_content_3_name">Yameen Vinchu</div>
+              <div className="mention_content_3_name">Abhinav Pandey </div>
             </div>
             <div className="mention_content_4">
               <div className="mention_content_4_image_div">
@@ -386,18 +395,7 @@ class Homepage extends Component {
               </div>
               <div className="mention_content_4_name">Aman Shaikh</div>
             </div>
-            <div className="mention_content_5">
-              <div className="mention_content_5_image_div">
-                <img></img>
-              </div>
-              <div className="mention_content_5_name">Abhinav Pandey</div>
-            </div>
-            <div className="mention_content_6">
-              <div className="mention_content_6_image_div">
-                <img></img>
-              </div>
-              <div className="mention_content_6_name">Tejas Devrudkar</div>
-            </div>
+           
           </div>
         </div>
 

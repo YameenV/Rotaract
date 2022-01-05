@@ -2,7 +2,6 @@
   background: url("../imgs/Layer\ 1.png"),
   linear-gradient(180deg, #000000 10.1%, #000217 34.37%, #0066FF 68.23%, #ADD7F2 100%), #000917;
     background-repeat: no-repeat;
-  /* object-fit: contain; */
   background-blend-mode: lighten;
 
   background-size: 100%;
@@ -10,16 +9,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* align-content: center; */
 
-  /* background: linear-gradient(
-      180deg,
-      #000917 16.45%,
-      #0066ff 59.8%,
-      #add7f2 100%
-    ),
-    #000917; */
   overflow-y: hidden;
   animation: HomeLoad 2s ease-in-out;
 }
@@ -31,13 +21,13 @@
 
 .home-bg img {
   mix-blend-mode: screen;
-  /* z-index: -1; */
+
 }
 .earth_div {
   height: 720px;
 }
 .earth_image {
-  /* position: absolute; */
+
   width: 100%;
   height: 720px;
   object-fit: cover;
@@ -97,7 +87,7 @@
 }
 
 .second_container {
-  margin-top: 10vw;
+  margin-top: 15vw;
   /* position: absolute; */
   width: 85vw;
   background-color: transparent;
@@ -210,7 +200,7 @@
 
 .home_announcement {
   /* position: absolute; */
-  margin-top: 10vw;
+  margin-top: 15vw;
   width: 85vw;
   background-color: transparent;
   color: white;
@@ -327,11 +317,13 @@
   margin: 1em 0;
   padding: 0;
 }
-
+.home_announcement .leaderboard_more{
+  color: white;
+}
 /* -------- Events --------*/
 
 .homepage_events {
-  margin-top: 10vw;
+  margin-top: 15vw;
   margin-bottom: 5vw;
   display: flex;
   flex-direction: column;
@@ -340,11 +332,11 @@
   /* position: absolute; */
   width: 85vw;
   background-color: transparent;
-  color: white;
+  color: rgba(255, 255, 255, 0.767);
 
   align-content: center;
 }
-.home_event_header {
+.home_event_header h1 {
   font-family: Bebas Neue;
   font-style: normal;
   font-weight: normal;
@@ -441,14 +433,14 @@
 /* ---------- Leader Board---------- */
 
 .home_leaderboard {
-  margin-top: 10vw;
+  margin-top: 15vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* align-content: center; */
   align-items: center;
   /* width: 30vw; */
-  margin-bottom: 10vw;
+  /* margin-bottom: 10vw; */
 }
 .leaderboard_h {
   margin-bottom: 5vw;
@@ -650,12 +642,14 @@
   font-size: 2.2rem;
   /* line-height: 41px; */
   text-align: center;
-  text-decoration-line: underline;
+  /* text-decoration-line: underline; */
   text-transform: capitalize;
 
   color: #000917;
 }
-
+.leaderboard_more:hover{
+  text-decoration: underline;
+}
 .leaderboard_switch {
   display: flex;
   flex-direction: row;
@@ -666,6 +660,7 @@
 /* -----------  Team Info -----------  */
 
 .team_info {
+  margin-top: 15vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -755,7 +750,8 @@
   justify-content: space-between;
   align-items: center;
   /* height: 20vh; */
-  margin-bottom: 10vw;
+  margin-top: 15vw;
+  /* margin-bottom: 10vw; */
 }
 .home_register_head {
   font-family: Bebas Neue;
@@ -769,8 +765,12 @@
 
   color: #000917;
 }
-
+.home_register_button_div{
+  display: flex;
+  justify-content: center;
+}
 .home_register_button {
+  margin-top: 4vw;
   background: #ff5555;
   border-radius: 10px;
   padding: 16px 40px 15px 40px;
@@ -788,7 +788,7 @@
 /*    -------- Homepage Mention ------------- */
 
 .homepage_mention {
-  margin-top: 10vw;
+  margin-top: 15vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -809,7 +809,7 @@
 
 .mention_content {
   display: grid;
-  grid-template-columns: 5rem 2fr 2fr 2fr 5rem;
+  grid-template-columns: 2rem 2fr 2fr 2fr 2fr  1rem;
   width: 100%;
   height: 100%;
   /* margin-bottom: 20vh; */
@@ -841,7 +841,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  grid-column: 2/3;
+  grid-column: 5/6;
 }
 .mention_content_5 {
   display: flex;
@@ -947,12 +947,7 @@
 }
 
 @media (max-width: 780px) {
-  .first_container {
-    /* top: 50vw; */
-  }
-  .second_container {
-    margin-top: 34vw;
-  }
+  
   .content1_message h1 {
     font-size: 2rem;
   }
@@ -961,6 +956,10 @@
   }
   .leaderboard_h h1 {
     font-size: 3.5rem;
+  }
+  .home_event_container h1{
+    font-size: 3.5rem;
+
   }
   .bar_1_name h2,
   .bar_2_name h2,
@@ -979,6 +978,7 @@
   .mention_header {
     font-size: 3.3rem;
   }
+  
   .mention_content_1_name,
   .mention_content_2_name,
   .mention_content_3_name,
@@ -1028,20 +1028,30 @@
   }
 
   .mention_content {
-    grid-template-columns: 1rem 2fr 2fr 2fr 2rem;
+    grid-template-columns: 1rem 2fr 2fr  2rem;
+  }
+  .mention_content_1{
+    grid-column: 2/3;
+  }
+  .mention_content_2{
+    grid-column: 3/4;
+  }
+  .mention_content_3{
+    grid-column: 2/3;
+  }
+  .mention_content_4{
+    grid-column: 3/4;
   }
   .content1_name_positi {
     font-size: 1rem;
   }
+  .home_register_button{
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 580px) {
-  .first_contain {
-    top: 70vw;
-  }
-  .second_container {
-    margin-top: 55vw;
-  }
+  
   .title_header_1 h1 {
     font-size: 3rem;
   }
@@ -1054,7 +1064,13 @@
   .annoncement_header h1 {
     font-size: 3rem;
   }
+  .home_event_container h1{
+    font-size: 3rem;
+  }
   .content1_message h1 {
+    font-size: 1.8rem;
+  }
+  .home_register_button{
     font-size: 1.8rem;
   }
 
@@ -1138,6 +1154,9 @@
 }
 
 @media (max-width: 480px) {
+  .home_register_button{
+    font-size: 1.6rem;
+  }
   .event_container_1,
   .event_container_2,
   .event_container_3 {
@@ -1156,12 +1175,10 @@
 }
 
 @media (max-width: 420px) {
-  .first_container {
-    top: 100vw;
+  .home_register_button{
+    font-size: 1.3rem;
   }
-  .second_container {
-    margin-top: 100vw;
-  }
+  
   .container_content h2 {
     font-size: 0.8rem;
   }
@@ -1190,6 +1207,9 @@
   .leaderboard h1 {
     font-size: 2.5rem;
   }
+  .home_event_container h1{
+    font-size: 2.7rem;
+  }
   .home_register_head {
     font-size: 1.7rem;
   }
@@ -1207,12 +1227,10 @@
 }
 
 @media (max-width: 350px) {
-  .first_container {
-    top: 120vw;
+  .home_register_button{
+    font-size: 1rem;
   }
-  .second_container {
-    margin-top: 160vw;
-  }
+  
   .container_content h2 {
     font-size: 0.8rem;
   }
