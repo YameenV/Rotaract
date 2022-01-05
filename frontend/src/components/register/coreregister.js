@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../css/core_login.css'
 import Navbar from '../navbar/navbar'
 import {auth} from '../firebase/config.js'
 import {signInWithPopup,GoogleAuthProvider} from "firebase/auth";
+import {db} from '../firebase/config'
+import { collection, getDoc, onSnapshot } from "firebase/firestore"; 
+
 
 
  function Coreregister() {
+
+
+    const userCollectionRef = collection(db, "User");
+    const [user, setuser] = useState([])
+
+    useEffect(() =>
+        onSnapshot(collection(db,"User"), (snap) =>{
+            console.log(snap.docs.map((doc) => ({...doc.data(), id:doc.id})))
+        })
+    );
 
     const SignWithGoogle = () => {
         const provider = new GoogleAuthProvider();

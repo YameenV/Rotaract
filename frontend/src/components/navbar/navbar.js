@@ -1,14 +1,26 @@
 import React, { useState } from "react";
 import "../../css/navbar.css";
-import { GiHamburgerMenu } from "react-icons/gi";
+import FontAwesome from "react-fontawesome"
+
 import { NavLink } from "react-router-dom";
 // import { image } from '../../imgs/RCUCoEsLogo.png';
-import ROTLOGO from "../../imgs/RCUCoEsLogo.png";
+import ROTLOGO from "../../background/rotl.png";
 
-const Navbar = () => {
+const Navbar = (flag) => {
+
+  const fl = flag.flags
   const [showMediaIcons, setShowMediaIcons] = useState(false);
+
+  const className = (flag) => {
+
+    if (flag == 1){
+      return "main-nav-homepage"
+    }
+    return "main-nav"
+  }
   return (
-      <nav className="main-nav">
+      
+        <nav className={className(fl)}>
         
         {/* 1st logo part  */}
         <div className="logo">
@@ -48,11 +60,13 @@ const Navbar = () => {
           {/*  hamburger Menu menu   */}
           <div className="hamburger-menu">
             <a  onClick={() => setShowMediaIcons(!showMediaIcons)}>
-              <GiHamburgerMenu />
+              <FontAwesome className="fas fa-bars fa-lg"/>
+              {/* <FontAwesome className="fas fa-times fa-lg"/> */}
             </a>
           </div>
         </div>
-      </nav>    
+      </nav> 
+    
   );
 };
 

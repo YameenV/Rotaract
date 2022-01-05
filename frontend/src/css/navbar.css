@@ -24,10 +24,17 @@ li {
 /* ---------------  navbar style start  --------- */
 
 .main-nav {
-  /* background-color: ; */
-  /* position: absolute; */
-  /* top: 0; */
-  /* z-index: +1;s */
+  width: 100%;
+  height: 10rem;
+  display: grid;
+  grid-template-columns: 4rem 1fr 2fr 3fr 4rem;
+  
+}
+.main-nav-homepage {
+  background-color: transparent;
+  position: absolute;
+  z-index: +1;
+  top:0;
   width: 100%;
   height: 10rem;
   display: grid;
@@ -56,6 +63,7 @@ svg {
   /* color: antiquewhite; */
   z-index: 99;
 }
+
 .leader_rotLogo-image {
 
   height: 12vw;
@@ -127,7 +135,7 @@ svg {
 /* ------------------------responsive css style -------------------------------- */
 
 @media (max-width: 1070px) {
-  .main-nav {
+  .main-nav,.main-nav-homepage{
     /* height: 7rem; */
     grid-template-columns: 2rem 1fr 4fr 1rem;
   }
@@ -150,7 +158,7 @@ svg {
 /* responsive css style  */
 
 @media (max-width: 790px) {
-  .main-nav {
+  .main-nav, .main-nav-homepage{
     height: 7rem;
     grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
   }
@@ -248,7 +256,7 @@ svg {
 }
 
 @media (max-width: 520px) {
-  .main-nav {
+  .main-nav,.main-nav-homepage{
     height: 6rem;
     grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
     color: aliceblue;

@@ -14,7 +14,6 @@ import AdminPublish from './components/admin_publish/adminPublish'
 import Homepage from './components/Homepage/homepageContainer'
 import Coreregister from './components/register/coreregister'
 import Membership from './components/membership/memberRegister'
-import New_Homepage from './components/New-Homepage/member-registration'
 import Loader from './components/loadpage/loadder'
 
 const Routes = () =>{
@@ -36,7 +35,6 @@ const Routes = () =>{
             <Route exact path = "/admin_publish" component={AdminPublish}/>
             <Route exact path = "/corelogin" component={Coreregister}/>
             <Route exact path = "/mem" component={Membership}/>
-            <Route exact path = "/new-homepage" component={New_Homepage}/>
             </Switch>
         </div>
     )
