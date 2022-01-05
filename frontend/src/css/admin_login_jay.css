@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .admin_panel_login_main{
     background: linear-gradient(186.37deg, #000917 14.88%, #0066FF 82.38%, #ADD7F2 141.93%);
     min-width: 100vw;
@@ -10,10 +13,13 @@
 }
 .admin_panel_login_main img{
     width:30%;
-    margin-top: 10vh;
+    margin-top: 40px;
 }
 .jay_login{
-    background: rgba(173, 215, 242, 0.3);
+    backdrop-filter: blur(15px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.18);
+    border: rgba(186,186,186,0.4) solid 1.5px;
     height: 90vh;
     width: 50%;
     color: white;
@@ -22,19 +28,21 @@
     border-radius: 30px;
     align-items: center;
     position: relative;
-    backdrop-filter: blur(10px);
 }
 .jay_header_txt{
-    width: 90%;
+    width: 80%;
     color: #000917;
     margin-top: 5%;
 }
 .jay_header_txt h1{
-    font-size: 3.5rem;
+    font-size: 3.6rem;
     margin-bottom: 3%;
+    font-family: Montserrat !important;
+    font-weight: 900;
 }
 .jay_header_txt p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-family: Montserrat !important;
 }
 .jay_login form{
     margin-top: 5px;
@@ -44,15 +52,16 @@
 .jay_login button{
     border: none;
     position: absolute;
-    width: 90%;
+    width: 80%;
     background-color: #20DF7F;
     color: #000917;
     height: 6vh;
     font-size: 1.2rem;
     border-radius: 3px;
     bottom: 7%;
+    font-family: Montserrat !important;
 }
-.jay_login form button:hover{
+.jay_login button:hover{
     background-color: #23ff91;
     transition: 300ms ease-in;
 }
@@ -64,28 +73,21 @@ and (max-width: 800px) {
         transition: 300ms ease-in;
     }
     .jay_header_txt h1{
-        font-size: 4rem;
+        font-size: 3.6rem;
         transition: 300ms ease-in
     }
     .jay_header_txt p{
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         transition: 300ms ease-in
     }
     .jay_login input{
         width: 60vw;
         transition: 30ms ease-in;
     }
-    .jay_login form button{
-        width: 60vw;
-        transition: 300ms ease-in;
-    }
-    .jay_login form label{
-        font-size: 1.3rem;
-        transition: 300ms ease-in
-    }
     .admin_panel_login_main img{
-        width:40%;
+        width:60%;
         transition: 300ms ease-in;
+        margin-top: 40px;
     }
     
 }
@@ -97,8 +99,9 @@ and  (min-width: 426px) and (max-width: 1024px) {
         transition: 300ms ease-in;
     }
     .admin_panel_login_main img{
-        width:30%;
+        width:40%;
         transition: 300ms ease-in;
+        margin-top: 15px;
     }
     .jay_header_txt h1{
         font-size: 4.8rem;
@@ -112,13 +115,8 @@ and  (min-width: 426px) and (max-width: 1024px) {
         width: 60vw;
         transition: 30ms ease-in;
     }
-    .jay_login form button{
-        width: 60vw;
+    .jay_login button{
+        font-size: 1.4rem;
         transition: 300ms ease-in;
-    }
-
-    .jay_login form label{
-        font-size: 1.3rem;
-        transition: 300ms ease-in
     }
 } 

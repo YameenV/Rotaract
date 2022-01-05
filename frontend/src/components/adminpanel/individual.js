@@ -1,9 +1,9 @@
 import React, { cl, Component } from "react";
 import MemberNames from "./memberNames";
 import "../../css/jayindi.css";
-import rtlogo from "../../imgs/RCUCoEsLogo.png";
-import {connect} from 'react-redux'
-import * as actions from '../../actions/index'
+import rtlogo from "../../imgs/Background.png";
+import { connect } from "react-redux";
+import * as actions from "../../actions/index";
 
 class Individualpage extends Component {
   state = {
@@ -225,6 +225,7 @@ class Individualpage extends Component {
             </form>
           </div>
         ) : null}
+        <button className="jayindi_logoutbtn">Logout</button>
       </div>
     );
   }
