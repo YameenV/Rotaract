@@ -3,13 +3,6 @@ import {db} from '../components/firebase/config'
 import { collection, addDoc } from "firebase/firestore"; 
 const userCollectionRef = collection(db, "users");
 
-
-async function createUser(udata){
-    onSnapshot(collection(db,"User"), (snap) =>{
-        console.log(snap.docs.map((doc) => ({...doc.data(), id:doc.id})))
-    })
-}
-
 export function getLeaderUserData(){
     const request = axios.get('/get_user_leaderboard')
     .then(response=>response.data)
