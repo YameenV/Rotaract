@@ -80,7 +80,7 @@
 }
 
 .pro-graph{
-    backdrop-filter: blur(15px) saturate(120%);
+    backdrop-filter: blur(1px) saturate(102%);
     -webkit-backdrop-filter: blur(16px) saturate(200%);
     background-color: rgba(255, 255, 255, 0.18);
     border: rgba(186,186,186,0.4) solid 1.5px;

@@ -1,6 +1,7 @@
 
 
 .main_member{
+    background: linear-gradient(347.52deg, #0066FF -44.11%, #000917 90.94%);
     min-height: 100vh;
     min-width: 100vw; 
     display: flex;
