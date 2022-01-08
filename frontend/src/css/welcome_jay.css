@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .wlcmjay_main{
     background: linear-gradient(186.37deg, #000917 14.88%, #0066FF 82.38%, #ADD7F2 141.93%);
     min-width: 100vw;
@@ -11,6 +13,8 @@
     font-size: 3.5rem;
     align-self: flex-end;
     margin-bottom: 2%;
+    font-family: Montserrat !important;
+    font-weight: 900;
 }
 .wlcmjay_hdr{
     display: flex;
@@ -19,7 +23,9 @@
     width: 90%;
 }
 .wlcmjay_main img{
-    width:20%;
+    width:12%;
+    margin: 40px;
+    filter: drop-shadow(0px 0px 39px rgba(0, 163, 255, 0.7));
 }
 .wlcm_btn{
     display: flex;
@@ -35,6 +41,7 @@
     color: #000917;
     border-radius: 10px;
     margin: 10px;
+    font-family: Montserrat !important;
 }
 .team_btn{
     background: linear-gradient(90deg, #20DF7F 0%, #0066FF 166.88%);
@@ -68,17 +75,24 @@ and (max-width: 800px) {
     .wlcmjay_hdr h1{
         align-self: center;
         text-align: center;
-        font-size: 5rem;
+        font-size: 3.6rem;
         margin-top: 10px;
         transition: 300ms ease-in;
     }
     .wlcmjay_hdr img{
-        width: 100%;
+        width: 60%;
         transition: 300ms ease-in;
+        margin: 80px 0 80px 0;
     }
     .wlcm_btn{
         flex-direction: column;
         transition: 300ms ease-in;
+    }
+    .team_btn{
+        background: #20DF7F;
+    }
+    .indi_btn{
+        background: #20DF7F;
     }
 } 
 /* iPads  ----------- */
@@ -95,11 +109,14 @@ and  (min-width: 426px) and (max-width: 1024px) {
         transition: 300ms ease-in;
     }
     .wlcmjay_hdr img{
-        width: 70%;
+        width: 40%;
         transition: 300ms ease-in;
     }
     .wlcm_btn{
         flex-direction: column;
         transition: 300ms ease-in;
+    }
+    .wlcm_btn button{
+        font-size: 1.5rem;
     }
 } 

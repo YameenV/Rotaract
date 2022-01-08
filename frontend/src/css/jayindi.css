@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .jayindi_main{
     min-height: 100vh;
     min-width: 100vw;
@@ -6,12 +8,15 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    font-family: Montserrat !important;
 }
 .jayindi_hdr h1{
     color: #FFFFFF;
     font-size: 3.5rem;
     align-self: flex-end;
     margin-bottom: 2%;
+    font-family: Montserrat !important;
+    font-weight: 900;
 }
 .jayindi_hdr{
     display: flex;
@@ -20,11 +25,13 @@
     width: 90%;
 }
 .jayindi_main img{
-    width:20%;
+    width:12%;
+    margin: 40px;
+    filter: drop-shadow(0px 0px 39px rgba(0, 163, 255, 0.7));
 }
 .jay_indibtn{
     width: 90%;
-    background: linear-gradient(90deg, #0066FF -48.96%, #20DF7F 200.68%);
+    background: #00d068;
     text-align: center;
     height: 6vh;
     border-radius: 10px;
@@ -32,6 +39,7 @@
     color: #000917;
     padding-top: 0.8vh;
     margin-bottom: 15px;
+    font-family: Montserrat !important;
 }
 .uploadcsvindi_nxtform{
     width: 100vw;
@@ -107,10 +115,11 @@
     border: none;
     padding: 0.7vh;
     border-radius: 10px;
-    background: #000917;
-    color: #FFFFFF;
+    background: #20DF7F;
+    color: #000917;
     transition: 1s;
     margin-left: -10px;
+    width: 30%;
   }
 .jayindi_main h5{
     color: #000917;
@@ -172,6 +181,9 @@
     font-size: 0.8rem !important;
     margin: 0 0.2vw 0 0.2vw !important;
 }
+.jayindi_logoutbtn{
+    background: #FF5555 !important;
+}
 /* Smartphones ----------- */
 @media only screen
 and (max-width: 800px) {
@@ -182,12 +194,14 @@ and (max-width: 800px) {
     .jayindi_hdr h1{
         align-self: center;
         text-align: center;
-        font-size: 5rem;
+        font-size: 3.6rem;
         margin-top: 10px;
         transition: 300ms ease-in;
     }
     .jayindi_hdr img{
-        width: 100%;
+        width: 60%;
+        transition: 300ms ease-in;
+        margin: 80px 0 80px 0;
     }
     .jay_indibtn{
         padding-top: 1vh;
@@ -215,7 +229,7 @@ and  (min-width: 426px) and (max-width: 1024px) {
         transition: 300ms ease-in;
     }
     .jayindi_hdr img{
-        width: 70%;
+        width: 40%;
         transition: 300ms ease-in;
     }
     .jay_indibtn{

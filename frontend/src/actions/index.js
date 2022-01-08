@@ -1,7 +1,4 @@
 import axios from 'axios'
-import {db} from '../components/firebase/config'
-import { collection, addDoc } from "firebase/firestore"; 
-const userCollectionRef = collection(db, "users");
 
 export function getLeaderUserData(){
     const request = axios.get('/get_user_leaderboard')
