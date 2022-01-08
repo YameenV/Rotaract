@@ -4,7 +4,7 @@
 .leader_main{
     min-height: 100vh;
     min-width: 100vw;
-    display: flex;
+    display: flex; 
     justify-content: stretch;
     align-items: stretch;
     flex-direction: column;
@@ -14,9 +14,9 @@
     /* background: linear-gradient(180deg, #000917 22.63%, #0066FF 99.03%, #ADD7F2 172.32%); */
     height: 60vh;
     border-radius: 0px 0px 25px 25px;
-    flex-grow: 2;
+    /* flex-grow: 2; */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
 

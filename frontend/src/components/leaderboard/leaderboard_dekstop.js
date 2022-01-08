@@ -41,9 +41,9 @@ class Leaderboard_dekstop extends Component {
 
 
       <div className="leader_main">
-        <Navbar />
+        
         <div className="leader_header">
-
+        <Navbar />
 
           
           <video autoPlay muted loop
@@ -55,9 +55,7 @@ class Leaderboard_dekstop extends Component {
               zIndex:"-1",
               position: "fixed",
               left: "0",
-              overflow:"hidden"
-
-            }}
+              overflow:"hidden" }}
           >
             <source src={neu} type="video/mp4" />
           </video>

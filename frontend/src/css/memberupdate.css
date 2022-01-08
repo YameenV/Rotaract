@@ -84,7 +84,7 @@
     -webkit-backdrop-filter: blur(16px) saturate(200%);
     background-color: rgba(255, 255, 255, 0.15);
     border: rgba(186,186,186,0.3) solid 1px;
-    border-radius: 25px;
+    border-radius: 25px 25px 0px 0px;
     width: 90vw;
     /* height: 90vh; */
 
@@ -93,7 +93,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 10vh;
+    padding:    5vw 1vw 3vw 1vw;
     grid-column: 4/5;
 
     height: 100%;
@@ -121,6 +121,8 @@
 }
 .contact_form button, .about_form button , .education_form button,.other_form button,.personal_form button,.professional_form button,.rotaract_form button{
     border-radius: 10px;
+    background-color: blue;
+    margin-top: 3vw;
 }
 .contact_form label{
     font-family:  Helvetica;
@@ -129,6 +131,10 @@
 }
 .personal_form select{
     border-radius: 8px;
+}
+.personal_div button{
+
+    /* background-color: red; */
 }
 
 .main_data{
@@ -178,7 +184,7 @@
     display: flex;  
     flex-direction: column;
     grid-column: 2/3;
-    justify-content: center;
+    /* justify-content: center; */
     align-content: center;       
 }
 .changer_buttons{
@@ -270,7 +276,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height:80vw;   
+        height:100vh;   
         grid-column: 3/4;
     }
     .member_rotimage{
@@ -382,6 +388,7 @@
     .main_data{
         min-height: 50vh;
         min-width: 60vw;
+        
         /* display: grid; */
         /* grid-template-columns: 1rem 2fr 2fr  ; */
         display: flex;
@@ -393,6 +400,9 @@
         /* grid-column: 2/3; */
         justify-content: center;
         align-content: center;       
+        align-items: center;
+        width: 100vw;
+    
     }
 
     .unknown{
@@ -409,6 +419,9 @@
     .changer_buttons{
         height: 100%;
         padding-left: 0;
+        width: 70vw;
+        /* align-items: center; */
+        
     }
     .contact_form , .about_form , .education_form ,.other_form ,.personal_form,.professional_form,.rotaract_form{
         display: flex;
