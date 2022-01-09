@@ -14,6 +14,7 @@ class Contact extends Component {
     sendData = (e) =>{
         e.preventDefault();
         this.props.pers('contact',this.state)
+        this.props.takeChange('rotaractclub')
     }
     render() {
         return (
@@ -37,7 +38,7 @@ class Contact extends Component {
                 <label>Whatsapp</label>
                 <input value = {this.state.whatsapp} onChange={(e)=>{this.setState({whatsapp:e.target.value})}} type="text"/>
 
-                <button type="submit">Submit</button>
+                <button type="submit">Next</button>
               </form>
             </div>
         )

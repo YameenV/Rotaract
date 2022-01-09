@@ -19,6 +19,7 @@ class Otherinterest extends Component {
             Interest
         }
         this.props.pers('otherinterest',obj);
+        this.props.takeChange('about');
     }
     
     render() {
@@ -35,7 +36,7 @@ class Otherinterest extends Component {
                 </label>
                 <input type = "text" value={this.state.Interest} onChange={(e)=>{this.setState({Interest:e.target.value})}}/>
                 
-                <button type="submit">Submit</button>
+                <button type="submit">Next</button>
                 </form>
 
             </div>
