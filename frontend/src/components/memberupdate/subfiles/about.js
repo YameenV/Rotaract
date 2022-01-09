@@ -16,6 +16,7 @@ class About extends Component {
             yourself_ten_years
         }
         this.props.pers('about',obj)
+        
     }
 
     render() {
@@ -27,7 +28,7 @@ class About extends Component {
                 <label>Where do you see your self in 10 years:</label>
                 <input type="text" value = {this.state.yourself_ten_years} onChange={(e)=>{this.setState({yourself_ten_years:e.target.value})}}/>
                 <br/>
-                <button type="submit">Submit</button>
+                <button type="submit">Next</button>
                 </form>
             </div>
         )

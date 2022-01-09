@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 
 .core_login-main{
-    background-image: url("../background/memebrlogin.jpg");
+    background-image: url("../background/Member Login Milkyway.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -18,32 +18,37 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: rgba(173, 215, 242, 0.28);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(11px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: rgba(186,186,186,0.3) solid 1px;
     border-radius: 20px;
     height: 60vh;
     width: calc(200px + 25vw);
     padding: 15px;
-    gap: 10px;
 }
 
 .core_login-text{
     font-family: Bebas Neue;
-    font-style: normal;
-    font-weight: 400;
-    text-transform: capitalize;
     font-size: calc(12px + 6vw);
     color: #000917;
     align-self: center;
 }
-
+.core_login-supptext{
+    width: 90%;
+    align-self: center;
+    font-size: calc(6px + 1vw);
+    color: #000917;
+    font-family: Montserrat;
+    margin-bottom: 20px;
+}
 .core_login-but{
     width: 70%;
     background: #0066FF;
     border-radius: 10px;
     height: 8vh;
     border: none;
-    font-family: Inter;
+    font-family: Montserrat;
     font-style: bold;
     font-weight: bold;
     font-size: calc(6px + 1vw);
@@ -56,6 +61,7 @@
     .core_login-conn{
         height: 40vh;
         width: calc(100px + 40vw);
+        margin-top: 100px;
     }
     .core_login-text{
         font-size: calc(12px + 8vw);
@@ -63,5 +69,13 @@
     .core_login-but{
         height: 7vh;
         font-size: calc(6px + 2vw);
+    }
+}
+
+/* iPads  ----------- */
+@media only screen
+and  (min-width: 426px) and (max-width: 1024px) {
+    .core_login-conn{
+        margin-top: 60px;
     }
 }

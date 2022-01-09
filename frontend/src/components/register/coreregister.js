@@ -39,13 +39,24 @@ function Coreregister() {
     }
 
     return (
-        <div className='core_login-main'>
-            <Navbar/>
-            <div className='core_login-conn'>
-            <div className='core_login-text'> Member Login</div>
-            <button className='core_login-but' type='submit'onClick={SignWithGoogle}>Login With Google</button>
-            </div>
+      <div className="core_login-main">
+        <Navbar />
+        <div className="core_login-conn">
+          <div className="core_login-text"> Member Login</div>
+          <div className="core_login-supptext">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            sodales dolor vitae porttitor sagittis. Ut in nunc at magna cursus
+            malesuada. In sodales libero at faucibus pulvinar.
+          </div>
+          <button
+            className="core_login-but"
+            type="submit"
+            onClick={SignWithGoogle}
+          >
+            Login With Google
+          </button>
         </div>
-    )
+      </div>
+    );
 }
 export default Coreregister

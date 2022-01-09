@@ -26,6 +26,11 @@ class MemberContainer extends Component {
         }
     }
 
+    changesType = (atype)=>{
+        this.setState({
+            typeofupdate:atype
+        })
+    }
 
     render() {
 
@@ -74,7 +79,9 @@ class MemberContainer extends Component {
                         </div>
                         <div className="unknown">
                             {this.state.typeofupdate !== '' ? (
-                                <LauncherDiv data={this.state.typeofupdate} sender={this.sendUser} />
+                                <LauncherDiv 
+                                typeChanger = {this.changeType}
+                                data={this.state.typeofupdate} sender={this.sendUser} />
                             ) : (null)}
                         </div>
                     </div>
