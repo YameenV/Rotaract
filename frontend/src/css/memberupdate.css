@@ -10,6 +10,12 @@
     align-content: center;
     align-items: center;
 }
+.final_submit_div{
+    display: none;
+}
+.final_submit_button{
+    display: none;
+}
 /* .member_navbar{
     display: grid;
     grid-template-columns: 2rem 2fr 2fr 2fr 2rem;
@@ -224,7 +230,7 @@
     padding-left:10px;
     font-size: 1.8rem;
 }
-.
+
 .changer_buttons button:active{
     background: black; 
     

@@ -18,140 +18,152 @@ const ListOfPPL = (props) => {
         })
         .map((item, i) => (
           <div className="leader_list-group">
-            <div classname="leader_list-group-number">{i}</div>
+            <div className="leader_list-group-number">{i}</div>
             <div>
-              <img classname="leader_list-group-number" src={item.image}></img>
+              <img className="leader_list-group-number" src={item.image}></img>
             </div>
             <div
-              classname="leader_list-group-team"
+              className="leader_list-group-team"
               style={{ width: "100px", textAlign: "center" }}
             >
               Alliance
             </div>
             <div
-              classname="leader_list-group-name"
+              className="leader_list-group-name"
               style={{ width: "100px", textAlign: "center" }}
             >
               {item.name}
             </div>
-            <div classname="leader_list-group-score">{item.total}</div>
+            <div className="leader_list-group-score">{item.total}</div>
           </div>
         ))
     ) : (
       <div className="leader_list-group">
         <div className="leader-row-all-1">
-          <div classname="leader_list-group-number">None</div>
+          <div className="leader-data-div">
+          <div className="leader_list-group-number">None</div>
           <div>
-            <img classname="leader_list-group-number"></img>
+            <img className="leader_list-group-number" src="x"></img>
           </div>
           <div
-            classname="leader_list-group-team"
+            className="leader_list-group-team"
             style={{ width: "100px", textAlign: "center" }}
           >
             None
           </div>
           <div
-            classname="leader_list-group-name"
+            className="leader_list-group-name"
             style={{ width: "100px", textAlign: "center" }}
-          >
+          > 
             None
           </div>
-          <div classname="leader_list-group-score">None</div>
+          </div>
+          <div className="leader_list-group-score">None</div>
         </div>
         <div className="leader-row-all-2">
-          <div classname="leader_list-group-number">None</div>
+        <div className="leader-data-div">
+          <div className="leader_list-group-number">None</div>
           <div>
-            <img classname="leader_list-group-number"></img>
+            <img className="leader_list-group-number" src="x"></img>
           </div>
           <div
-            classname="leader_list-group-team"
+            className="leader_list-group-team"
             style={{ width: "100px", textAlign: "center" }}
           >
             None
           </div>
           <div
-            classname="leader_list-group-name"
+            className="leader_list-group-name"
             style={{ width: "100px", textAlign: "center" }}
           >
             None
           </div>
-          <div classname="leader_list-group-score">None</div>
+          </div>
+          <div className="leader_list-group-score">None</div>
         </div>
         <div className="leader-row-all-3">
-          <div classname="leader_list-group-number">None</div>
+        <div className="leader-data-div">
+          <div className="leader_list-group-number">None</div>
           <div>
-            <img classname="leader_list-group-number"></img>
+            <img className="leader_list-group-number" src="x"></img>
           </div>
           <div
-            classname="leader_list-group-team"
+            className="leader_list-group-team"
             style={{ width: "100px", textAlign: "center" }}
           >
             None
           </div>
           <div
-            classname="leader_list-group-name"
+            className="leader_list-group-name"
             style={{ width: "100px", textAlign: "center" }}
           >
             None
           </div>
-          <div classname="leader_list-group-score">None</div>
+          </div>
+          <div className="leader_list-group-score">None</div>
         </div> 
         <div className="leader-row-all-4">
-          <div classname="leader_list-group-number">None</div>
+        <div className="leader-data-div">
+          <div className="leader_list-group-number">None</div>
           <div>
-            <img classname="leader_list-group-number"></img>
+            <img className="leader_list-group-number" src="x"></img>
           </div>
           <div
-            classname="leader_list-group-team"
+            className="leader_list-group-team"
             style={{ width: "100px", textAlign: "center" }}
           >
             None
           </div>
           <div
-            classname="leader_list-group-name"
+            className="leader_list-group-name"
             style={{ width: "100px", textAlign: "center" }}
           >
             None
           </div>
-          <div classname="leader_list-group-score">None</div>
+          </div>
+          <div className="leader_list-group-score">None</div>
         </div>       
         <div className="leader-row-all-5">
-          <div classname="leader_list-group-number">None</div>
+        <div className="leader-data-div">
+          <div className="leader_list-group-number">None</div>
           <div>
-            <img classname="leader_list-group-number"></img>
+            <img className="leader_list-group-number" src="x"></img>
           </div>
           <div
-            classname="leader_list-group-team"
+            className="leader_list-group-team"
             style={{ width: "100px", textAlign: "center" }}
           >
             None
           </div>
           <div
-            classname="leader_list-group-name"
+            className="leader_list-group-name"
             style={{ width: "100px", textAlign: "center" }}
           >
             None
           </div>
-          <div classname="leader_list-group-score">None</div>
+          </div>
+          <div className="leader_list-group-score">None</div>
         </div>  
          <div className="leader-row-all-6">
-          <div classname="leader_list-group-number">None</div>
+         <div className="leader-data-div">
+          <div className="leader_list-group-number">None</div>
           <div>
-            <img classname="leader_list-group-number"></img>
+            <img className="leader_list-group-number" src="x"cv></img>
           </div>
           <div
-            classname="leader_list-group-team"
+            className="leader_list-group-team"
             style={{ width: "100px", textAlign: "center" }}
           >
             None
           </div>
           <div
-            classname="leader_list-group-name"
+            className="leader_list-group-name"
             style={{ width: "100px", textAlign: "center" }}
           >
             None
           </div>
-          <div classname="leader_list-group-score">None</div>
+          </div>
+          <div className="leader_list-group-score">None</div>
         </div> 
       </div>
     );

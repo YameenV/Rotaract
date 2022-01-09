@@ -56,10 +56,10 @@ class Leaderboard_dekstop extends Component {
               width: "100%",
               height:"inherit",
               // height:"100%",
-             //mixBlendMode: "lighten",
+             mixBlendMode: "screen",
               position: "fixed",
               left: "0",
-              //transform: "scale(-1,1)",
+              // transform: "scale(-1,1)",
 
               overflow:"hidden" }}
           >
@@ -71,12 +71,12 @@ class Leaderboard_dekstop extends Component {
           </p>
           
           <div className="leader_button-username">
-
+            <div className="leader-button-toggle">
             <ButtonGroup className="leader_button_group">
               <div className="leader_button_1">Team</div>
               <div onClick={this.getUserBoard} className="leader_button_2">Individual</div>
             </ButtonGroup>
-
+            </div>
             <div className="leader_username-input">
               <div className="leader_search">
                 <InputGroup>
