@@ -37,7 +37,7 @@ const Eventlanding = (props) => {
 
             <div className="title">{items.title}</div>
 
-            <div className="description">{items.description}</div>
+            <div className="description-event">{items.description}</div>
           </div>
         ))}
       </div>
@@ -63,84 +63,135 @@ const Eventlanding = (props) => {
         <source src={eve} type="video/mp4" />
       </video>
 
-      <div className="event_header">events</div>
-      <div className="evnt_main_con">
-        <div className="event">
-          <img className="event_img" src={testimg}></img>
+      <div class="wrapper">
+        <header>
+            <h1>Events</h1>
+        </header>
+    </div>
+      <div class="container">
+        <div class="card">
+        
+        <img className="event_img" src={testimg}></img>
 
-          <div className="title">Garbe ki Shaam</div>
+        <div className="title">No events till now</div>
 
-          <div className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            luctus hendrerit orci. Nunc vulputate in sapien at dignissim. In
-            purus elit, ullamcorper nec neque ac, volutpat consectetur tortor.
-            Donec viverra vel turpis ac mollis. Etiam viverra ipsum quis metus
-            molestie, eget convallis nisi fringilla. Praesent a lorem viverra,
-            pellentesque magna et, ornare tortor. Phasellus porttitor rhoncus
-            lorem, ut facilisis libero venenatis eget. Etiam vel tellus sem.
-            Mauris vel orci semper, vehicula augue eu, posuere urna. Sed
-            sagittis ligula et turpis semper efficitur. Proin et risus tempus
-            risus tristique pretium. Cras quam felis, rhoncus sit amet venenatis
-            sit amet, imperdiet ut elit. Sed sapien erat, lobortis quis nunc
-            quis, pulvinar placerat felis. Suspendisse luctus luctus euismod.
-            Pellentesque habitant morbi tristique senectus et netus et malesuada
-            fames ac turpis egestas. Sed lorem ipsum, fermentum vitae rutrum a,
-            ultricies lobortis nibh. Sed vehicula tellus ac lectus rhoncus, non
-            ultricies mi finibus. Nulla non varius erat. Curabitur nec laoreet
-            quam. Aenean lectus neque, congue in efficitur nec, fringilla nec
-            tortor. Nunc vitae viverra diam, nec feugiat lorem. Phasellus sit
-            amet interdum quam. Sed consequat vel neque vitae gravida. Nam et
-            purus ex. In ut diam purus. Praesent vulputate ultrices mauris, eu
-            euismod metus viverra in. Sed rhoncus tempor ante, eu rhoncus augue
-            sodales ornare. Sed fringilla metus eget nunc viverra vulputate.
-            Pellentesque tellus tellus, posuere vel gravida sit amet, ultricies
-            vel tortor. Quisque in posuere massa. Sed in quam euismod,
-            ullamcorper orci eu, lacinia justo. Integer sed mattis purus. In
-            neque orci, feugiat ac congue eget, rhoncus id ligula. In vitae
-            augue ex. Praesent imperdiet eget risus quis sodales. Nullam mauris
-            massa, efficitur a posuere et, vehicula eu lacus. Ut a tellus sem.
-            Curabitur molestie nisl vel maximus sagittis. Morbi finibus nunc at
-            tellus facilisis condimentum. Vestibulum id lobortis massa. Nulla
-            nec egestas purus. Integer ac nibh mauris. Mauris pharetra vehicula
-            rhoncus. Fusce eu quam eget justo sollicitudin accumsan nec id leo.
-            Donec laoreet dui vel justo varius, eget fringilla turpis rhoncus.
-            Aenean hendrerit massa eros, sed vestibulum velit molestie quis.
-            Pellentesque habitant morbi tristique senectus et netus et malesuada
-            fames ac turpis egestas. Vivamus ex justo, tincidunt quis pretium
-            et, dapibus et nulla. Donec sed lectus orci. Curabitur sodales porta
-            molestie. Maecenas blandit dictum auctor. Ut tincidunt tellus sit
-            amet vehicula scelerisque. Sed sollicitudin leo sem, tempor egestas
-            purus vulputate ut. Aliquam id viverra felis. Vestibulum ante ipsum
-            primis in faucibus orci luctus et ultrices posuere cubilia curae; In
-            nec ligula nec ante consectetur aliquet. Aenean pellentesque lectus
-            ac condimentum egestas. Proin sed odio lobortis, luctus velit sed,
-            faucibus ante. Morbi hendrerit auctor massa sed scelerisque.
-            Suspendisse eu luctus augue. Nullam dignissim nulla quis lorem
-            dictum rutrum non a lacus. Sed venenatis ipsum erat, non lobortis
-            est sodales ut. Integer interdum ut enim vel pulvinar. Integer eu
-            maximus nisi. Nunc tempor vitae justo sed gravida.
-          </div>
+        <div className="description-event">
+         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+
         </div>
-        <div className="event">
-          <img className="event_img" src={testimg}></img>
-
-          <div className="title">No events till now</div>
-
-          <div className="description">
-            The server may be down, please wait for a while
-          </div>
         </div>
-        <div className="event">
-          <img className="event_img" src={testimg}></img>
+        <div class="card">
+        
+        <img className="event_img" src={testimg}></img>
 
-          <div className="title">No events till now</div>
+        <div className="title">No events till now</div>
 
-          <div className="description">
-            The server may be down, please wait for a while
-          </div>
+        <div className="description-event">
+         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+
+        </div>
+        </div>
+        <div class="card">
+        
+        <img className="event_img" src={testimg}></img>
+
+        <div className="title">No events till now</div>
+
+        <div className="description-event">
+         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+
+        </div>
+        </div>
+        <div class="card">
+        
+        <img className="event_img" src={testimg}></img>
+
+        <div className="title">No events till now</div>
+
+        <div className="description-event">
+         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+
+        </div>
+        </div>
+        <div class="card">
+        
+        <img className="event_img" src={testimg}></img>
+
+        <div className="title">No events till now</div>
+
+        <div className="description-event">
+         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+
+        </div>
+        </div>
+        <div class="card">
+        
+        <img className="event_img" src={testimg}></img>
+
+        <div className="title">No events till now</div>
+
+        <div className="description-event">
+         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+
+        </div>
+        </div>
+        <div class="card">
+        
+        <img className="event_img" src={testimg}></img>
+
+        <div className="title">No events till now</div>
+
+        <div className="description-event">
+         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+
+        </div>
+        </div>
+        <div class="card">
+        
+        <img className="event_img" src={testimg}></img>
+
+        <div className="title">No events till now</div>
+
+        <div className="description-event">
+         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+
+        </div>
+        </div>
+        <div class="card">
+        
+        <img className="event_img" src={testimg}></img>
+
+        <div className="title">No events till now</div>
+
+        <div className="description-event">
+         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+
+        </div>
+        </div>
+        <div class="card">
+        
+        <img className="event_img" src={testimg}></img>
+
+        <div className="title">No events till now</div>
+
+        <div className="description-event">
+         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+
+        </div>
         </div>
       </div>
-    </div>
+      </div>
+  
   );
 };
 
