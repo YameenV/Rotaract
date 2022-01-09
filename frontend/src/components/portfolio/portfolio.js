@@ -4,6 +4,7 @@ import Scoregraph from './subfiles/Scoregraph'
 import OtherData from './subfiles/otherData.js'
 import "../../css/portfolio.css"
 import Navbar from '../navbar/navbar'
+import FontAwesome from "react-fontawesome";
 
 
 class Portfolio extends Component {

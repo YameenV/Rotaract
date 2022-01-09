@@ -1,337 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.pro-main {
+  background: linear-gradient(321.78deg, #0066ff -3.86%, #000917 82.31%) fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  font-family: Montserrat !important;
+}
 
+.pro-search-con {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
 
-.pro-main{
-    background: linear-gradient(321.78deg, #0066FF -3.86%, #000917 82.31%) fixed;
-    min-width: 100vw;
-    min-height: 100vh;
-    display: flex;
+.pro-input {
+  border: none;
+  width: 100%;
+  height: 5vh;
+  background: rgba(173, 215, 242, 0.3);
+  backdrop-filter: blur(5px) saturate(102%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border-radius: 50px;
+  outline: none;
+  text-indent: 10px;
+  border: rgba(186, 186, 186, 0.4) solid 1.5px;
+}
+.pro-input:hover {
+  background: rgba(173, 215, 242, 0.5);
+  transition: 300ms ease-in;
+}
+.pro-input:focus {
+  background: rgba(173, 215, 242, 0.5);
+  transition: 300ms ease-in;
+}
+.pro-button {
+  border: none;
+  border-radius: 50%;
+  height: 5vh;
+  width: 5vh;
+  background: transparent;
+  right: 20px;
+  z-index: +1;
+  position: absolute;
+  color: #000917;
+  font-size: 1.2rem;
+}
+.pro-button:hover {
+  background: rgba(173, 215, 242, 0.7);
+}
+
+.pro-cont-presonal_graph {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1vw;
+}
+.pro-conn {
+  width: 100%;
+  padding: 25px;
+}
+
+.pro-personal {
+  backdrop-filter: blur(5px) saturate(102%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.18);
+  border: rgba(186, 186, 186, 0.4) solid 1.5px;
+  border-radius: 25px;
+  flex-grow: 2;
+  flex-shrink: 0;
+  height: 400px;
+  padding: 10px;
+}
+
+.pro-graph {
+  backdrop-filter: blur(5px) saturate(102%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.18);
+  border: rgba(186, 186, 186, 0.4) solid 1.5px;
+  border-radius: 25px;
+  flex-grow: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  padding: 10px;
+}
+
+.pro-chart_div {
+  width: 100%;
+  height: 100%;
+}
+
+.pro-personal_div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-basis: 0;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.pro-personal_img {
+  box-shadow: 11px 6px 10px 5px rgba(0, 0, 0, 0.15);
+  width: calc(30px + 5vw);
+  border-radius: 50%;
+}
+
+.pro-personal_text {
+  font-family: Montserrat;
+  width: 100%;
+  color: #000917;
+  /* font-size: 1rem; */
+  margin-bottom: 5px;
+}
+.pro-personal_name {
+  font-family: Montserrat !important;
+  font-style: bold;
+  /* font-size: 2rem; */
+  color: #000917;
+  margin-bottom: 5px;
+}
+.fas,
+.fab,
+.far {
+  width: 15%;
+  font-size: 1.3rem;
+}
+
+.pro-otherdata_rotaractclub {
+  margin-top: 2vw;
+  display: flex;
+  backdrop-filter: blur(15px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.18);
+  border: rgba(186, 186, 186, 0.4) solid 1.5px;
+  border-radius: 25px;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.pro-otherdata_rotaractclub h3 {
+  font-family: Montserrat;
+  color: #000917;
+  font-weight: bold;
+}
+
+.pro-otherdata_rotaractclub h2 {
+  font-family: Montserrat;
+  color: #000917;
+}
+.pro-otherdata_rotaractclub p {
+  font-family: Montserrat;
+  color: white;
+}
+
+.pro-otherdata_professional {
+  margin-top: 1vw;
+  display: flex;
+  backdrop-filter: blur(15px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.18);
+  border: rgba(186, 186, 186, 0.4) solid 1.5px;
+  border-radius: 25px;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.pro-otherdata_professional h1 {
+  font-family: Montserrat;
+  color: #000917;
+  font-weight: bold;
+}
+
+.pro-otherdata_professional h2 {
+  font-family: Montserrat;
+  color: #000917;
+}
+.pro-otherdata_professional p {
+  font-family: Montserrat;
+  color: white;
+}
+
+.pro-otherdata_professional-Tech {
+  font-family: Montserrat;
+  color: #000917;
+}
+.pro-otherdata_professional-field {
+  font-family: Montserrat;
+  color: #000917;
+}
+.pro-otherdata_professional-internship {
+  font-family: Montserrat;
+  color: #000917;
+}
+.pro-otherdata_professional-ach {
+  font-family: Montserrat;
+  color: #000917;
+}
+
+.pro-otherdata_education {
+  margin-top: 1vw;
+  display: flex;
+  backdrop-filter: blur(15px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.18);
+  border: rgba(186, 186, 186, 0.4) solid 1.5px;
+  border-radius: 25px;
+  flex-direction: column;
+  padding: 25px;
+}
+.pro-otherdata_education h1 {
+  font-family: Montserrat;
+  font-weight: bold;
+  color: #000917;
+}
+.pro-otherdata_education h2 {
+  font-family: Montserrat;
+  color: #000917;
+}
+.pro-otherdata_education p {
+  font-family: Montserrat;
+  color: white;
+}
+.pro-otherdata_education-cert {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  color: #000917;
+}
+
+.pro-otherdata_interests {
+  margin-top: 1vw;
+  display: flex;
+  backdrop-filter: blur(15px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.18);
+  border: rgba(186, 186, 186, 0.4) solid 1.5px;
+  border-radius: 25px;
+  flex-direction: column;
+  padding: 25px;
+}
+.pro-otherdata_interests h1 {
+  font-family: Montserrat;
+  font-weight: bold;
+  color: #000917;
+}
+.pro-otherdata_interests h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  color: #000917;
+}
+.pro-otherdata_interests p {
+  font-family: Montserrat;
+  color: white;
+}
+
+.pro-otherdata_about {
+  margin-top: 1vw;
+  display: flex;
+  backdrop-filter: blur(15px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.18);
+  border: rgba(186, 186, 186, 0.4) solid 1.5px;
+  border-radius: 25px;
+  flex-direction: column;
+  text-align: start;
+  padding: 25px 25px 25px 25px;
+}
+.pro-otherdata_about h1 {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: #000917;
+  }
+  .pro-otherdata_about h2 {
+    font-family: Montserrat;
+    font-style: normal;
+    color: #000917;
+  }
+  .pro-otherdata_about p {
+    font-family: Montserrat;
+    color: white;
+  }
+
+@media only screen and (max-width: 800px) {
+  .pro-cont-presonal_graph {
     flex-direction: column;
-    justify-content: space-between;
     align-items: stretch;
-}
-
-.pro-search-con{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-bottom: 10px;
-}
-
-.pro-input{
-    border: none;
-    width: 50vw;
-    height: 4vh;
-    background: rgba(173, 215, 242, 0.3);
-    backdrop-filter: blur(8px);
-    border-radius: 50px;
-    outline:none;
-}
-.pro-input:hover{
-    background: rgba(173, 215, 242, 0.7);
-    transition: 300ms ease-in;
-}
-.pro-input:focus{
-    background: white;
-    transition: 300ms ease-in;
-}
-
-.pro-button{
-    border: none;
-    width: 10vw;
-    border-radius: 50px;
-    height: 4vh;
-    background: rgba(173, 215, 242, 0.7);
-    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
-    border-radius: 50px;
-    outline:none;
-}
-
-.pro-cont-presonal_graph{
-
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    column-gap: 1vw;
-
-}
-.pro-conn{
-    width: 100%;
-    padding: 25px;
-}
-
-.pro-personal{
-    backdrop-filter: blur(15px) saturate(120%);
-    -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.18);
-    border: rgba(186,186,186,0.4) solid 1.5px;
-    border-radius: 25px;
-    flex-grow: 2;
-    flex-shrink: 0;
-    height: 350px;
-    padding: 10px 10px 10px 10px;
-}
-
-.pro-graph{
-    backdrop-filter: blur(1px) saturate(102%);
-    -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.18);
-    border: rgba(186,186,186,0.4) solid 1.5px;
-    border-radius: 25px;
-    flex-grow: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 350px;
-    padding: 10px 10px 10px 10px;
-    
-}
-
-.pro-chart_div{
-    width: 100%;
-    height: 100%;
-    
-}
-
-.pro-personal_div{
-    width: 100%;
-    height: 100%;
-    display: flex;
+    justify-content: space-between;
+  }
+  .pro-personal {
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-grow: 1;
     flex-basis: 0;
-    flex-shrink: 0;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    
-}
-
-.pro-personal_img{
-    box-shadow: 11px 6px 10px 5px rgba(0, 0, 0, 0.15);
-    width: calc(30px + 5vw);
-    border-radius: 50%;
-}
-
-.pro-personal_text{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    width: 100%;
-    padding-left: 5px;
-    color: #000917;
-}
-.pro-personal_name{
-    font-family: Montserrat;
-    font-style: bold;
-    font-weight: 400;
-    font-size: calc(5px + 1.5vw);
-    color: #000917;
-}
-
-
-.pro-otherdata_rotaractclub{
-    margin-top: 2vw;
-    display: flex;
-    backdrop-filter: blur(15px) saturate(120%);
-    -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.18);
-    border: rgba(186,186,186,0.4) solid 1.5px;
-    border-radius: 25px;
-    flex-direction: column;
-    padding: 25px 25px 25px 25px;
-
-}
-
-.pro-otherdata_rotaractclub h1{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-
-.pro-otherdata_rotaractclub h2{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-.pro-otherdata_rotaractclub p{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-
-.pro-otherdata_professional{
-    margin-top: 1vw;
-    display: flex;
-    backdrop-filter: blur(15px) saturate(120%);
-    -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.18);
-    border: rgba(186,186,186,0.4) solid 1.5px;
-    border-radius: 25px;
-    flex-direction: column;
-    padding: 25px 25px 25px 25px;
-}
-
-
-.pro-otherdata_professional h1{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-
-.pro-otherdata_professional h2{
-     font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-.pro-otherdata_professional p{
-     font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-
-.pro-otherdata_professional-Tech{
-     font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-.pro-otherdata_professional-field{
-     font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-.pro-otherdata_professional-internship{
-     font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-.pro-otherdata_professional-ach{
-     font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-
-
-.pro-otherdata_education{
-    margin-top: 1vw;
-    display: flex;
-    backdrop-filter: blur(15px) saturate(120%);
-    -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.18);
-    border: rgba(186,186,186,0.4) solid 1.5px;
-    border-radius: 25px;
-    flex-direction: column;
-    padding: 25px 25px 25px 25px;
-}
-.pro-otherdata_education h1{
-     font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-.pro-otherdata_education h2{
-     font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-.pro-otherdata_education p{
-     font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-.pro-otherdata_education-cert{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-
-.pro-otherdata_interests{
-    margin-top: 1vw;
-    display: flex;
-    backdrop-filter: blur(15px) saturate(120%);
-    -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.18);
-    border: rgba(186,186,186,0.4) solid 1.5px;
-    border-radius: 25px;
-    flex-direction: column;
-    padding: 25px 25px 25px 25px;
-}
-.pro-otherdata_interests h1{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-.pro-otherdata_interests h2{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-.pro-otherdata_interests p{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    color: #000917;
-}
-
-
-.pro-otherdata_about{
-    margin-top: 1vw;
-    display: flex;
-    backdrop-filter: blur(15px) saturate(120%);
-    -webkit-backdrop-filter: blur(16px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.18);
-    border: rgba(186,186,186,0.4) solid 1.5px;
-    border-radius: 25px;
-    flex-direction: column;
-    text-align: start;
-    padding: 25px 25px 25px 25px;
-}
-
-@media only screen and (max-width: 800px){
-    .pro-cont-presonal_graph{
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: space-between;
-    }
-    .pro-personal{
-
-        margin-bottom: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        flex-grow: 1;
-        flex-basis: 0;
-
-    }
-    .pro-graph{
-        margin-bottom: 15px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        flex-grow: 4;
-    }
-    .pro-search-con{
-        justify-content: center;
-    }
-    .pro-personal_div{
-        text-align: center;
-    }
+  }
+  .pro-graph {
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-grow: 4;
+  }
+  .pro-search-con {
+    justify-content: center;
+  }
+  .pro-personal_div {
+    text-align: center;
+  }
 }
