@@ -105,30 +105,49 @@ class LauncherDiv extends Component {
     this.props.sender(this.state)
   }
 
+  changeTaker = (change) =>{
+    console.log(change)
+    this.props.typeChanger(change)
+  }
+
   render() {
     
     return (
       <div className = "changing_container">
         {this.props.data === "personalinfo" ? (
-         <Personalinfo pers={this.getPersonalData}/>
+         <Personalinfo 
+         takeChange = {this.changeTaker}
+         pers={this.getPersonalData}/>
         ) : null}
-        {this.props.data === "Contact" ? <Contact  pers={this.getPersonalData}/> : null}
+        {this.props.data === "Contact" ? <Contact 
+        takeChange = {this.changeTaker}
+        pers={this.getPersonalData}/> : null}
         {this.props.data === "rotaractclub" ? (
-         <Rotaractclub  pers={this.getPersonalData}/>
+         <Rotaractclub 
+         takeChange = {this.changeTaker}
+         pers={this.getPersonalData}/>
         ) : null}
         {this.props.data === "proskilss" ? (
-          <Proskills  pers={this.getPersonalData}/>
+          <Proskills  
+          takeChange = {this.changeTaker}
+          pers={this.getPersonalData}/>
         ) : null}
          {this.props.data === "edubackground" ? (
-          <Educational  pers={this.getPersonalData}/>
+          <Educational 
+          takeChange = {this.changeTaker}
+          pers={this.getPersonalData}/>
         ) : null}
         {this.props.data === "otherinterest" ? (
-          <Otherinterest  pers={this.getPersonalData}/>
+          <Otherinterest 
+          takeChange = {this.changeTaker}
+          pers={this.getPersonalData}/>
         ) : null}
-        {this.props.data === "about" ? <About  pers={this.getPersonalData}/> : null}
+        {this.props.data === "about" ? <About 
+        takeChange = {this.changeTaker}
+        pers={this.getPersonalData}/> : null}
 
-        <div>
-          <div>
+        <div classsName="final_submit_div">
+          <div className="final_submit_button">
             Only submit when all data is filled
           <button type="submit" onClick={this.send}>Submit</button>
           </div>

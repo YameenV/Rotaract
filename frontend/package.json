@@ -1,5 +1,9 @@
 {
   "name": "client",
+<<<<<<< HEAD
+=======
+  "homepage": "http://ashutosh.educationhost.cloud",
+>>>>>>> f2d207d5b16e133582b1527c77db42460be50656
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +15,7 @@
     "axios": "^0.24.0",
     "bootstrap": "^5.1.3",
     "firebase": "^9.6.1",
+    "next-link": "^2.0.0",
     "package.json": "^2.0.1",
     "react": "^17.0.2",
     "react-apexcharts": "^1.3.9",

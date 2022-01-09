@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 .home-main {
   background: url("../imgs/StarOverlay.png"),
   linear-gradient(180deg, #000000 10.1%, #000217 34.37%, #0066FF 68.23%, #ADD7F2 100%), #000917;
   background-repeat: no-repeat;
   background-blend-mode: lighten;
+=======
+.home-main{
+  background: url('../imgs/StarOverlay.png'),
+  linear-gradient(180deg, #000000 10.1%, #000217 34.37%, #0066FF 68.23%, #ADD7F2 100%), #000917;
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+>>>>>>> f2d207d5b16e133582b1527c77db42460be50656
 
   background-size: 100%;
   min-width: 100vw;

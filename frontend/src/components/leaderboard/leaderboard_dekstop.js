@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from '../../actions/index'
 import { Button, ButtonGroup, InputGroup, FormControl, Nav } from "react-bootstrap";
 import Navbar from '../../components/navbar/navbar'
-import neu from "../../background/leaderboard.mp4"
+import neu from "../../background/prot.mp4"
 
 class Leaderboard_dekstop extends Component {
   state = {
@@ -41,41 +41,42 @@ class Leaderboard_dekstop extends Component {
 
 
       <div className="leader_main">
-        <Navbar />
+        
         <div className="leader_header">
-
+        <Navbar />
 
           
+          
+
+
+          <div className="leader_title">LEADERBOARD</div>
           <video autoPlay muted loop
             style={{
-              objectFit: "cover",
+              objectFit: "contain",
               width: "100%",
               height:"inherit",
               // height:"100%",
-              zIndex:"-1",
+             mixBlendMode: "screen",
               position: "fixed",
               left: "0",
-              overflow:"hidden"
+              // transform: "scale(-1,1)",
 
-            }}
+              overflow:"hidden" }}
           >
             <source src={neu} type="video/mp4" />
           </video>
 
-
-          <div className="leader_title">LEADERBOARD</div>
-
           <p className="leader_Mantaintext">
             Maintained By Jai Prajapat - Human Resource & Development Director
           </p>
-
+          
           <div className="leader_button-username">
-
-            <ButtonGroup className="leader_button-group">
-              <div className="leader_button-1">Team</div>
-              <div onClick={this.getUserBoard} className="leader_button-2">Individual</div>
+            <div className="leader-button-toggle">
+            <ButtonGroup className="leader_button_group">
+              <div className="leader_button_1">Team</div>
+              <div onClick={this.getUserBoard} className="leader_button_2">Individual</div>
             </ButtonGroup>
-
+            </div>
             <div className="leader_username-input">
               <div className="leader_search">
                 <InputGroup>

@@ -26,6 +26,11 @@ class MemberContainer extends Component {
         }
     }
 
+    changesType = (atype)=>{
+        this.setState({
+            typeofupdate:atype
+        })
+    }
 
     render() {
 
@@ -37,10 +42,10 @@ class MemberContainer extends Component {
                         objectFit:"cover",
                         width:"100%",
                         height:"100%",
-                        zIndex:"-1",
                         position:"fixed",
                         top:"0",
-                        left:"0"
+                        left:"0",
+                        mixBlendMode:"screen"
                       }}
                 >
                     <source src={mem} type="video/mp4" />
@@ -74,7 +79,9 @@ class MemberContainer extends Component {
                         </div>
                         <div className="unknown">
                             {this.state.typeofupdate !== '' ? (
-                                <LauncherDiv data={this.state.typeofupdate} sender={this.sendUser} />
+                                <LauncherDiv 
+                                typeChanger = {this.changeType}
+                                data={this.state.typeofupdate} sender={this.sendUser} />
                             ) : (null)}
                         </div>
                     </div>

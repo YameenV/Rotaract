@@ -30,6 +30,7 @@ class Proskills extends Component {
     }
 
     this.props.pers("proskills", obj);
+    this.props.takeChange('edubackground')
   };
 
   render() {
@@ -99,7 +100,7 @@ class Proskills extends Component {
             value={this.state.future_goal}
           />
 
-          <button type="submit">Submit</button>
+          <button type="submit">Next</button>
         </form>
       </div>
     );

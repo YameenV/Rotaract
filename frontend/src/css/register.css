@@ -59,15 +59,10 @@
     padding-left: 40px;
 }
 
-.memregister_rotLogo-image-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .memregister_rotLogo-image{
-    width: calc(100 + 20vw);
-    height: 40vh;
+    width: 30%;
+    margin: 40px;
 }
 
 .memeregister_button-div{
@@ -86,6 +81,11 @@
     border-radius: 20px;
     height: 5vh;
     border: none;
+    text-indent: 10px;
+}
+.memeregister_button-in::placeholder{
+    color: #000917;
+    opacity: 70%;
 }
 .memeregister_button-in:hover{
     background: rgba(173, 215, 242, 0.7);
@@ -118,7 +118,7 @@
     .memeregister_text{
         order:2;
     }
-    .memregister_rotLogo-image-div{
+    .memregister_rotLogo-image{
         order:1;
     }
     .memregister-con{
