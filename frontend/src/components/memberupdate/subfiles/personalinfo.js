@@ -15,6 +15,7 @@ class Personalinfo extends Component {
     getData = (e) => {
         e.preventDefault()
         this.props.pers("personalInfo",this.state)
+        this.props.takeChange('Contact')
     }
 
     setGender = (t) => {
@@ -28,6 +29,7 @@ class Personalinfo extends Component {
             dob: d
         })
     }
+
 
     render() {
         return (
@@ -53,7 +55,7 @@ class Personalinfo extends Component {
 
                     <label>District</label>
                     <input type="text" value={this.state.district} onChange={(e) => this.setState({ district: e.target.value })} placeholder="Enter district" />
-                    <button type="submit">Submit</button>
+                    <button type="submit">Next</button>
 
                 </form>
             </div>
