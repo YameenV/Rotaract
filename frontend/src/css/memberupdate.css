@@ -118,14 +118,19 @@
     color:black;
 }
 .contact_form input ,.about_form input , .education_form input ,.other_form  input ,.personal_form input,.professional_form input,.rotaract_form input {
-    border-radius: 10px;
+    border-radius: 1px;
+    
+    border:none;
+    padding-left:10px;
 }
 .contact_form button, .about_form button , .education_form button,.other_form button,.personal_form button,.professional_form button,.rotaract_form button{
     border-radius: 10px;
     background-color: blue;
     margin-top: 3vw;
+    padding: 8px;
 }
-.contact_form label{
+.contact_form label, .about_form label , .education_form label,.other_form label,.personal_form label,.professional_form label,.rotaract_form label{
+    font-size:1.5rem;
     font-family:  Helvetica;
     font-style: normal;
     font-weight: normal;
@@ -156,7 +161,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100vh;   
+    height:80%	;   
     grid-column: 3/4;
 }
 .member_name{
@@ -203,10 +208,12 @@
 }
 /* 
  */
-.button{    
+.changer_buttons button{    
     /* margin: 5px; */
     background: transparent;
     color:white;
+    text-align: left;
+    padding-left: 15px; 
     font-style: normal;
     border-style: none;
     border-radius: 10px;
@@ -214,14 +221,18 @@
     font-family: Helvetica;
     /* font-style: normal; */
     font-weight: normal;
+    padding-left:10px;
+    font-size: 1.8rem;
 }
-/* .button:active{
-    background-color: red; 
-    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.1);
-} */
-.button:focus{
-    background-color: black;
+.
+.changer_buttons button:active{
+    background: black; 
+    
 }
+.changer_buttons button:focus{
+    background: black;
+}
+
 
 .button:hover{
     transform: scale(1.05);
@@ -340,7 +351,12 @@
         /* width: 37vw; */
         
     }
-    
+    .changer_buttons button{
+    font-size:1.5rem;
+    }
+    .contact_form button, .about_form button , .education_form button,.other_form button,.personal_form button,.professional_form button,.rotaract_form button{
+    font-size: 1.3rem;
+    }
     .member_navbar{
         display: grid;
         grid-template-columns:  2fr 2fr 2fr ;
@@ -424,6 +440,23 @@
         /* align-items: center; */
         
     }
+    .changer_buttons button{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 3px;
+    
+    }
+    .member_status {
+    font-size: 1rem;
+    }
+    .member_name {
+    font-size: 1.3rem;
+   }
+    
+    .contact_form label, .about_form label , .education_form label,.other_form label,.personal_form label,.professional_form label,.rotaract_form label{
+    	font-size: 1.1rem;
+    	}
+
     .contact_form , .about_form , .education_form ,.other_form ,.personal_form,.professional_form,.rotaract_form{
         display: flex;
         flex-direction: column;
@@ -433,6 +466,9 @@
     /* font-style: normal; */
         font-weight: normal;
         
+    }
+    select {
+    	padding:10px;
     }
     .member_rotimage{
         width: 105px;

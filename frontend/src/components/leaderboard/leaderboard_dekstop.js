@@ -52,7 +52,7 @@ class Leaderboard_dekstop extends Component {
               width: "100%",
               height:"inherit",
               // height:"100%",
-              zIndex:"-1",
+             //mixBlendMode: "lighten",
               position: "fixed",
               left: "0",
               overflow:"hidden" }}
