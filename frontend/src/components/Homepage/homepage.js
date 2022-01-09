@@ -11,8 +11,7 @@ import Pic6 from "../../imgs/pic6.png";
 import ashu from "../../imgs/ashutosh1.jpg";
 import Navbar from "../navbar/navbar";
 import { Link } from "react-router-dom";
-// import home from "../../background/homepage.mp4"
-
+import homevideo from "../../background/homepage.mp4"
 
 class Homepage extends Component {
 
@@ -45,10 +44,9 @@ class Homepage extends Component {
               objectFit: "cover",
               width: "100%",
               height: "100%",
-              mixBlendMode:"lighten"
             }}
           >
-            <source id="video" src='https://r5---sn-npoe7n7y.googlevideo.com/videoplayback?expire=1641390676&ei=NIbVYd_xMKzT3LUPjdSPoAg&ip=103.211.43.130&id=9009369b5b0ce302&itag=18&source=picasa&begin=0&requiressl=yes&sc=yes&susc=ph&app=fife&ic=51&eaua=l_Uu6TxX0PM&mime=video/mp4&vprv=1&prv=1&dur=20.085&lmt=1641383438397101&cpn=k9vK6H57rMw7_S1r&c=WEB_EMBEDDED_PLAYER&cver=1.20211215.00.01&sparams=expire,ei,ip,id,itag,source,requiressl,susc,app,ic,eaua,mime,vprv,prv,dur,lmt&sig=AOq0QJ8wRAIgXSKD6z4tiX4P5KMjLXJQLjCGSXy-LCWXttXFyFM8Lc0CIHIfzcEQJUPILw2AxtT8iGRB0BqM8azkMLYe9rslarJx&redirect_counter=1&cm2rm=sn-cvhsl76&req_id=5b3c4f6f7996a3ee&cms_redirect=yes&mh=U2&mm=34&mn=sn-npoe7n7y&ms=ltu&mt=1641383334&mv=m&mvi=5&pl=24&lsparams=mh,mm,mn,ms,mv,mvi,pl,sc&lsig=AG3C_xAwRgIhANrLpLS57pTl6HQUULao2KL-sPBTBSCDVaMlGlKvmlKBAiEA2atSHk9yDDedjgry-CewYjOpYs-P47NOWZsg8YJYlH8%3D' type="video/mp4" />
+            <source id="video" src={homevideo} type="video/mp4" />
           </video>
         </div>
         <Navbar flags={1} />

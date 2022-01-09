@@ -1,10 +1,11 @@
 from pydantic import BaseModel, Field
 from typing import Any, Optional, List, Dict
-from bson.objectid import ObjectId
+
 
 class Event(BaseModel):
     name: str 
     title: str
+    types: str
     description: str
     img:str
 
@@ -32,17 +33,21 @@ class Team(BaseModel):
     captain_name:str
     date_time:str
     
+# Scores
+class UserForScore(BaseModel):
+    user_id: str
+    full_name: str
+    current_position: str
+    img:str
 
 class IndividualScore(BaseModel):
-    user_id: int
-    name: str
-    current_position: str
+    member: UserForScore
     score: float
     month: int
     day: int
     year:int
     increment_type: str
-    reason: str 
+    reason: str
 
 class Contact(BaseModel):
     mobile_number: str
@@ -92,6 +97,7 @@ class User(BaseModel):
     blood_group: str
     district: str 
     city: str
+    img: str
     contact: Contact
     rotractClub: RotractClub
     professional_skill: ProfessionalSkill
