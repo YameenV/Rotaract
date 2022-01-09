@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from '../../actions/index'
 import { Button, ButtonGroup, InputGroup, FormControl, Nav } from "react-bootstrap";
 import Navbar from '../../components/navbar/navbar'
-import neu from "../../background/leaderboard.mp4"
+import neu from "../../background/prot.mp4"
 
 class Leaderboard_dekstop extends Component {
   state = {
@@ -46,32 +46,35 @@ class Leaderboard_dekstop extends Component {
         <Navbar />
 
           
+          
+
+
+          <div className="leader_title">LEADERBOARD</div>
           <video autoPlay muted loop
             style={{
-              objectFit: "cover",
+              objectFit: "contain",
               width: "100%",
               height:"inherit",
               // height:"100%",
              //mixBlendMode: "lighten",
               position: "fixed",
               left: "0",
+              //transform: "scale(-1,1)",
+
               overflow:"hidden" }}
           >
             <source src={neu} type="video/mp4" />
           </video>
 
-
-          <div className="leader_title">LEADERBOARD</div>
-
           <p className="leader_Mantaintext">
             Maintained By Jai Prajapat - Human Resource & Development Director
           </p>
-
+          
           <div className="leader_button-username">
 
-            <ButtonGroup className="leader_button-group">
-              <div className="leader_button-1">Team</div>
-              <div onClick={this.getUserBoard} className="leader_button-2">Individual</div>
+            <ButtonGroup className="leader_button_group">
+              <div className="leader_button_1">Team</div>
+              <div onClick={this.getUserBoard} className="leader_button_2">Individual</div>
             </ButtonGroup>
 
             <div className="leader_username-input">

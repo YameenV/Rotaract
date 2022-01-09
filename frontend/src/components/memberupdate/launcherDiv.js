@@ -127,8 +127,8 @@ class LauncherDiv extends Component {
         ) : null}
         {this.props.data === "about" ? <About  pers={this.getPersonalData}/> : null}
 
-        <div>
-          <div>
+        <div classsName="final_submit_div">
+          <div className="final_submit_button">
             Only submit when all data is filled
           <button type="submit" onClick={this.send}>Submit</button>
           </div>
