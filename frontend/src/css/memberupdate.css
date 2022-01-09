@@ -129,11 +129,18 @@
     border:none;
     padding-left:10px;
 }
-.contact_form button, .about_form button , .education_form button,.other_form button,.personal_form button,.professional_form button,.rotaract_form button{
+.contact_form button,  .education_form button,.other_form button,.personal_form button,.professional_form button,.rotaract_form button{
     border-radius: 10px;
     background-color: blue;
     margin-top: 3vw;
     padding: 8px;
+}
+.about_form button {
+    border-radius: 10px;
+    background-color: red;
+    margin-top: 3vw;
+    padding: 8px;
+    
 }
 .contact_form label, .about_form label , .education_form label,.other_form label,.personal_form label,.professional_form label,.rotaract_form label{
     font-size:1.5rem;
