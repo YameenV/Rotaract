@@ -3,11 +3,17 @@ import "../../css/homepage.css";
 import { ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
 import { connect } from "react-redux";
 import * as actions from "../../actions/index";
-import Pic2 from "../../imgs/pic2.png";
-import Pic3 from "../../imgs/pic3.png";
-import Pic4 from "../../imgs/pic4.png";
-import Pic5 from "../../imgs/pic5.png";
-import Pic6 from "../../imgs/pic6.png";
+
+import Pic1 from "../../imgs/pic2.png";
+import Pic2 from "../../imgs/pic3.png";
+import Pic3 from "../../imgs/pic4.png";
+import Pic4 from "../../imgs/pic5.png";
+import Pic5 from "../../imgs/pic6.png";
+import Pic6 from "../../imgs/pic3.png";
+import Pic7 from "../../imgs/pic4.png";
+import Pic8 from "../../imgs/pic5.png";
+import Pic9 from "../../imgs/pic6.png";
+import Pic10 from "../../imgs/pic2.png";
 import ashu from "../../imgs/ashutosh1.jpg";
 import Navbar from "../navbar/navbar";
 import { Link } from "react-router-dom";
@@ -93,7 +99,7 @@ class Homepage extends Component {
             </div>
 
             <div className="Team_member">
-              <div className="row_1">
+              
                 <div className="row_1_content">
                   <div className="row_1_image_div">
                     <img className="row_1_image1" src={ashu}></img>
@@ -105,9 +111,9 @@ class Homepage extends Component {
                     <h2> President</h2>
                   </div>
                 </div>
-              </div>
+              
 
-              <div className="row_2">
+              
                 <div className="row_2_content1">
                   <div className="row_2_image1_div">
                     <img className="row_2_image1" src={Pic2}></img>
@@ -130,9 +136,9 @@ class Homepage extends Component {
                     <h2> Pres-elect</h2>
                   </div>
                 </div>
-              </div>
+              
 
-              <div className="row_3">
+             
                 <div className="row_3_content1">
                   <div className="row_3_image1_div">
                     <img className="row_3_image1" src={Pic4}></img>
@@ -156,7 +162,7 @@ class Homepage extends Component {
                   </div>
                 </div>
                 <div className="row_3_content3">
-                  <div className="row_3_image1_div">
+                  <div className="row_3_image3_div">
                     <img className="row_3_image3" src={Pic6}></img>
                   </div>
                   <div className="row_3_content3_Name">
@@ -166,7 +172,55 @@ class Homepage extends Component {
                     <h2> GBM</h2>
                   </div>
                 </div>
-              </div>
+
+
+
+
+                <div className="row_4_content1">
+                  <div className="row_4_image1_div">
+                    <img className="row_4_image1" src={Pic7}></img>
+                  </div>
+                  <div className="row_4_content1_Name">
+                    <h1>Abhinav Singhh</h1>
+                  </div>
+                  <div className="row_4_content1_position">
+                    <h2> Advisor</h2>
+                  </div>
+                </div>
+                <div className="row_4_content2">
+                  <div className="row_4_image2_div">
+                    <img className="row_4_image2" src={Pic8}></img>
+                  </div>
+                  <div className="row_4_content2_Name">
+                    <h1>Aman Shaikh</h1>
+                  </div>
+                  <div className="row_4_content2_position">
+                    <h2> Finance Director</h2>
+                  </div>
+                </div>
+                <div className="row_4_content3">
+                  <div className="row_4_image3_div">
+                    <img className="row_4_image3" src={Pic9}></img>
+                  </div>
+                  <div className="row_4_content3_Name">
+                    <h1>Tejas</h1>
+                  </div>
+                  <div className="row_4_content3_position">
+                    <h2> GBM</h2>
+                  </div>
+                </div>
+                <div className="row_4_content4">
+                  <div className="row_4_image4_div">
+                    <img className="row_4_image4" src={Pic10}></img>
+                  </div>
+                  <div className="row_4_content4_Name">
+                    <h1>Tejas</h1>
+                  </div>
+                  <div className="row_4_content4_position">
+                    <h2> GBM</h2>
+                  </div>
+                </div>
+              
             </div>
           </div>
 

@@ -32,30 +32,21 @@
     border-radius: clamp(10px,25px,30px);
     object-fit: fill;
 }
-.title{
+.eventpage_title{
     font-weight: 600;
     text-align: left;
     align-self: flex-start;
     font-size: 1.7rem;
     margin-top: 0.5vw;
     margin-bottom: 0.2vw;
-    color:rgb(236, 118, 22);}
-
-    h2{
-    color: #3696dc;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 2px;
-    margin-top: auto;
+    color:rgb(236, 118, 22);
 }
 
-p{
-    font-size: 16px;
-    line-height: 24px;
-}
+    
 
 
-h1{
+
+.wrapper header h1{
     font-size: 80px;
     color: white;
     margin-top: 0.1vw;
@@ -71,7 +62,7 @@ h1{
     
 }
 
-header{
+.wrapper header{
     padding: 0 15px;
     text-align: center;
     font-size: 100px;
@@ -84,9 +75,7 @@ header{
     gap:25px
 }
 
-.column{
-    
-}
+
 .card{
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.18);
@@ -106,7 +95,7 @@ header{
 .event_img{
     width: 100%;
 }
-/* Smartphones ----------- */
+
 @media only screen and (max-width: 800px){
     .event_header{
         font-size: 4rem;

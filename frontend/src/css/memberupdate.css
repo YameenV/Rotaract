@@ -131,7 +131,7 @@
 }
 .contact_form button,  .education_form button,.other_form button,.personal_form button,.professional_form button,.rotaract_form button{
     border-radius: 10px;
-    background-color: blue;
+    background-color: rgb(29, 29, 255);
     margin-top: 3vw;
     padding: 8px;
 }
@@ -151,11 +151,6 @@
 .personal_form select{
     border-radius: 8px;
 }
-.personal_div button{
-
-    /* background-color: red; */
-}
-
 .main_data{
     min-height: 50vh;
     min-width: 60vw;
