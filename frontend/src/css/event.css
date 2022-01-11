@@ -4,7 +4,7 @@
 .event_main{
     /* background:linear-gradient(3.97deg, #0066FF 2.93%, #000917 96.58%) fixed; */
     min-width: 100vw;
-    min-height: 100vh;    
+    min-height: 100vh;     
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,10 +68,10 @@
     font-size: 100px;
 }
 
-.container{
+.container-event{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     gap:25px
 }
 
@@ -106,7 +106,7 @@
     .card{
         width: 35vw;
     }
-    .container{
+    .container-event{
         justify-content: center;
     }
     
@@ -116,7 +116,7 @@
     .card{
         width: 80vw;
     }
-    .container{
+    .container-event{
         justify-content: center;
     }
 }

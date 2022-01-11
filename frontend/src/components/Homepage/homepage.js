@@ -256,9 +256,10 @@ class Homepage extends Component {
                         </div>
                         <hr className="hr1" />
                       </div>
-                    ) : null;
+                    ) : null; 
                   })
                 ) : (
+                <>
                   <div className="announcement_content_1">
                     <div className="content1_header">
                       <div className="content1_image_div">
@@ -275,6 +276,39 @@ class Homepage extends Component {
                     <div className="content1_date">on 0-0-0</div>
                     <hr className="hr1" />
                   </div>
+                  <div className="announcement_content_1">
+                    <div className="content1_header">
+                      <div className="content1_image_div">
+                        <img className="content1_image" src={Pic3}></img>
+                      </div>
+                      <div className="content1_name">
+                        <div className="content1_name_name"> BY Rushil</div>
+                        <div className="content1_name_position">Secratory</div>
+                      </div>
+                    </div>
+                    <div className="content1_message">
+                      <h1>There might be a network error</h1>
+                    </div>
+                    <div className="content1_date">on 0-0-0</div>
+                    <hr className="hr1" />
+                  </div>
+                  <div className="announcement_content_1">
+                    <div className="content1_header">
+                      <div className="content1_image_div">
+                        <img className="content1_image" src={Pic3}></img>
+                      </div>
+                      <div className="content1_name">
+                        <div className="content1_name_name"> BY Rushil</div>
+                        <div className="content1_name_position">Secratory</div>
+                      </div>
+                    </div>
+                    <div className="content1_message">
+                      <h1>There might be a network error</h1>
+                    </div>
+                    <div className="content1_date">on 0-0-0</div>
+                    <hr className="hr1" />
+                  </div>
+                  </>
                 )}
               </div>
             </div>
@@ -304,6 +338,7 @@ class Homepage extends Component {
                   ) : null;
                 })
               ) : (
+                <>
                 <div className="event_container_1">
                   <div className="event_container_1_image_div">
                     <img className="container_1_image"></img>
@@ -314,6 +349,27 @@ class Homepage extends Component {
                   </div>
                   <div className="event_container_1_content">Description</div>
                 </div>
+                <div className="event_container_1">
+                  <div className="event_container_1_image_div">
+                    <img className="container_1_image"></img>
+                  </div>
+                  <div className="event_title">Title</div>
+                  <div className="event_name">
+                    Please wait for a while the server might be down
+                  </div>
+                  <div className="event_container_1_content">Description</div>
+                </div>
+                <div className="event_container_1">
+                  <div className="event_container_1_image_div">
+                    <img className="container_1_image"></img>
+                  </div>
+                  <div className="event_title">Title</div>
+                  <div className="event_name">
+                    Please wait for a while the server might be down
+                  </div>
+                  <div className="event_container_1_content">Description</div>
+                </div>
+                </>
               )}
             </div>
             <Link to="/event">
@@ -344,6 +400,7 @@ class Homepage extends Component {
                 );
               })
             ) : (
+              <>
               <div className="leaderboard_bar_1">
                 <div className="bar_image_div_1">
                   <img className="bar_1_image" src="../../bdujab"></img>
@@ -352,6 +409,39 @@ class Homepage extends Component {
                   <h2>Bar 1</h2>
                 </div>
               </div>
+              <div className="leaderboard_bar_2">
+                <div className="bar_image_div_2">
+                  <img className="bar_2_image" src="../../bdujab"></img>
+                </div>
+                <div className="bar_2_name">
+                  <h2>Bar 1</h2>
+                </div>
+              </div>
+              <div className="leaderboard_bar_3">
+                <div className="bar_image_div_3">
+                  <img className="bar_3_image" src="../../bdujab"></img>
+                </div>
+                <div className="bar_3_name">
+                  <h2>Bar 1</h2>
+                </div>
+              </div>
+              <div className="leaderboard_bar_4">
+                <div className="bar_image_div_4">
+                  <img className="bar_4_image" src="../../bdujab"></img>
+                </div>
+                <div className="bar_4_name">
+                  <h2>Bar 1</h2>
+                </div>
+              </div>
+              <div className="leaderboard_bar_5">
+                <div className="bar_image_div_5">
+                  <img className="bar_5_image" src="../../bdujab"></img>
+                </div>
+                <div className="bar_5_name">
+                  <h2>Bar 1</h2>
+                </div>
+              </div>
+              </>
             )}
           </div>
           <div className="leaderboard_switch">

@@ -642,13 +642,12 @@
   border-radius: 50%;
   background-color: yellow;
   width: 7vw;
+  height: 7vw; 
   align-items: center;
   display: flex;
   justify-content: center;
 }
-
 .leader_button-group {
-  /* margin-left: 1vw; */
   margin-bottom: 1vw;
   width: 100%;
   height: max-content;
@@ -660,9 +659,7 @@
   align-items: center;
   align-content: center;
   flex-direction: row;
-  /* padding-top: 20px; */
 }
-
 .leader_button-1,
 .leader_button-2 {
   width: 100%;
