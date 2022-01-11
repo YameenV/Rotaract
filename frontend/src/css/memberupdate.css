@@ -225,13 +225,13 @@
     font-size: 1.8rem;
 }
 .
-.changer_buttons button:active{
+/* .changer_buttons button:active{
     background: black; 
     
 }
 .changer_buttons button:focus{
     background: black;
-}
+} */
 
 
 .button:hover{
