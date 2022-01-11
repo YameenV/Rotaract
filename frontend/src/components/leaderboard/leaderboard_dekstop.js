@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import '../../css/leaderboard.css'
 import ListOfPPL from "./listcomponent/listofppl";
-import ROTLOGO from "../../imgs/RCUCoEsLogo.png";
-import search from "../../icons/search.png";
 import { connect } from 'react-redux'
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from '../../actions/index'
-import { Button, ButtonGroup, InputGroup, FormControl, Nav } from "react-bootstrap";
+import {  ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
 import Navbar from '../../components/navbar/navbar'
 import neu from "../../background/prot.mp4"
 
@@ -56,10 +54,10 @@ class Leaderboard_dekstop extends Component {
               width: "100%",
               height:"inherit",
               // height:"100%",
-             //mixBlendMode: "lighten",
+             mixBlendMode: "screen",
               position: "fixed",
               left: "0",
-              //transform: "scale(-1,1)",
+              // transform: "scale(-1,1)",
 
               overflow:"hidden" }}
           >
@@ -71,12 +69,12 @@ class Leaderboard_dekstop extends Component {
           </p>
           
           <div className="leader_button-username">
-
+            <div className="leader-button-toggle">
             <ButtonGroup className="leader_button_group">
               <div className="leader_button_1">Team</div>
               <div onClick={this.getUserBoard} className="leader_button_2">Individual</div>
             </ButtonGroup>
-
+            </div>
             <div className="leader_username-input">
               <div className="leader_search">
                 <InputGroup>

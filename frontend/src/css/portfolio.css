@@ -134,12 +134,14 @@
   width: 100%;
   color: #000917;
   margin-bottom: 5px;
+  font-size: 1em;
 }
 .pro-personal_name {
   font-family: Montserrat !important;
   font-style: bold;
   color: #000917;
   margin-bottom: 5px;
+  font-size: 2em;
 }
 .pro-personal .fas,
 .pro-personal .fab,
@@ -164,15 +166,18 @@
   font-family: Montserrat;
   color: #000917;
   font-weight: bold;
+  font-size: 2.2em;
 }
 
 .pro-otherdata_rotaractclub h3 {
   font-family: Montserrat;
   color: #000917;
+  font-size: 1.4em;
 }
 .pro-otherdata_rotaractclub p {
   font-family: Montserrat;
   color: white;
+  font-size: 1em;
 }
 
 .pro-otherdata_professional {
@@ -191,15 +196,18 @@
   font-family: Montserrat;
   color: #000917;
   font-weight: bold;
+  font-size: 2.2em;
 }
 
 .pro-otherdata_professional h3 {
   font-family: Montserrat;
   color: #000917;
+  font-size: 1.4em;
 }
 .pro-otherdata_professional p {
   font-family: Montserrat;
   color: white;
+  font-size: 1em;
 }
 
 .pro-otherdata_professional-Tech {
@@ -234,14 +242,17 @@
   font-family: Montserrat;
   font-weight: bold;
   color: #000917;
+  font-size: 2.2em;
 }
 .pro-otherdata_education h3 {
   font-family: Montserrat;
   color: #000917;
+  font-size: 1.4em;
 }
 .pro-otherdata_education p {
   font-family: Montserrat;
   color: white;
+  font-size: 1em;
 }
 .pro-otherdata_education-cert {
   font-family: Montserrat;
@@ -265,15 +276,18 @@
   font-family: Montserrat;
   font-weight: bold;
   color: #000917;
+  font-size: 2.2em;
 }
 .pro-otherdata_interests h3 {
   font-family: Montserrat;
   font-style: normal;
   color: #000917;
+  font-size: 1.4em;
 }
 .pro-otherdata_interests p {
   font-family: Montserrat;
   color: white;
+  font-size: 1em;
 }
 
 .pro-otherdata_about {
@@ -292,15 +306,18 @@
   font-family: Montserrat;
   font-weight: bold;
   color: #000917;
+  font-size: 2.2em;
 }
 .pro-otherdata_about h3 {
   font-family: Montserrat;
   font-style: normal;
   color: #000917;
+  font-size: 1.4em;
 }
 .pro-otherdata_about p {
   font-family: Montserrat;
   color: white;
+  font-size: 1em;
 }
 
 /* Smartphones */
@@ -325,6 +342,15 @@
   }
   .pro-personal_div{
     justify-content: space-between;
+  }
+  .pro-main h1{
+    font-size: 1.8em;
+  }
+  .pro-main h3{
+    font-size: 1.2em;
+  }
+  .pro-personal_name{
+    font-size: 1.6em;
   }
 }
 

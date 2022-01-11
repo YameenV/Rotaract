@@ -1,6 +1,4 @@
-
 import '../../css/announcement.css'
-import HeaderNav from '../header/headerNav'
 import ann from '../../background/announcements.mp4'
 import Navbar from '../navbar/navbar'
 
@@ -34,7 +32,7 @@ function Announcement(props) {
           data.map(items =>
             <div className='announcement'>
               <div className="ann_image-con">
-                <img className="ann_image" src="https://lh3.googleusercontent.com/ogw/ADea4I4aW8SmWEbhY1q_SL-RvoLNujBEj5VsoDcB9BfSWBo=s83-c-mo" />
+                <img  alt=""   className="ann_image" src="https://lh3.googleusercontent.com/ogw/ADea4I4aW8SmWEbhY1q_SL-RvoLNujBEj5VsoDcB9BfSWBo=s83-c-mo" />
                 <div className="ann_by">{items.name}</div>
               </div>
               <div className="ann_title">{items.title}</div>
@@ -71,7 +69,7 @@ function Announcement(props) {
 
         <div className='announcement'>
           <div className="ann_image-con">
-            <img className="ann_image" />
+            <img  alt=""   className="ann_image" />
             <div className="ann_by">No announcement till now</div>
           </div>
           <div className="ann_title">Please wait for a while, the server might be down</div>
