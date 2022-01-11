@@ -21,6 +21,7 @@ class Educational extends Component {
             book
         }
         this.props.pers('education_background',obj)
+        this.props.takeChange('otherinterest')
     }
 
     render() {
@@ -40,7 +41,7 @@ class Educational extends Component {
                     <label>Novels/Book/Articles you had read :</label>
                     <input type= "text" value ={this.state.book} onChange={(e)=>{this.setState({book:e.target.value})}}/>
                 
-                    <button type="submit">Submit</button>
+                    <button type="submit">Next</button>
                 </form>
                 
             </div>

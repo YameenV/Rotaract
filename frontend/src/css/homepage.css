@@ -6,7 +6,7 @@
 
   background-size: 100%;
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
 
@@ -88,15 +88,11 @@
 
 .second_container {
   margin-top: 15vw;
-  /* position: absolute; */
   width: 85vw;
   background-color: transparent;
   color: white;
-  /* top: 76vw; */
-  /* left: 50%; */
   align-content: center;
-  /* transform: translateX(-50%); */
-  /* z-index: 99; */
+  
 }
 .title_header_1 {
   display: flex;
@@ -118,30 +114,79 @@
 
   color: #add7f2;
 }
+.Team_member{
+  display: grid;
+  grid-template-columns: 0.1rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2rem;  
+}
 
-.row_1,
+.row_1{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  grid-column: 4/5;
+  
+}
 .row_2 {
   display: flex;
   justify-content: space-evenly;
   align-content: center;
+  grid-column: 4/5;
 }
 .row_3 {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  grid-column: 4/5;
 }
+.row_1_content{
+  grid-column: 5/6;
+}
+.row_2_content1{
+  grid-column: 4/5;
+}
+.row_2_content2{
+  grid-column: 6/7;
+}
+.row_3_content1{
+  grid-column: 3/4;
+}
+.row_3_content2{
+  grid-column: 5/6;
+}
+.row_3_content3{
+  grid-column: 7/8;
+}
+.row_4_content1{
+  grid-column: 2/3;
+}
+.row_4_content2{
+  grid-column: 4/5;
+}
+.row_4_content3{
+  grid-column: 6/7;
+}
+.row_4_content4{
+  grid-column: 8/9;
+}
+
+
+
 
 .row_1_content,
 .row_2_content1,
 .row_2_content2,
 .row_3_content1,
 .row_3_content2,
-.row_3_content3 {
+.row_3_content3, 
+.row_4_content1, 
+.row_4_content2, 
+.row_4_content3, 
+.row_4_content4 {
   display: flex;
   margin-top: 4vh;
   flex-direction: column;
   justify-content: center;
-  width: 40vw;
+  /* width: 40vw; */
   align-items: center;
   justify-content: space-between;
 }
@@ -151,7 +196,11 @@
 .row_2_image2,
 .row_3_image1,
 .row_3_image2,
-.row_3_image3 {
+.row_3_image3,
+.row_4_image1, 
+.row_4_image2, 
+.row_4_image3, 
+.row_4_image4 {
   width: 9vw;
   height: 8vw;
   /* z-index: 99; */
@@ -163,7 +212,11 @@
 .row_2_content2_Name h1,
 .row_3_content1_Name h1,
 .row_3_content2_Name h1,
-.row_3_content3_Name h1 {
+.row_3_content3_Name h1,
+.row_4_content1_Name h1, 
+.row_4_content2_Name h1, 
+.row_4_content3_Name h1, 
+.row_4_content4_Name h1{
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -177,12 +230,17 @@
   color: white;
 }
 
-.row_1_content1_positi h2,
-.row_2_content1_positi h2,
-.row_2_content2_positi h2,
-.row_3_content1_positi h2,
-.row_3_content2_positi h2,
-.row_3_content3_positi h2 {
+.row_1_content1_position h2,
+.row_2_content1_position h2,
+.row_2_content2_position h2,
+.row_3_content1_position h2,
+.row_3_content2_position h2,
+.row_3_content3_position h2,
+.row_4_content1_position h2, 
+.row_4_content2_position h2, 
+.row_4_content3_position h2, 
+.row_4_content4_position h2
+{
   font-family: Helvetica;
   font-style: normal;
   font-weight: normal;
@@ -584,13 +642,12 @@
   border-radius: 50%;
   background-color: yellow;
   width: 7vw;
+  height: 7vw; 
   align-items: center;
   display: flex;
   justify-content: center;
 }
-
 .leader_button-group {
-  /* margin-left: 1vw; */
   margin-bottom: 1vw;
   width: 100%;
   height: max-content;
@@ -602,9 +659,7 @@
   align-items: center;
   align-content: center;
   flex-direction: row;
-  /* padding-top: 20px; */
 }
-
 .leader_button-1,
 .leader_button-2 {
   width: 100%;
@@ -934,7 +989,13 @@
   .row_2_content2_Name h1,
   .row_3_content1_Name h1,
   .row_3_content2_Name h1,
-  .row_3_content3_Name h1 {
+  .row_3_content3_Name h1,
+  .row_4_content1_Name h1, 
+.row_4_content2_Name h1, 
+.row_4_content3_Name h1, 
+.row_4_content4_Name h1
+
+   {
     font-size: 1.8rem;
   }
   .bar_1_name h2,
@@ -947,6 +1008,41 @@
 }
 
 @media (max-width: 780px) {
+
+  .Team_member{
+    grid-template-columns: 1rem 2fr 2fr 2rem;
+  }
+
+  .row_1_content{
+    grid-column: 2/3;
+  }
+  .row_2_content1{
+    grid-column: 3/4;
+  }
+  .row_2_content2{
+    grid-column: 2/3;
+  }
+  .row_3_content1{
+    grid-column: 3/4;
+  }
+  .row_3_content2{
+    grid-column: 2/3;
+  }
+  .row_3_content3{
+    grid-column: 3/4;
+  }
+  .row_4_content1{
+    grid-column: 2/3;
+  }
+  .row_4_content2{
+    grid-column: 3/4;
+  }
+  .row_4_content3{
+    grid-column: 2/3;
+  }
+  .row_4_content4{
+    grid-column: 3/4;
+  }
   
   .content1_message h1 {
     font-size: 2rem;

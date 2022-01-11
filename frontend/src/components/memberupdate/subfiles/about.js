@@ -16,6 +16,7 @@ class About extends Component {
             yourself_ten_years
         }
         this.props.pers('about',obj)
+        
     }
 
     render() {

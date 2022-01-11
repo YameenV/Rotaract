@@ -22,12 +22,11 @@
 }
 
 .pro-input {
-  border: none;
   width: 100%;
   height: 5vh;
   background: rgba(173, 215, 242, 0.3);
   backdrop-filter: blur(5px) saturate(102%);
-  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(5px) saturate(102%);
   border-radius: 50px;
   outline: none;
   text-indent: 10px;
@@ -72,7 +71,7 @@
 
 .pro-personal {
   backdrop-filter: blur(5px) saturate(102%);
-  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(5px) saturate(102%);
   background-color: rgba(255, 255, 255, 0.18);
   border: rgba(186, 186, 186, 0.4) solid 1.5px;
   border-radius: 25px;
@@ -84,7 +83,7 @@
 
 .pro-graph {
   backdrop-filter: blur(5px) saturate(102%);
-  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(5px) saturate(102%);
   background-color: rgba(255, 255, 255, 0.18);
   border: rgba(186, 186, 186, 0.4) solid 1.5px;
   border-radius: 25px;
@@ -111,7 +110,19 @@
   justify-content: space-evenly;
   align-items: center;
 }
-
+.pro-personalimgname{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.pro-personaltextcon{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+}
 .pro-personal_img {
   box-shadow: 11px 6px 10px 5px rgba(0, 0, 0, 0.15);
   width: calc(30px + 5vw);
@@ -122,19 +133,19 @@
   font-family: Montserrat;
   width: 100%;
   color: #000917;
-  /* font-size: 1rem; */
   margin-bottom: 5px;
+  font-size: 1em;
 }
 .pro-personal_name {
   font-family: Montserrat !important;
   font-style: bold;
-  /* font-size: 2rem; */
   color: #000917;
   margin-bottom: 5px;
+  font-size: 2em;
 }
-.fas,
-.fab,
-.far {
+.pro-personal .fas,
+.pro-personal .fab,
+.pro-personal .far {
   width: 15%;
   font-size: 1.3rem;
 }
@@ -142,36 +153,39 @@
 .pro-otherdata_rotaractclub {
   margin-top: 2vw;
   display: flex;
-  backdrop-filter: blur(15px) saturate(120%);
-  -webkit-backdrop-filter: blur(16px) saturate(200%);
-  background-color: rgba(255, 255, 255, 0.18);
+  background: rgba(173, 215, 242, 0.3);
+  backdrop-filter: blur(5px) saturate(102%);
+  -webkit-backdrop-filter: blur(5px) saturate(102%);
   border: rgba(186, 186, 186, 0.4) solid 1.5px;
   border-radius: 25px;
   flex-direction: column;
   padding: 25px;
 }
 
-.pro-otherdata_rotaractclub h3 {
+.pro-otherdata_rotaractclub h1 {
   font-family: Montserrat;
   color: #000917;
   font-weight: bold;
+  font-size: 2.2em;
 }
 
-.pro-otherdata_rotaractclub h2 {
+.pro-otherdata_rotaractclub h3 {
   font-family: Montserrat;
   color: #000917;
+  font-size: 1.4em;
 }
 .pro-otherdata_rotaractclub p {
   font-family: Montserrat;
   color: white;
+  font-size: 1em;
 }
 
 .pro-otherdata_professional {
   margin-top: 1vw;
   display: flex;
-  backdrop-filter: blur(15px) saturate(120%);
-  -webkit-backdrop-filter: blur(16px) saturate(200%);
-  background-color: rgba(255, 255, 255, 0.18);
+  background: rgba(173, 215, 242, 0.3);
+  backdrop-filter: blur(5px) saturate(102%);
+  -webkit-backdrop-filter: blur(5px) saturate(102%);
   border: rgba(186, 186, 186, 0.4) solid 1.5px;
   border-radius: 25px;
   flex-direction: column;
@@ -182,15 +196,18 @@
   font-family: Montserrat;
   color: #000917;
   font-weight: bold;
+  font-size: 2.2em;
 }
 
-.pro-otherdata_professional h2 {
+.pro-otherdata_professional h3 {
   font-family: Montserrat;
   color: #000917;
+  font-size: 1.4em;
 }
 .pro-otherdata_professional p {
   font-family: Montserrat;
   color: white;
+  font-size: 1em;
 }
 
 .pro-otherdata_professional-Tech {
@@ -213,9 +230,9 @@
 .pro-otherdata_education {
   margin-top: 1vw;
   display: flex;
-  backdrop-filter: blur(15px) saturate(120%);
-  -webkit-backdrop-filter: blur(16px) saturate(200%);
-  background-color: rgba(255, 255, 255, 0.18);
+  background: rgba(173, 215, 242, 0.3);
+  backdrop-filter: blur(5px) saturate(102%);
+  -webkit-backdrop-filter: blur(5px) saturate(102%);
   border: rgba(186, 186, 186, 0.4) solid 1.5px;
   border-radius: 25px;
   flex-direction: column;
@@ -225,14 +242,17 @@
   font-family: Montserrat;
   font-weight: bold;
   color: #000917;
+  font-size: 2.2em;
 }
-.pro-otherdata_education h2 {
+.pro-otherdata_education h3 {
   font-family: Montserrat;
   color: #000917;
+  font-size: 1.4em;
 }
 .pro-otherdata_education p {
   font-family: Montserrat;
   color: white;
+  font-size: 1em;
 }
 .pro-otherdata_education-cert {
   font-family: Montserrat;
@@ -244,9 +264,9 @@
 .pro-otherdata_interests {
   margin-top: 1vw;
   display: flex;
-  backdrop-filter: blur(15px) saturate(120%);
-  -webkit-backdrop-filter: blur(16px) saturate(200%);
-  background-color: rgba(255, 255, 255, 0.18);
+  background: rgba(173, 215, 242, 0.3);
+  backdrop-filter: blur(5px) saturate(102%);
+  -webkit-backdrop-filter: blur(5px) saturate(102%);
   border: rgba(186, 186, 186, 0.4) solid 1.5px;
   border-radius: 25px;
   flex-direction: column;
@@ -256,23 +276,26 @@
   font-family: Montserrat;
   font-weight: bold;
   color: #000917;
+  font-size: 2.2em;
 }
-.pro-otherdata_interests h2 {
+.pro-otherdata_interests h3 {
   font-family: Montserrat;
   font-style: normal;
   color: #000917;
+  font-size: 1.4em;
 }
 .pro-otherdata_interests p {
   font-family: Montserrat;
   color: white;
+  font-size: 1em;
 }
 
 .pro-otherdata_about {
   margin-top: 1vw;
   display: flex;
-  backdrop-filter: blur(15px) saturate(120%);
-  -webkit-backdrop-filter: blur(16px) saturate(200%);
-  background-color: rgba(255, 255, 255, 0.18);
+  background: rgba(173, 215, 242, 0.3);
+  backdrop-filter: blur(5px) saturate(102%);
+  -webkit-backdrop-filter: blur(5px) saturate(102%);
   border: rgba(186, 186, 186, 0.4) solid 1.5px;
   border-radius: 25px;
   flex-direction: column;
@@ -280,20 +303,24 @@
   padding: 25px 25px 25px 25px;
 }
 .pro-otherdata_about h1 {
-    font-family: Montserrat;
-    font-weight: bold;
-    color: #000917;
-  }
-  .pro-otherdata_about h2 {
-    font-family: Montserrat;
-    font-style: normal;
-    color: #000917;
-  }
-  .pro-otherdata_about p {
-    font-family: Montserrat;
-    color: white;
-  }
+  font-family: Montserrat;
+  font-weight: bold;
+  color: #000917;
+  font-size: 2.2em;
+}
+.pro-otherdata_about h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  color: #000917;
+  font-size: 1.4em;
+}
+.pro-otherdata_about p {
+  font-family: Montserrat;
+  color: white;
+  font-size: 1em;
+}
 
+/* Smartphones */
 @media only screen and (max-width: 800px) {
   .pro-cont-presonal_graph {
     flex-direction: column;
@@ -313,10 +340,23 @@
     padding-bottom: 10px;
     flex-grow: 4;
   }
-  .pro-search-con {
-    justify-content: center;
+  .pro-personal_div{
+    justify-content: space-between;
   }
-  .pro-personal_div {
-    text-align: center;
+  .pro-main h1{
+    font-size: 1.8em;
+  }
+  .pro-main h3{
+    font-size: 1.2em;
+  }
+  .pro-personal_name{
+    font-size: 1.6em;
+  }
+}
+
+/* iPads  ----------- */
+@media only screen and (min-width: 426px) and (max-width: 1024px) {
+  .pro-personal_div{
+    flex-direction: row;
   }
 }

@@ -26,6 +26,7 @@ class Rotaractclub extends Component {
         }
 
         this.props.pers('rotaract',obj)
+        this.props.takeChange('proskilss')
     }
 
     render() {
@@ -58,11 +59,11 @@ class Rotaractclub extends Component {
 
 
                     <label>
-                        Small Testimonial for club
+                        Small Testimonial for the club
                     </label>
                     <input type="text" onChange={(e) => { this.setState({ testimonial: e.target.value }) }} value={this.state.testimonial} />
                     <button type="submit">
-                        Submit
+                        Next
                     </button>
                 </form>
 

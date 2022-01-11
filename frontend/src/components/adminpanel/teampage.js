@@ -21,7 +21,8 @@ class Teampage extends Component {
     captainarray: [],
     namesarray: [],
     FileLength: 0,
-    inputVal: ""
+    inputVal: "",
+    score:''
   };
 
   addTeam = (e) => {
@@ -81,11 +82,11 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
   setToggle2 = (e) => {
     if (this.state.upToggle2) {
       this.setState({
-        upToggle2: false,
+        upToggle2: false
       });
     } else {
       this.setState({
-        upToggle2: true,
+        upToggle2: true
       });
     }
   };
@@ -149,10 +150,11 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
 
 
   deleteItem = (key)=>{
-    let cloneArray = [...this.state.namesarray]
+    console.log()
+    let cloneArray = [...this.state.teams]
     cloneArray.splice(key,1)
     this.setState({
-      namesarray:cloneArray
+      teams:cloneArray
     })
 
   }
@@ -194,6 +196,13 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
                 type="text"
                 placeholder="Captain name"
               />
+               <input
+                value={this.state.score}
+                onChange={(e) => this.setState({ score: e.target.value })}
+                type="text"
+                placeholder="Score"
+              />
+
               <button onClick={this.addTeam}>Add</button>
 
               <div className="jayteam_conatiner">
