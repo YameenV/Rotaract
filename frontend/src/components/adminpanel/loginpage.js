@@ -18,7 +18,7 @@ function Loginpage(props) {
             <h1>Login</h1>
             <p>Sign In and Start Managing your Leaderboard!</p>
           </div>
-          <img src={rtlogo}></img>
+          <img  alt="" src={rtlogo}></img>
           <button type="submit">Login with Google</button>
         </div>
       </div>

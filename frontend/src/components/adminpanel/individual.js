@@ -1,4 +1,4 @@
-import React, { cl, Component } from "react";
+import React, { Component } from "react";
 import MemberNames from "./memberNames";
 import "../../css/jayindi.css";
 import rtlogo from "../../imgs/Background.png";
@@ -150,7 +150,7 @@ class Individualpage extends Component {
       <div className="jayindi_main">
         <div className="jayindi_hdr">
           <h1>Welcome jai</h1>
-          <img src={rtlogo}></img>
+          <img  alt=""  src={rtlogo}></img>
         </div>
         <div className="jay_indibtn">Individual</div>
         <input

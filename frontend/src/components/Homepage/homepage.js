@@ -96,7 +96,7 @@ class Homepage extends Component {
               <div className="row_1">
                 <div className="row_1_content">
                   <div className="row_1_image_div">
-                    <img className="row_1_image1" src={ashu}></img>
+                    <img className="row_1_image1" src={ashu} alt=""></img>
                   </div>
                   <div className="row_1_content1_Name">
                     <h1>Ashutosh Upadhyay</h1>
@@ -110,7 +110,7 @@ class Homepage extends Component {
               <div className="row_2">
                 <div className="row_2_content1">
                   <div className="row_2_image1_div">
-                    <img className="row_2_image1" src={Pic2}></img>
+                    <img className="row_2_image1" src={Pic2} alt=""></img>
                   </div>
                   <div className="row_2_content1_Name">
                     <h1>Harsh Patel</h1>
@@ -121,7 +121,7 @@ class Homepage extends Component {
                 </div>
                 <div className="row_2_content2">
                   <div className="row_2_image2_div">
-                    <img className="row_2_image2" src={Pic3}></img>
+                    <img className="row_2_image2" src={Pic3} alt="" ></img>
                   </div>
                   <div className="row_2_content2_Name">
                     <h1>Yameen Vinchew</h1>
@@ -135,7 +135,7 @@ class Homepage extends Component {
               <div className="row_3">
                 <div className="row_3_content1">
                   <div className="row_3_image1_div">
-                    <img className="row_3_image1" src={Pic4}></img>
+                    <img className="row_3_image1" src={Pic4} alt=""></img>
                   </div>
                   <div className="row_3_content1_Name">
                     <h1>Abhinav Singh</h1>
@@ -146,7 +146,7 @@ class Homepage extends Component {
                 </div>
                 <div className="row_3_content2">
                   <div className="row_3_image2_div">
-                    <img className="row_3_image2" src={Pic5}></img>
+                    <img className="row_3_image2" src={Pic5} alt=""></img>
                   </div>
                   <div className="row_3_content2_Name">
                     <h1>Aman Shaikh</h1>
@@ -157,13 +157,13 @@ class Homepage extends Component {
                 </div>
                 <div className="row_3_content3">
                   <div className="row_3_image1_div">
-                    <img className="row_3_image3" src={Pic6}></img>
+                    <img className="row_3_image3" src={Pic6} alt=""></img>
                   </div>
                   <div className="row_3_content3_Name">
                     <h1>Tejas</h1>
                   </div>
                   <div className="row_3_content3_position">
-                    <h2> GBM</h2>
+                    <h2> GBM</h2> 
                   </div>
                 </div>
               </div>
@@ -185,7 +185,7 @@ class Homepage extends Component {
                       <div className={`announcement_content_${i}`}>
                         <div className="content1_header">
                           <div className="content1_image_div">
-                            <img className="content1_image" src={Pic3}></img>
+                            <img className="content1_image" src={Pic3} alt=""></img>
                           </div>
                           <div className="content1_name">
                             <div className="content1_name_name"> BY Rushil</div>
@@ -208,7 +208,7 @@ class Homepage extends Component {
                   <div className="announcement_content_1">
                     <div className="content1_header">
                       <div className="content1_image_div">
-                        <img className="content1_image" src={Pic3}></img>
+                        <img className="content1_image" src={Pic3} alt=""></img>
                       </div>
                       <div className="content1_name">
                         <div className="content1_name_name"> BY Rushil</div>
@@ -239,7 +239,7 @@ class Homepage extends Component {
                   return i < 2 ? (
                     <div className={`event_container_${i + 1}`}>
                       <div className="event_container_1_image_div">
-                        <img className="container_1_image"></img>
+                        <img className="container_1_image" alt=""></img>
                       </div>
                       <div className="event_title">{item.title}</div>
                       <div className="event_name">{item.name}</div>
@@ -252,7 +252,7 @@ class Homepage extends Component {
               ) : (
                 <div className="event_container_1">
                   <div className="event_container_1_image_div">
-                    <img className="container_1_image"></img>
+                    <img className="container_1_image" alt=""></img>
                   </div>
                   <div className="event_title">Title</div>
                   <div className="event_name">
@@ -281,6 +281,7 @@ class Homepage extends Component {
                       <img
                         className={`bar_${i + 1}_image`}
                         src="../../bdujab"
+                        alt=""
                       ></img>
                     </div>
                     <div className={`bar_${i + 1}_name`}>
@@ -292,7 +293,7 @@ class Homepage extends Component {
             ) : (
               <div className="leaderboard_bar_1">
                 <div className="bar_image_div_1">
-                  <img className="bar_1_image" src="../../bdujab"></img>
+                  <img className="bar_1_image" src="../../bdujab" alt=""></img>
                 </div>
                 <div className="bar_1_name">
                   <h2>Bar 1</h2>
@@ -322,7 +323,7 @@ class Homepage extends Component {
           <div className="team_info_detail">
             <div className="team_info_1">
               <div className="team_info_1_image">
-                <img className="team_info_image" src={Pic2}></img>
+                <img className="team_info_image" src={Pic2} alt=""></img>
               </div>
               {/* <div className="team_info_1_name">
               <h2>Harsh Patel</h2>
@@ -330,7 +331,7 @@ class Homepage extends Component {
             </div>
             <div className="team_info_2">
               <div className="team_info_2_image">
-                <img className="team_info_image" src={Pic2}></img>
+                <img className="team_info_image" src={Pic2} alt=""></img>
               </div>
               {/* <div className="team_info_2_name">
               <h2>Harsh Patel</h2>
@@ -338,7 +339,7 @@ class Homepage extends Component {
             </div>
             <div className="team_info_3">
               <div className="team_info_3_image">
-                <img className="team_info_image" src={Pic2}></img>
+                <img className="team_info_image" src={Pic2} alt=""></img>
               </div>
               {/* <div className="team_info_3_name">
               <h2>Harsh Patel</h2>
@@ -375,25 +376,25 @@ class Homepage extends Component {
           <div className="mention_content">
             <div className="mention_content_1">
               <div className="mention_content_1_image_div">
-                <img></img>
+                <img alt=""></img>
               </div>
               <div className="mention_content_1_name">Yameen Vinchu</div>
             </div>
             <div className="mention_content_2">
               <div className="mention_content_2_image_div">
-                <img></img>
+                <img alt=""></img>
               </div>
               <div className="mention_content_2_name">Ashutosh Upadhyay</div>
             </div>
             <div className="mention_content_3">
               <div className="mention_content_3_image_div">
-                <img></img>
+                <img alt=""></img>
               </div>
               <div className="mention_content_3_name">Abhinav Pandey </div>
             </div>
             <div className="mention_content_4">
               <div className="mention_content_4_image_div">
-                <img></img>
+                <img alt=""></img>
               </div>
               <div className="mention_content_4_name">Aman Shaikh</div>
             </div>

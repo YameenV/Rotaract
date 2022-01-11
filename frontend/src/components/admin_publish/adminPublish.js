@@ -79,6 +79,7 @@ class AdminPublish extends Component {
             <div className="public-ann_img_by">
               <img
                 className="public-ann_img"
+                alt=""
                 src="https://lh3.googleusercontent.com/ogw/ADea4I55Y8CeJadoMfZsh9xbDTaa8z9Qy1Ge2Ud5Yiak=s83-c-mo"
               />
               <h3>By Aakash president</h3>
