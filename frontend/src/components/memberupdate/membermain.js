@@ -22,7 +22,7 @@ class MemberContainer extends Component {
 
 
     changeType = (t) => {
-        if(t==='presonalinfo'){
+        if(t==='personalinfo'){
             if(this.state.firstColor === 'transparent'){
                 this.setState({
                     typeofupdate: t,
