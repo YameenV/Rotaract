@@ -1,9 +1,10 @@
-.home-main{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+.home-main {
   background: url('../imgs/StarOverlay.png'),
   linear-gradient(180deg, #000000 10.1%, #000217 34.37%, #0066FF 68.23%, #ADD7F2 100%), #000917;
   background-repeat: no-repeat;
   background-blend-mode: screen;
-
   background-size: 100%;
   min-width: 100vw;
   min-height: 100vh; 
@@ -15,13 +16,11 @@
 }
 @keyframes HomeLoad{
   from { opacity: 0; } to { opacity: 1; }
-
 }
 
 
 .home-bg img {
   mix-blend-mode: screen;
-
 }
 .earth_div {
   height: 720px;
@@ -76,12 +75,13 @@
 }
 .container_content h2 {
   padding: 1vw 1vw 1vw 1vw;
-  font-family: Helvetica;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.125rem;
   line-height: 21px;
   text-transform: capitalize;
+  text-align: justify;
 
   color: #ffffff;
 }
@@ -927,6 +927,21 @@
   background-color: bisque;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 130px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.mention_content_1_image,
+.mention_content_3_image,
+.mention_content_2_image,
+.mention_content_4_image,
+.mention_content_5_image,
+.mention_content_6_image{
+  height: 7.8vw;
+  width: 7.8vw;
+  border-radius: 50%;
+
 }
 
 .mention_content_1_name,
@@ -938,7 +953,7 @@
   font-family: Helvetica;
   font-style: normal;
   font-weight: normal;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   line-height: 41px;
   text-align: center;
   text-transform: capitalize;
@@ -1081,7 +1096,7 @@
   .mention_content_4_name,
   .mention_content_5_name,
   .mention_content_6_name {
-    font-size: 2rem;
+    /* font-size: 2rem; */
   }
   .home_event_container {
     flex-direction: column;
@@ -1092,7 +1107,11 @@
   .row_2_content2_Name h1,
   .row_3_content1_Name h1,
   .row_3_content2_Name h1,
-  .row_3_content3_Name h1 {
+  .row_3_content3_Name h1,
+  .row_4_content1_Name h1, 
+.row_4_content2_Name h1, 
+.row_4_content3_Name h1, 
+.row_4_content4_Name h1 {
     font-size: 1.5rem;
   }
   .event_container_1,
@@ -1230,7 +1249,11 @@
   .row_2_content2_Name h1,
   .row_3_content1_Name h1,
   .row_3_content2_Name h1,
-  .row_3_content3_Name h1 {
+  .row_3_content3_Name h1,
+  .row_4_content1_Name h1, 
+.row_4_content2_Name h1, 
+.row_4_content3_Name h1, 
+.row_4_content4_Name h1 {
     font-size: 1.2rem;
   }
   .row_1_content1_position h2,
@@ -1286,7 +1309,11 @@
   .row_2_content2_Name h1,
   .row_3_content1_Name h1,
   .row_3_content2_Name h1,
-  .row_3_content3_Name h1 {
+  .row_3_content3_Name h1,
+  .row_4_content1_Name h1, 
+.row_4_content2_Name h1, 
+.row_4_content3_Name h1, 
+.row_4_content4_Name h1 {
     font-size: 1.2rem;
   }
   .row_1_content1_position h2,
