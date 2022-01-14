@@ -1,9 +1,6 @@
 {
   "name": "client",
-<<<<<<< HEAD
-=======
   "homepage": "http://ashutosh.educationhost.cloud",
->>>>>>> f2d207d5b16e133582b1527c77db42460be50656
   "version": "0.1.0",
   "private": true,
   "dependencies": {

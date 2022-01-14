@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import '../../css/leaderboard.css'
 import ListOfPPL from "./listcomponent/listofppl";
-import ROTLOGO from "../../imgs/RCUCoEsLogo.png";
-import search from "../../icons/search.png";
 import { connect } from 'react-redux'
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from '../../actions/index'
@@ -44,11 +42,6 @@ class Leaderboard_dekstop extends Component {
         
         <div className="leader_header">
         <Navbar />
-
-          
-          
-
-
           <div className="leader_title">LEADERBOARD</div>
           <video autoPlay muted loop
             style={{
@@ -56,7 +49,7 @@ class Leaderboard_dekstop extends Component {
               width: "100%",
               height:"inherit",
               // height:"100%",
-             mixBlendMode: "screen",
+              mixBlendMode: "screen",
               position: "fixed",
               left: "0",
               // transform: "scale(-1,1)",

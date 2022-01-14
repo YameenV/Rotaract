@@ -1,5 +1,3 @@
-from pymongo import MongoClient
-# import pyrebase
 import firebase_admin
 from firebase_admin import credentials, firestore
 
@@ -7,7 +5,7 @@ cred = credentials.Certificate("../backend/config/serviceAccountKey.json")
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
-conn = MongoClient()
+
 
 # firebaseConfig = {
 #   "apiKey": "AIzaSyBo7DCJgc-GhvK2Prayh_GGcV6rRP8kAa8",

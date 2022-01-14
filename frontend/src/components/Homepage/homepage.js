@@ -11,12 +11,8 @@ import Pic6 from "../../imgs/pic6.png";
 import ashu from "../../imgs/ashutosh1.jpg";
 import Navbar from "../navbar/navbar";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import homevideo from "../../background/homepage.mp4"
-=======
 import home from "../../background/homepage.mp4"
 
->>>>>>> f2d207d5b16e133582b1527c77db42460be50656
 
 class Homepage extends Component {
 
@@ -51,11 +47,7 @@ class Homepage extends Component {
               height: "100%",
             }}
           >
-<<<<<<< HEAD
-            <source id="video" src={homevideo} type="video/mp4" />
-=======
             <source id="video" src={home} type="video/mp4" />
->>>>>>> f2d207d5b16e133582b1527c77db42460be50656
           </video>
         </div>
         <Navbar flags={1} />

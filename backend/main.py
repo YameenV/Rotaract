@@ -103,30 +103,30 @@ async def get_event():
 
 
 
-@app.get('/get_user_id_by_name/{name}')
-async def get_user_id_by_name(name:str):
-    return await servies.get_user_id_by_name(name.lower())
+# @app.get('/get_user_id_by_name/{name}')
+# async def get_user_id_by_name(name:str):
+#     return await servies.get_user_id_by_name(name.lower())
 
-@app.get('/get_user_club_position_by_name')
-async def get_user_club_position_by_name(name:str):
-    return await servies.get_user_club_position_by_name(name.lower())
-
-
-@app.get('/get_score_by_name/{name}')
-async def get_score_by_name(name):
-    return await servies.get_score_by_name(name.lower())
+# @app.get('/get_user_club_position_by_name')
+# async def get_user_club_position_by_name(name:str):
+#     return await servies.get_user_club_position_by_name(name.lower())
 
 
-# Team Routes
-
-@app.get('/get_team_id_by_name/{name}')
-async def get_user_id_by_name(name:str):
-    return await servies.get_team_id_by_name(name.lower())
+# @app.get('/get_score_by_name/{name}')
+# async def get_score_by_name(name):
+#     return await servies.get_score_by_name(name.lower())
 
 
-@app.get('/get_team_score_by_name/{name}')
-async def get_team_score_by_name(name: str):
-    return await servies.get_team_score_by_name(name.lower())
+# # Team Routes
+
+# @app.get('/get_team_id_by_name/{name}')
+# async def get_user_id_by_name(name:str):
+#     return await servies.get_team_id_by_name(name.lower())
+
+
+# @app.get('/get_team_score_by_name/{name}')
+# async def get_team_score_by_name(name: str):
+#     return await servies.get_team_score_by_name(name.lower())
 
 
 # # Leaderboard Routes
@@ -142,21 +142,21 @@ async def get_team_score_by_name(name: str):
 
 # Latestannouncement
 
-@app.post('/create_latestannouncement')
-async def create_latestannouncement(announcement: model.LatestAnnouncement):
-    return await servies.create_latestannouncement(announcement)
+# @app.post('/create_latestannouncement')
+# async def create_latestannouncement(announcement: model.LatestAnnouncement):
+#     return await servies.create_latestannouncement(announcement)
 
-@app.get('/get_latestannouncement')
-async def get_latestannouncement():
-    return await servies.get_latestannouncement()
+# @app.get('/get_latestannouncement')
+# async def get_latestannouncement():
+#     return await servies.get_latestannouncement()
 
 
-# Events 
+# # Events 
 
-@app.post('/create_event')
-async def create_event(event: model.Event):
-    return await servies.create_event(event)
+# @app.post('/create_event')
+# async def create_event(event: model.Event):
+#     return await servies.create_event(event)
 
-@app.get('/get_event')
-async def get_event():
-    return await servies.get_event()
+# @app.get('/get_event')
+# async def get_event():
+#     return await servies.get_event()

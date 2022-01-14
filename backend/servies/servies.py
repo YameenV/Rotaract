@@ -1,11 +1,9 @@
 from typing import List
-from config.db import conn, db
-from schemas import schemas
+from config.db import db
 from models import model
 from fastapi import HTTPException
 from datetime import datetime
 import pytz 
-from bson.objectid import ObjectId
 from pandas import DataFrame
 
 tz_NY = pytz.timezone('Asia/Kolkata')   
@@ -47,14 +45,8 @@ async def get_user_for_score():
     return userList
 
 async def increment_user_score(users:List[model.UserForScore], score: model.IndividualScore):
-    for user in users:
-        user = {
-            "user_id":user.user_id,
-            "full_name":user.full_name,
-            "current_position":user.current_position,
-            "img":user.img,
-        }        
-        db.collection("Score").add(dict(member = user, score = score.score, month = score.month, day = score.day, year = score.year, increment_type = score.increment_type, reason = score.reason))
+    for user in users:        
+        db.collection("Score").add(dict(user_id = user.user_id, full_name= user.full_name, current_position = user.current_position, img = user.img, score =  score.score, month = score.month, day = score.day, year = score.year, increment_type = score.increment_type, reason = score.reason))
     return "Sucess"
 
 
@@ -82,31 +74,14 @@ async def increment_team_score(score: model.TeamScore):
 
 
 async def get_user_leaderboard():
-    scores = db.collection("Score").get()
-    leaderboardUser = []
-    curr_dict = {}
-    for score in scores:
-        sc = score.to_dict()
-        name = sc["member"]["full_name"]
-        point = sc["score"]
-        _p = None
-        try:
-            curr_dict[name] += point
-        except:
-            curr_dict[name] = point
-            _dict = {
-                "current_position":sc["member"]["current_position"],
-                "full_name": sc["member"]["full_name"],
-                "img": sc["member"]["img"]
-            }
-            leaderboardUser.append(_dict)
-
-    for x, y in curr_dict.items():
-        for i in leaderboardUser:
-            if x == i["full_name"]:
-                i["score"] = y 
-    return leaderboardUser
-
+    users = db.collection("Score").get()
+    userList = []
+    for user in users:
+        _user = user.to_dict()
+        userList.append(_user)
+    userdf = DataFrame(userList)
+    a = userdf.groupby(["full_name","current_position","img"])["score"].agg("sum")
+    return a.to_json()
 
 async def get_team_leaderboard():
     teams = db.collection("TeamScore").get()
@@ -114,9 +89,9 @@ async def get_team_leaderboard():
     for team in teams:
         tea = team.to_dict()
         teamList.append(tea)
-    df = DataFrame(teamList)
-    d = df.groupby(["team_name"])["score"].agg("sum")
-    print(d)
+    teamdf = DataFrame(teamList)
+    teamd = teamdf.groupby(["team_name", "captain_name"])["score"].agg("sum")
+    return teamd.to_json()
     
 async def create_event(event: model.Event):
     try:
@@ -138,7 +113,6 @@ async def get_event():
 
 
 async def create_latestannouncement(announcement: model.LatestAnnouncement):
-
     db.collection("Announcement").add(announcement.dict())
 
 
@@ -206,22 +180,22 @@ async def get_latestannouncement():
 
 
 
-async def get_user_club_position_by_name(name):
-    _id = await get_user_id_by_name(name)
-    user_position = schemas.serializeList(conn.local.user.find({"_id": ObjectId(_id[0]["_id"])}, {"rotractClub.current_position":1, "_id":0}).limit(0))
-    if not user_position: raise HTTPException(status_code=404 , detail="Position not found")
-    else: return user_position[0]["rotractClub"]["current_position"]
+# async def get_user_club_position_by_name(name):
+#     _id = await get_user_id_by_name(name)
+#     user_position = schemas.serializeList(conn.local.user.find({"_id": ObjectId(_id[0]["_id"])}, {"rotractClub.current_position":1, "_id":0}).limit(0))
+#     if not user_position: raise HTTPException(status_code=404 , detail="Position not found")
+#     else: return user_position[0]["rotractClub"]["current_position"]
 
-async def get_user_id_by_name(name):
-    _id = schemas.serializeList(conn.local.user.find({ 'full_name': {"$eq": name}}, {"_id": 1}).limit(1))
-    if not _id: raise HTTPException(status_code=404 , detail="Name does not exist")
-    else: return _id
+# async def get_user_id_by_name(name):
+#     _id = schemas.serializeList(conn.local.user.find({ 'full_name': {"$eq": name}}, {"_id": 1}).limit(1))
+#     if not _id: raise HTTPException(status_code=404 , detail="Name does not exist")
+#     else: return _id
     
-async def get_user_club_position_by_name(name):
-    _id = await get_user_id_by_name(name)
-    user_position = schemas.serializeList(conn.local.user.find({"_id": ObjectId(_id[0]["_id"])}, {"rotractClub.current_position":1, "_id":0}).limit(0))
-    if not user_position: raise HTTPException(status_code=404 , detail="Position not found")
-    else: return user_position[0]["rotractClub"]["current_position"]
+# async def get_user_club_position_by_name(name):
+#     _id = await get_user_id_by_name(name)
+#     user_position = schemas.serializeList(conn.local.user.find({"_id": ObjectId(_id[0]["_id"])}, {"rotractClub.current_position":1, "_id":0}).limit(0))
+#     if not user_position: raise HTTPException(status_code=404 , detail="Position not found")
+#     else: return user_position[0]["rotractClub"]["current_position"]
 
 
 # async def increment_user_score(userId: List[str], score: model.IndividualScore):
@@ -229,9 +203,9 @@ async def get_user_club_position_by_name(name):
 #         db.collection("User").document(userId).collection("Score").add(score.dict())
 #     return "Sucess"
 
-async def get_score_by_name(name):
-    _id = await get_user_id_by_name(name)
-    return schemas.serializeList(conn.local.individualscore.find({ 'user_id': {"$eq": _id[0]["_id"]}}))
+# async def get_score_by_name(name):
+#     _id = await get_user_id_by_name(name)
+#     return schemas.serializeList(conn.local.individualscore.find({ 'user_id': {"$eq": _id[0]["_id"]}}))
 
 
 # Team 
@@ -240,19 +214,19 @@ async def get_score_by_name(name):
 #     conn.local.team.insert_one(dict(team.dict(), date_time = datetime_NY.strftime("%Y-%m-%d %H:%M:%S.%f")))
 #     return schemas.serializeList(conn.local.team.find())
 
-async def get_team_id_by_name(name):
-    _id = schemas.serializeList(conn.local.team.find({ 'team_name': {"$eq": name}}, {"_id": 1}).limit(1))
-    if not _id: raise HTTPException(status_code=404 , detail="Team does not exist")
-    return _id
+# async def get_team_id_by_name(name):
+#     _id = schemas.serializeList(conn.local.team.find({ 'team_name': {"$eq": name}}, {"_id": 1}).limit(1))
+#     if not _id: raise HTTPException(status_code=404 , detail="Team does not exist")
+#     return _id
 
 # async def increment_team_score(names: str, score: model.TeamScore):
 #     _id = await get_team_id_by_name(names)
 #     if _id: conn.local.teamscore.insert_one(dict(team_id = _id[0]["_id"], team_name = score.team_name,captain_name= score.captain_name, score = score.score, month = score.month, day = score.day, year = score.year, reason = score.reason))
 #     return schemas.serializeList(conn.local.teamscore.find())
 
-async def get_team_score_by_name(name):
-    _id = await get_team_id_by_name(name)
-    return schemas.serializeList(conn.local.teamscore.find({ 'team_id': {"$eq": _id[0]["_id"]}}))
+# async def get_team_score_by_name(name):
+#     _id = await get_team_id_by_name(name)
+#     return schemas.serializeList(conn.local.teamscore.find({ 'team_id': {"$eq": _id[0]["_id"]}}))
 
 
 # leaderboard Routes

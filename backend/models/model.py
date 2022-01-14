@@ -8,6 +8,7 @@ class Event(BaseModel):
     types: str
     description: str
     img:str
+    event_link:str
 
 class LatestAnnouncement(BaseModel):
     name: str
@@ -41,7 +42,10 @@ class UserForScore(BaseModel):
     img:str
 
 class IndividualScore(BaseModel):
-    member: UserForScore
+    user_id: str
+    full_name: str
+    current_position: str
+    img:str
     score: float
     month: int
     day: int
