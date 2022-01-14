@@ -76,6 +76,31 @@ function Announcement(props) {
           <div className="ann_date">0-0-0</div>
           <div className="ann_description">No announcement</div>
           <hr className="ann_line"></hr>
+          
+
+        </div>
+        <div className='announcement'>
+          <div className="ann_image-con">
+            <img  alt=""   className="ann_image" />
+            <div className="ann_by">No announcement till now</div>
+          </div>
+          <div className="ann_title">Please wait for a while, the server might be down</div>
+          <div className="ann_date">0-0-0</div>
+          <div className="ann_description">No announcement</div>
+          <hr className="ann_line"></hr>
+          
+
+        </div>
+        <div className='announcement'>
+          <div className="ann_image-con">
+            <img  alt=""   className="ann_image" />
+            <div className="ann_by">No announcement till now</div>
+          </div>
+          <div className="ann_title">Please wait for a while, the server might be down</div>
+          <div className="ann_date">0-0-0</div>
+          <div className="ann_description">No announcement</div>
+          <hr className="ann_line"></hr>
+          
 
         </div>
 
