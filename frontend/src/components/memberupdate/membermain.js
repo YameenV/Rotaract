@@ -10,14 +10,167 @@ import mem from '../../background/memupdate.mp4'
 class MemberContainer extends Component {
 
     state = {
-        typeofupdate: 'personalinfo'
+        typeofupdate: 'personalinfo',
+        firstColor:'black',
+        secondColor:'transparent',
+        thirdColor:'transparent',
+        fourthColor:'transparent',
+        fiveColor:'transparent',
+        sixColor:'transparent',
+        seventhColor:'transparent'
     }
 
 
     changeType = (t) => {
-        this.setState({
-            typeofupdate: t
-        })
+        if(t==='personalinfo'){
+            if(this.state.firstColor === 'transparent'){
+                this.setState({
+                    typeofupdate: t,
+                    firstColor:'black',
+                    secondColor:'transparent',
+                    thirdColor:'transparent',
+                    fourthColor:'transparent',
+                    fiveColor:'transparent',
+                    sixColor:'transparent',
+                    seventhColor:'transparent'
+                })
+            }
+            else{
+                this.setState({
+                    typeofupdate: t,
+                    firstColor:'transparent'
+                })
+            }
+           
+        }
+        if(t==='Contact'){
+            if(this.state.secondColor === 'transparent'){
+                this.setState({
+                    typeofupdate:t,
+                    firstColor:'transparent',
+                    secondColor:'black',
+                    thirdColor:'transparent',
+                    fourthColor:'transparent',
+                    fiveColor:'transparent',
+                    sixColor:'transparent',
+                    seventhColor:'transparent'
+                })
+            }
+            else{
+                this.setState({
+                    typeofupdate:t,
+                    secondColor:'transparent'
+                })
+            }
+          
+        }
+        if(t==='rotaractclub'){
+            if(this.state.thirdColor === 'transparent'){
+                this.setState({
+                    typeofupdate:t,
+                    firstColor:'transparent',
+                    secondColor:'transparent',
+                    thirdColor:'black',
+                    fourthColor:'transparent',
+                    fiveColor:'transparent',
+                    sixColor:'transparent',
+                    seventhColor:'transparent'
+                    
+                })
+            }
+            else{
+                this.setState({
+                    typeofupdate:t,
+                    thirdColor:'transparent'
+                })
+            }
+           
+        }
+        if(t==='proskilss'){
+            if(this.state.fourthColor === 'transparent'){
+                this.setState({
+                    typeofupdate:t,
+                    fourthColor:'black',
+                    firstColor:'transparent',
+                    secondColor:'transparent',
+                    thirdColor:'transparent',
+                    fiveColor:'transparent',
+                    sixColor:'transparent',
+                    seventhColor:'transparent'
+                })
+            }
+            else{
+                this.setState({
+                    typeofupdate:t,
+                    fourthColor:'transparent'
+                })
+            }
+            
+        }
+        if(t==='edubackground'){
+            if(this.state.fiveColor === 'transparent'){
+                this.setState({
+                    typeofupdate:t,
+                    fiveColor:'black',
+                    firstColor:'transparent',
+                    secondColor:'transparent',
+                    thirdColor:'transparent',
+                    fourthColor:'transparent',
+                    sixColor:'transparent',
+                    seventhColor:'transparent'
+                })
+            }
+            else{
+                this.setState({
+                    typeofupdate:t,
+                    fiveColor:'transparent'
+                })
+            }
+            
+        }
+        if(t==='otherinterest'){
+            if(this.state.sixColor === 'transparent'){
+                this.setState({
+                    typeofupdate:t,
+                    sixColor:'black',
+                    firstColor:'transparent',
+                    secondColor:'transparent',
+                    thirdColor:'transparent',
+                    fourthColor:'transparent',
+                    fiveColor:'transparent',
+                    seventhColor:'transparent'
+                })
+            }
+            else{
+                this.setState({
+                    typeofupdate:t,
+                    sixColor:'transparent'
+                })
+            }
+            
+        }
+        if(t==='about'){
+            if(this.state.seventhColor === 'transparent'){
+                this.setState({
+                    typeofupdate:t,
+                    seventhColor:'black',
+                    firstColor:'transparent',
+                    secondColor:'transparent',
+                    thirdColor:'transparent',
+                    fourthColor:'transparent',
+                    fiveColor:'transparent',
+                    sixColor:'transparent'
+                })
+            }
+            else{
+                this.setState({
+                    typeofupdate:t,
+                    seventhColor:'transparent'
+                })
+            }
+           
+        }
+        
     }
 
     sendUser = (data) => {
@@ -65,13 +218,13 @@ class MemberContainer extends Component {
 
                         <div className="button_div">
                             <div className="changer_buttons">
-                                <button className="button" onClick={(e) => this.changeType(e.target.value)} value="personalinfo">Personal information</button>
-                                <button className="button" onClick={(e) => this.changeType(e.target.value)} value="Contact">Contact</button>
-                                <button className="button" onClick={(e) => this.changeType(e.target.value)} value="rotaractclub">Rotaract Club</button>
-                                <button className="button" onClick={(e) => this.changeType(e.target.value)} value="proskilss">Professional Skills</button>
-                                <button className="button" onClick={(e) => this.changeType(e.target.value)} value="edubackground">Educational background</button>
-                                <button className="button" onClick={(e) => this.changeType(e.target.value)} value="otherinterest">Other interests</button>
-                                <button className="button" onClick={(e) => this.changeType(e.target.value)} value="about">About</button>
+                                <button className="button" style={{backgroundColor:this.state.firstColor}} onClick={(e) => this.changeType(e.target.value)} value="personalinfo">Personal information</button>
+                                <button className="button" style={{backgroundColor:this.state.secondColor}} onClick={(e) => this.changeType(e.target.value)} value="Contact">Contact</button>
+                                <button className="button" style={{backgroundColor:this.state.thirdColor}} onClick={(e) => this.changeType(e.target.value)} value="rotaractclub">Rotaract Club</button>
+                                <button className="button" style={{backgroundColor:this.state.fourthColor}} onClick={(e) => this.changeType(e.target.value)} value="proskilss">Professional Skills</button>
+                                <button className="button" style={{backgroundColor:this.state.fiveColor}} onClick={(e) => this.changeType(e.target.value)} value="edubackground">Educational background</button>
+                                <button className="button" style={{backgroundColor:this.state.sixColor}} onClick={(e) => this.changeType(e.target.value)} value="otherinterest">Other interests</button>
+                                <button className="button" style={{backgroundColor:this.state.seventhColor}} onClick={(e) => this.changeType(e.target.value)} value="about">About</button>
                             </div>
                         </div>
                         <div className="member_line">

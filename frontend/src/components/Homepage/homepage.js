@@ -3,19 +3,38 @@ import "../../css/homepage.css";
 import { ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
 import { connect } from "react-redux";
 import * as actions from "../../actions/index";
-import Pic2 from "../../imgs/pic2.png";
-import Pic3 from "../../imgs/pic3.png";
-import Pic4 from "../../imgs/pic4.png";
-import Pic5 from "../../imgs/pic5.png";
-import Pic6 from "../../imgs/pic6.png";
+
+import Pic1 from "../../imgs/pic2.png";
+import Pic2 from "../../imgs/pic3.png";
+import Pic3 from "../../imgs/pic4.png";
+import Pic4 from "../../imgs/pic5.png";
+import Pic5 from "../../imgs/pic6.png";
+import Pic6 from "../../imgs/pic3.png";
+import Pic7 from "../../imgs/pic4.png";
+import Pic8 from "../../imgs/pic5.png";
+import Pic9 from "../../imgs/pic6.png";
+import Pic10 from "../../imgs/pic2.png";
 import ashu from "../../imgs/ashutosh1.jpg";
+import akash from "../../imgs/core/Aakash.png";
+import Amey from "../../imgs/core/Amey.png";
+import Divvya from "../../imgs/core/Divvya.png";
+import Jaii from "../../imgs/core/Jaii.png";
+import Kaustubh from "../../imgs/core/Kaustubh.png";
+import Mihir from "../../imgs/core/Mihir.png";
+import Rushil from "../../imgs/core/Rushil.png";
+import Shaily from "../../imgs/core/Shaily.png";
+import Shreya from "../../imgs/core/Shreya.png";
+
+import ashutosh from "../../imgs/god/ashutosh.jpeg";
+import abhinav from "../../imgs/god/abhinav.jpeg";
+import aman from "../../imgs/god/aman.jpeg";
+import yameen from "../../imgs/god/yameen.png";
+
 import Navbar from "../navbar/navbar";
 import { Link } from "react-router-dom";
-import home from "../../background/homepage.mp4"
-
+import home from "../../background/homepage.mp4";
 
 class Homepage extends Component {
-
   state = {
     teamdata: [],
   };
@@ -40,11 +59,18 @@ class Homepage extends Component {
     return (
       <div className="home-main">
         <div className="earth_div">
-          <video autoPlay muted loop 
-            style={{ 
+          <video
+            autoPlay
+            muted
+            loop
+            style={{
               objectFit: "cover",
               width: "100%",
               height: "100%",
+<<<<<<< HEAD
+=======
+              mixBlendMode: "lighten",
+>>>>>>> d136494995f8c8e2a3cc2a3e246cab131852a4d6
             }}
           >
             <source id="video" src={home} type="video/mp4" />
@@ -59,29 +85,26 @@ class Homepage extends Component {
             </div>
             <div className="container_content">
               <h2>
-                The universe (Latin: universus) is all of space and time[a] and
-                their contents,[10] including planets, stars, galaxies, and all
-                other forms of matter and energy. The Big Bang theory is the
-                prevailing cosmological description of the development of the
-                universe. According to this theory, space and time emerged
-                together 13.787±0.020 billion years ago,[11] and the universe
-                has been expanding ever since. While the spatial size of the
-                entire universe is unknown,[3] the cosmic inflation equation
-                indicates that it must have a minimum diameter of 23 trillion
-                light years,[12] and it is possible to measure the size of the
-                observable universe, which is approximately 93 billion
-                light-years in diameter at the present day.
-                <br />
-                <br />
-                The earliest cosmological models of the universe were developed
-                by ancient Greek and Indian philosophers and were geocentric,
-                placing Earth at the center.[13][14] Over the centuries, more
-                precise astronomical observations led Nicolaus Copernicus to
-                develop the heliocentric model with the Sun at the center of the
-                Solar System. In developing the law of universal gravitation,
-                Isaac Newton built upon Copernicus's work as well as Johannes
-                Kepler's laws of planetary motion and observations by Tycho
-                Brahe.
+                The expansion of the universe is a boom that occurs over time
+                within distances between gravitationally unrelated elements of
+                the local universe. As we all know, after the Big Bang, the
+                universe began to grow mysteriously, and so far no one has
+                solved this mystery. So let us get the same satisfaction and do
+                as much as possible for ourselves and our members. Everything in
+                the universe depends on every difference. For example, the
+                desires of the planets, the sunlight required by life, the
+                vacuum in the universe, gravity, and other factors that help
+                everyone maintain normal stability in various ways. Likewise, we
+                need to help everyone reach their realm and expand as much as
+                possible. Look at the farthest corner.
+                <br/>
+                The galaxy, and you will see it precisely because it was in the distant past. However,
+                light arriving after 1,000,000,000 years is no longer coming
+                from the galaxy. It is ten million light-years away. But it is
+                still far from the thing. Why? Because the visible global world
+                in which we live is thriving. Likewise, may our club expand
+                endlessly and let the Light guide us into an inspiring future
+                for our members and everyone associated with our club.
               </h2>
             </div>
           </div>
@@ -92,78 +115,117 @@ class Homepage extends Component {
             </div>
 
             <div className="Team_member">
-              <div className="row_1">
-                <div className="row_1_content">
-                  <div className="row_1_image_div">
-                    <img className="row_1_image1" src={ashu}></img>
-                  </div>
-                  <div className="row_1_content1_Name">
-                    <h1>Ashutosh Upadhyay</h1>
-                  </div>
-                  <div className="row_1_content1_position">
-                    <h2> President</h2>
-                  </div>
+              <div className="row_1_content">
+                <div className="row_1_image_div">
+                  <img className="row_1_image1" src={akash} alt=""></img>
+                </div>
+                <div className="row_1_content1_Name">
+                  <h1>Rtr.Aakash Varma</h1>
+                </div>
+                <div className="row_1_content1_position">
+                  <h2>President</h2>
                 </div>
               </div>
 
-              <div className="row_2">
-                <div className="row_2_content1">
-                  <div className="row_2_image1_div">
-                    <img className="row_2_image1" src={Pic2}></img>
-                  </div>
-                  <div className="row_2_content1_Name">
-                    <h1>Harsh Patel</h1>
-                  </div>
-                  <div className="row_2_content1_position">
-                    <h2> Secratory</h2>
-                  </div>
+              <div className="row_2_content1">
+                <div className="row_2_image1_div">
+                  <img className="row_2_image1" src={Kaustubh} alt=""></img>
                 </div>
-                <div className="row_2_content2">
-                  <div className="row_2_image2_div">
-                    <img className="row_2_image2" src={Pic3}></img>
-                  </div>
-                  <div className="row_2_content2_Name">
-                    <h1>Yameen Vinchew</h1>
-                  </div>
-                  <div className="row_2_content2_position">
-                    <h2> Pres-elect</h2>
-                  </div>
+                <div className="row_2_content1_Name">
+                  <h1>Rtr.Kaustubh Latake</h1>
+                </div>
+                <div className="row_2_content1_position">
+                  <h2>Vice President</h2>
+                </div>
+              </div>
+              <div className="row_2_content2">
+                <div className="row_2_image2_div">
+                  <img className="row_2_image2" src={Rushil} alt=""></img>
+                </div>
+                <div className="row_2_content2_Name">
+                  <h1>Rtr.Rushil Vira</h1>
+                </div>
+                <div className="row_2_content2_position">
+                  <h2>Secretary</h2>
                 </div>
               </div>
 
-              <div className="row_3">
-                <div className="row_3_content1">
-                  <div className="row_3_image1_div">
-                    <img className="row_3_image1" src={Pic4}></img>
-                  </div>
-                  <div className="row_3_content1_Name">
-                    <h1>Abhinav Singh</h1>
-                  </div>
-                  <div className="row_3_content1_position">
-                    <h2> Advisor</h2>
-                  </div>
+              <div className="row_3_content1">
+                <div className="row_3_image1_div">
+                  <img className="row_3_image1" src={Amey} alt=""></img>
                 </div>
-                <div className="row_3_content2">
-                  <div className="row_3_image2_div">
-                    <img className="row_3_image2" src={Pic5}></img>
-                  </div>
-                  <div className="row_3_content2_Name">
-                    <h1>Aman Shaikh</h1>
-                  </div>
-                  <div className="row_3_content2_position">
-                    <h2> Finance Director</h2>
-                  </div>
+                <div className="row_3_content1_Name">
+                  <h1>Rtr.Amey Desai</h1>
                 </div>
-                <div className="row_3_content3">
-                  <div className="row_3_image1_div">
-                    <img className="row_3_image3" src={Pic6}></img>
-                  </div>
-                  <div className="row_3_content3_Name">
-                    <h1>Tejas</h1>
-                  </div>
-                  <div className="row_3_content3_position">
-                    <h2> GBM</h2>
-                  </div>
+                <div className="row_3_content1_position">
+                  <h2>Jt.Secretary</h2>
+                </div>
+              </div>
+              <div className="row_3_content2">
+                <div className="row_3_image2_div">
+                  <img className="row_3_image2" src={Shreya} alt=""></img>
+                </div>
+                <div className="row_3_content2_Name">
+                  <h1>Rtr.Shreya Patil</h1>
+                </div>
+                <div className="row_3_content2_position">
+                  <h2>Jt.Secretary</h2>
+                </div>
+              </div>
+              <div className="row_3_content3">
+                <div className="row_3_image3_div">
+                  <img className="row_3_image3" src={Divvya}></img>
+                </div>
+                <div className="row_3_content3_Name">
+                  <h1>Rtr.Divvya Rambhia</h1>
+                </div>
+                <div className="row_3_content3_position">
+                  <h2>Chairman</h2>
+                </div>
+              </div>
+
+              <div className="row_4_content1">
+                <div className="row_4_image1_div">
+                  <img className="row_4_image1" src={Mihir}></img>
+                </div>
+                <div className="row_4_content1_Name">
+                  <h1>Rtr.Mihir Parmar</h1>
+                </div>
+                <div className="row_4_content1_position">
+                  <h2>Finance Director</h2>
+                </div>
+              </div>
+              <div className="row_4_content2">
+                <div className="row_4_image2_div">
+                  <img className="row_4_image2" src={Jaii}></img>
+                </div>
+                <div className="row_4_content2_Name">
+                  <h1>Rtr.Jai Prajapat</h1>
+                </div>
+                <div className="row_4_content2_position">
+                  <h2>HRD</h2>
+                </div>
+              </div>
+              <div className="row_4_content3">
+                <div className="row_4_image3_div">
+                  <img className="row_4_image3" src={Shaily}></img>
+                </div>
+                <div className="row_4_content3_Name">
+                  <h1>Rtr.Shaily Verma</h1>
+                </div>
+                <div className="row_4_content3_position">
+                  <h2>IPP</h2>
+                </div>
+              </div>
+              <div className="row_4_content4">
+                <div className="row_4_image4_div">
+                  <img className="row_4_image4" src={Pic2}></img>
+                </div>
+                <div className="row_4_content4_Name">
+                  <h1>Rtr. XYZ</h1>
+                </div>
+                <div className="row_4_content4_position">
+                  <h2>SAA</h2>
                 </div>
               </div>
             </div>
@@ -184,7 +246,11 @@ class Homepage extends Component {
                       <div className={`announcement_content_${i}`}>
                         <div className="content1_header">
                           <div className="content1_image_div">
-                            <img className="content1_image" src={Pic3}></img>
+                            <img
+                              className="content1_image"
+                              src={Pic3}
+                              alt=""
+                            ></img>
                           </div>
                           <div className="content1_name">
                             <div className="content1_name_name"> BY Rushil</div>
@@ -204,22 +270,66 @@ class Homepage extends Component {
                     ) : null;
                   })
                 ) : (
-                  <div className="announcement_content_1">
-                    <div className="content1_header">
-                      <div className="content1_image_div">
-                        <img className="content1_image" src={Pic3}></img>
+                  <>
+                    <div className="announcement_content_1">
+                      <div className="content1_header">
+                        <div className="content1_image_div">
+                          <img
+                            className="content1_image"
+                            src={Pic3}
+                            alt=""
+                          ></img>
+                        </div>
+                        <div className="content1_name">
+                          <div className="content1_name_name"> BY Rushil</div>
+                          <div className="content1_name_position">
+                            Secratory
+                          </div>
+                        </div>
                       </div>
-                      <div className="content1_name">
-                        <div className="content1_name_name"> BY Rushil</div>
-                        <div className="content1_name_position">Secratory</div>
+                      <div className="content1_message">
+                        <h1>There might be a network error</h1>
                       </div>
+                      <div className="content1_date">on 0-0-0</div>
+                      <hr className="hr1" />
                     </div>
-                    <div className="content1_message">
-                      <h1>There might be a network error</h1>
+                    <div className="announcement_content_1">
+                      <div className="content1_header">
+                        <div className="content1_image_div">
+                          <img className="content1_image" src={Pic3}></img>
+                        </div>
+                        <div className="content1_name">
+                          <div className="content1_name_name"> BY Rushil</div>
+                          <div className="content1_name_position">
+                            Secratory
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content1_message">
+                        <h1>There might be a network error</h1>
+                      </div>
+                      <div className="content1_date">on 0-0-0</div>
+                      <hr className="hr1" />
                     </div>
-                    <div className="content1_date">on 0-0-0</div>
-                    <hr className="hr1" />
-                  </div>
+                    <div className="announcement_content_1">
+                      <div className="content1_header">
+                        <div className="content1_image_div">
+                          <img className="content1_image" src={Pic3}></img>
+                        </div>
+                        <div className="content1_name">
+                          <div className="content1_name_name"> BY Rushil</div>
+                          <div className="content1_name_position">
+                            Secratory
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content1_message">
+                        <h1>There might be a network error</h1>
+                      </div>
+                      <div className="content1_date">on 0-0-0</div>
+                      <hr className="hr1" />
+                    </div>
+                  </>
                 )}
               </div>
             </div>
@@ -238,7 +348,7 @@ class Homepage extends Component {
                   return i < 2 ? (
                     <div className={`event_container_${i + 1}`}>
                       <div className="event_container_1_image_div">
-                        <img className="container_1_image"></img>
+                        <img className="container_1_image" alt=""></img>
                       </div>
                       <div className="event_title">{item.title}</div>
                       <div className="event_name">{item.name}</div>
@@ -249,16 +359,38 @@ class Homepage extends Component {
                   ) : null;
                 })
               ) : (
-                <div className="event_container_1">
-                  <div className="event_container_1_image_div">
-                    <img className="container_1_image"></img>
+                <>
+                  <div className="event_container_1">
+                    <div className="event_container_1_image_div">
+                      <img className="container_1_image" alt=""></img>
+                    </div>
+                    <div className="event_title">Title</div>
+                    <div className="event_name">
+                      Please wait for a while the server might be down
+                    </div>
+                    <div className="event_container_1_content">Description</div>
                   </div>
-                  <div className="event_title">Title</div>
-                  <div className="event_name">
-                    Please wait for a while the server might be down
+                  <div className="event_container_1">
+                    <div className="event_container_1_image_div">
+                      <img className="container_1_image"></img>
+                    </div>
+                    <div className="event_title">Title</div>
+                    <div className="event_name">
+                      Please wait for a while the server might be down
+                    </div>
+                    <div className="event_container_1_content">Description</div>
                   </div>
-                  <div className="event_container_1_content">Description</div>
-                </div>
+                  <div className="event_container_1">
+                    <div className="event_container_1_image_div">
+                      <img className="container_1_image"></img>
+                    </div>
+                    <div className="event_title">Title</div>
+                    <div className="event_name">
+                      Please wait for a while the server might be down
+                    </div>
+                    <div className="event_container_1_content">Description</div>
+                  </div>
+                </>
               )}
             </div>
             <Link to="/event">
@@ -280,6 +412,7 @@ class Homepage extends Component {
                       <img
                         className={`bar_${i + 1}_image`}
                         src="../../bdujab"
+                        alt=""
                       ></img>
                     </div>
                     <div className={`bar_${i + 1}_name`}>
@@ -289,14 +422,52 @@ class Homepage extends Component {
                 );
               })
             ) : (
-              <div className="leaderboard_bar_1">
-                <div className="bar_image_div_1">
-                  <img className="bar_1_image" src="../../bdujab"></img>
+              <>
+                <div className="leaderboard_bar_1">
+                  <div className="bar_image_div_1">
+                    <img
+                      className="bar_1_image"
+                      src="../../bdujab"
+                      alt=""
+                    ></img>
+                  </div>
+                  <div className="bar_1_name">
+                    <h2>Bar 1</h2>
+                  </div>
                 </div>
-                <div className="bar_1_name">
-                  <h2>Bar 1</h2>
+                <div className="leaderboard_bar_2">
+                  <div className="bar_image_div_2">
+                    <img className="bar_2_image" src="../../bdujab"></img>
+                  </div>
+                  <div className="bar_2_name">
+                    <h2>Bar 1</h2>
+                  </div>
                 </div>
-              </div>
+                <div className="leaderboard_bar_3">
+                  <div className="bar_image_div_3">
+                    <img className="bar_3_image" src="../../bdujab"></img>
+                  </div>
+                  <div className="bar_3_name">
+                    <h2>Bar 1</h2>
+                  </div>
+                </div>
+                <div className="leaderboard_bar_4">
+                  <div className="bar_image_div_4">
+                    <img className="bar_4_image" src="../../bdujab"></img>
+                  </div>
+                  <div className="bar_4_name">
+                    <h2>Bar 1</h2>
+                  </div>
+                </div>
+                <div className="leaderboard_bar_5">
+                  <div className="bar_image_div_5">
+                    <img className="bar_5_image" src="../../bdujab"></img>
+                  </div>
+                  <div className="bar_5_name">
+                    <h2>Bar 1</h2>
+                  </div>
+                </div>
+              </>
             )}
           </div>
           <div className="leaderboard_switch">
@@ -321,7 +492,7 @@ class Homepage extends Component {
           <div className="team_info_detail">
             <div className="team_info_1">
               <div className="team_info_1_image">
-                <img className="team_info_image" src={Pic2}></img>
+                <img className="team_info_image" src={Pic2} alt=""></img>
               </div>
               {/* <div className="team_info_1_name">
               <h2>Harsh Patel</h2>
@@ -329,7 +500,7 @@ class Homepage extends Component {
             </div>
             <div className="team_info_2">
               <div className="team_info_2_image">
-                <img className="team_info_image" src={Pic2}></img>
+                <img className="team_info_image" src={Pic2} alt=""></img>
               </div>
               {/* <div className="team_info_2_name">
               <h2>Harsh Patel</h2>
@@ -337,7 +508,7 @@ class Homepage extends Component {
             </div>
             <div className="team_info_3">
               <div className="team_info_3_image">
-                <img className="team_info_image" src={Pic2}></img>
+                <img className="team_info_image" src={Pic2} alt=""></img>
               </div>
               {/* <div className="team_info_3_name">
               <h2>Harsh Patel</h2>
@@ -365,7 +536,9 @@ class Homepage extends Component {
             Join Rotaract club of UCOE Today !
           </div>
           <div className="home_register_button_div">
+            <Link to="/mem">
             <button className="home_register_button">Register</button>
+            </Link>
           </div>
         </div>
 
@@ -374,29 +547,28 @@ class Homepage extends Component {
           <div className="mention_content">
             <div className="mention_content_1">
               <div className="mention_content_1_image_div">
-                <img></img>
+                <img className="mention_content_1_image"  alt="" src={yameen}></img>
               </div>
-              <div className="mention_content_1_name">Yameen Vinchu</div>
+              <div className="mention_content_1_name">Rtr. Yameen Vinchu</div>
             </div>
             <div className="mention_content_2">
               <div className="mention_content_2_image_div">
-                <img></img>
+                <img  className="mention_content_2_image" alt="" src={ashutosh}></img>
               </div>
-              <div className="mention_content_2_name">Ashutosh Upadhyay</div>
+              <div className="mention_content_2_name">Rtr. Ashutosh Upadhyay</div>
             </div>
             <div className="mention_content_3">
               <div className="mention_content_3_image_div">
-                <img></img>
+                <img className="mention_content_3_image"  alt="" src={abhinav}></img>
               </div>
-              <div className="mention_content_3_name">Abhinav Pandey </div>
+              <div className="mention_content_3_name">Rtr. Abhinav Pandey </div>
             </div>
             <div className="mention_content_4">
               <div className="mention_content_4_image_div">
-                <img></img>
+                <img className="mention_content_4_image"  alt="" src={aman}></img>
               </div>
-              <div className="mention_content_4_name">Aman Shaikh</div>
+              <div className="mention_content_4_name">Rtr. Aman Shaikh</div>
             </div>
-
           </div>
         </div>
 

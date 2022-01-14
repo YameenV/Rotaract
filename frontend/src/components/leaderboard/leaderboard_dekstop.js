@@ -4,7 +4,7 @@ import ListOfPPL from "./listcomponent/listofppl";
 import { connect } from 'react-redux'
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from '../../actions/index'
-import { Button, ButtonGroup, InputGroup, FormControl, Nav } from "react-bootstrap";
+import {  ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
 import Navbar from '../../components/navbar/navbar'
 import neu from "../../background/prot.mp4"
 

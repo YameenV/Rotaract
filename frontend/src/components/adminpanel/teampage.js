@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import MemberNames from "./memberNames";
+// import MemberNames from "./memberNames";
 import "../../css/jayteam.css";
 import rtlogo from "../../imgs/RCUCoEsLogo.png";
 import {connect} from 'react-redux'
@@ -166,7 +166,7 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
       <div className="jayteam_main">
         <div className="jayteam_hdr">
           <h1>Welcome Jai</h1>
-          <img src={rtlogo}></img>
+          <img  alt=""  src={rtlogo}></img>
         </div>
         <div className="jayteam_tmbtn">Team</div>
         <input

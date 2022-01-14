@@ -19,7 +19,7 @@ class Welcome_page extends Component {
       <div className="wlcmjay_main">
         <div className="wlcmjay_hdr">
           <h1>Welcome Jai</h1>
-          <img src={rtlogo}></img>
+          <img  alt=""   src={rtlogo}></img>
         </div>
         <div className="wlcm_btn">
           <button
