@@ -27,6 +27,19 @@ async def get_user_by_name(name:str):
     if users: return users[0].to_dict()
     else: raise HTTPException(status_code=404 , detail="Name does not exist")
 
+async def get_user_for_portfolio():
+    users = db.collection("User").get()
+    userList = []
+    for user in users:
+        a = user.to_dict()
+        user = {
+            "full_name":a["full_name"],
+            "current_position": a["rotractClub"]["current_position"],
+            "img":a["img"]
+        }
+        userList.append(user)
+    return userList
+
 
 # Protected
 async def get_user_for_score():

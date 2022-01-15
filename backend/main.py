@@ -32,6 +32,10 @@ async def update_user(id:str, user: model.User):
 async def create_user(name: str):
     return await servies.get_user_by_name(name.lower())
 
+@app.get('/get_user_for_portfolio')
+async def get_user_for_portfolio():
+    return await servies.get_user_for_portfolio()
+
 
 # Protected Admin Panel
 
