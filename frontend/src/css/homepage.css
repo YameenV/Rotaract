@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 .home-main {
-  background: url('../imgs/StarOverlay.png'),
-  linear-gradient(180deg, #000000 10.1%, #000217 34.37%, #0066FF 68.23%, #ADD7F2 100%), #000917;
+  /* background: url('../imgs/StarOverlay.png'),
+  linear-gradient(180deg, #000000 10.1%, #000217 34.37%, #0066FF 68.23%, #ADD7F2 100%), #000917; */
+  background: radial-gradient(539.67% 76.42% at 0% 8.68%, #000000 0%, #0066FF 8.41%, #000917 13.85%, #0066FF 55.21%, #ADD7F2 97.92%), #000917;
   background-repeat: no-repeat;
   background-blend-mode: screen;
   background-size: 100%;
@@ -24,6 +25,9 @@
 }
 .earth_div {
   height: 720px;
+}
+.earth_div_image{
+  width: 100vw;
 }
 .earth_image {
 
@@ -269,7 +273,7 @@
   font-family: Bebas Neue;
   font-style: normal;
   font-weight: normal;
-  font-size: 4rem;
+  font-size: 5rem;
   line-height: 77px;
 
   letter-spacing: 0.05em;
@@ -398,7 +402,7 @@
   font-family: Bebas Neue;
   font-style: normal;
   font-weight: normal;
-  font-size: 4rem;
+  font-size: 5rem;
   line-height: 77px;
   /* identical to box height */
 
@@ -456,6 +460,7 @@
   font-size: 2.25rem;
   line-height: 41px;
   text-transform: capitalize;
+  
 
   color: #ffffff;
 }
@@ -508,7 +513,7 @@
   font-family: Bebas Neue;
   font-style: normal;
   font-weight: normal;
-  font-size: 4rem;
+  font-size: 5rem;
   line-height: 77px;
   text-align: center;
   letter-spacing: 0.15em;

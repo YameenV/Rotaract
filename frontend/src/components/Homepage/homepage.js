@@ -59,19 +59,7 @@ class Homepage extends Component {
     return (
       <div className="home-main">
         <div className="earth_div">
-          <video
-            autoPlay
-            muted
-            loop
-            style={{
-              objectFit: "cover",
-              width: "100%",
-              height: "100%",
-              mixBlendMode: "lighten",
-            }}
-          >
-            <source id="video" src={home} type="video/mp4" />
-          </video>
+          <img className="earth_div_image" src="https://lh3.googleusercontent.com/tZSgaCiE2J4kPEFu92hIeT3P9nfHkoNuKHiG5BHhogcF-mnHQp1tCpooiyfMFAdjwM_XyHCvYFj5-RtDtKPNlOtzJ3dI64_sv-rBfHuovNDjOyQRo39e-ruAMBlZtJwz75wUJbUC=w2400" ></img>
         </div>
         <Navbar flags={1} />
 

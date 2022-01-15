@@ -7,24 +7,13 @@ export default class Loader extends Component {
             <div>
 
                 <div>
-                    <video autoPlay muted loop
-                        style={{
-                            position: "absolute",
-                            objectFit: "cover",
-                            width: "100%",
-                            height: "100%",
-                            zIndex: "-1",
-                            position: "fixed",
-                        }}
-                    >
-                        <source src={AnnVideo} type="video/mp4" />
-                    </video>
+                   <img style={{height:"100vh",width:"100vw",position:"fixed",objectFit:"cover"}} src="https://lh3.googleusercontent.com/tzLE6Ohw58ZMXnFxwKI8yumKCYTPHKdTGWJnMFulPSlVkmQBXUPfx4lJjGpZbp6cEzAEtdxnfE6jGzVUC_OqzMXIobyc6X8uoc0HMEFB9pMyHi0HtwMxgfK_Ixj9ZzR10KX8zpgd=w2400"></img>
                 </div>
 
                 {
                     setTimeout(() => {
                         this.props.history.push('/home')
-                    }, (3000))
+                    }, (2000))
                 }
             </div>
         )

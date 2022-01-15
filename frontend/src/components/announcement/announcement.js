@@ -17,7 +17,7 @@ function Announcement(props) {
         position:"fixed",
       }}
       >
-			<source src={ann} type="video/mp4" />
+			<source src="https://lh3.googleusercontent.com/xuaNWfpuuWRneAbPwyxYJzFCGezvH-5VDIRQGS96-b1v08HND_SXYntmNyorQ1M3HH_m11GDjr3Unw2I1og8Qcv1mxeKnILGMNbH2cFNZnW_CCxCkU8e_Z1pfGgnClHrCCUOcc0e=w2400" type="video/gif" />
       </video>
       {/* <HeaderNav/> */}
       <Navbar/>
@@ -46,19 +46,8 @@ function Announcement(props) {
       </div>
     </div>) : (
     <div className="announcement_main">
-      <video autoPlay muted loop
-      style={{
-        position:"absolute",
-        objectFit:"cover",
-        width:"100%",
-        height:"100%",
-        zIndex:"-1",
-        position:"fixed"
-      }}
-      >
-			<source src={ann} type="video/mp4" />
-      </video>
-      {/* <HeaderNav/> */}
+      <img className='announcement-bg-image' src="https://lh3.googleusercontent.com/xuaNWfpuuWRneAbPwyxYJzFCGezvH-5VDIRQGS96-b1v08HND_SXYntmNyorQ1M3HH_m11GDjr3Unw2I1og8Qcv1mxeKnILGMNbH2cFNZnW_CCxCkU8e_Z1pfGgnClHrCCUOcc0e=w2400"></img>
+            {/* <HeaderNav/> */}
       <Navbar/>
       <div className="announcement_header-ann">
         Announcement

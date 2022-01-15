@@ -2,18 +2,20 @@ import "../../css/portfolio-landing.css";
 import ashu from "../../imgs/god/ashutosh.jpeg";
 import astro from "../../imgs/astro.png";
 import {  ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
+// import navbar from "../"
 
 const Landing = () => {
   return (
     <div className="main-11">
+      
       <div className="landing-header">
-        {/* <img  className="landing,-bg-astro" src={astro}></img> */}
+        {/* <img  className="landing-bg-astro" src={astro}></img> */}
         <h1> Rotracter 2021-2022</h1>
         <div className="member-landing_search">
           <InputGroup>
             <FormControl
               className="memberlanding_inputfield"
-              placeholder="Search"
+              placeholder="Search Rotracter"
               aria-label="Username"
             />
           </InputGroup>

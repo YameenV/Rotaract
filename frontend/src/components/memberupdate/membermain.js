@@ -7,6 +7,7 @@ import MemberPic from "../../imgs/ashutosh1.jpg";
 import Navbar from '../navbar/navbar';
 import mem from '../../background/memupdate.mp4'
 
+
 class MemberContainer extends Component {
 
     state = {

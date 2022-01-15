@@ -11,7 +11,7 @@ import neu from "../../background/prot.mp4"
 class Leaderboard_dekstop extends Component {
   state = {
     inputVal: "",
-    indidata: []
+    indidata: []  
   };
 
   setVal = (e) => {

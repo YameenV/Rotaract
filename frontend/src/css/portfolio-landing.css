@@ -1,15 +1,18 @@
 .main-11{
     background: linear-gradient(180deg, #000917 0%, #0066FF 100%);
+    
     min-width: 100vw;
     min-height: 100vh;
 }
 .landing-header{
-    /* background:url("../imgs/astro.png") no-repeat    ;
-    object-fit: str;
+    background:url("../imgs/astro.png") no-repeat ;
+    mix-blend-mode: lighten;
     background-size: cover;
-    background-repeat: no-repeat; */
-    width: 100%;
-    /* height: 60vh; */
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    /* background-attachment: fixed; */
+    min-width: 100vw;
+    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -18,11 +21,19 @@
 }
 .landing-bg-astro{
     width: 100vw;
+    position: fixed;
 }
 .landing-header h1{
     font-size: 5vw;
+    color: white;
+}
+.member-landing_search{
+    /* position: absolute; */
+    /* bottom: 30px; */
+    width: 70vw;
 }
 .landing-containers{
+    /* background-color: grey; */
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
@@ -31,7 +42,7 @@
 }
 .member-div-1 {
     margin: 10px;
-    width: 18vw;
+    width: 200px;
 
     display: flex;
     flex-direction: column;

@@ -3,6 +3,7 @@
 
 .event_main{
     /* background:linear-gradient(3.97deg, #0066FF 2.93%, #000917 96.58%) fixed; */
+    /* background: linear-gradient(180deg, #000917 18.33%, #0066FF 59.59%, #ADD7F2 100%); */
     min-width: 100vw;
     min-height: 100vh;     
     display: flex;
@@ -39,7 +40,7 @@
     font-size: 1.7rem;
     margin-top: 0.5vw;
     margin-bottom: 0.2vw;
-    color:rgb(236, 118, 22);
+    color: white;
 }
 
     
@@ -48,7 +49,7 @@
 
 .wrapper header h1{
     font-size: 80px;
-    color: white;
+    color: skyblue;
     margin-top: 0.1vw;
     margin-bottom: 0.2vw;
 }
@@ -78,6 +79,8 @@
 
 .card{
     padding: 15px;
+    backdrop-filter: blur(7px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
     background-color: rgba(255, 255, 255, 0.18);
     border: rgba(186,186,186,0.4) solid 1.5px;
     border-radius: 25px;

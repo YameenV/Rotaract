@@ -2,6 +2,7 @@ import '../../css/event.css'
 import eve from '../../background/event.mp4'
 import Navbar from '../navbar/navbar'
 import testimg from "../../imgs/Ashutoast.jpg";
+import goldennebula from "../../imgs/Golden_Nebula_Event.mp4";
 const Eventlanding = (props) => {
   let data = props.data;
   console.log(data);
@@ -55,9 +56,10 @@ const Eventlanding = (props) => {
           position: "fixed",
           left: "0",
           overflow: "hidden",
+          // mixBlendMode: "screen"
         }}
       >
-        <source src={eve} type="video/mp4" />
+        <source src={goldennebula} type="video/mp4" />
       </video>
 
       <div class="wrapper">
