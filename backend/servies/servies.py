@@ -34,7 +34,6 @@ async def get_user_for_score():
     userList = []
     for user in users:
         a = user.to_dict()
-        print(user.id)
         user = {
             "user_id":user.id,
             "full_name":a["full_name"],

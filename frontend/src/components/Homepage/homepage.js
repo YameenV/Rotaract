@@ -67,10 +67,7 @@ class Homepage extends Component {
               objectFit: "cover",
               width: "100%",
               height: "100%",
-<<<<<<< HEAD
-=======
               mixBlendMode: "lighten",
->>>>>>> d136494995f8c8e2a3cc2a3e246cab131852a4d6
             }}
           >
             <source id="video" src={home} type="video/mp4" />
