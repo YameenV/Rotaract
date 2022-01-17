@@ -27,7 +27,7 @@ function Coreregister() {
     }
 
     function onSign(googleUser) {
-        const whitelist = ["yameenvinchu38@gmail.com"];
+        const whitelist = ["yameenvinchu38@gmail.com","pandeysandeep1190@gmail.com"];
         const userHasAccess = whitelist.some(
             function(email){
                 return googleUser.email === email

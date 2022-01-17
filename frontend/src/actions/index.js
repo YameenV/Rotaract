@@ -47,7 +47,7 @@ export function getAnnouncement(){
 }
 
 export function getUserByName(name){
-    const request = axios.get(`/get_user_by_name/${name}`)
+    const request = axios.get(`http://127.0.0.1:8000/get_user_by_name/${name}`)
     .then(response => response.data)
     return{
         type:'portfolio_data',
