@@ -95,8 +95,8 @@ export function AddTeam(tdata){
 }
 
 
-export function createUser(udata){
-    const request = axios.post('/create_user',udata)
+export function createUser(udata,id){
+    const request = axios.post(`http://127.0.0.1:8000/update_user/${id}`,udata)
     .then(response=>response.data)
     return{
         type:'Create_user',

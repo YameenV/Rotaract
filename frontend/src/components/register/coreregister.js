@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../../css/core_login.css'
+import { useHistory } from 'react-router-dom'
 import Navbar from '../navbar/navbar'
 import {auth} from '../firebase/config.js'
 import {signInWithPopup,GoogleAuthProvider,getIdToken} from "firebase/auth";
@@ -7,9 +8,9 @@ import {signInWithPopup,GoogleAuthProvider,getIdToken} from "firebase/auth";
 
 function Coreregister() {
     const [user, setuser] = useState([])
-
-
-    const SignWithGoogle = () => {
+    const [authenticated,SetAuthenticated] = useState('')
+    let history = useHistory();
+    const SignWithGoogle = (props) => {
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider)
         .then((re) => {
@@ -17,8 +18,14 @@ function Coreregister() {
                 throw new Error("Not a Rotaract Memeber")
             }
             else{
-                console.log(re)
-                console.log("Token",re._tokenResponse.idToken)
+              console.log(re.user)
+              SetAuthenticated(re._tokenResponse.idToken)
+              history.push(
+                {
+                  pathname: '/member',
+                  state: { name:re.user.displayName, email:re.user.email, photo: re.user.photoURL, uid:re.user.uid }
+                }
+              )
             }
         })
         .catch((err) => {
