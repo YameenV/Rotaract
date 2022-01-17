@@ -15,6 +15,7 @@ class About extends Component {
             describe,
             yourself_ten_years
         }
+        this.props.submitter();
         this.props.pers('about',obj)
         
     }

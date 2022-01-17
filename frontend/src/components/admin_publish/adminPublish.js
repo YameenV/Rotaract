@@ -14,7 +14,9 @@ class AdminPublish extends Component {
     event: "",
     imglink: "",
     date:"",
-    message:""
+    message:"",
+    types:"",
+    evtTitle:""
   };
 
   submitAnnouncement = (e) => {
@@ -38,7 +40,16 @@ class AdminPublish extends Component {
       title: this.state.etitle,
       name:'Abhinav',
       description: this.state.event,
-      img: this.state.imglink
+      img: this.state.imglink,
+      types:this.state.types,
+      event_link:this.state.event_link
+      
+      /*name: str 
+    title: str
+    types: str
+    description: str
+    img:str
+    event_link:str*/
 
     };
     this.props.createEvent(event)
@@ -124,6 +135,28 @@ class AdminPublish extends Component {
                 onChange={(e)=>this.setState({message:e.target.value})}
                 />
               </div>
+
+              <div>
+                <input 
+                type="text"
+                className="public-ann_title"
+                placeholder="Type"
+                value={this.state.types}
+                onChange={(e)=>this.setState({types:e.target.value})}
+                />
+              </div>
+
+              <div>
+                <input 
+                type="text"
+                className="public-ann_title"
+                placeholder="eventTitke"
+                value={this.state.evtTitle}
+                onChange={(e)=>this.setState({evtTitle:e.target.value})}
+                />
+              </div>
+
+
               <div>
                 <textarea
                   className="public-ann_text"

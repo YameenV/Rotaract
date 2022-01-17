@@ -20,9 +20,9 @@ app.add_middleware(
 
 # User Routes
 
-@app.post('/create_user')
-async def create_user(user: model.User):
-    return await servies.create_user(user)
+@app.get('/user_alreadythere/{id}')
+async def user_alreadythere(id:str):
+    return await servies.user_alreadythere(id)
 
 @app.put('/update_user/{id}')
 async def update_user(id:str, user: model.User):

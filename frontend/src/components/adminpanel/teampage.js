@@ -22,7 +22,8 @@ class Teampage extends Component {
     namesarray: [],
     FileLength: 0,
     inputVal: "",
-    score:''
+    score:"",
+    season:""
   };
 
   addTeam = (e) => {
@@ -54,10 +55,9 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
                 + currentdate.getHours() + ":"  
                 + currentdate.getMinutes() + ":" 
                 + currentdate.getSeconds();
-                console.log(datetime)
                
    var obj = {
-    season_name: 'season 1',
+    season_name: this.state.season,
     team_name: this.state.teamname,
     captain_name: this.state.captainname,
     date_time: datetime
@@ -202,6 +202,14 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
                 type="text"
                 placeholder="Score"
               />
+              <input
+                value={this.state.season}
+                onChange={(e) => this.setState({ season: e.target.value })}
+                type="text"
+                placeholder="Season"
+              />
+
+              
 
               <button onClick={this.addTeam}>Add</button>
 
