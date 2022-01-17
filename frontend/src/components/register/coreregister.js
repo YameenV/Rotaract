@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../../css/core_login.css'
 import Navbar from '../navbar/navbar'
 import {auth} from '../firebase/config.js'
-import {signInWithPopup,GoogleAuthProvider} from "firebase/auth";
+import {signInWithPopup,GoogleAuthProvider,getIdToken} from "firebase/auth";
 
 
 function Coreregister() {
@@ -18,6 +18,7 @@ function Coreregister() {
             }
             else{
                 console.log(re)
+                console.log("Token",re._tokenResponse.idToken)
             }
         })
         .catch((err) => {

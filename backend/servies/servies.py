@@ -10,10 +10,13 @@ tz_NY = pytz.timezone('Asia/Kolkata')
 datetime_NY = datetime.now(tz_NY)
 
 # User
-async def create_user(user: model.User):
-    try:
-        db.collection("User").add(user.dict())
-        return "Sucess"
+async def user_alreadythere(userId:str):
+    try: 
+        users = db.collection("User").get()
+        for user in users:
+            if userId == user.id:
+                return "userexist"
+        return "notfound"
     except: return "Failed"
     
 async def update_user(user:model.User, userId:str):
