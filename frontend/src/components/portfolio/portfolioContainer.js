@@ -5,10 +5,7 @@ import * as actions from "../../actions/index";
 import "../../css/portfolio.css"
 import Navbar from "../navbar/navbar"
 import port from "../../background/PortfolioQuasar.mp4"
-<<<<<<< HEAD
 import bgastro from "../../background/astro_bw.mp4"
-=======
->>>>>>> 51198f3ed644510614e22d4901f71d9ab9376ac3
 
 class PortFolioContainer extends Component {
 
