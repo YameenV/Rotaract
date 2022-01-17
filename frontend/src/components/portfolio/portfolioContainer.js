@@ -5,8 +5,7 @@ import * as actions from "../../actions/index";
 import "../../css/portfolio.css"
 import Navbar from "../navbar/navbar"
 import port from "../../background/PortfolioQuasar.mp4"
-import HeaderNav from "../header/headerNav";
-import FontAwesome from "react-fontawesome";
+import bgastro from "../../background/astro_bw.mp4"
 
 class PortFolioContainer extends Component {
   state = {
@@ -145,7 +144,7 @@ class PortFolioContainer extends Component {
             position: "fixed",
           }}
         >
-          <source src={port} type="video/mp4" />
+          <source src={bgastro} type="video/mp4" />
         </video>
         <Navbar />
 

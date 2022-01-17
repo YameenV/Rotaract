@@ -16,6 +16,7 @@ import Coreregister from './components/register/coreregister'
 import Membership from './components/membership/memberRegister'
 import Loader from './components/loadpage/loadder'
 import Landing from './components/portfolio-landing/portfolio-landing'
+import footer from './components/footer/footer'
 
 const Routes = () =>{
     return(
@@ -37,6 +38,7 @@ const Routes = () =>{
             <Route exact path = "/corelogin" component={Coreregister}/>
             <Route exact path = "/mem" component={Membership}/>
             <Route exact path = "/pep" component={Landing}/>
+            <Route exact path = "/footer" component={footer}/>
             </Switch>
         </div>
     )
