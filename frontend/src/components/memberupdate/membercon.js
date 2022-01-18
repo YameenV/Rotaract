@@ -8,10 +8,8 @@ export default function MemberMain() {
     return (
         <div>
             {
-                state.email ? (<MemberContainer things = {state}/>):(
-                    <div>
-                        User denied
-                    </div>
+                state ? (<MemberContainer things = {state}/>):(
+                    <MemberContainer/>
                 )
             }
             
