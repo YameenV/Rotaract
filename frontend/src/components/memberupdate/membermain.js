@@ -18,7 +18,8 @@ class MemberContainer extends Component {
         fourthColor:'transparent',
         fiveColor:'transparent',
         sixColor:'transparent',
-        seventhColor:'transparent'
+        seventhColor:'transparent',
+        uid:this.props.things.uid
     }
 
 
@@ -175,8 +176,13 @@ class MemberContainer extends Component {
     }
 
     sendUser = (data) => {
+        console.log(data)
         if (data) {
-            this.props.createUser(data)
+            if(this.state.uid){
+
+                this.props.createUser(data,this.state.uid)
+            }
+            
         }
     }
 
@@ -187,7 +193,8 @@ class MemberContainer extends Component {
     }
 
     render() {
-
+        let data = this.props.things
+        console.log(this.props)
         return (
             <div className="main_member">
                 <video autoPlay muted loop
@@ -208,11 +215,18 @@ class MemberContainer extends Component {
                 <Navbar />
 
                 <div className="member_logo">
-                    <img className="member_rotimage" src={MemberPic} />
+                    {data.photo ? (
+                        <img className="member_rotimage" alt="profile" src={data.photo} />
+                    ):(
+                        <div>
+                            ok
+                        </div>
+                    )}
+                    
                 </div>
                 <div className="member_container">
                     {/* <div className="main_member_name"> */}
-                    <div className="member_name">Ashutosh Upadhyay</div>
+                    <div className="member_name">{data.name}</div>
                     <div className="member_status">President</div>
                     {/* </div> */}
                     <div className="main_data">

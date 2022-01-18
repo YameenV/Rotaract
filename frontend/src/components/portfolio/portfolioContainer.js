@@ -5,10 +5,19 @@ import * as actions from "../../actions/index";
 import "../../css/portfolio.css"
 import Navbar from "../navbar/navbar"
 import port from "../../background/PortfolioQuasar.mp4"
-import HeaderNav from "../header/headerNav";
-import FontAwesome from "react-fontawesome";
+import bgastro from "../../background/astro_bw.mp4"
 
 class PortFolioContainer extends Component {
+
+/* about: {describe: 'I am 20 yrs old', yourself_in_ten_years: 'I cant see the future'}
+contacts: {email_address: 'somefakeemail@123', github: 'githibAccount21', linkedin: 'linkednaccount', mobile_number: '941242587', twitter: 'fakeTwitter', …}
+education_background: {currently_studying: 'college', certification_done: Array(1), future_plan: Array(1), book: Array(1)}
+full_name: "yameen"
+otherinterest: {Interest: Array(1), hobbies: Array(1)}
+personalinfo: {age: 20, bloodgroup: 'A+', fullname: '', gender: 'male', district: 'palghar'}
+professionalskill: {achievement: Array(1), artical: Array(1), experience: 4, field_of_interest: Array(1), future_goal: 'NA', …}
+rotractClub: {joning_reason: 'exciting', avenue: Array(1), current_posi */
+
   state = {
     full_name: "",
     personalinfo: {
@@ -62,18 +71,24 @@ class PortFolioContainer extends Component {
 
   findRtr = (e) => {
     e.preventDefault();
-    console.log(this.state.full_name);
+  
     if (this.state.full_name !== "") {
+      console.log(this.state.full_name)
       this.props.getUserByName(this.state.full_name);
     }
   };
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.portdata.userData) {
-      let data = nextProps.portdata.userData[0];
-      let checker = nextProps.portdata.userData.response;
-      if (checker === undefined) {
-        this.setState({
+    let checker = nextProps.portdata.userData.response
+    if(checker.status === 404){
+      alert('User does not exists')
+      window.location.reload()
+    }
+    if(nextProps){
+    let data = nextProps.portdata.userData;
+  
+      if(data){
+      this.setState({
           personalinfo: {
             age: data.age,
             bloodgroup: data.blood_group,
@@ -120,15 +135,22 @@ class PortFolioContainer extends Component {
             number_of_year: data.rotractClub.number_of_year,
             suggestion: data.rotractClub.suggestion,
             testimonial: data.rotractClub.testimonial,
-          },
-        });
-      } else {
-        let fourofour = checker.data.detail;
-        alert(fourofour);
-      }
-    }
+          }
+          
+    })
   }
+
+}
+
+  }
+    
+        
+         
+         
+  
+          
   render() {
+    
     return (
       <div className="pro-main">
         <video
@@ -145,7 +167,7 @@ class PortFolioContainer extends Component {
             position: "fixed",
           }}
         >
-          <source src={port} type="video/mp4" />
+          <source src={bgastro} type="video/mp4" />
         </video>
         <Navbar />
 
@@ -161,9 +183,11 @@ class PortFolioContainer extends Component {
               <i class="fas fa-search"></i>
             </button>
           </form>
-          {this.state.personalinfo.age ? (
+          {this.state.rotractClub ? (
             <Portfolio alldata={this.state} />
-          ) : null}
+          ) : <div>
+            Not found
+            </div>}
         </div>
       </div>
     );
@@ -172,7 +196,7 @@ class PortFolioContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    portdata: state.portfolio,
+    portdata: state.portfolio
   };
 };
 

@@ -34,6 +34,8 @@ import Navbar from "../navbar/navbar";
 import { Link } from "react-router-dom";
 import home from "../../background/homepage.mp4";
 
+import Footer from "../footer/footer";
+
 class Homepage extends Component {
   state = {
     teamdata: [],
@@ -62,7 +64,7 @@ class Homepage extends Component {
           <img className="earth_div_image" src="https://lh3.googleusercontent.com/tZSgaCiE2J4kPEFu92hIeT3P9nfHkoNuKHiG5BHhogcF-mnHQp1tCpooiyfMFAdjwM_XyHCvYFj5-RtDtKPNlOtzJ3dI64_sv-rBfHuovNDjOyQRo39e-ruAMBlZtJwz75wUJbUC=w2400" ></img>
         </div>
         <Navbar flags={1} />
-
+          
         <div className="home_main-2">
           <div className="first_container">
             <div className="container_header">
@@ -137,24 +139,24 @@ class Homepage extends Component {
 
               <div className="row_3_content1">
                 <div className="row_3_image1_div">
-                  <img className="row_3_image1" src={Amey} alt=""></img>
+                  <img className="row_3_image1" src={Mihir} alt=""></img>
                 </div>
                 <div className="row_3_content1_Name">
-                  <h1>Rtr.Amey Desai</h1>
+                  <h1>Rtr.Mihir Parmar</h1>
                 </div>
                 <div className="row_3_content1_position">
-                  <h2>Jt.Secretary</h2>
+                  <h2>Finance Director</h2>
                 </div>
               </div>
               <div className="row_3_content2">
                 <div className="row_3_image2_div">
-                  <img className="row_3_image2" src={Shreya} alt=""></img>
+                  <img className="row_3_image2" src={Jaii} alt=""></img>
                 </div>
                 <div className="row_3_content2_Name">
-                  <h1>Rtr.Shreya Patil</h1>
+                  <h1>Rtr.Jaii Prajapat</h1>
                 </div>
                 <div className="row_3_content2_position">
-                  <h2>Jt.Secretary</h2>
+                  <h2>HRD</h2>
                 </div>
               </div>
               <div className="row_3_content3">
@@ -171,24 +173,24 @@ class Homepage extends Component {
 
               <div className="row_4_content1">
                 <div className="row_4_image1_div">
-                  <img className="row_4_image1" src={Mihir}></img>
+                  <img className="row_4_image1" src={Amey}></img>
                 </div>
                 <div className="row_4_content1_Name">
-                  <h1>Rtr.Mihir Parmar</h1>
+                  <h1>Rtr.Amey Desai</h1>
                 </div>
                 <div className="row_4_content1_position">
-                  <h2>Finance Director</h2>
+                  <h2>Jt.Secretary</h2>
                 </div>
               </div>
               <div className="row_4_content2">
                 <div className="row_4_image2_div">
-                  <img className="row_4_image2" src={Jaii}></img>
+                  <img className="row_4_image2" src={Shreya}></img>
                 </div>
                 <div className="row_4_content2_Name">
-                  <h1>Rtr.Jai Prajapat</h1>
+                  <h1>Rtr.Shreya Patil</h1>
                 </div>
                 <div className="row_4_content2_position">
-                  <h2>HRD</h2>
+                  <h2>Jt.Secretary</h2>
                 </div>
               </div>
               <div className="row_4_content3">
@@ -216,9 +218,9 @@ class Homepage extends Component {
             </div>
           </div>
 
-          {/* <div className="moon_div">
-            <img className="moon_image" src={Moon}></img>
-          </div> */}
+            {/* <div className="moon_div">
+              <img className="moon_image" src={Moon}></img>
+            </div> */}
           <div className="home_announcement">
             <div className="annoncement_header">
               <h1>Announcements</h1>
@@ -558,9 +560,7 @@ class Homepage extends Component {
         </div>
 
         <footer className="footer">
-          <div className="footer_div">
-            <h1>footer</h1>
-          </div>
+          <Footer/>
         </footer>
       </div>
     );
