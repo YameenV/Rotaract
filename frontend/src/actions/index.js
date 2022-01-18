@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+
+
 export function getLeaderUserData(){
     const request = axios.get('/get_user_leaderboard')
     .then(response=>response.data)
@@ -100,6 +102,25 @@ export function createUser(udata,id){
     .then(response=>response.data)
     return{
         type:'Create_user',
+        payload:request
+    }
+}
+
+
+export function getUserForScore(){
+    const request = axios.get('http://127.0.0.1:8000/get_user_for_score')
+    .then(response=>response.data)
+    return{
+        type:'get_users_for_score',
+        payload:request
+    }
+}
+
+export function incrementUserScore(data){
+    const request = axios.post('http://127.0.0.1:8000/increment_user_score',data)
+    .then(response=>response.data)
+    return{
+        type:'increment_score_individual',
         payload:request
     }
 }

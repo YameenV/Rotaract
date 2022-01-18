@@ -11,6 +11,12 @@ class MemberNames extends Component {
     this.props.deleteName(key)
   }
   
+  deleteNameSearch = (e, key)=>{
+    e.preventDefault()
+    this.props.deleteSearchName(key)
+  }
+
+
 
   processNames = (recData, L) => {
     let EndArray = [];
@@ -54,8 +60,27 @@ return (
 
   render() {
     let recData = this.props.nameData;
+    let seachData = this.props.searchname
+    
     let L = this.props.fileLength;
-    return (
+    return (seachData) ? (
+      <div>
+        {
+          seachData.map((item,i)=>(
+            <div key={i}>
+              <span className="csv_members">
+        {item.full_name}
+        <button onClick={(e) => this.deleteNameSearch(e, i)} className="csv_dltbtn">
+          X
+        </button>
+      </span>
+            </div>
+          ))
+        }
+        
+        
+      </div>
+    ):(
       <div>{recData.length > 0 ? this.processNames(recData, L) : null}
       
       <div>
@@ -63,7 +88,9 @@ return (
       </div>
       
       </div>
-    );
+    )
+      
+   
   }
 }
 export default MemberNames;
