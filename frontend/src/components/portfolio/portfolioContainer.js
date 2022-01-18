@@ -5,6 +5,7 @@ import * as actions from "../../actions/index";
 import "../../css/portfolio.css"
 import Navbar from "../navbar/navbar"
 import port from "../../background/PortfolioQuasar.mp4"
+import bgastro from "../../background/astro_bw.mp4"
 
 class PortFolioContainer extends Component {
 
@@ -166,7 +167,7 @@ rotractClub: {joning_reason: 'exciting', avenue: Array(1), current_posi */
             position: "fixed",
           }}
         >
-          <source src={port} type="video/mp4" />
+          <source src={bgastro} type="video/mp4" />
         </video>
         <Navbar />
 

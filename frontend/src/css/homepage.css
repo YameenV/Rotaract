@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 .home-main {
-  background: radial-gradient(539.67% 76.42% at 0% 8.68%, #000000 0%, #0066FF 8.41%, #000917 13.85%, #0066FF 55.21%, #ADD7F2 97.92%), #000917;
+  background:url("../background/Artboard.jpg" ), radial-gradient(539.67% 76.42% at 0% 8.68%, #000000 0%, #0066FF 8.41%, #000917 13.85%, #0066FF 55.21%, #ADD7F2 97.92%), #000917;
   background-repeat: no-repeat;
   background-blend-mode: screen;
   background-size: 100%;
@@ -25,6 +25,7 @@
 }
 .earth_div_image{
   width: 100vw;
+  height: 720px;
 }
 .earth_image {
 
@@ -972,7 +973,7 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-  height: 20vw;
+  /* height: 20vw; */
 }
 .footer_div h1 {
   font-family: Helvetica;
