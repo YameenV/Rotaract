@@ -22,7 +22,7 @@ class Individualpage extends Component {
     FileLength: 0,
     inputVal: "",
     searchNameArray:[],
-    userObj:[]
+    
   };
   addTeam = (e) => {
     e.preventDefault();
@@ -47,36 +47,58 @@ class Individualpage extends Component {
   sendData = (e) => {
   e.preventDefault();
 
-  let obj = {
-          
-    user: [
-      {
-        user_id: '',
-        full_name: '',
-        current_position: '',
-        img: ''
-      }
-    ],
-    score: {
-      user_id: "",
-      full_name:  "",
-      current_position: "",
-      img: "",
-      score: this.state.points,
-      month: this.state.month,
-      day: this.state.day,
-      year: this.state.year,
-      increment_type: this.state.incrementType,
-      reason: this.state.reason
-    }
-  }
 
     if(this.state.namesarray.length > 0){
       
-     this.state.userObj.map((user)=>{
-       obj.user.push(user)
-       if(obj.user.length == this.state.userObj.length+1){
+      let obj = {
+          
+        user: [
+          {
+            user_id: 'adpmgp',
+            full_name: '',
+            current_position: 'gadg',
+            img: 'egsdswgv'
+          }
+        ],
+        score: {
+          user_id: "faefad",
+          full_name:  "af",
+          current_position: "gsgdsr",
+          img: "grdew",
+          score: this.state.points,
+          month: this.state.month,
+          day: this.state.day,
+          year: this.state.year,
+          increment_type: this.state.incrementType,
+          reason: this.state.reason
+        }
+      }
+
+     this.state.namesarray.map((user)=>{
+       
+   let object = {
+        user_id: 'afa',
+        full_name: user,
+        current_position: 'gadg',
+        img: 'egsdswgv'
+      }
+       obj.user.push(object)
+       if(obj.user.length == this.state.namesarray.length+1){
+         console.log('hello')
         obj.user.splice(0,1)
+        let object2 = {
+          user_id: "faefad",
+          full_name:  "daip",
+          current_position: "gsgdsr",
+          img: "grdew",
+          score: this.state.points,
+          month: this.state.month,
+          day: this.state.day,
+          year: this.state.year,
+          increment_type: this.state.incrementType,
+          reason: this.state.reason
+        }
+        obj.score = object2
         this.props.incrementUserScore(obj)
        }
      })
@@ -84,6 +106,29 @@ class Individualpage extends Component {
     }
     else if(this.state.searchNameArray.length > 0){
       
+      let obj = {
+          
+        user: [
+          {
+            user_id: '',
+            full_name: '',
+            current_position: '',
+            img: ''
+          }
+        ],
+        score: {
+          user_id: "",
+          full_name:  "",
+          current_position: "",
+          img: "grdew",
+          score: this.state.points,
+          month: this.state.month,
+          day: this.state.day,
+          year: this.state.year,
+          increment_type: this.state.incrementType,
+          reason: this.state.reason
+        }
+      }
     
       this.state.searchNameArray.map((item)=>{
         let object = {
@@ -158,22 +203,12 @@ class Individualpage extends Component {
         console.log(KeysArr)
         if (KeysArr.includes("Full Name")) {
           this.setState({
-            userObj: [...this.state.userObj, {
-              user_id: eachObj['user_id'],
-              full_name: eachObj['Full Name'],
-              current_position: eachObj['current_position'],
-              img: eachObj['img\r']
-            }],
               namesarray:[...this.state.namesarray, eachObj['Full Name']],
             FileLength,
           });
         } else if (KeysArr.includes("Name")) {
           this.setState({
-            userObj: [...this.state.userObj, {
-              user_id: eachObj['user_id'],
-              full_name: eachObj['Name'],
-              current_position: eachObj['current_position'],
-              img: eachObj['img\r']}],
+
               namesarray:[...this.state.namesarray, eachObj['Name']],
             FileLength,
           });
@@ -190,12 +225,11 @@ class Individualpage extends Component {
   };
 
   deleteItem = (key) => {
-    let cloneArray1 = [...this.state.userObj];
+    
     let cloneArray2 = [...this.state.namesarray];
-    cloneArray1.splice(key, 1);
+
     cloneArray2.splice(key,1)
     this.setState({
-      userObj: cloneArray1,
       namesarray:cloneArray2
     });
   };
@@ -222,7 +256,6 @@ class Individualpage extends Component {
   }
 
   render() {
- console.log(this.state.userObj)
  console.log(this.props)
     return (this.props.portdata) ? (
       <div className="jayindi_main">
