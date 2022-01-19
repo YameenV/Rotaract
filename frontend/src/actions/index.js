@@ -3,6 +3,7 @@ import axios from 'axios'
 
 
 
+
 export function getLeaderUserData(){
     const request = axios.get('/get_user_leaderboard')
     .then(response=>response.data)
@@ -131,6 +132,15 @@ export function getTeamsForScore(){
     .then(response=>response.data)
     return{
         type:'get_teams',
+        payload:request
+    }
+}
+
+export function incremenTeamScore(data){
+    const request = axios.post('http://127.0.0.1:8000/increment_team_score',data)
+    .then(response=>response.data)
+    return{
+        type:'increment_team_score',
         payload:request
     }
 }

@@ -14,9 +14,6 @@ class Teampage extends Component {
     reason: "",
     teams: [],
     teamname: "",
-    year:"",
-    month:"",
-    day:"",
     captainname: "",
     captainarray: [],
     namesarray: [],
@@ -37,14 +34,44 @@ class Teampage extends Component {
             teamsarray:nextProps.portdata.userData
           })
     }
+    if(nextProps.portdata){
+      if(nextProps.portdata.userData === 'Sucess'){
+        window.location.reload()
+        alert('Score updated')
+      }
+    }
   }
 
   addTeam = (e) => {
     e.preventDefault();
 
+    var currentdate = new Date(); 
+    var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/" 
+                    + currentdate.getFullYear() + " @ "  
+                    + currentdate.getHours() + ":"  
+                    + currentdate.getMinutes() + ":" 
+                    + currentdate.getSeconds();
+    
+        let time = datetime.split('/')
+        let day = time[0]
+        let month = time[1]
+        let year = time[2].split(' @')
+        let newyear = year[0]
+
+    let cloneAray = [...this.state.teams]
+    let obj = {
+      team_id: 'oxvz87-381xzvq3',
+    reason: this.state.reason,
+    team_name: this.state.teamname,
+    captain_name: this.state.captainname,
+    day:day,
+    year:newyear,
+    month:month,
+    score:this.state.score
+    }
+    cloneAray.push(obj)
     this.setState({
-      teams: [...this.state.teams, this.state.teamname],
-      captainarray: [...this.state.captainarray, this.state.captainname],
+      teams:cloneAray
     });
   };
 
@@ -61,37 +88,65 @@ class Teampage extends Component {
   };
   sendData = (e) => {
     e.preventDefault();
+    if(this.state.teamsarray.length > 0){
+      
+      if(this.state.teamsarray.length > 1){
+        alert('You can only update score of one team at a time')
+        this.setState({
+          teamsarray:[]
+        })
+      }
+      else{
+        let sender = this.state.teamsarray[0]
+        this.setState({
+          captain_name:sender.captainname,
+          team_name:sender.teamname
+        })
+        var currentdate = new Date(); 
+        var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/" 
+                        + currentdate.getFullYear() + " @ "  
+                        + currentdate.getHours() + ":"  
+                        + currentdate.getMinutes() + ":" 
+                        + currentdate.getSeconds();
+        
+            let time = datetime.split('/')
+            let day = time[0]
+            let month = time[1]
+            let year = time[2].split(' @')
+            let newyear = year[0]
     
-    var currentdate = new Date(); 
-var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/" 
-                + currentdate.getFullYear() + " @ "  
-                + currentdate.getHours() + ":"  
-                + currentdate.getMinutes() + ":" 
-                + currentdate.getSeconds();
-               
-   var obj = {
-    season_name: this.state.season,
-    team_name: this.state.teamname,
-    captain_name: this.state.captainname,
-    date_time: datetime
-   }
-   this.props.AddTeam(obj)
-  
+        let obj = {
+          team_id: 'oxvz87-381xzvq3',
+          reason: this.state.reason,
+          team_name: sender.captain_name,
+          captain_name: sender.captain_name,
+          day:day,
+          year:newyear,
+          month:month,
+          score:this.state.score
+        }
+        console.log(obj)
+        this.props.incremenTeamScore(obj)
+      }
+    
+    }
+    else{
+      if(this.state.teams.length > 1){
+        alert('You can only update score of one team at a time')
+        this.setState({
+          teams:[]
+        })
+      }
+      else{
+        this.props.incremenTeamScore(this.state.teams[0])
+      }
+    
+    }
+
+    
   };
 
-  setDate = (d) => {
-    let date = d.split('-')
-    let year = date[0]
-    let month = date[1]
-    let day = date[2]
-    console.log(date)
-    this.setState({
-      date:d,
-      year,
-      month,
-      day
-    });
-  };
+  
   setToggle2 = (e) => {
     if (this.state.upToggle2) {
       this.setState({
@@ -120,41 +175,7 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
     });
   };
 
-  takeFile = (e) => {
-    const file = e.target.files[0];
-
-    const reader = new FileReader();
-
-    reader.onload = function (e) {
-      const text = e.target.result;
-      const delim = ",";
-      const headers = text.slice(0, text.indexOf("\n")).split(delim);
-      const rows = text.slice(text.indexOf("\n") + 1).split("\n");
-
-      let FileLength = rows.length;
-      const newArray = rows.map((row) => {
-        const value = row.split(delim);
-        const eachObj = headers.reduce((obj, header, i) => {
-          obj[header] = value[i];
-          return obj;
-        }, {});
-        let KeysArr = Object.keys(eachObj);
-        if (KeysArr.includes("Full Name")) {
-          this.setState({
-            namesarray: [...this.state.namesarray, eachObj["Full Name"]],
-            FileLength,
-          });
-        } else if (KeysArr.includes("Name")) {
-          this.setState({
-            namesarray: [...this.state.namesarray, eachObj["Name"]],
-            FileLength,
-          });
-        }
-      });
-    }.bind(this);
-    reader.readAsText(file);
-  };
-
+  
   clearNames = () => {
     this.setState({
       namesarray: [],
@@ -171,10 +192,18 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
     })
 
   }
+
+  deleteItemsearch = (key) =>{
+    let cloneArray = [...this.state.teamsarray]
+    cloneArray.splice(key,1)
+    this.setState({
+      teamsarray:cloneArray
+    })
+  }
  
 
   render() {
-    console.log(this.state.teamsarray)
+    console.log(this.props)
     return (
       <div className="jayteam_main">
         <div className="jayteam_hdr">
@@ -194,8 +223,9 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
         <button onClick={this.setToggle2} className="addteambtn">
           Add team
         </button>
-        {this.state.upToggle2 ? (
-          <div>
+        {this.state.name  ? (
+         <div>
+ <div>
             <form onSubmit={this.sendData}>
               <input
                 value={this.state.teamname}
@@ -216,10 +246,10 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
                 placeholder="Score"
               />
               <input
-                value={this.state.season}
-                onChange={(e) => this.setState({ season: e.target.value })}
+                value={this.state.reason}
+                onChange={(e) => this.setState({ reason: e.target.value })}
                 type="text"
-                placeholder="Season"
+                placeholder="Reason"
               />
 
               
@@ -227,14 +257,15 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
               <button onClick={this.addTeam}>Add</button>
 
               <div className="jayteam_conatiner">
-                {this.state.teams ? (
+                {this.state.teamsarray.length>0 ? (
                   <div className="allteamsselected">
-                    {this.state.teams.map((item, i) => (
+                    {this.state.teamsarray.map((item, i) => (
                       <span className="jayselectedteams">
-                        <span>{item}</span>
+                        <span>{item.team_name}</span>
                         <button
                           className="jayteam_selteambutton"
-                          onClick={(e) => this.deleteItem(i)}
+                          type="button"
+                          onClick={(e) => this.deleteItemsearch(i)}
                         >
                           X
                         </button>
@@ -256,7 +287,69 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
               </div>
             </form>
           </div>
-        ) : null}
+          </div>
+        ) : ( <div>
+          <form onSubmit={this.sendData}>
+            <input
+              value={this.state.teamname}
+              onChange={(e) => this.setState({ teamname: e.target.value })}
+              type="text"
+              placeholder="Team name"
+            />
+            <input
+              value={this.state.captainname}
+              onChange={(e) => this.setState({ captainname: e.target.value })}
+              type="text"
+              placeholder="Captain name"
+            />
+             <input
+              value={this.state.score}
+              onChange={(e) => this.setState({ score: e.target.value })}
+              type="text"
+              placeholder="Score"
+            />
+            <input
+              value={this.state.reason}
+              onChange={(e) => this.setState({ reason: e.target.value })}
+              type="text"
+              placeholder="Reason"
+            />
+
+            
+
+            <button onClick={this.addTeam}>Add</button>
+
+            <div className="jayteam_conatiner">
+              {this.state.teams ? (
+                <div className="allteamsselected">
+                  {this.state.teams.map(({team_name},i) => (
+                    <span className="jayselectedteams">
+                      <span>{team_name}</span>
+                      <button
+                        className="jayteam_selteambutton"
+                        type="button"
+                        onClick={(e) => this.deleteItem(i)}
+                      >
+                        X
+                      </button>
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <div>0 teams selected</div>
+              )}
+              {this.state.teams.length} teams selected
+            </div>
+            <div className="updtrestbtn">
+              <button type="submit">
+                Update
+              </button>
+              <button type="reset" className="resetbtn_jayteam">
+                Reset
+              </button>
+            </div>
+          </form>
+        </div>)}
       </div>
     );
   }
