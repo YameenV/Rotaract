@@ -12,6 +12,10 @@ export default function(state={},action){
 
         case 'increment_score_individual':
             return {...state,userData:action.payload}
+        
+        case 'get_teams':
+            return {...state,userData:action.payload}
+            
 
         default:
             return state

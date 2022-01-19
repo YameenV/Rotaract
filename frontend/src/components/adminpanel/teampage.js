@@ -23,8 +23,21 @@ class Teampage extends Component {
     FileLength: 0,
     inputVal: "",
     score:"",
-    season:""
+    season:"",
+    teamsarray:[]
   };
+
+
+  componentWillMount(){
+    this.props.getTeamsForScore()
+  }
+  componentWillReceiveProps(nextProps){
+    if(nextProps.portdata){
+          this.setState({
+            teamsarray:nextProps.portdata.userData
+          })
+    }
+  }
 
   addTeam = (e) => {
     e.preventDefault();
@@ -161,7 +174,7 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
  
 
   render() {
-    console.log(this.props)
+    console.log(this.state.teamsarray)
     return (
       <div className="jayteam_main">
         <div className="jayteam_hdr">
@@ -251,7 +264,8 @@ var datetime =  currentdate.getDate() + "/"+ (currentdate.getMonth()+1)  + "/"
 
 const mapStateToProps = (state) =>{
   return{
-    tdata:state.team
+    tdata:state.team,
+    portdata:state.portfolio
   }
 }
 
