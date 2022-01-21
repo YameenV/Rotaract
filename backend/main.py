@@ -51,7 +51,7 @@ async def increment_user_score(user:List[model.UserForScore], score: model.Indiv
 async def get_score_by_name(team: model.Team):
     return await servies.create_team(team)
 
-@app.post('/get_team_for_score')
+@app.get('/get_team_for_score')
 async def get_team_for_score():
     return await servies.get_team_for_score()
 

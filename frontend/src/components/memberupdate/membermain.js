@@ -19,7 +19,7 @@ class MemberContainer extends Component {
         fiveColor:'transparent',
         sixColor:'transparent',
         seventhColor:'transparent',
-        uid:this.props.things.uid
+        uid:this.props.things ? this.props.things.uid:null
     }
 
 
@@ -195,67 +195,124 @@ class MemberContainer extends Component {
     render() {
         let data = this.props.things
         console.log(this.props)
-        return (
-            <div className="main_member">
-                <video autoPlay muted loop
-                    style={{
-                        position:"absolute",
-                        objectFit:"cover",
-                        width:"100%",
-                        height:"100%",
-                        position:"fixed",
-                        top:"0",
-                        left:"0",
-                        mixBlendMode:"screen"
-                      }}
-                >
-                    <source src={mem} type="video/mp4" />
-                </video>
+        return (data) ? ( <div className="main_member">
+        <video autoPlay muted loop
+            style={{
+                position:"absolute",
+                objectFit:"cover",
+                width:"100%",
+                height:"100%",
+                position:"fixed",
+                top:"0",
+                left:"0",
+                mixBlendMode:"screen"
+              }}
+        >
+            <source src={mem} type="video/mp4" />
+        </video>
 
-                <Navbar />
+        <Navbar />
 
-                <div className="member_logo">
-                    {data.photo ? (
-                        <img className="member_rotimage" alt="profile" src={data.photo} />
-                    ):(
-                        <div>
-                            ok
-                        </div>
-                    )}
-                    
+        <div className="member_logo">
+            {data.photo ? (
+                <img className="member_rotimage" alt="profile" src={data.photo} />
+            ):(
+                <div>
+                    ok
                 </div>
-                <div className="member_container">
-                    {/* <div className="main_member_name"> */}
-                    <div className="member_name">{data.name}</div>
-                    <div className="member_status">President</div>
-                    {/* </div> */}
-                    <div className="main_data">
+            )}
+            
+        </div>
+        <div className="member_container">
+            {/* <div className="main_member_name"> */}
+            <div className="member_name">{data.name}</div>
+            <div className="member_status">President</div>
+            {/* </div> */}
+            <div className="main_data">
 
-                        <div className="button_div">
-                            <div className="changer_buttons">
-                                <button className="button" style={{backgroundColor:this.state.firstColor}} onClick={(e) => this.changeType(e.target.value)} value="personalinfo">Personal information</button>
-                                <button className="button" style={{backgroundColor:this.state.secondColor}} onClick={(e) => this.changeType(e.target.value)} value="Contact">Contact</button>
-                                <button className="button" style={{backgroundColor:this.state.thirdColor}} onClick={(e) => this.changeType(e.target.value)} value="rotaractclub">Rotaract Club</button>
-                                <button className="button" style={{backgroundColor:this.state.fourthColor}} onClick={(e) => this.changeType(e.target.value)} value="proskilss">Professional Skills</button>
-                                <button className="button" style={{backgroundColor:this.state.fiveColor}} onClick={(e) => this.changeType(e.target.value)} value="edubackground">Educational background</button>
-                                <button className="button" style={{backgroundColor:this.state.sixColor}} onClick={(e) => this.changeType(e.target.value)} value="otherinterest">Other interests</button>
-                                <button className="button" style={{backgroundColor:this.state.seventhColor}} onClick={(e) => this.changeType(e.target.value)} value="about">About</button>
-                            </div>
-                        </div>
-                        <div className="member_line">
-                            <div className="vl"> </div>
-                        </div>
-                        <div className="unknown">
-                            {this.state.typeofupdate !== '' ? (
-                                <LauncherDiv 
-                                typeChanger = {this.changeType}
-                                data={this.state.typeofupdate} sender={this.sendUser} />
-                            ) : (null)}
-                        </div>
+                <div className="button_div">
+                    <div className="changer_buttons">
+                        <button className="button" style={{backgroundColor:this.state.firstColor}} onClick={(e) => this.changeType(e.target.value)} value="personalinfo">Personal information</button>
+                        <button className="button" style={{backgroundColor:this.state.secondColor}} onClick={(e) => this.changeType(e.target.value)} value="Contact">Contact</button>
+                        <button className="button" style={{backgroundColor:this.state.thirdColor}} onClick={(e) => this.changeType(e.target.value)} value="rotaractclub">Rotaract Club</button>
+                        <button className="button" style={{backgroundColor:this.state.fourthColor}} onClick={(e) => this.changeType(e.target.value)} value="proskilss">Professional Skills</button>
+                        <button className="button" style={{backgroundColor:this.state.fiveColor}} onClick={(e) => this.changeType(e.target.value)} value="edubackground">Educational background</button>
+                        <button className="button" style={{backgroundColor:this.state.sixColor}} onClick={(e) => this.changeType(e.target.value)} value="otherinterest">Other interests</button>
+                        <button className="button" style={{backgroundColor:this.state.seventhColor}} onClick={(e) => this.changeType(e.target.value)} value="about">About</button>
                     </div>
                 </div>
+                <div className="member_line">
+                    <div className="vl"> </div>
+                </div>
+                <div className="unknown">
+                    {this.state.typeofupdate !== '' ? (
+                        <LauncherDiv 
+                        typeChanger = {this.changeType}
+                        data={this.state.typeofupdate} sender={this.sendUser} />
+                    ) : (null)}
+                </div>
             </div>
-        )
+        </div>
+    </div>):(
+         <div className="main_member">
+         <video autoPlay muted loop
+             style={{
+                 position:"absolute",
+                 objectFit:"cover",
+                 width:"100%",
+                 height:"100%",
+                 position:"fixed",
+                 top:"0",
+                 left:"0",
+                 mixBlendMode:"screen"
+               }}
+         >
+             <source src={mem} type="video/mp4" />
+         </video>
+
+         <Navbar />
+
+         <div className="member_logo">
+           
+                 <img className="member_rotimage" alt="profile" src={MemberPic} />
+             
+            
+             
+         </div>
+         <div className="member_container">
+             {/* <div className="main_member_name"> */}
+             <div className="member_name">Ashutosh</div>
+             <div className="member_status">President</div>
+             {/* </div> */}
+             <div className="main_data">
+
+                 <div className="button_div">
+                     <div className="changer_buttons">
+                         <button className="button" style={{backgroundColor:this.state.firstColor}} onClick={(e) => this.changeType(e.target.value)} value="personalinfo">Personal information</button>
+                         <button className="button" style={{backgroundColor:this.state.secondColor}} onClick={(e) => this.changeType(e.target.value)} value="Contact">Contact</button>
+                         <button className="button" style={{backgroundColor:this.state.thirdColor}} onClick={(e) => this.changeType(e.target.value)} value="rotaractclub">Rotaract Club</button>
+                         <button className="button" style={{backgroundColor:this.state.fourthColor}} onClick={(e) => this.changeType(e.target.value)} value="proskilss">Professional Skills</button>
+                         <button className="button" style={{backgroundColor:this.state.fiveColor}} onClick={(e) => this.changeType(e.target.value)} value="edubackground">Educational background</button>
+                         <button className="button" style={{backgroundColor:this.state.sixColor}} onClick={(e) => this.changeType(e.target.value)} value="otherinterest">Other interests</button>
+                         <button className="button" style={{backgroundColor:this.state.seventhColor}} onClick={(e) => this.changeType(e.target.value)} value="about">About</button>
+                     </div>
+                 </div>
+                 <div className="member_line">
+                     <div className="vl"> </div>
+                 </div>
+                 <div className="unknown">
+                     {this.state.typeofupdate !== '' ? (
+                         <LauncherDiv 
+                         typeChanger = {this.changeType}
+                         data={this.state.typeofupdate} sender={this.sendUser} />
+                     ) : (null)}
+                 </div>
+             </div>
+         </div>
+     </div>
+    )
+           
+        
     }
 }
 

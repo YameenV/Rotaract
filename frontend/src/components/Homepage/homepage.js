@@ -503,7 +503,7 @@ class Homepage extends Component {
         </div>
 
         <div className="homepage_mention">
-          <div className="mention_header">Design & Developed by </div>
+          <div className="mention_header">Designed & Developed by </div>
           <div className="mention_content">
             <div className="mention_content_1">
               <div className="mention_content_1_image_div">
