@@ -30,13 +30,14 @@ const Footer = () => {
           <h1>Contact Us</h1>
           <div className="footer-contact-aakash">
             <h4>Aakash Verma, President</h4>
-            <h6>919702012345</h6>
-            <h6>aakash.verma@gmail.com</h6>
+            <h6>varmaaakash2@gmail.com</h6>
+            <h6>8381033324</h6>
+            
           </div>
           <div className="footer-contact-rushil">
-            <h4>Rushil Vira , Secratory</h4>
-            <h6>rushil.vira@gmail.com</h6>
-            <h6>9215544554</h6>
+            <h4>Rushil Vira , Secretary</h4>
+            <h6>virarushil27@gmail.com</h6>
+            <h6>7773988513</h6>
           </div>
         </div>
 

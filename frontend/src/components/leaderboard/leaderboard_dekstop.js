@@ -43,7 +43,7 @@ class Leaderboard_dekstop extends Component {
         <div className="leader_header">
         <Navbar />
           <div className="leader_title">LEADERBOARD</div>
-          <video autoPlay muted loop
+          {/* <video autoPlay muted loop
             style={{
               objectFit: "contain",
               width: "100%",
@@ -57,7 +57,8 @@ class Leaderboard_dekstop extends Component {
               overflow:"hidden" }}
           >
             <source src={neu} type="video/mp4" />
-          </video>
+          </video> */}
+          <img className="leaderboard-bg-gif" src="https://lh3.googleusercontent.com/il4wDbXa3nWwCCn3Ihs2guKTmAdqjSE4fjoUVbJquSOpSm5WMnQflK9I3aZbNq7EJDae-aeEtbGD6jccsoXGS3IVurZA0tDgnDPB0pTHW_KJkk82sjHosyNTmUjVdqyxmrKQzGMv=w2400"></img>
 
           <p className="leader_Mantaintext">
             Maintained By Jai Prajapat - Human Resource & Development Director

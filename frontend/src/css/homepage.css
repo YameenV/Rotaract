@@ -5,12 +5,13 @@
   background-repeat: no-repeat;
   background-blend-mode: screen;
   background-size: 100%;
-  min-width: 100vw;
+  /* min-width: 100vw; */
   min-height: 100vh; 
   display: flex;
   flex-direction: column;
-  overflow-y: hidden;
+  overflow: hidden;
   animation: HomeLoad 2s ease-in-out;
+
 }
 @keyframes HomeLoad{
   from { opacity: 0; } to { opacity: 1; }
@@ -188,7 +189,7 @@
   margin-top: 4vh;
   flex-direction: column;
   justify-content: center;
-  /* width: 40vw; */
+  width: 10vw;
   align-items: center;
   justify-content: space-between;
 }
@@ -1030,6 +1031,18 @@
   .Team_member{
     grid-template-columns: 1rem 2fr 2fr 2rem;
   }
+  .row_1_content,
+.row_2_content1,
+.row_2_content2,
+.row_3_content1,
+.row_3_content2,
+.row_3_content3, 
+.row_4_content1, 
+.row_4_content2, 
+.row_4_content3, 
+.row_4_content4 {
+  width: 30vw;
+}
 
   .row_1_content{
     grid-column: 2/3;
@@ -1146,7 +1159,7 @@
   }
 
   .mention_content {
-    grid-template-columns: 1rem 2fr 2fr  2rem;
+    grid-template-columns: 1rem 2fr 2fr  1rem;
   }
   .mention_content_1{
     grid-column: 2/3;

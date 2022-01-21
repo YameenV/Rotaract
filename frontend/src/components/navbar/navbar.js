@@ -60,7 +60,7 @@ const Navbar = (flag) => {
           {/*  hamburger Menu menu   */}
           <div className="hamburger-menu">
             <a  onClick={() => setShowMediaIcons(!showMediaIcons)}>
-              <FontAwesome className="fas fa-bars fa-lg"/>
+              <FontAwesome className="fas fa-bars fa-sm"/>
               {/* <FontAwesome className="fas fa-times fa-lg"/> */}
             </a>
           </div>

@@ -1,7 +1,7 @@
 import '../../css/event.css'
 import eve from '../../background/event.mp4'
 import Navbar from '../navbar/navbar'
-import testimg from "../../imgs/Ashutoast.jpg";
+import testimg from "../../imgs/astro.png";
 import goldennebula from "../../imgs/Golden_Nebula_Event.mp4";
 const Eventlanding = (props) => {
   let data = props.data;
@@ -22,7 +22,7 @@ const Eventlanding = (props) => {
           left: "0",
         }}
       >
-        <source src={eve} type="video/mp4" />
+        <source src="https://lh3.googleusercontent.com/K27ZYDc3ssoLG0-vS_o8Irz2Bt_2567CFn8apQaarqZPVf2nxp4DrFELTVqK7K2GONeHM-UnyPRwcaRhnxtHNjrZ5J_fKnVnQKnQ6g5ZMoGe2xkNVRWSqWHxTi6AO8DNGGzmlW61=w2400" type="video/gif" />
       </video>
 
       <div className="event_header">events</div>

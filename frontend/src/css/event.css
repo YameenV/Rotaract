@@ -4,7 +4,8 @@
 .event_main{
     /* background:linear-gradient(3.97deg, #0066FF 2.93%, #000917 96.58%) fixed; */
     /* background: linear-gradient(180deg, #000917 18.33%, #0066FF 59.59%, #ADD7F2 100%); */
-    min-width: 100vw;
+    /* min-width: 100vw; */
+    overflow: hidden;
     min-height: 100vh;     
     display: flex;
     justify-content: space-between;
@@ -92,7 +93,7 @@
     height: 290px;
     overflow: hidden;
     color: white;
-    -webkit-text-stroke: 0.5px navy;
+    /* -webkit-text-stroke: 0.5px navy; */
 }
 
 .event_img{

@@ -1,12 +1,13 @@
 .main-11{
     background: linear-gradient(180deg, #000917 0%, #0066FF 100%);
     
-    min-width: 100vw;
+    /* min-width: 100vw; */
+    overflow: hidden; 
     min-height: 100vh;
 }
 .landing-header{
     padding: relative;
-    background:url("../imgs/astro.png") no-repeat ;
+    background:url("https://lh3.googleusercontent.com/jrFgmSyruq0DQzg8xzRQTwq4uMNIJeyCw-__FmLY8SVH78grLRMPXVEd12vTf11wl2klC2QBo_zSGRvrp4K4IC0doBWXKGdVhNLhzCv9iTglMjjJ-GzHAQeWB6LOF0D0dk3_IxYQ=w2400") no-repeat ;
     mix-blend-mode: lighten;
     background-size: cover;
     /* background-repeat: no-repeat; */

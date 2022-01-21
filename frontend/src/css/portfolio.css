@@ -4,12 +4,13 @@
 
 .pro-main {
   background: linear-gradient(321.78deg, #0066ff -3.86%, #000917 82.31%) fixed;
-  min-width: 100vw;
+  /* min-width: 100vw; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+  overflow: hidden;
   font-family: Montserrat !important;
 }
 

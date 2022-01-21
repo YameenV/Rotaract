@@ -3,37 +3,10 @@ import "../../css/homepage.css";
 import { ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
 import { connect } from "react-redux";
 import * as actions from "../../actions/index";
-
-import Pic1 from "../../imgs/pic2.png";
 import Pic2 from "../../imgs/pic3.png";
 import Pic3 from "../../imgs/pic4.png";
-import Pic4 from "../../imgs/pic5.png";
-import Pic5 from "../../imgs/pic6.png";
-import Pic6 from "../../imgs/pic3.png";
-import Pic7 from "../../imgs/pic4.png";
-import Pic8 from "../../imgs/pic5.png";
-import Pic9 from "../../imgs/pic6.png";
-import Pic10 from "../../imgs/pic2.png";
-import ashu from "../../imgs/ashutosh1.jpg";
-import akash from "../../imgs/core/Aakash.png";
-import Amey from "../../imgs/core/Amey.png";
-import Divvya from "../../imgs/core/Divvya.png";
-import Jaii from "../../imgs/core/Jaii.png";
-import Kaustubh from "../../imgs/core/Kaustubh.png";
-import Mihir from "../../imgs/core/Mihir.png";
-import Rushil from "../../imgs/core/Rushil.png";
-import Shaily from "../../imgs/core/Shaily.png";
-import Shreya from "../../imgs/core/Shreya.png";
-
-import ashutosh from "../../imgs/god/ashutosh.jpeg";
-import abhinav from "../../imgs/god/abhinav.jpeg";
-import aman from "../../imgs/god/aman.jpeg";
-import yameen from "../../imgs/god/yameen.png";
-
 import Navbar from "../navbar/navbar";
 import { Link } from "react-router-dom";
-import home from "../../background/homepage.mp4";
-
 import Footer from "../footer/footer";
 
 class Homepage extends Component {
@@ -61,7 +34,7 @@ class Homepage extends Component {
     return (
       <div className="home-main">
         <div className="earth_div">
-          <img className="earth_div_image" src="https://lh3.googleusercontent.com/tZSgaCiE2J4kPEFu92hIeT3P9nfHkoNuKHiG5BHhogcF-mnHQp1tCpooiyfMFAdjwM_XyHCvYFj5-RtDtKPNlOtzJ3dI64_sv-rBfHuovNDjOyQRo39e-ruAMBlZtJwz75wUJbUC=w2400" ></img>
+          <img alt="" className="earth_div_image" src="https://lh3.googleusercontent.com/tZSgaCiE2J4kPEFu92hIeT3P9nfHkoNuKHiG5BHhogcF-mnHQp1tCpooiyfMFAdjwM_XyHCvYFj5-RtDtKPNlOtzJ3dI64_sv-rBfHuovNDjOyQRo39e-ruAMBlZtJwz75wUJbUC=w2400" ></img>
         </div>
         <Navbar flags={1} />
           
@@ -104,7 +77,7 @@ class Homepage extends Component {
             <div className="Team_member">
               <div className="row_1_content">
                 <div className="row_1_image_div">
-                  <img className="row_1_image1" src={akash} alt=""></img>
+                  <img className="row_1_image1" src="https://lh3.googleusercontent.com/yhtbhvmFdPNN7qr7-BmV3NrmA8aBc-mirbhYaLtTN-QoYvwoF-gKLf0xsQr9JFRYTXyqV11cu2pok5AWJh4pcq4caJceLxXP6iWDPZs2XzHtbFaevvugwmIl0wGL61Sp0_J_4UBh=w2400" alt=""></img>
                 </div>
                 <div className="row_1_content1_Name">
                   <h1>Rtr.Aakash Varma</h1>
@@ -116,7 +89,7 @@ class Homepage extends Component {
 
               <div className="row_2_content1">
                 <div className="row_2_image1_div">
-                  <img className="row_2_image1" src={Kaustubh} alt=""></img>
+                  <img className="row_2_image1" src="https://lh3.googleusercontent.com/EkmlbhNTLjausMBEuJSAZW7bdw44FswlLOGY7RmBvLhhiELlyM3b2OQYEsmiwEizRrv-QtNDyr5Vd2a3VYQNscI-1WDruK3UoaUOjOTYqHzed5nM2fmF_4IbMLwiJjnL5q8kTppT=w2400" ></img>
                 </div>
                 <div className="row_2_content1_Name">
                   <h1>Rtr.Kaustubh Latake</h1>
@@ -127,7 +100,7 @@ class Homepage extends Component {
               </div>
               <div className="row_2_content2">
                 <div className="row_2_image2_div">
-                  <img className="row_2_image2" src={Rushil} alt=""></img>
+                  <img className="row_2_image2" src="https://lh3.googleusercontent.com/WaEQEeADQ3PGr9nT3VIXuM35BWO6FcJd3PdFEiYDSmmEyU0FKy0m9xLeTHJbRXUgr-SfPQZYfkfFOAGsQr0OZFp3terI6gFGG52CpEbaGdXNX07KymoeeuZEu1T-zMYRhL42-vE0=w2400" alt=""></img>
                 </div>
                 <div className="row_2_content2_Name">
                   <h1>Rtr.Rushil Vira</h1>
@@ -139,7 +112,7 @@ class Homepage extends Component {
 
               <div className="row_3_content1">
                 <div className="row_3_image1_div">
-                  <img className="row_3_image1" src={Mihir} alt=""></img>
+                  <img className="row_3_image1" src="https://lh3.googleusercontent.com/wdJMM7Oqx32Yke6ubJBm3y-GRA-Dlw21zWnZzEA9_JLTqAO--PTxEe6NSy2GmsZji4wyUYlhhfzA5y10Plmr1enQoI1ZrU1u7B_MGpbm7b5WEsVmX0zVxbQnR-HN2yyPquGy0JR9=w2400" alt=""></img>
                 </div>
                 <div className="row_3_content1_Name">
                   <h1>Rtr.Mihir Parmar</h1>
@@ -150,7 +123,7 @@ class Homepage extends Component {
               </div>
               <div className="row_3_content2">
                 <div className="row_3_image2_div">
-                  <img className="row_3_image2" src={Jaii} alt=""></img>
+                  <img className="row_3_image2" src="https://lh3.googleusercontent.com/roDpytI0G06OM_JUYJT_GbPmh6XA5Hvstubbh9AZPePz6qNYsgcdkA3NwAoVcpqBhNWt4FovW5j6NfdNx-w-I2B3JFu0IHw34GdafP5UimBX76l8oRfv2F0dbDgBFWt4TNpcWQYI=w2400" alt=""></img>
                 </div>
                 <div className="row_3_content2_Name">
                   <h1>Rtr.Jaii Prajapat</h1>
@@ -161,7 +134,7 @@ class Homepage extends Component {
               </div>
               <div className="row_3_content3">
                 <div className="row_3_image3_div">
-                  <img className="row_3_image3" src={Divvya}></img>
+                  <img className="row_3_image3" src="https://lh3.googleusercontent.com/QCYoIald6FNoeUUckUzb9HK__ehYSJatiC-oDPufnTV7nuMQ5QlR5DadXQjWbedw0F_xvbb9INT6dVbcBH0kvjYfBX4vSE4A3HZXvUQ9u3Ut5KMqBlLpmSaxbWZkk13doU3Whay_=w2400"></img>
                 </div>
                 <div className="row_3_content3_Name">
                   <h1>Rtr.Divvya Rambhia</h1>
@@ -173,7 +146,7 @@ class Homepage extends Component {
 
               <div className="row_4_content1">
                 <div className="row_4_image1_div">
-                  <img className="row_4_image1" src={Amey}></img>
+                  <img className="row_4_image1" src="https://lh3.googleusercontent.com/7ieynODlB3MNYmN4Dg1Mo8ec_Nzi9s91sKmqBD576CfsXePuEeAvMlEC3_aShdDiO9YWTrJBVaoLRC9IGliWZr9QxSxWwSeROcLm4ve4CaZ8vlei8_tSuqtwuiTFuXvYD4MPu-ok=w2400"></img>
                 </div>
                 <div className="row_4_content1_Name">
                   <h1>Rtr.Amey Desai</h1>
@@ -184,7 +157,7 @@ class Homepage extends Component {
               </div>
               <div className="row_4_content2">
                 <div className="row_4_image2_div">
-                  <img className="row_4_image2" src={Shreya}></img>
+                  <img className="row_4_image2" src="https://lh3.googleusercontent.com/8o4YC2CRK8gj6B-LsDX2-E4Vcn3ShXA9Ffkzkd8jOmhYQV4kTySTRHGx5F4oACMEhI0O-XdEzF-Aurtn5XAwyI4L-g_YokAqhE70xj2QZXZGcVYrYKUd-SoZMN4dicgALxXngrG1=w2400"></img>
                 </div>
                 <div className="row_4_content2_Name">
                   <h1>Rtr.Shreya Patil</h1>
@@ -195,7 +168,7 @@ class Homepage extends Component {
               </div>
               <div className="row_4_content3">
                 <div className="row_4_image3_div">
-                  <img className="row_4_image3" src={Shaily}></img>
+                  <img className="row_4_image3" src="https://lh3.googleusercontent.com/2AyhMxPEnEs7UG1i1DyluPnpMsM5MUJCDcE1hcTKa1MHv2vo5FiVRoulCkvDqRYaNClSkMWEYGkqZGWqEAJjpm6skcjNdQAxB3xSiYp6bjwNXCoigzYRnIkGaPiz_XTVKGOL1fHp=w2400"></img>
                 </div>
                 <div className="row_4_content3_Name">
                   <h1>Rtr.Shaily Verma</h1>
@@ -206,10 +179,10 @@ class Homepage extends Component {
               </div>
               <div className="row_4_content4">
                 <div className="row_4_image4_div">
-                  <img className="row_4_image4" src={Pic2}></img>
+                  <img className="row_4_image4" src="https://lh3.googleusercontent.com/vbjBzbtIoYd2WMiWNoX_Ht9zTKvdtTSIctyUAcqTM8Pdz-YBxBB1I6RfCTgbEwSu9qaY2yRZ8PGpqLruH6-cVH14L7-ocsPB7JyZigHWwptgsTdjz98FrEY2_MB8Bav_L_6z95KC=w2400"></img>
                 </div>
                 <div className="row_4_content4_Name">
-                  <h1>Rtr. XYZ</h1>
+                  <h1>Rtr.Sanskriti Singh</h1>
                 </div>
                 <div className="row_4_content4_position">
                   <h2>SAA</h2>
@@ -502,7 +475,7 @@ class Homepage extends Component {
             </div> */}
             </div>
           </div>
-          <div className="team_info_more"> View More</div>
+          <Link to="/pep"> <div className="team_info_more"> View More</div></Link>
           <div className="team_info_search">
             <InputGroup className="homepage_leader_inputfield">
               <FormControl
@@ -534,27 +507,27 @@ class Homepage extends Component {
           <div className="mention_content">
             <div className="mention_content_1">
               <div className="mention_content_1_image_div">
-                <img className="mention_content_1_image"  alt="" src={yameen}></img>
+                <img className="mention_content_1_image"  alt="" src="https://lh3.googleusercontent.com/xOCnZ-egE2F944aFwqBCLLANWqepFNM6-RGlLVwolTDU-TX8uWemKGN7iM52f2nuCQkiiRq6N3UxUim7kceGw1zRnhreefxiYw2dnl2_P9qzCoawp0E2W9x7EXCWKvobM3zyK_Iv=w2400"></img>
               </div>
               <div className="mention_content_1_name">Rtr. Yameen Vinchu</div>
             </div>
             <div className="mention_content_2">
               <div className="mention_content_2_image_div">
-                <img  className="mention_content_2_image" alt="" src={ashutosh}></img>
+                <img  className="mention_content_2_image" alt="" src="https://lh3.googleusercontent.com/OmQFZNfsCOPNjZAIS4EsZ1UKa9Rx0meBhXiak3daQnSiab5nBfIKLzOzt-8o9y-YXEHZyJGyifd5eMe6Uq9Hy1KxcFpZpt8eKRn-VboukFoYWsjw1zPYUCYnMxt-oLVK8czkVHtd=w2400"></img>
               </div>
               <div className="mention_content_2_name">Rtr. Ashutosh Upadhyay</div>
             </div>
             <div className="mention_content_3">
               <div className="mention_content_3_image_div">
-                <img className="mention_content_3_image"  alt="" src={abhinav}></img>
+                <img className="mention_content_3_image"  alt="" src="https://lh3.googleusercontent.com/xA_ns4rq4ex1EkbcEn626jty_jpQsuvJmVxYikN9yNChannoNxruCEDJTMCDRjvHJydmGJKH7jslklMVn6SMB11kxC6f1QA4e0rimf-9yptLLVeWKm7znAhWf-OlKqNVtbM5dpvr=w2400"></img>
               </div>
               <div className="mention_content_3_name">Rtr. Abhinav Pandey </div>
             </div>
             <div className="mention_content_4">
               <div className="mention_content_4_image_div">
-                <img className="mention_content_4_image"  alt="" src={aman}></img>
+                <img className="mention_content_4_image"  alt="" src="https://lh3.googleusercontent.com/yCNjr0t9k5DF1TTY8NA_iRhBIwftOhCkj-xPyOjXoDt1XT9xMn37WaZ384J26OlRxAxyGKF7MAC-WjZP0oFoQEpCL_TDxQRurWb-A63ddxtkXmUnIdV4_mMzetsxMqOHsrn9kmeJ=w2400"></img>
               </div>
-              <div className="mention_content_4_name">Rtr. Aman Shaikh</div>
+              <div className="mention_content_4_name">Rtr. Amaan Shaikh</div>
             </div>
           </div>
         </div>
