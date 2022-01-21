@@ -28,16 +28,16 @@ const Routes = () =>{
             <Route exact path = "/event" component = {Eventcontainer}/>
             <Route exact path = "/navbar"  component = {Navbar}/>
             <Route exact path = "/announcement" component = {AnnContainer}/>
-            <Route exact path = "/member" component = {MemberMain}/>
+            <Route exact path = "/member/update" component = {MemberMain}/>
             <Route exact path = "/admin_login" component = {Loginpage} />
             <Route exact path = "/admin_welcome" component = {Welcome_page}/>
             <Route exact path = "/admin_team" component = {Teampage}/>
             <Route exact path = "/admin_individual" component = {Individualpage}/>
             <Route exact path = "/portfolio" component={PortFolioContainer}/>
             <Route exact path = "/admin_publish" component={AdminPublish}/>
-            <Route exact path = "/corelogin" component={Coreregister}/>
-            <Route exact path = "/mem" component={Membership}/>
-            <Route exact path = "/pep" component={Landing}/>
+            <Route exact path = "/login" component={Coreregister}/>
+            <Route exact path = "/register" component={Membership}/>
+            <Route exact path = "/member" component={Landing}/>
             <Route exact path = "/footer" component={footer}/>
             </Switch>
         </div>

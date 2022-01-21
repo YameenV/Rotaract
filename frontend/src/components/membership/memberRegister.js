@@ -20,9 +20,9 @@ export default class index extends Component {
             <div className="memeregister_text">
               <h1>Join now!</h1>
               <p>
-                Duis eros purus, accumsan sed aliquam at, molestie quis leo.
-                Nunc sit amet est vehicula, iaculis libero at, tempus ipsum.
-                Proin justo erat, mollis vitae quam sed, lacinia vu
+                
+            What are your waiting for ? <br/>
+            Register and Join the club now to experience the expansion of the universe !!
               </p>
             </div>
             <img className="memregister_rotLogo-image" src={ROTLOGO} />

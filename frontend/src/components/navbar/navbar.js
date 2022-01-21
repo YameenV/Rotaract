@@ -46,10 +46,10 @@ const Navbar = (flag) => {
               <NavLink to="/leaderboard">Leaderboard</NavLink>
             </li>
             <li>
-              <NavLink to="/member">Member Update</NavLink>
+              <NavLink to="/member">Members</NavLink>
             </li>
             <li>
-              <NavLink to="/portfolio">Portfolio</NavLink>
+              <NavLink to="/login">Login</NavLink>
             </li>
           </ul>
         </div>
