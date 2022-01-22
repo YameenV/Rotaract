@@ -144,3 +144,12 @@ export function incremenTeamScore(data){
         payload:request
     }
 }
+
+export function checkAlreadyThere(id){
+    const request = axios.get(`http://127.0.0.1:8000/user_alreadythere/${id}`)
+    .then(response=>response.data)
+    return{
+        type:'check_user',
+        payload:request
+    }
+}
