@@ -12,7 +12,7 @@ import Navbar from './components/navbar/navbar'
 import PortFolioContainer from './components/portfolio/portfolioContainer'
 import AdminPublish from './components/admin_publish/adminPublish'
 import Homepage from './components/Homepage/homepageContainer'
-import Coreregister from './components/register/coreregister'
+import CoreConatainer from './components/register/CoreConatainer'
 import Membership from './components/membership/memberRegister'
 import Loader from './components/loadpage/loadder'
 import Landing from './components/portfolio-landing/portfolio-landing'
@@ -35,7 +35,7 @@ const Routes = () =>{
             <Route exact path = "/admin_individual" component = {Individualpage}/>
             <Route exact path = "/portfolio" component={PortFolioContainer}/>
             <Route exact path = "/admin_publish" component={AdminPublish}/>
-            <Route exact path = "/login" component={Coreregister}/>
+            <Route exact path = "/login" component={CoreConatainer}/>
             <Route exact path = "/register" component={Membership}/>
             <Route exact path = "/member" component={Landing}/>
             <Route exact path = "/footer" component={footer}/>

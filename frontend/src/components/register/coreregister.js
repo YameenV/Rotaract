@@ -20,18 +20,10 @@ function Coreregister(props) {
           throw new Error("Not a Rotaract Member")
         }
         else {
-          SetAuthenticated(re._tokenResponse.idToken)
         
-            history.push(
-              {
-                pathname: '/member/update',
-                state: { name: re.user.displayName, email: re.user.email, photo: re.user.photoURL, uid: re.user.uid }
-              }
-            )
-
-          
-
-
+            let s = re.user.uid
+            props.OneFunction(s)          
+            
         }
       })
       .catch((err) => {
