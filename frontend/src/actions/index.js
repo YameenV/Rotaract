@@ -4,6 +4,7 @@ import axios from 'axios'
 
 
 
+
 export function getLeaderUserData(){
     const request = axios.get('/get_user_leaderboard')
     .then(response=>response.data)
@@ -150,6 +151,15 @@ export function checkAlreadyThere(id){
     .then(response=>response.data)
     return{
         type:'check_user',
+        payload:request
+    }
+}
+
+export function makeUser(id,data){
+    const request = axios.put(`http://127.0.0.1:8000/update_user/${id}`,data)
+    .then(response=>response.data)
+    return{
+        type:'create_user',
         payload:request
     }
 }

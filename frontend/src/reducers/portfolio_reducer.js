@@ -22,6 +22,9 @@ export default function(state={},action){
         case 'check_user':
             return {...state,userData:action.payload}
 
+        case 'create_user':
+            return {...state,userData:action.payload}
+
         default:
             return state
 

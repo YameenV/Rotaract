@@ -20,10 +20,8 @@ function Coreregister(props) {
           throw new Error("Not a Rotaract Member")
         }
         else {
-        
             let s = re.user.uid
-            props.OneFunction(s)          
-            
+            props.OneFunction(s,re.user)          
         }
       })
       .catch((err) => {
