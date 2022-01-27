@@ -21,14 +21,14 @@ class Eventcontainer extends Component {
     }
 
     render() {
-        
+      
         return (
             <div>
                 {
-                    this.state.eData.length > 0 ? (
+                    this.state.eData ? (
                         <Eventlanding data = {this.state.eData}/>
                     ):(
-                        <Eventlanding data = {this.state.eData}/> 
+                        <Eventlanding data = {this.state.eData}/>
                     )
                 }
                

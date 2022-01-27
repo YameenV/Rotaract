@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import LauncherDiv from './launcherDiv'
 import '../../css/memberupdate.css'
 import { connect } from 'react-redux'
+
 import * as actions from '../../actions/index'
 import MemberPic from "../../imgs/ashutosh1.jpg";
 import Navbar from '../navbar/navbar';
@@ -9,6 +10,7 @@ import mem from '../../background/memupdate.mp4'
 
 
 class MemberContainer extends Component {
+
 
     state = {
         typeofupdate: 'personalinfo',
@@ -19,9 +21,28 @@ class MemberContainer extends Component {
         fiveColor:'transparent',
         sixColor:'transparent',
         seventhColor:'transparent',
-        uid:this.props.things ? this.props.things.uid:null
+        uid:this.props.things ? this.props.things.uid:null,
+        displayName:'',
+        recievedData:{}
     }
 
+    componentWillMount(){
+        let name = this.props.things
+        if(name){
+            console.log(name.displayName)
+                this.props.getUserByName(name.displayName)
+        
+        }
+    }
+
+    componentWillReceiveProps(nextProps){
+        if(nextProps){
+            this.setState({
+                recievedData:nextProps.data.userData
+            })
+        }
+    }
+    
 
     changeType = (t) => {
         if(t==='personalinfo'){
@@ -176,7 +197,7 @@ class MemberContainer extends Component {
     }
 
     sendUser = (data) => {
-        console.log(data)
+        
         if (data) {
             if(this.state.uid){
 
@@ -192,9 +213,11 @@ class MemberContainer extends Component {
         })
     }
 
+
     render() {
+       console.log(this.state.recievedData)
         let data = this.props.things
-        console.log(this.props)
+
         return (data) ? ( <div className="main_member">
         <video autoPlay muted loop
             style={{
@@ -214,8 +237,8 @@ class MemberContainer extends Component {
         <Navbar />
 
         <div className="member_logo">
-            {data.photo ? (
-                <img className="member_rotimage" alt="profile" src={data.photo} />
+            {this.state.recievedData ? (
+                <img className="member_rotimage" alt="profile" referrerpolicy="no-referrer" src={this.state.recievedData.img} />
             ):(
                 <div>
                     ok
@@ -225,7 +248,7 @@ class MemberContainer extends Component {
         </div>
         <div className="member_container">
             {/* <div className="main_member_name"> */}
-            <div className="member_name">{data.name}</div>
+            <div className="member_name">{this.state.recievedData.full_name}</div>
             <div className="member_status">President</div>
             {/* </div> */}
             <div className="main_data">
@@ -281,7 +304,12 @@ class MemberContainer extends Component {
          </div>
          <div className="member_container">
              {/* <div className="main_member_name"> */}
-             <div className="member_name">Ashutosh</div>
+             
+                  <div className="member_name">Name not found</div>
+            
+                 
+             
+             
              <div className="member_status">President</div>
              {/* </div> */}
              <div className="main_data">

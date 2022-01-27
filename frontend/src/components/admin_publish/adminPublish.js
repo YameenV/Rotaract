@@ -42,21 +42,35 @@ class AdminPublish extends Component {
       description: this.state.event,
       img: this.state.imglink,
       types:this.state.types,
-      event_link:this.state.event_link
-      
-      /*name: str 
-    title: str
-    types: str
-    description: str
-    img:str
-    event_link:str*/
-
+      event_link:this.state.event_link,
+      types:this.state.types
     };
     this.props.createEvent(event)
+    this.setState({
+      typeof: "",
+      atitle: "",
+      name:"",
+      etitle: "",
+      announcement: "",
+      annName:"",
+      event: "",
+      imglink: "",
+      date:"",
+      message:"",
+      types:"",
+      evtTitle:""
+    })
   };
 
+
+  Type = (type) =>{
+    this.setState({
+      types:type
+    })
+  }
+
   render() {
-    console.log(this.props)
+    
     return (
       <div className="publish-main">
         <div className="publish-headertext">Welcome Aakash!</div>
@@ -146,6 +160,7 @@ class AdminPublish extends Component {
                 />
               </div>
 
+      
               <div>
                 <input 
                 type="text"
@@ -207,6 +222,20 @@ class AdminPublish extends Component {
                 value={this.state.imglink}
                 onChange={(e) => this.setState({ imglink: e.target.value })}
               />
+      
+                <input 
+                type="text"
+                className="public-ann_title"
+                placeholder="Event link"
+                value={this.state.event_link}
+                onChange={(e)=>this.setState({event_link:e.target.value})}
+                />
+
+                <select onClick={(e)=>this.Type(e.target.value)}>
+                  <option>Latest</option>
+                  <option>Upcoming</option>
+                </select>
+            
               <div className="public-ann-botton">
               <button
               className="public-ann_back"
