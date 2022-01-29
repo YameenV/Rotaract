@@ -28,51 +28,51 @@ class CoreConatainer extends Component {
         let obj = {
           id:this.state.id,
           img:this.state.user.photoURL,
-          full_name: "dgsrg",
+          full_name: "",
           age: 21,
-          gender: "agrsg",
-          blood_group: "argae",
-          district: "aweg4r",
-          city: "wsgva",
+          gender: "",
+          blood_group: "",
+          district: "",
+          city: "",
           contact: {
-            mobile_number: "awre",
-            email_address: "ergersa",
-            linkedin: "arhedrh",
-            twitter: "baerfb",
-            github: "wasfrg",
-            whatsapp: "argawrg"
+            mobile_number: "",
+            email_address: "",
+            linkedin: "",
+            twitter: "",
+            github: "",
+            whatsapp: ""
           },
           rotractClub: {
-            joning_reason: "garhbsr",
-            avenue: ['grgw'],
-            current_position: "gwegeth",
-            number_of_year: "aarh",
-            suggestion: "arhbeh",
-            testimonial: "aetbadse"
+            joning_reason: "",
+            avenue: [""],
+            current_position: "",
+            number_of_year: "",
+            suggestion: "",
+            testimonial: ""
           },
           professional_skill: {
-            skill: ["gfwsrg"],
-            feild_of_interest: ["gwrg"],
+            skill: [""],
+            feild_of_interest: [""],
             experience: 21,
-            project: ["faieopof"],
-            artical: ["sigvins"],
-            intership: ["aineifp"],
-            achievement: ["psrbinsnr"],
-            future_goal: "aefwg"
+            project: [""],
+            artical: [""],
+            intership: [""],
+            achievement: [""],
+            future_goal: ""
           },
           education_background: {
-            currently_studying: "bseth",
-            certification_done: ["ianesf"],
-            future_plan: ["pepignwe"],
-            book: ["aeignwpoeg"]
+            currently_studying: " ",
+            certification_done: [""],
+            future_plan: [""],
+            book: [""]
           },
           other_interest: {
-            hobbies: ["psirnfbpowsmr"],
-            Interest: ["ojawof"]
+            hobbies: [""],
+            Interest: [""]
           },
           about: {
-            describe: ["dmogove"],
-            yourself_ten_years: ["asodev"]
+            describe: [""],
+            yourself_ten_years: [""]
           }
         }
         this.props.history.push('/member/update')
