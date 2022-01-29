@@ -28,7 +28,7 @@ const Routes = () =>{
             <Route exact path = "/event" component = {Eventcontainer}/>
             <Route exact path = "/navbar"  component = {Navbar}/>
             <Route exact path = "/announcement" component = {AnnContainer}/>
-            <Route exact path = "/member/update" component = {MemberMain}/>
+            <Route exact path = "/member/update/:name" component = {MemberMain}/>
             <Route exact path = "/admin_login" component = {Loginpage} />
             <Route exact path = "/admin_welcome" component = {Welcome_page}/>
             <Route exact path = "/admin_team" component = {Teampage}/>

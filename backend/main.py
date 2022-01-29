@@ -30,7 +30,7 @@ async def update_user(id:str, user: model.User):
 
 @app.get('/get_user_by_name/{name}')
 async def create_user(name: str):
-    return await servies.get_user_by_name(name.lower())
+    return await servies.get_user_by_name(name)
 
 @app.get('/get_user_for_portfolio')
 async def get_user_for_portfolio():

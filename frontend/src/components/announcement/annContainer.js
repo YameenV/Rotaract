@@ -21,7 +21,7 @@ class AnnContainer extends Component {
     }
 
     render() {
-       
+       console.log(this.props)
         return (
             <div>
                 {this.state.annDATA.length > 0 ?(

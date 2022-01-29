@@ -24,11 +24,12 @@ class CoreConatainer extends Component {
   componentWillReceiveProps(nextProps){
     if(nextProps.portdata){
       let check = nextProps.portdata.userData
+      console.log(this.state.id)
       if(check === "notfound"){
         let obj = {
           id:this.state.id,
           img:this.state.user.photoURL,
-          full_name: "",
+          full_name: this.state.user.displayName,
           age: 21,
           gender: "",
           blood_group: "",
@@ -61,7 +62,7 @@ class CoreConatainer extends Component {
             future_goal: ""
           },
           education_background: {
-            currently_studying: " ",
+            currently_studying: "",
             certification_done: [""],
             future_plan: [""],
             book: [""]
@@ -75,18 +76,27 @@ class CoreConatainer extends Component {
             yourself_ten_years: [""]
           }
         }
-        this.props.history.push('/member/update')
-        this.props.makeUser(this.state.id,obj)
+         this.props.history.push({
+          pathname:`/member/update/${this.state.user.displayName}`,
+          state:{displayName:this.state.user.displayName}
+        }) 
+        
+         this.props.makeUser(this.state.id,obj) 
+      
       }
       else if(check === "userexist"){
-        this.props.history.push('/member/update')
+        this.props.history.push(
+        {
+          pathname:`/member/update/${this.state.user.displayName}`,
+          state:{displayName:this.state.user.displayName}
+        })
       }
 
     }
   }
 
   render() {
-  console.log(this.props)
+  
     return (
         <div>
             <Coreregister OneFunction ={this.takeId}/>

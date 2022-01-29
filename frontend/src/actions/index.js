@@ -6,7 +6,7 @@ import axios from 'axios'
 
 
 export function getLeaderUserData(){
-    const request = axios.get('/get_user_leaderboard')
+    const request = axios.get('http://127.0.0.1:8000/get_user_leaderboard')
     .then(response=>response.data)
     return{
         type:'Leaderboard_user_data',
@@ -15,7 +15,7 @@ export function getLeaderUserData(){
 }
 
 export function getLeaderTeamData(){
-    const request = axios.get('/get_team_leaderboard')
+    const request = axios.get('http://127.0.0.1:8000/get_team_leaderboard')
     .then(response=>response.data)
     return{
         type:'Leaderboard_team_data',
@@ -25,7 +25,7 @@ export function getLeaderTeamData(){
 
 
 export function getEvents(){
-    const request = axios.get('/get_event')
+    const request = axios.get('http://127.0.0.1:8000/get_event')
     .then(response => response.data)
     return{
         type:'get_all_events',
@@ -34,7 +34,7 @@ export function getEvents(){
 }
 
 export function getOneEvent(name){
-    const request = axios.get(`/get_one_event?name=${name}`)
+    const request = axios.get(`http://127.0.0.1:8000/get_one_event?name=${name}`)
     .then(response => response.data)
     return{
         type:'get_one_event',
@@ -43,7 +43,7 @@ export function getOneEvent(name){
 }
 
 export function getAnnouncement(){
-    const request = axios.get('/get_latestannouncement')
+    const request = axios.get('http://127.0.0.1:8000/get_latestannouncement')
     .then(response => response.data)
     return{
         type:'get_announcement',
@@ -51,19 +51,12 @@ export function getAnnouncement(){
     }
 }
 
-export function getUserByName(name){
-    const request = axios.get(`http://127.0.0.1:8000/get_user_by_name/${name}`)
-    .then(response => response.data)
-    return{
-        type:'portfolio_data',
-        payload:request
-    }
-}
+
 
 
 export function createAnnouncement(adata){
     console.log(adata)
-    const request = axios.post('/create_latestannouncement',adata)
+    const request = axios.post('http://127.0.0.1:8000/create_latestannouncement',adata)
     .then(response=>response.data)
     return{
         type:'ann_post',
@@ -73,7 +66,7 @@ export function createAnnouncement(adata){
 
 export function createEvent(edata){
 
-    const request = axios.post('/create_event',edata)
+    const request = axios.post('http://127.0.0.1:8000/create_event',edata)
     .then(response =>response.data)
     return{
         type:'post_event',
@@ -82,7 +75,7 @@ export function createEvent(edata){
 }
 
 export function IncrementIndividual(idata){
-    const request = axios.post('/increment_user_score',idata)
+    const request = axios.post('http://127.0.0.1:8000/increment_user_score',idata)
     .then(response=>response.data)
     return{
         type:'inc_data',
@@ -91,7 +84,7 @@ export function IncrementIndividual(idata){
 }
 
 export function AddTeam(tdata){
-    const request = axios.post('/create_team',tdata)
+    const request = axios.post('http://127.0.0.1:8000/create_team',tdata)
     .then(response=>response.data)
     return{
         type:'add_team',
@@ -160,6 +153,15 @@ export function makeUser(id,data){
     .then(response=>response.data)
     return{
         type:'create_user',
+        payload:request
+    }
+}
+
+export function getUserByName(name){
+    const request = axios.get(`http://127.0.0.1:8000/get_user_by_name/${name}`)
+    .then(response => response.data)
+    return{
+        type:'portfolio_data',
         payload:request
     }
 }

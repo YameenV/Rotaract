@@ -4,10 +4,9 @@ import Navbar from '../navbar/navbar'
 import testimg from "../../imgs/astro.png";
 import goldennebula from "../../imgs/Golden_Nebula_Event.mp4";
 const Eventlanding = (props) => {
-  let data = props.data;
-  console.log(data);
-
-  return data.length > 0 ? (
+  let newData = props.data;
+  console.log(newData)
+  return (newData.length) > 0 ? (
     <div className="event_main">
       <video
         autoPlay
@@ -24,22 +23,30 @@ const Eventlanding = (props) => {
       >
         <source src="https://lh3.googleusercontent.com/K27ZYDc3ssoLG0-vS_o8Irz2Bt_2567CFn8apQaarqZPVf2nxp4DrFELTVqK7K2GONeHM-UnyPRwcaRhnxtHNjrZ5J_fKnVnQKnQ6g5ZMoGe2xkNVRWSqWHxTi6AO8DNGGzmlW61=w2400" type="video/gif" />
       </video>
-
-      <div className="event_header">events</div>
-      <div className="Events">
-        {data.map((items) => (
-          <div className="event">
-            <div className="images">
-              <img className="event_img" src={items.img}></img>
-            </div>
-
-            <div className="eventpage_title">{items.title}</div>
-
-            <div className="description-event">{items.description}</div>
-          </div>
-        ))}
-      </div>
+      <div class="wrapper">
+        <header>
+            <h1>Events</h1>
+        </header>
     </div>
+      <div class="container-event">
+        {
+          newData.map(({img,title,description})=>{
+            <div class="card">
+        
+            <img className="event_img" src={img}></img>
+    
+            <div className="eventpage_title">{title}</div>
+    
+            <div className="description-event">
+            {description}
+            </div>
+            </div>
+          })
+        }
+     
+        </div>
+        </div>
+     
   ) : (
     <div className="event_main">
       <Navbar />

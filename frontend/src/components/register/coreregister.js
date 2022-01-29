@@ -3,7 +3,7 @@ import '../../css/core_login.css'
 import { useHistory } from 'react-router-dom'
 import Navbar from '../navbar/navbar'
 import { auth } from '../firebase/config.js'
-import { signInWithPopup, GoogleAuthProvider, getIdToken } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { checkAlreadyThere } from '../../actions/index'
 import { connect } from 'react-redux'
 
@@ -30,7 +30,7 @@ function Coreregister(props) {
   }
 
   function onSign(googleUser) {
-    const whitelist = ["yameenvinchu38@gmail.com", "pandeysandeep1190@gmail.com"];
+    const whitelist = ["yameenvinchu38@gmail.com", "pandeysandeep1190@gmail.com", "abhinavkumar.pandey@universal.edu.in"];
     const userHasAccess = whitelist.some(
       function (email) {
         return googleUser.email === email
