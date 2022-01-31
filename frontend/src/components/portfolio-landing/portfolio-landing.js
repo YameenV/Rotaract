@@ -68,7 +68,15 @@ const Landing = (props) => {
               );
             })}
           </div>
-            :(null)}
+            :(<div className="member-div-1">
+    
+            <div className="member-div-1-div">
+              <img alt="#none" className="member-div-1-image"></img>
+            </div>
+            <div className="member-div-1-name">Please check your connection</div>
+            <div className="member-div-1-status">Server might be down</div>
+         
+          </div>)}
       </div>
     </div>
   );
