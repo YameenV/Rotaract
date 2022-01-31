@@ -165,3 +165,12 @@ export function getUserByName(name){
         payload:request
     }
 }
+
+export function getAllUsers(){
+    const request = axios.get(`http://127.0.0.1:8000/get_user_for_portfolio`)
+    .then(response=>response.data)
+    return{
+        type:'all_users',
+        payload:request
+    }
+}

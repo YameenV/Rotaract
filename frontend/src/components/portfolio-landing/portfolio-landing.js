@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../css/portfolio-landing.css";
 import ashu from "../../imgs/god/ashutosh.jpeg";
 import astro from "../../imgs/astro.png";
 import { ButtonGroup, InputGroup, FormControl } from "react-bootstrap";
 import Navbar from "../navbar/navbar"
+import {connect} from 'react-redux'
+import * as actions from '../../actions/index'
 
-const Landing = () => {
+const Landing = (props) => {
   const [name, SetName] = useState("");
+  
+  useEffect(()=>{
+    props.getAllUsers()
+  },[])
 
   let data = [
     {
@@ -85,7 +91,7 @@ const Landing = () => {
       status: "President",
     },
   ];
-
+  console.log(props)
   return (
     <div className="main-11">
       <Navbar flags={1} />
@@ -132,4 +138,10 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+const mapStateToProps = (state) =>{
+  return{
+    users:state.portfolio
+  }
+}
+
+export default connect(mapStateToProps,actions)(Landing);

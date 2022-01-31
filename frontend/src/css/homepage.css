@@ -937,15 +937,20 @@
   align-items: center;
 }
 .mention_content_1_image,
-.mention_content_3_image,
 .mention_content_2_image,
 .mention_content_4_image,
 .mention_content_5_image,
 .mention_content_6_image{
-  height: 10vw;
-  width: 10vw;
+  height: 7.8vw;
+  width: 7.8vw;
   border-radius: 50%;
 
+}
+
+.mention_content_3_image{
+  height: 120%;
+  width: 100%;
+  border-radius: 50%;
 }
 
 .mention_content_1_name,
