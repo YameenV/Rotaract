@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="footer-contact">
           <h1>Contact Us</h1>
           <div className="footer-contact-aakash">
-            <h4>Aakash Verma, President</h4>
+            <h4>Akash Varma, President</h4>
             <h6>varmaaakash2@gmail.com</h6>
             <h6>8381033324</h6>
             
@@ -56,7 +56,7 @@ const Footer = () => {
 
       <div className="footer-lower-div">
         <div className="footer-social-media">
-          <Link to="https://www.google.com"><img className="instaicon" src={insta}></img></Link>
+          <a href="https://www.google.com"><img className="instaicon" src={insta}></img></a>
           <Link to="https://www.google.com"><img className="iicon" src={fb}></img></Link>
           <Link to="https://www.google.com"><img className="iicon" src={linkedin}></img></Link>
           <Link to="https://www.google.com"><img className="iicon" src={twitter}></img></Link>

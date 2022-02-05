@@ -10,7 +10,6 @@ state = {
 
 sendEmail = (e) =>{
 e.preventDefault()
-console.log(this.state.email)
 }
     render() {
         return (

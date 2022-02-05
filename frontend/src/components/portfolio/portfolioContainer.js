@@ -71,22 +71,22 @@ rotractClub: {joning_reason: 'exciting', avenue: Array(1), current_posi */
 
   findRtr = (e) => {
     e.preventDefault();
-  
     if (this.state.full_name !== "") {
       console.log(this.state.full_name)
       this.props.getUserByName(this.state.full_name);
     }
   };
 
+  componentDidMount(){
+    this.props.getUserByName(this.props.match.params.name);
+  }
+
   componentWillReceiveProps(nextProps) {
     let checker = nextProps.portdata.userData.response
-    if(checker.status === 404){
-      alert('User does not exists')
-      window.location.reload()
-    }
+   
     if(nextProps){
     let data = nextProps.portdata.userData;
-  
+ 
       if(data){
       this.setState({
           personalinfo: {
@@ -144,11 +144,6 @@ rotractClub: {joning_reason: 'exciting', avenue: Array(1), current_posi */
 
   }
     
-        
-         
-         
-  
-          
   render() {
     
     return (

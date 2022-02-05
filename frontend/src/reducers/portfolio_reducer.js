@@ -25,6 +25,9 @@ export default function(state={},action){
         case 'create_user':
             return {...state,userData:action.payload}
 
+        case 'all_users':
+            return {...state,userData:action.payload}
+
         default:
             return state
 

@@ -33,7 +33,7 @@ const Routes = () =>{
             <Route exact path = "/admin_welcome" component = {Welcome_page}/>
             <Route exact path = "/admin_team" component = {Teampage}/>
             <Route exact path = "/admin_individual" component = {Individualpage}/>
-            <Route exact path = "/portfolio" component={PortFolioContainer}/>
+            <Route exact path = "/portfolio/:name" component={PortFolioContainer}/>
             <Route exact path = "/admin_publish" component={AdminPublish}/>
             <Route exact path = "/login" component={CoreConatainer}/>
             <Route exact path = "/register" component={Membership}/>
