@@ -6,7 +6,7 @@ import axios from 'axios'
 
 
 export function getLeaderUserData(){
-    const request = axios.get('http://127.0.0.1:8000/get_user_leaderboard')
+    const request = axios.get('https://obscure-basin-25126.herokuapp.com/get_user_leaderboard')
     .then(response=>response.data)
     return{
         type:'Leaderboard_user_data',
@@ -15,7 +15,7 @@ export function getLeaderUserData(){
 }
 
 export function getLeaderTeamData(){
-    const request = axios.get('http://127.0.0.1:8000/get_team_leaderboard')
+    const request = axios.get('https://obscure-basin-25126.herokuapp.com/get_team_leaderboard')
     .then(response=>response.data)
     return{
         type:'Leaderboard_team_data',
@@ -25,7 +25,7 @@ export function getLeaderTeamData(){
 
 
 export function getEvents(){
-    const request = axios.get('http://127.0.0.1:8000/get_event')
+    const request = axios.get('https://obscure-basin-25126.herokuapp.com/get_event')
     .then(response => response.data)
     return{
         type:'get_all_events',
@@ -34,7 +34,7 @@ export function getEvents(){
 }
 
 export function getOneEvent(name){
-    const request = axios.get(`http://127.0.0.1:8000/get_one_event?name=${name}`)
+    const request = axios.get(`https://obscure-basin-25126.herokuapp.com/get_one_event?name=${name}`)
     .then(response => response.data)
     return{
         type:'get_one_event',
@@ -43,7 +43,7 @@ export function getOneEvent(name){
 }
 
 export function getAnnouncement(){
-    const request = axios.get('http://127.0.0.1:8000/get_latestannouncement')
+    const request = axios.get('https://obscure-basin-25126.herokuapp.com/get_latestannouncement')
     .then(response => response.data)
     return{
         type:'get_announcement',
@@ -56,7 +56,7 @@ export function getAnnouncement(){
 
 export function createAnnouncement(adata){
     console.log(adata)
-    const request = axios.post('http://127.0.0.1:8000/create_latestannouncement',adata)
+    const request = axios.post('https://obscure-basin-25126.herokuapp.com/create_latestannouncement',adata)
     .then(response=>response.data)
     return{
         type:'ann_post',
@@ -66,7 +66,7 @@ export function createAnnouncement(adata){
 
 export function createEvent(edata){
 
-    const request = axios.post('http://127.0.0.1:8000/create_event',edata)
+    const request = axios.post('https://obscure-basin-25126.herokuapp.com/create_event',edata)
     .then(response =>response.data)
     return{
         type:'post_event',
@@ -75,7 +75,7 @@ export function createEvent(edata){
 }
 
 export function IncrementIndividual(idata){
-    const request = axios.post('http://127.0.0.1:8000/increment_user_score',idata)
+    const request = axios.post('https://obscure-basin-25126.herokuapp.com/increment_user_score',idata)
     .then(response=>response.data)
     return{
         type:'inc_data',
@@ -84,7 +84,7 @@ export function IncrementIndividual(idata){
 }
 
 export function AddTeam(tdata){
-    const request = axios.post('http://127.0.0.1:8000/create_team',tdata)
+    const request = axios.post('https://obscure-basin-25126.herokuapp.com/create_team',tdata)
     .then(response=>response.data)
     return{
         type:'add_team',
@@ -94,7 +94,7 @@ export function AddTeam(tdata){
 
 
 export function createUser(udata,id){
-    const request = axios.post(`http://127.0.0.1:8000/update_user/${id}`,udata)
+    const request = axios.post(`https://obscure-basin-25126.herokuapp.com/update_user/${id}`,udata)
     .then(response=>response.data)
     return{
         type:'Create_user',
@@ -104,7 +104,7 @@ export function createUser(udata,id){
 
 
 export function getUserForScore(){
-    const request = axios.get('http://127.0.0.1:8000/get_user_for_score')
+    const request = axios.get('https://obscure-basin-25126.herokuapp.com/get_user_for_score')
     .then(response=>response.data)
     return{
         type:'get_users_for_score',
@@ -113,7 +113,7 @@ export function getUserForScore(){
 }
 
 export function incrementUserScore(data){
-    const request = axios.post('http://127.0.0.1:8000/increment_user_score',data)
+    const request = axios.post('https://obscure-basin-25126.herokuapp.com/increment_user_score',data)
     .then(response=>response.data)
     return{
         type:'increment_score_individual',
@@ -122,7 +122,7 @@ export function incrementUserScore(data){
 }
 
 export function getTeamsForScore(){
-    const request = axios.get('http://127.0.0.1:8000/get_team_for_score')
+    const request = axios.get('https://obscure-basin-25126.herokuapp.com/get_team_for_score')
     .then(response=>response.data)
     return{
         type:'get_teams',
@@ -131,7 +131,7 @@ export function getTeamsForScore(){
 }
 
 export function incremenTeamScore(data){
-    const request = axios.post('http://127.0.0.1:8000/increment_team_score',data)
+    const request = axios.post('https://obscure-basin-25126.herokuapp.com/increment_team_score',data)
     .then(response=>response.data)
     return{
         type:'increment_team_score',
@@ -140,7 +140,7 @@ export function incremenTeamScore(data){
 }
 
 export function checkAlreadyThere(id){
-    const request = axios.get(`http://127.0.0.1:8000/user_alreadythere/${id}`)
+    const request = axios.get(`https://obscure-basin-25126.herokuapp.com/user_alreadythere/${id}`)
     .then(response=>response.data)
     return{
         type:'check_user',
@@ -149,7 +149,7 @@ export function checkAlreadyThere(id){
 }
 
 export function makeUser(id,data){
-    const request = axios.put(`http://127.0.0.1:8000/update_user/${id}`,data)
+    const request = axios.put(`https://obscure-basin-25126.herokuapp.com/update_user/${id}`,data)
     .then(response=>response.data)
     return{
         type:'create_user',
@@ -158,7 +158,7 @@ export function makeUser(id,data){
 }
 
 export function getUserByName(name){
-    const request = axios.get(`http://127.0.0.1:8000/get_user_by_name/${name}`)
+    const request = axios.get(`https://obscure-basin-25126.herokuapp.com/get_user_by_name/${name}`)
     .then(response => response.data)
     return{
         type:'portfolio_data',
@@ -167,7 +167,7 @@ export function getUserByName(name){
 }
 
 export function getAllUsers(){
-    const request = axios.get(`http://127.0.0.1:8000/get_user_for_portfolio`)
+    const request = axios.get(`https://obscure-basin-25126.herokuapp.com/get_user_for_portfolio`)
     .then(response=>response.data)
     return{
         type:'all_users',
