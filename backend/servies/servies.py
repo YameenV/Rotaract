@@ -23,11 +23,13 @@ async def update_user(user:model.User, userId:str):
     except: return "Failed"
 
 async def get_user_by_name(name:str):
-    try:
-        users = db.collection("User").where("full_name","==",name).limit(1).get()
-        return users[0].to_dict()
-    except: raise HTTPException(status_code=404 , detail="User not found")
-
+    users = db.collection("User").get()
+    for user in users:
+        curr_name = user.to_dict()
+        if curr_name["full_name"] == name:
+            print(curr_name["full_name"])
+            return curr_name
+    raise HTTPException(status_code=404 , detail="User not found")
 
 async def get_user_for_portfolio():
     users = db.collection("User").get()
