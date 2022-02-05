@@ -11,13 +11,10 @@ datetime_NY = datetime.now(tz_NY)
 
 # User
 async def user_alreadythere(userId:str):
-    try: 
-        users = db.collection("User").get()
-        for user in users:
-            if userId == user.id:
-                return "userexist"
-        return "notfound"
-    except: return "Failed"
+    
+    users = db.collection("User").document(userId).get()
+    if users.exists: return users.to_dict()
+    else:raise HTTPException(status_code=404 , detail="User not found")
     
 async def update_user(user:model.User, userId:str):
     try: 
@@ -26,9 +23,11 @@ async def update_user(user:model.User, userId:str):
     except: return "Failed"
 
 async def get_user_by_name(name:str):
-    users = db.collection("User").where("full_name","==",name).limit(1).get()
-    if users: return users[0].to_dict()
-    else: raise HTTPException(status_code=404 , detail="Name does not exist")
+    try:
+        users = db.collection("User").where("full_name","==",name).limit(1).get()
+        return users[0].to_dict()
+    except: raise HTTPException(status_code=404 , detail="User not found")
+
 
 async def get_user_for_portfolio():
     users = db.collection("User").get()
