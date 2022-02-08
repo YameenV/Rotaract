@@ -63,6 +63,9 @@ class Scoregraph extends Component {
                 width="100%"
                 height="100%"
                 />
+                <div className='pro-chart-upper'>
+                  <h1>Loading soon ...</h1> 
+                </div>
             </div>
         )
     }

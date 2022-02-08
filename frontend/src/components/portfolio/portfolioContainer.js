@@ -171,6 +171,7 @@ rotractClub: {joning_reason: 'exciting', avenue: Array(1), current_posi */
             <input
               className="pro-input"
               type="text"
+              placeholder="Search Name"
               value={this.state.full_name}
               onChange={(e) => this.setState({ full_name: e.target.value })}
             />

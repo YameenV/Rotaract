@@ -938,6 +938,7 @@
 }
 .mention_content_1_image,
 .mention_content_2_image,
+.mention_content_3_image,
 .mention_content_4_image,
 .mention_content_5_image,
 .mention_content_6_image{
@@ -966,7 +967,8 @@
   line-height: 41px;
   text-align: center;
   text-transform: capitalize;
-  color: #ffffff;
+  color: black;
+  font-style: italic;
 }
 
 /* ---------- Footer ---------------------- */

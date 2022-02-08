@@ -60,15 +60,27 @@
   /* justify-content: space-around; */
 }
 .footer-contact h1 {
+  
   font-family: Montserrat;
   font-style: normal;
   font-size: 3rem;
   font-weight: bold;
   text-transform: capitalize;
   color: #0066ff;
+  
 }
 .footer-contact-aakash {
   margin-top: 2vw;
+}
+.footer-contact-aakash h6,
+.footer-contact-rushil h6
+{  
+  color: white;
+}
+.footer-contact-aakash h4,
+.footer-contact-rushil h4
+{
+  font-style: italic;
 }
 .footer-contact-rushil {
   margin-top: 1vw;
@@ -83,6 +95,7 @@
   flex-direction: column;
   color: white;
 }
+
 .footer-adress h1 {
   font-family: Montserrat;
   font-style: normal;
@@ -93,6 +106,8 @@
 }
 .footer-adress h5 {
   margin-top: 2vw;
+  color: white;
+  
 }
 
 .footer-lower-div {

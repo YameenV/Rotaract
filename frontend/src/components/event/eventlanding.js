@@ -8,20 +8,24 @@ const Eventlanding = (props) => {
   console.log(newData)
   return (newData.length) > 0 ? (
     <div className="event_main">
+      <Navbar/>
       <video
         autoPlay
         muted
         loop
         style={{
+          position: "absolute",
           objectFit: "cover",
           width: "100%",
           height: "100%",
           zIndex: "-1",
           position: "fixed",
           left: "0",
+          overflow: "hidden",
+          // mixBlendMode: "scr
         }}
       >
-        <source src="https://lh3.googleusercontent.com/K27ZYDc3ssoLG0-vS_o8Irz2Bt_2567CFn8apQaarqZPVf2nxp4DrFELTVqK7K2GONeHM-UnyPRwcaRhnxtHNjrZ5J_fKnVnQKnQ6g5ZMoGe2xkNVRWSqWHxTi6AO8DNGGzmlW61=w2400" type="video/gif" />
+        <source src={goldennebula} type="video/mp4" />
       </video>
       <div class="wrapper">
         <header>
@@ -70,7 +74,7 @@ const Eventlanding = (props) => {
       </video>
 
       <div class="wrapper">
-        <header>
+        <header> 
             <h1>Events</h1>
         </header>
     </div>

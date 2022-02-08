@@ -80,7 +80,7 @@ class Homepage extends Component {
                   <img className="row_1_image1" src="https://lh3.googleusercontent.com/yhtbhvmFdPNN7qr7-BmV3NrmA8aBc-mirbhYaLtTN-QoYvwoF-gKLf0xsQr9JFRYTXyqV11cu2pok5AWJh4pcq4caJceLxXP6iWDPZs2XzHtbFaevvugwmIl0wGL61Sp0_J_4UBh=w2400" alt=""></img>
                 </div>
                 <div className="row_1_content1_Name">
-                  <h1>Rtr.Aakash Varma</h1>
+                  <h1>Rtr.Akash Varma</h1>
                 </div>
                 <div className="row_1_content1_position">
                   <h2>President</h2>
@@ -126,7 +126,7 @@ class Homepage extends Component {
                   <img className="row_3_image2" src="https://lh3.googleusercontent.com/roDpytI0G06OM_JUYJT_GbPmh6XA5Hvstubbh9AZPePz6qNYsgcdkA3NwAoVcpqBhNWt4FovW5j6NfdNx-w-I2B3JFu0IHw34GdafP5UimBX76l8oRfv2F0dbDgBFWt4TNpcWQYI=w2400" alt=""></img>
                 </div>
                 <div className="row_3_content2_Name">
-                  <h1>Rtr.Jaii Prajapat</h1>
+                  <h1>Rtr.Jai Prajapat</h1>
                 </div>
                 <div className="row_3_content2_position">
                   <h2>HRD</h2>
@@ -305,7 +305,7 @@ class Homepage extends Component {
             <div className="home_event_container">
               {eventdata && eventdata.length > 0 ? (
                 eventdata.map((item, i) => {
-                  return i < 2 ? (
+                  return i < 3 ? (
                     <div className={`event_container_${i + 1}`}>
                       <div className="event_container_1_image_div">
                         <img className="container_1_image" alt=""></img>
