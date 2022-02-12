@@ -21,6 +21,7 @@ function Coreregister(props) {
         }
         else {
             let s = re.user.uid
+          
             props.OneFunction(s,re.user)          
         }
       })

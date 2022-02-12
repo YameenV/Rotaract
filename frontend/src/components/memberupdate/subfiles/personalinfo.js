@@ -9,7 +9,15 @@ class Personalinfo extends Component {
         place: '',
         blood_group:'',
         district:'',
-        age:0
+        age:0,
+        img:''
+    }
+    componentWillReceiveProps(nextProps){
+        if(nextProps.img){
+            this.setState({
+                img:nextProps.img
+            })
+        }
     }
 
     getData = (e) => {

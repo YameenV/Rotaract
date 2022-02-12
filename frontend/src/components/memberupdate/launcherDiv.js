@@ -78,7 +78,8 @@ class LauncherDiv extends Component {
           gender:data.gender,
           city:data.place,
           full_name:data.full_name,
-          district:data.district
+          district:data.district,
+          img:data.img
         })
         break;
       case 'otherinterest':
@@ -119,6 +120,7 @@ class LauncherDiv extends Component {
         {this.props.data === "personalinfo" ? (
          <Personalinfo 
          takeChange = {this.changeTaker}
+         img = {this.props.img}
          pers={this.getPersonalData}/>
         ) : null}
         {this.props.data === "Contact" ? <Contact 

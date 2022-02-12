@@ -11,14 +11,14 @@ class CoreConatainer extends Component {
   }
 
   takeId = (id,user) =>{
-
-    if(id !== ""){
+   
+ 
       this.props.checkAlreadyThere(id)
       this.setState({
         user,
         id
       })
-    }
+    
   }
 
 
@@ -86,6 +86,7 @@ class CoreConatainer extends Component {
       
       }
       else{
+       
         this.props.history.push(
         {
           pathname:`/member/update/${this.state.user.displayName}`,
@@ -97,7 +98,7 @@ class CoreConatainer extends Component {
   }
 
   render() {
-  
+  console.log(this.props, "helo")
     return (
         <div>
             <Coreregister OneFunction ={this.takeId}/>

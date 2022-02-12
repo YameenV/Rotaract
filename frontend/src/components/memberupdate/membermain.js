@@ -203,7 +203,6 @@ class MemberContainer extends Component {
         
         console.log(data,"require12")
             if(this.state.uid){
-                console.log(this.state.uid,"this is uid1")
                 
                 this.props.createUser(data,this.state.uid)
 
@@ -219,7 +218,6 @@ class MemberContainer extends Component {
 
 
     render() {
-        console.log(this.props)
        
         let data = this.props.things
 
@@ -276,6 +274,7 @@ class MemberContainer extends Component {
                     {this.state.typeofupdate !== '' ? (
                         <LauncherDiv 
                         typeChanger = {this.changeType}
+                        img = {this.state.recievedData.img}
                         data={this.state.typeofupdate} sender={this.sendUser} />
                     ) : (null)}
                 </div>
