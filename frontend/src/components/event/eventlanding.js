@@ -5,8 +5,8 @@ import testimg from "../../imgs/astro.png";
 import goldennebula from "../../imgs/Golden_Nebula_Event.mp4";
 const Eventlanding = (props) => {
   let newData = props.data;
-  console.log(newData)
-  return (newData.length) > 0 ? (
+ console.log(newData)
+  return (newData) ? (
     <div className="event_main">
       <Navbar/>
       <video
@@ -33,18 +33,21 @@ const Eventlanding = (props) => {
         </header>
     </div>
       <div class="container-event">
+
         {
-          newData.map(({img,title,description})=>{
+          newData.map((item,i)=>{
+            return(
             <div class="card">
         
-            <img className="event_img" src={img}></img>
+            <img className="event_img" src={item.img}></img>
     
-            <div className="eventpage_title">{title}</div>
+            <div className="eventpage_title">{item.title}</div>
     
             <div className="description-event">
-            {description}
+            {item.description}
             </div>
             </div>
+            )
           })
         }
      
