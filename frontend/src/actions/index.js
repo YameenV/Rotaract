@@ -94,7 +94,7 @@ export function AddTeam(tdata){
 
 
 export function createUser(udata,id){
-    const request = axios.post(`https://obscure-basin-25126.herokuapp.com/update_user/${id}`,udata)
+    const request = axios.put(`https://obscure-basin-25126.herokuapp.com/update_user/${id}`,udata)
     .then(response=>response.data)
     return{
         type:'Create_user',

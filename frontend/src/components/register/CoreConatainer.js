@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions/index'
 import Coreregister from './coreregister';
 
+
 class CoreConatainer extends Component {
   state = {
     user:{},
@@ -78,17 +79,17 @@ class CoreConatainer extends Component {
         }
          this.props.history.push({
           pathname:`/member/update/${this.state.user.displayName}`,
-          state:{displayName:this.state.user.displayName}
+          state:{displayName:this.state.user.displayName,uid:this.state.id}
         }) 
         
          this.props.makeUser(this.state.id,obj) 
       
       }
-      else if(check === "userexist"){
+      else{
         this.props.history.push(
         {
           pathname:`/member/update/${this.state.user.displayName}`,
-          state:{displayName:this.state.user.displayName}
+          state:{displayName:this.state.user.displayName,uid:this.state.id}
         })
       }
 

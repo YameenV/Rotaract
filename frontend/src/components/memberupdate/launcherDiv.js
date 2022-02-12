@@ -103,6 +103,8 @@ class LauncherDiv extends Component {
   send = () =>{
     
     this.props.sender(this.state)
+    console.log(this.state,"asas1")
+    console.log("hello abhinav")
   }
 
   changeTaker = (change) =>{

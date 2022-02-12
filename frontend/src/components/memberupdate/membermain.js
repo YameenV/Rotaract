@@ -21,7 +21,7 @@ class MemberContainer extends Component {
         fiveColor:'transparent',
         sixColor:'transparent',
         seventhColor:'transparent',
-        uid:this.props.things ? this.props.things.uid:null,
+        uid: "",
         displayName:'',
         recievedData:{}
     }
@@ -36,8 +36,11 @@ class MemberContainer extends Component {
     }
 
     componentWillReceiveProps(nextProps){
+        console.log(this.props,"this is history")
         if(nextProps){
+            console.log(nextProps,"this is a next prop")
             this.setState({
+                uid:nextProps.things.uid,
                 recievedData:nextProps.data.userData
             })
         }
@@ -198,15 +201,16 @@ class MemberContainer extends Component {
 
     sendUser = (data) => {
         
-        if (data) {
+        console.log(data,"require12")
             if(this.state.uid){
-
+                console.log(this.state.uid,"this is uid1")
+                
                 this.props.createUser(data,this.state.uid)
+
             }
             
-        }
+      
     }
-
     changesType = (atype)=>{
         this.setState({
             typeofupdate:atype
@@ -215,7 +219,8 @@ class MemberContainer extends Component {
 
 
     render() {
-       console.log(this.state.recievedData)
+        console.log(this.props)
+       
         let data = this.props.things
 
         return (data) ? ( <div className="main_member">
